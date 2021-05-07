@@ -1,5 +1,5 @@
 # Base image (buster contains PHP >= 7.3, which is needed for "thesoftwarefanatics/php-html-parser")
-FROM node:14.16.1-buster-slim@sha256:f5ca34ff9a862fd26e803778b0c96638c2a20a3ca60fbf4ed959005aa8132290 AS build
+FROM node:16.1.0-buster-slim@sha256:0df270304cb63e22681e2e65d59ece417709cd0db4576074c8bd242041877de9 AS build
 
 # Update and install build dependencies
 RUN \
