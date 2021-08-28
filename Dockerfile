@@ -1,5 +1,5 @@
 # Base image (buster contains PHP >= 7.3, which is needed for "thesoftwarefanatics/php-html-parser")
-FROM php:7.4.23-cli-buster@sha256:2e3512d56579e7925f07ff71c70fabb79e9d69f474e632a54552c0f27a657db5 AS build
+FROM php:8.0.10-cli-buster@sha256:664e195cd4e6fe16712700eed173f3c4149c9c3a3926e65231245e00b127b4ae AS build
 
 # Update and install build dependencies
 # Git is required for gulp's sitemap sitemap.
@@ -21,7 +21,7 @@ RUN yarn build
 
 
 # Base image (buster contains python2, which is needed for node-sass)
-FROM php:7.4.23-fpm-buster@sha256:b714424e65730adce597660bec2ff92348eaca5d52618d6fd540af665508ac10 AS development
+FROM php:8.0.10-fpm-buster@sha256:b25b1544c03853fb2c59282cfbd82171e06ace6a0395e56abfef21ebc25cf7fb AS development
 
 # Environment variables
 ENV PHP_INI_DIR /usr/local/etc/php
@@ -44,7 +44,7 @@ WORKDIR /var/www/$PROJECT_NAME/
 
 
 # Base image
-FROM php:7.4-fpm-alpine@sha256:7193180ad7104d4c74d17cd7d36ccd9f025ded84fd7b6a7a03e14f4f6682ea2e AS production
+FROM php:8.0-fpm-alpine@sha256:5c5e5251113018e3cadc7295b1f2b2a1ebf199ad5619fd61ddbe8e720dab15fd AS production
 
 # Environment variables
 ENV PHP_INI_DIR /usr/local/etc/php
