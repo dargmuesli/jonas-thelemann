@@ -49,7 +49,7 @@ RUN npm install -g pnpm && \
 #######################
 # Provide a web server.
 
-FROM nginx:1.23.2-alpine@sha256:14fd59d0399fab3c31f2f25113e9142d03b6ba3f28237517b46bfcf71fb4fe61 AS production
+FROM nginx:1.23.2-alpine@sha256:7f01646baf70c28a99fc1c78b827d1942ba097daf693f1991daaeecd3c3dcc83 AS production
 
 WORKDIR /usr/share/nginx/html
 
