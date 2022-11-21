@@ -16,24 +16,32 @@
           <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
           <h1 class="text-left">Jonas Thelemann</h1>
           <p class="text-right text-2xl font-normal text-gray-500">
-            {{ $t('metaInfo', { age: $moment().diff('1998-12-17', 'years') }) }}
+            {{
+              t('metaInfo', {
+                age: Math.abs(
+                  new Date(
+                    Date.now() - Date.parse('1998-12-17')
+                  ).getUTCFullYear() - 1970
+                ),
+              })
+            }}
           </p>
         </div>
         <div>
-          <i18n path="descriptionShort">
+          <i18n-t keypath="descriptionShort">
             <template #ninjaneers>
               <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
               <a href="https://www.ninjaneers.de/">Ninjaneer</a>
             </template>
             <template #university>
               <a href="https://www.uni-kassel.de/">
-                <span>{{ $t('universityKassel') }}</span>
+                <span>{{ t('universityKassel') }}</span>
               </a>
             </template>
-          </i18n>
+          </i18n-t>
           <p class="text-gray-500">
             <a href="https://www.google.com/maps/place/Kassel">
-              {{ $t('kasselAddress') }}
+              {{ t('kasselAddress') }}
             </a>
           </p>
         </div>
@@ -41,169 +49,181 @@
           <ul class="-mx-1.5 flex flex-wrap">
             <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
             <li class="m-1.5">
-              <Link to="https://giphy.com/channel/dargmuesli">Giphy</Link>
+              <SocialLink to="https://giphy.com/channel/dargmuesli"
+                >Giphy</SocialLink
+              >
             </li>
             <li class="m-1.5">
-              <Link to="https://github.com/dargmuesli">GitHub</Link>
+              <SocialLink to="https://github.com/dargmuesli">GitHub</SocialLink>
             </li>
             <li class="m-1.5">
-              <Link to="https://www.instagram.com/dargmuesli/">Instagram</Link>
+              <SocialLink to="https://www.instagram.com/dargmuesli/"
+                >Instagram</SocialLink
+              >
             </li>
             <li class="m-1.5">
-              <Link to="https://www.linkedin.com/in/jonas-thelemann-148a74205/">
+              <SocialLink
+                to="https://www.linkedin.com/in/jonas-thelemann-148a74205/"
+              >
                 LinkedIn
-              </Link>
+              </SocialLink>
             </li>
             <li class="m-1.5">
-              <Link to="https://www.mixcloud.com/creal/">Mixcloud</Link>
+              <SocialLink to="https://www.mixcloud.com/creal/"
+                >Mixcloud</SocialLink
+              >
             </li>
             <li class="m-1.5">
-              <Link
+              <SocialLink
                 to="https://open.spotify.com/user/1153065250?si=cf16bda05fd2491b"
               >
                 Spotify
-              </Link>
+              </SocialLink>
             </li>
             <li class="m-1.5">
-              <Link to="https://stackoverflow.com/users/4682621/dargmuesli">
+              <SocialLink
+                to="https://stackoverflow.com/users/4682621/dargmuesli"
+              >
                 Stack Overflow
-              </Link>
+              </SocialLink>
             </li>
             <li class="m-1.5">
-              <Link
+              <SocialLink
                 to="https://www.youtube.com/channel/UCmIrzQsJeEM5eW6KOAk9nSg"
               >
                 YouTube
-              </Link>
+              </SocialLink>
             </li>
             <!-- eslint-enable @intlify/vue-i18n/no-raw-text -->
           </ul>
         </div>
         <div>
           <!-- Wrapping div required for paragraph's negative margin to work. -->
-          <i18n class="mt-[-0.5rem]" path="about" tag="p">
+          <i18n-t class="mt-[-0.5rem]" keypath="about" tag="p">
             <template #aboutMarkSoftwareTemplate>
-              <mark>{{ $t('aboutMarkSoftware') }}</mark>
+              <mark>{{ t('aboutMarkSoftware') }}</mark>
             </template>
             <template #aboutMarkDjTemplate>
-              <mark>{{ $t('aboutMarkDj') }}</mark>
+              <mark>{{ t('aboutMarkDj') }}</mark>
             </template>
             <template #aboutAttraction>
-              {{ $t('aboutAttraction') }}
+              {{ t('aboutAttraction') }}
             </template>
             <template #aboutSidefact>
-              {{ $t('aboutSidefact') }}
+              {{ t('aboutSidefact') }}
             </template>
             <template #aboutCreating>
-              {{ $t('aboutCreating') }}
+              {{ t('aboutCreating') }}
             </template>
             <template #br>
               <br />
             </template>
-          </i18n>
+          </i18n-t>
         </div>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
           <section>
-            <h2 class="text-2xl">{{ $t('experience') }}</h2>
+            <h2 class="text-2xl">{{ t('experience') }}</h2>
             <div class="mt-2">
-              <p>{{ $t('softwareEngineer') }}</p>
+              <p>{{ t('softwareEngineer') }}</p>
               <p>
                 <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
                 <a href="https://www.ninjaneers.de/">Ninjaneers GmbH</a>
                 <span class="text-gray-500">
-                  · {{ $t('monthShortJul') }} 2020 – {{ $t('present') }}
+                  · {{ t('monthShortJul') }} 2020 – {{ t('present') }}
                 </span>
                 <!-- eslint-enable @intlify/vue-i18n/no-raw-text -->
               </p>
             </div>
           </section>
           <section>
-            <h2 class="text-2xl">{{ $t('education') }}</h2>
+            <h2 class="text-2xl">{{ t('education') }}</h2>
             <div class="mt-2">
-              <p>{{ $t('educationGoal') }}</p>
-              <i18n path="educationContent">
+              <p>{{ t('educationGoal') }}</p>
+              <i18n-t keypath="educationContent">
                 <template #place>
                   <a href="https://www.uni-kassel.de/">
-                    {{ $t('universityKassel') }}
+                    {{ t('universityKassel') }}
                   </a>
                 </template>
                 <template #time>
-                  <span class="text-gray-500">{{ $t('educationTime') }}</span>
+                  <span class="text-gray-500">{{ t('educationTime') }}</span>
                 </template>
-              </i18n>
+              </i18n-t>
             </div>
           </section>
           <section>
-            <h2 class="text-2xl">{{ $t('organizations') }}</h2>
+            <h2 class="text-2xl">{{ t('organizations') }}</h2>
             <ul class="mt-2 list-inside list-disc">
               <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
               <li>
-                <a href="https://gi.de/">{{ $t('gi') }}</a>
+                <a href="https://gi.de/">{{ t('gi') }}</a>
                 <span class="text-gray-500">
-                  · {{ $t('monthShortJan') }} 2019 – {{ $t('present') }}
+                  · {{ t('monthShortJan') }} 2019 – {{ t('present') }}
                 </span>
               </li>
               <li>
                 <a href="https://www.ccc.de/">Chaos Computer Club</a>
                 <span class="text-gray-500">
-                  · {{ $t('monthShortMay') }} 2018 – {{ $t('present') }}
+                  · {{ t('monthShortMay') }} 2018 – {{ t('present') }}
                 </span>
               </li>
               <li>
                 <a href="https://flipdot.org/">flipdot Hackerspace Kassel</a>
                 <span class="text-gray-500">
-                  · {{ $t('monthShortDec') }} 2016 – {{ $t('present') }}
+                  · {{ t('monthShortDec') }} 2016 – {{ t('present') }}
                 </span>
               </li>
               <!-- eslint-enable @intlify/vue-i18n/no-raw-text -->
             </ul>
           </section>
           <section>
-            <h2 class="text-2xl">{{ $t('languages') }}</h2>
+            <h2 class="text-2xl">{{ t('languages') }}</h2>
             <ul class="mt-2 list-inside list-disc">
               <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
               <li>
-                <span>{{ $t('german') }}</span>
+                <span>{{ t('german') }}</span>
                 <span class="text-gray-500">
-                  · {{ $t('proficiencyNative') }}
+                  · {{ t('proficiencyNative') }}
                 </span>
               </li>
               <li>
-                <span>{{ $t('english') }}</span>
+                <span>{{ t('english') }}</span>
                 <span class="text-gray-500">
-                  · {{ $t('proficiencyProfessional') }}
+                  · {{ t('proficiencyProfessional') }}
                 </span>
               </li>
               <!-- eslint-enable @intlify/vue-i18n/no-raw-text -->
             </ul>
           </section>
           <section>
-            <h2 class="text-2xl">{{ $t('honorsAwards') }}</h2>
+            <h2 class="text-2xl">{{ t('honorsAwards') }}</h2>
             <ul class="mt-2 list-inside list-disc">
               <li>
                 <a
                   href="https://www.uni-kassel.de/einrichtung/index.php?eID=dumpFile&t=f&f=1988&token=e881e12fc8112d90e46d21d4fbef05530929c5c0"
                 >
-                  <span>{{ $t('honorsAwardsIdeasCompetition') }}</span>
+                  <span>{{ t('honorsAwardsIdeasCompetition') }}</span>
                 </a>
                 <!-- eslint-disable-next-line prettier/prettier @intlify/vue-i18n/no-raw-text -->
-                <span class="text-gray-500"> · <a href="https://www.uni-kassel.de/einrichtung/ukt/unikat-von-der-idee-zur-gruendung/unikat-ideenwettbewerb">UNI­KAT</a>, {{ $t('monthShortOct') }} 2020</span>
+                <span class="text-gray-500"> · <a href="https://www.uni-kassel.de/einrichtung/ukt/unikat-von-der-idee-zur-gruendung/unikat-ideenwettbewerb">UNI­KAT</a>, {{ t('monthShortOct') }} 2020</span>
               </li>
               <li>
-                <span>{{ $t('nominationScholarship') }}</span>
+                <span>{{ t('nominationScholarship') }}</span>
                 <!-- eslint-disable-next-line prettier/prettier @intlify/vue-i18n/no-raw-text -->
-                <span class="text-gray-500"> · <a href="https://www.studienstiftung.de/">{{ $t('studyFoundation') }}</a>, {{ $t('monthShortJul') }} 2019</span>
+                <span class="text-gray-500"> · <a href="https://www.studienstiftung.de/">{{ t('studyFoundation') }}</a>, {{ t('monthShortJul') }} 2019</span>
               </li>
             </ul>
           </section>
           <div class="flex flex-col items-center justify-center">
-            <Link to="https://www.linkedin.com/in/jonas-thelemann-148a74205/">
-              {{ $t('portfolioFull') }}
-            </Link>
+            <SocialLink
+              to="https://www.linkedin.com/in/jonas-thelemann-148a74205/"
+            >
+              {{ t('portfolioFull') }}
+            </SocialLink>
           </div>
           <hr class="md:col-span-2" />
           <section class="md:col-span-2">
-            <h2 class="text-2xl">{{ $t('projects') }}</h2>
+            <h2 class="text-2xl">{{ t('projects') }}</h2>
             <ul class="mt-2 flex flex-wrap items-center justify-around">
               <li class="my-4 flex w-1/2 justify-center md:w-auto">
                 <a href="https://maev.si/">
@@ -244,9 +264,9 @@
                 </a>
               </li>
               <li class="my-4 flex w-1/2 justify-center md:w-auto">
-                <Link to="https://github.com/dargmuesli?tab=repositories">
-                  {{ $t('projectsMore', { repoCount }) }}
-                </Link>
+                <SocialLink to="https://github.com/dargmuesli?tab=repositories">
+                  {{ t('projectsMore', { repoCount }) }}
+                </SocialLink>
               </li>
             </ul>
           </section>
@@ -256,7 +276,8 @@
         <div class="mx-auto mt-8 flex w-9/12 items-center">
           <div class="h-px flex-1 bg-gray-500" />
           <LoaderImage
-            alt="cReals Logo"
+            :alt="t('globalOgImageAlt')"
+            aspect="aspect-square"
             class="mx-12 h-12 w-12 opacity-50"
             height="48"
             src="/assets/static/favicon/safari-pinned-tab.svg"
@@ -265,10 +286,10 @@
           <div class="h-px flex-1 bg-gray-500" />
         </div>
         <p class="p-2 text-center text-gray-500">
-          {{ $t('copyright', { year: new Date().getFullYear() }) }}
+          {{ t('copyright', { year: new Date().getFullYear() }) }}
           <br />
           <AppLink class="text-blue-400" :to="localePath('/legal-notice')">
-            {{ $t('legalNotice') }}
+            {{ t('legalNotice') }}
           </AppLink>
         </p>
       </footer>
@@ -276,39 +297,36 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from '#app'
-import { Context } from '@nuxt/types-edge'
-
+<script setup lang="ts">
 import consola from 'consola'
+import { ofetch } from 'ofetch'
 
-export default defineComponent({
-  name: 'IndexPage',
-  async asyncData({ $http }: Context) {
-    let repoCount: string | null = null
+const { t } = useI18n()
+const localePath = useLocalePath()
 
-    try {
-      const res = await $http.get(
-        'https://api.github.com/users/dargmuesli/repos?per_page=1'
-      )
-      const headerLink = res.headers.get('link')
-      repoCount = headerLink
-        ? new URLSearchParams(
-            new URL(
-              headerLink
-                .split(', ')[1]
-                .split('; ')[0]
-                .replace(/(^<|>$)/g, '')
-            ).searchParams
-          ).get('page')
-        : null
-    } catch (e) {
-      consola.error(JSON.stringify(e))
-    }
+let repoCount: string | null = null
 
-    return { repoCount }
-  },
-})
+try {
+  const res = await ofetch.raw(
+    'https://api.github.com/users/dargmuesli/repos?per_page=1'
+  )
+
+  if (!res.ok) throw createError('Response is not ok!')
+
+  const headerLink = res.headers.get('link')
+  repoCount = headerLink
+    ? new URLSearchParams(
+        new URL(
+          headerLink
+            .split(', ')[1]
+            .split('; ')[0]
+            .replace(/(^<|>$)/g, '')
+        ).searchParams
+      ).get('page')
+    : null
+} catch (e) {
+  consola.error(JSON.stringify(e))
+}
 </script>
 
 <style scoped>
@@ -317,7 +335,7 @@ mark {
 }
 </style>
 
-<i18n lang="yml">
+<i18n lang="yaml">
 de:
   about: '{aboutMarkSoftwareTemplate} irgendwo zwischen Frontend, Backend und DevOps.{br}{aboutMarkDjTemplate}, manchmal am Doubletime rappen.{br}{aboutAttraction}{br}{aboutSidefact}{br}{aboutCreating}'
   aboutAttraction: Angezogen von Dingen, die er nicht versteht. Gelangweilt, wenn Videos langsamer als mit 2x-Geschwindigkeit abspielen.
@@ -339,7 +357,6 @@ de:
   honorsAwardsIdeasCompetition: Ideenwettbewerb Top 10 Projekt
   kasselAddress: Kassel, Hessen, Deutschland
   languages: Sprachen
-  legal: Rechtliches
   legalNotice: Impressum
   metaInfo: '{age}, er/ihn'
   monthShortDec: Dez
@@ -379,7 +396,6 @@ en:
   honorsAwardsIdeasCompetition: Ideas Competition Top 10 Project
   kasselAddress: Kassel, Hesse, Germany
   languages: Languages
-  legal: Legal
   legalNotice: Legal notice
   metaInfo: '{age}, he/him'
   monthShortDec: Dec
