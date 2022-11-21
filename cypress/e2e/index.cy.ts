@@ -1,4 +1,19 @@
 describe('index page', () => {
+  beforeEach(() => {
+    cy.intercept(
+      'GET',
+      'https://api.github.com/users/dargmuesli/repos?per_page=1',
+      (req) => {
+        req.reply({
+          fixture: 'githubApi.json',
+          headers: {
+            link: '<https://api.github.com/user/4778485/repos?per_page=1&page=2>; rel="next", <https://api.github.com/user/4778485/repos?per_page=1&page=1337>; rel="last"',
+          },
+        })
+      }
+    )
+  })
+
   context('page load', () => {
     it('loads the page successfully', () => {
       cy.request('/').then((resp) => {
