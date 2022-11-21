@@ -28,6 +28,7 @@ describe('index page', () => {
 
     it('looks as before', () => {
       cy.visit('/')
+      cy.get('[data-is-loading="false"]').should('be.visible')
       cy.compareSnapshot('index')
     })
   })
