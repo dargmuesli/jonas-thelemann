@@ -150,16 +150,39 @@ COPY --from=lint /srv/app/package.json /tmp/lint/package.json
 COPY --from=test-integration /srv/app/package.json /tmp/test/package.json
 
 
+# #######################
+# # Provide a web server.
+
+# # Should be the specific version of `nginx:alpine`.
+# FROM nginx:1.23.2-alpine@sha256:455c39afebd4d98ef26dd70284aa86e6810b0485af5f4f222b19b89758cabf1e AS production
+
+# WORKDIR /usr/share/nginx/html
+
+# COPY ./nginx.conf /etc/nginx/nginx.conf
+
+# COPY --from=build /srv/app/.output/public/ ./
+
+# HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost/api/healthcheck || exit 1
+
+
 #######################
 # Provide a web server.
+# Requires node (cannot be static) as the server acts as backend too.
 
-# Should be the specific version of `nginx:alpine`.
-FROM nginx:1.23.2-alpine@sha256:455c39afebd4d98ef26dd70284aa86e6810b0485af5f4f222b19b89758cabf1e AS production
+# Should be the specific version of `node:alpine`.
+FROM node:19.1.0-alpine@sha256:3a718461938f351292be2cb77f7299cd4e3d8f28f29d548f0cf3c8551dc80e08 AS production
 
-WORKDIR /usr/share/nginx/html
+ENV NODE_ENV=production
 
-COPY ./nginx.conf /etc/nginx/nginx.conf
+# Update and install dependencies.
+# - `wget` is required by the healthcheck
+RUN apk update \
+    && apk add --no-cache \
+        wget
 
-COPY --from=build /srv/app/.output/public/ ./
+WORKDIR /srv/app/
 
-HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost/api/healthcheck || exit 1
+COPY --from=collect /srv/app/ ./
+
+CMD ["node", ".output/server/index.mjs"]
+HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1

@@ -11,7 +11,9 @@
   "packageManager": "pnpm@7.16.1",
   "scripts": {
     "dev": "nuxi dev",
-    "build": "nuxi generate",
+    "build": "nuxi build",
+    "start": "node .output/server/index.mjs",
+    "generate": "nuxi generate",
     "cypress:open": "cypress open",
     "cypress:test": "cypress run --env type=actual",
     "lint": "pnpm lint:js && pnpm lint:ts && pnpm lint:style",
