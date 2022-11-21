@@ -1,17 +1,19 @@
 <template>
-  <nuxt />
+  <div :data-is-loading="isLoading">
+    <slot />
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from '#app'
+<script setup lang="ts">
+const loadingId = Math.random()
+const loadingIds = useState('loadingIds', () => [loadingId])
 
-export default defineComponent({
-  name: 'IndexPage',
-  head() {
-    return this.$nuxtI18nHead({ addSeoAttributes: true })
-  },
-  beforeCreate() {
-    this.$moment.locale(this.$i18n.locale)
-  },
-})
+// computations
+const isLoading = computed(() => !!loadingIds.value.length)
+
+// lifecycle
+onMounted(() => loadingIds.value.splice(loadingIds.value.indexOf(loadingId), 1))
+
+// initialization
+useHeadLayout()
 </script>

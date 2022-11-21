@@ -1,64 +1,57 @@
 <template>
   <a
     v-if="to.match(/^((ftp|http(s)?):\/\/|(mailto):)/)"
-    class="inline-flex items-center rounded"
-    :class="{ 'text-link-dark dark:text-link-bright': isColored }"
+    :aria-label="ariaLabel"
+    :class="classes"
     :href="to"
     :rel="
       [...(nofollow ? ['nofollow'] : []), 'noopener', 'noreferrer'].join(' ')
     "
     target="_blank"
-    @click="$emit('click')"
+    @click="emit('click')"
   >
-    <FontAwesomeIcon
-      v-if="iconId"
-      :class="{ 'mr-2': $slots.default }"
-      :icon="iconId"
-    />
     <slot />
   </a>
-  <nuxt-link
+  <NuxtLink
     v-else
-    :append="append"
-    class="rounded"
-    :class="{ 'text-link-dark dark:text-link-bright': isColored }"
-    :to="to"
-    @click.native="$emit('click')"
+    :aria-label="ariaLabel"
+    :class="classes"
+    :to="isToRelative ? append(route.path, to) : to"
+    @click="emit('click')"
   >
-    <FontAwesomeIcon
-      v-if="iconId"
-      :class="{ 'mr-2': $slots.default }"
-      :icon="iconId"
-    />
     <slot />
-  </nuxt-link>
+  </NuxtLink>
 </template>
 
-<script lang="ts">
-import { defineComponent, PropType } from '#app'
+<script setup lang="ts">
+export interface Props {
+  ariaLabel?: string
+  isColored?: boolean
+  isToRelative?: boolean
+  isUnderlined?: boolean
+  nofollow?: boolean
+  to: string
+}
+const props = withDefaults(defineProps<Props>(), {
+  ariaLabel: undefined,
+  isColored: true,
+  isToRelative: false,
+  isUnderlined: false,
+  nofollow: false,
+})
 
-export default defineComponent({
-  props: {
-    append: {
-      default: false,
-      type: Boolean,
-    },
-    iconId: {
-      default: undefined,
-      type: Array as PropType<string[] | undefined>,
-    },
-    isColored: {
-      default: true,
-      type: Boolean,
-    },
-    nofollow: {
-      default: false,
-      type: Boolean,
-    },
-    to: {
-      required: true,
-      type: String,
-    },
-  },
+const emit = defineEmits<{
+  (e: 'click'): void
+}>()
+
+const route = useRoute()
+
+// computations
+const classes = computed(() => {
+  return [
+    'rounded',
+    ...(props.isColored ? ['text-link-dark dark:text-link-bright'] : []),
+    ...(props.isUnderlined ? ['underline'] : []),
+  ].join(' ')
 })
 </script>
