@@ -11,7 +11,7 @@ specifiers:
   '@nuxt/bridge': npm:@nuxt/bridge-edge@3.0.0-27778503.de9e5c2
   '@nuxt/http': 0.6.4
   '@nuxt/types-edge': 2.16.0-27720022.54e852f
-  '@nuxtjs/eslint-config-typescript': 11.0.0
+  '@nuxtjs/eslint-config-typescript': 12.0.0
   '@nuxtjs/eslint-module': 3.1.0
   '@nuxtjs/google-analytics': 2.4.0
   '@nuxtjs/html-validator': 1.1.1
@@ -73,7 +73,7 @@ devDependencies:
   '@nuxt/babel-preset-app': 2.15.8_vue@2.7.14
   '@nuxt/bridge': /@nuxt/bridge-edge/3.0.0-27778503.de9e5c2_5rcrikc6ruk4er5robn5zztt2a
   '@nuxt/types-edge': 2.16.0-27720022.54e852f_webpack@4.46.0
-  '@nuxtjs/eslint-config-typescript': 11.0.0_hsf322ms6xhhd4b5ne6lb74y4a
+  '@nuxtjs/eslint-config-typescript': 12.0.0_hsf322ms6xhhd4b5ne6lb74y4a
   '@nuxtjs/eslint-module': 3.1.0_4ccfrreed6ckxvste6jnrinore
   '@nuxtjs/google-analytics': 2.4.0
   '@nuxtjs/html-validator': 1.1.1
@@ -2539,25 +2539,26 @@ packages:
       - whiskers
     dev: false
 
-  /@nuxtjs/eslint-config-typescript/11.0.0_hsf322ms6xhhd4b5ne6lb74y4a:
-    resolution: {integrity: sha512-hmFjGtXT524ql8eTbK8BaRkamcXB6Z8YOW8nSQhosTP6oBw9WtOFUeWr7holyE278UhOmx+wDFG90BnyM9D+UA==}
+  /@nuxtjs/eslint-config-typescript/12.0.0_hsf322ms6xhhd4b5ne6lb74y4a:
+    resolution: {integrity: sha512-HJR0ho5MYuOCFjkL+eMX/VXbUwy36J12DUMVy+dj3Qz1GYHwX92Saxap3urFzr8oPkzzFiuOknDivfCeRBWakg==}
     peerDependencies:
       eslint: ^8.23.0
     dependencies:
-      '@nuxtjs/eslint-config': 11.0.0_d5vn4nsvkp5ugznurcfxmdkaeu
+      '@nuxtjs/eslint-config': 12.0.0_d5vn4nsvkp5ugznurcfxmdkaeu
       '@typescript-eslint/eslint-plugin': 5.43.0_nqj4bdx4ekws7aecttskpih4py
       '@typescript-eslint/parser': 5.43.0_hsf322ms6xhhd4b5ne6lb74y4a
       eslint: 8.28.0
       eslint-import-resolver-typescript: 3.5.2_ktrec6dplf4now6nlbc6d67jee
       eslint-plugin-import: 2.26.0_d5vn4nsvkp5ugznurcfxmdkaeu
+      eslint-plugin-vue: 9.7.0_eslint@8.28.0
     transitivePeerDependencies:
       - eslint-import-resolver-webpack
       - supports-color
       - typescript
     dev: true
 
-  /@nuxtjs/eslint-config/11.0.0_d5vn4nsvkp5ugznurcfxmdkaeu:
-    resolution: {integrity: sha512-o4zFOpU8gJgwrC/gLE7c2E0XEjkv2fEixCGG1y+dZYzBPyzTorkQmfxskSF3WRXcZkpkS9uUYlRkeOSdYB7z0w==}
+  /@nuxtjs/eslint-config/12.0.0_d5vn4nsvkp5ugznurcfxmdkaeu:
+    resolution: {integrity: sha512-ewenelo75x0eYEUK+9EBXjc/OopQCvdkmYmlZuoHq5kub/vtiRpyZ/autppwokpHUq8tiVyl2ejMakoiHiDTrg==}
     peerDependencies:
       eslint: ^8.23.0
     dependencies:
@@ -2567,8 +2568,9 @@ packages:
       eslint-plugin-n: 15.5.1_eslint@8.28.0
       eslint-plugin-node: 11.1.0_eslint@8.28.0
       eslint-plugin-promise: 6.1.1_eslint@8.28.0
-      eslint-plugin-unicorn: 43.0.2_eslint@8.28.0
+      eslint-plugin-unicorn: 44.0.2_eslint@8.28.0
       eslint-plugin-vue: 9.7.0_eslint@8.28.0
+      local-pkg: 0.4.2
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
       - eslint-import-resolver-typescript
@@ -2953,7 +2955,7 @@ packages:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
       '@types/eslint': 8.4.10
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
     dev: true
 
   /@types/eslint/7.29.0:
@@ -2966,7 +2968,7 @@ packages:
   /@types/eslint/8.4.10:
     resolution: {integrity: sha512-Sl/HOqN8NKPmhWo2VBEPm0nvHnu2LL3v9vKo8MEq0EtbJ4eVzGPl41VNPvn5E1i5poMk4/XD8UriLHpJvEP/Nw==}
     dependencies:
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
       '@types/json-schema': 7.0.11
     dev: true
 
@@ -6469,11 +6471,11 @@ packages:
       eslint: 8.28.0
     dev: true
 
-  /eslint-plugin-unicorn/43.0.2_eslint@8.28.0:
-    resolution: {integrity: sha512-DtqZ5mf/GMlfWoz1abIjq5jZfaFuHzGBZYIeuJfEoKKGWRHr2JiJR+ea+BF7Wx2N1PPRoT/2fwgiK1NnmNE3Hg==}
+  /eslint-plugin-unicorn/44.0.2_eslint@8.28.0:
+    resolution: {integrity: sha512-GLIDX1wmeEqpGaKcnMcqRvMVsoabeF0Ton0EX4Th5u6Kmf7RM9WBl705AXFEsns56ESkEs0uyelLuUTvz9Tr0w==}
     engines: {node: '>=14.18'}
     peerDependencies:
-      eslint: '>=8.18.0'
+      eslint: '>=8.23.1'
     dependencies:
       '@babel/helper-validator-identifier': 7.19.1
       ci-info: 3.6.1
