@@ -1,3 +1,21 @@
+# [5.0.0](https://github.com/dargmuesli/jonas-thelemann/compare/4.11.10...5.0.0) (2022-11-21)
+
+
+### Bug Fixes
+
+* **favicon:** add missing favicons ([0e58d35](https://github.com/dargmuesli/jonas-thelemann/commit/0e58d35d7be97ba315846c6e38270a09adfd512e))
+* **nuxt:** use ssr temporarily ([9da504d](https://github.com/dargmuesli/jonas-thelemann/commit/9da504d1a8c186c66ce30d6217ac06eb816528b1))
+
+
+### Features
+
+* migrate to Nuxt 3 ([bd46f98](https://github.com/dargmuesli/jonas-thelemann/commit/bd46f98d4efe7e92427d86d73e18771675c8a8a3))
+
+
+### BREAKING CHANGES
+
+* migrate to Nuxt 3
+
 ## [4.11.10](https://github.com/dargmuesli/jonas-thelemann/compare/4.11.9...4.11.10) (2022-11-21)
 
 
