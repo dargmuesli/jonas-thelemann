@@ -299,7 +299,6 @@
 
 <script setup lang="ts">
 import consola from 'consola'
-import { ofetch } from 'ofetch'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
@@ -307,7 +306,7 @@ const localePath = useLocalePath()
 let repoCount: string | null = null
 
 try {
-  const res = await ofetch.raw(
+  const res = await $fetch.raw(
     'https://api.github.com/users/dargmuesli/repos?per_page=1'
   )
 
