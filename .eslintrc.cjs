@@ -1,8 +1,4 @@
 module.exports = {
-  env: {
-    browser: true,
-    node: true,
-  },
   extends: [
     '@nuxtjs/eslint-config-typescript',
     'plugin:@intlify/vue-i18n/recommended',
