@@ -1,3 +1,10 @@
+## [5.0.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.0.0...5.0.1) (2022-11-22)
+
+
+### Bug Fixes
+
+* **deps:** update dargmuesli/github-actions action to v0.19.10 ([81f77c0](https://github.com/dargmuesli/jonas-thelemann/commit/81f77c05df808a7250284d778b89fd40d292b330))
+
 # [5.0.0](https://github.com/dargmuesli/jonas-thelemann/compare/4.11.10...5.0.0) (2022-11-21)
 
 
