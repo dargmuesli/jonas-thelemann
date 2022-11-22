@@ -1,3 +1,10 @@
+## [5.0.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.0.1...5.0.2) (2022-11-22)
+
+
+### Bug Fixes
+
+* **loader-image:** correct state update placement ([ddf7412](https://github.com/dargmuesli/jonas-thelemann/commit/ddf7412005a8a76f6020b84771d6e5f60e0518f1))
+
 ## [5.0.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.0.0...5.0.1) (2022-11-22)
 
 
