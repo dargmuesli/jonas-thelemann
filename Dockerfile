@@ -4,7 +4,7 @@
 # Should be the specific version of `node:alpine`.
 FROM node:19.1.0-alpine@sha256:3a718461938f351292be2cb77f7299cd4e3d8f28f29d548f0cf3c8551dc80e08 AS development
 
-COPY ./docker/docker-entrypoint.sh /usr/local/bin/
+COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 RUN npm install -g pnpm
 
