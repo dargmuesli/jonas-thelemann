@@ -104,7 +104,7 @@ export default defineNuxtConfig({
       },
     ],
     '@nuxtjs/robots',
-    // ['@nuxtjs/sitemap', { exclude: SITEMAP_EXCLUSIONS_LOCALIZED, i18n: true }], // Should be declared at the end of the array. // https://github.com/maevsi/maevsi/issues/741
+    '@funken-studio/sitemap-nuxt-3', // Should be declared at the end of the array.
   ],
   nitro: {
     compressPublicAssets: true,
