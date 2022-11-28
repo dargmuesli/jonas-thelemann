@@ -1,3 +1,10 @@
+## [5.0.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.0.2...5.0.3) (2022-11-28)
+
+
+### Bug Fixes
+
+* **nuxt:** repair sitemap ([3b3c9ce](https://github.com/dargmuesli/jonas-thelemann/commit/3b3c9ce2470f5be81085e143f41e78d3057475d2))
+
 ## [5.0.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.0.1...5.0.2) (2022-11-22)
 
 
