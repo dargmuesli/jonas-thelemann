@@ -2,7 +2,7 @@
 # Serve Nuxt in development mode.
 
 # Should be the specific version of `node:alpine`.
-FROM node:19.1.0-alpine@sha256:3a718461938f351292be2cb77f7299cd4e3d8f28f29d548f0cf3c8551dc80e08 AS development
+FROM node:19.2.0-alpine@sha256:dae8ae40ed1077dfa383fb0c04a3d3bb8e6360e03147dd3ee963d62ac2275346 AS development
 
 COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
@@ -27,7 +27,7 @@ CMD ["pnpm", "run", "dev"]
 # Prepare Nuxt.
 
 # Should be the specific version of `node:slim`.
-FROM node:19.1.0-alpine@sha256:3a718461938f351292be2cb77f7299cd4e3d8f28f29d548f0cf3c8551dc80e08 AS prepare
+FROM node:19.2.0-alpine@sha256:dae8ae40ed1077dfa383fb0c04a3d3bb8e6360e03147dd3ee963d62ac2275346 AS prepare
 
 WORKDIR /srv/app/
 
@@ -45,7 +45,7 @@ RUN pnpm install --offline \
 # Build Nuxt.
 
 # Should be the specific version of `node:alpine`.
-FROM node:19.1.0-alpine@sha256:3a718461938f351292be2cb77f7299cd4e3d8f28f29d548f0cf3c8551dc80e08 AS build
+FROM node:19.2.0-alpine@sha256:dae8ae40ed1077dfa383fb0c04a3d3bb8e6360e03147dd3ee963d62ac2275346 AS build
 
 ARG NUXT_PUBLIC_STACK_DOMAIN=jonas-thelemann.de
 ENV NUXT_PUBLIC_STACK_DOMAIN=${NUXT_PUBLIC_STACK_DOMAIN}
@@ -64,7 +64,7 @@ RUN npm install -g pnpm && \
 # Nuxt: lint
 
 # Should be the specific version of `node:alpine`.
-FROM node:19.1.0-alpine@sha256:3a718461938f351292be2cb77f7299cd4e3d8f28f29d548f0cf3c8551dc80e08 AS lint
+FROM node:19.2.0-alpine@sha256:dae8ae40ed1077dfa383fb0c04a3d3bb8e6360e03147dd3ee963d62ac2275346 AS lint
 
 WORKDIR /srv/app/
 
@@ -141,7 +141,7 @@ RUN pnpm test:integration:prod \
 # Collect build, lint and test results.
 
 # Should be the specific version of `node:alpine`.
-FROM node:19.1.0-alpine@sha256:3a718461938f351292be2cb77f7299cd4e3d8f28f29d548f0cf3c8551dc80e08 AS collect
+FROM node:19.2.0-alpine@sha256:dae8ae40ed1077dfa383fb0c04a3d3bb8e6360e03147dd3ee963d62ac2275346 AS collect
 
 WORKDIR /srv/app/
 
@@ -170,7 +170,7 @@ COPY --from=test-integration /srv/app/package.json /tmp/test/package.json
 # Requires node (cannot be static) as the server acts as backend too.
 
 # Should be the specific version of `node:alpine`.
-FROM node:19.1.0-alpine@sha256:3a718461938f351292be2cb77f7299cd4e3d8f28f29d548f0cf3c8551dc80e08 AS production
+FROM node:19.2.0-alpine@sha256:dae8ae40ed1077dfa383fb0c04a3d3bb8e6360e03147dd3ee963d62ac2275346 AS production
 
 ENV NODE_ENV=production
 
