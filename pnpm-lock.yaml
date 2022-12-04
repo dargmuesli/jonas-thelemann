@@ -6,7 +6,7 @@ specifiers:
   '@funken-studio/sitemap-nuxt-3': 4.0.4
   '@intlify/eslint-plugin-vue-i18n': 2.0.0
   '@nuxtjs/eslint-config-typescript': 12.0.0
-  '@nuxtjs/html-validator': 1.2.1
+  '@nuxtjs/html-validator': 1.2.2
   '@nuxtjs/i18n': npm:@nuxtjs/i18n-edge@8.0.0-beta.1-27775490.1ee240a
   '@nuxtjs/robots': 3.0.0
   '@popperjs/core': 2.11.6
@@ -51,7 +51,7 @@ devDependencies:
   '@funken-studio/sitemap-nuxt-3': 4.0.4
   '@intlify/eslint-plugin-vue-i18n': 2.0.0_eslint@8.29.0
   '@nuxtjs/eslint-config-typescript': 12.0.0_s5ps7njkmjlaqajutnox5ntcla
-  '@nuxtjs/html-validator': 1.2.1
+  '@nuxtjs/html-validator': 1.2.2
   '@nuxtjs/i18n': /@nuxtjs/i18n-edge/8.0.0-beta.1-27775490.1ee240a_vite@3.2.4+vue@3.2.45
   '@nuxtjs/robots': 3.0.0
   '@popperjs/core': 2.11.6
@@ -1250,12 +1250,12 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxtjs/html-validator/1.2.1:
-    resolution: {integrity: sha512-DuzD4cEJYwmBYvDgcPGgO90dAPiyk9Zyk8G44wdjNvzXHzxa5n1HfDPZ63O/+U3VSgxgUBeeYRPjSZhI//FjhA==}
+  /@nuxtjs/html-validator/1.2.2:
+    resolution: {integrity: sha512-kaZm4Ks6snS3fRi9yihkVFbpffdaZHiFcOxfTOuRRjDy2vnUKkdBzz6+JsGqliNhunSrCT/mziEeq1icjCle8Q==}
     dependencies:
       '@nuxt/kit': 3.0.0
       chalk: 5.1.2
-      html-validate: 7.8.0
+      html-validate: 7.10.1
       pathe: 1.0.0
       prettier: 2.8.0
     transitivePeerDependencies:
@@ -4779,8 +4779,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /html-validate/7.8.0:
-    resolution: {integrity: sha512-r9KxbC6ztQ5F266KEykWj2DtjlAEOYhCcZCwIP6Zme3odLJxeGAzoOQfrSW4x/RGJruzfbYzNUw+XH7+pPRBeQ==}
+  /html-validate/7.10.1:
+    resolution: {integrity: sha512-2MjthTcMfqAZ8V1YyXshINGsdmPKc3RW9IKJ3kgfjXq59BuvSVM+vBhfOu0dJvlpRVH117vZ5JImYNsMfca3nA==}
     engines: {node: '>= 14.0'}
     hasBin: true
     peerDependencies:
@@ -7639,6 +7639,7 @@ packages:
 
   /sourcemap-codec/1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
+    deprecated: Please use @jridgewell/sourcemap-codec instead
     dev: true
 
   /spdx-correct/3.1.1:
