@@ -1,3 +1,10 @@
+## [5.0.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.0.3...5.0.4) (2022-12-04)
+
+
+### Bug Fixes
+
+* **server:** add api and middleware ([95df2d5](https://github.com/dargmuesli/jonas-thelemann/commit/95df2d5a3e18dca6b3d35f9e15670f814be8a417))
+
 ## [5.0.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.0.2...5.0.3) (2022-11-28)
 
 
