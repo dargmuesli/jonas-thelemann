@@ -6,7 +6,7 @@ specifiers:
   '@funken-studio/sitemap-nuxt-3': 4.0.4
   '@intlify/eslint-plugin-vue-i18n': 2.0.0
   '@nuxtjs/eslint-config-typescript': 12.0.0
-  '@nuxtjs/html-validator': 1.2.2
+  '@nuxtjs/html-validator': 1.2.3
   '@nuxtjs/i18n': npm:@nuxtjs/i18n-edge@8.0.0-beta.1-27775490.1ee240a
   '@nuxtjs/robots': 3.0.0
   '@popperjs/core': 2.11.6
@@ -51,7 +51,7 @@ devDependencies:
   '@funken-studio/sitemap-nuxt-3': 4.0.4
   '@intlify/eslint-plugin-vue-i18n': 2.0.0_eslint@8.29.0
   '@nuxtjs/eslint-config-typescript': 12.0.0_s5ps7njkmjlaqajutnox5ntcla
-  '@nuxtjs/html-validator': 1.2.2
+  '@nuxtjs/html-validator': 1.2.3
   '@nuxtjs/i18n': /@nuxtjs/i18n-edge/8.0.0-beta.1-27775490.1ee240a_vite@3.2.5+vue@3.2.45
   '@nuxtjs/robots': 3.0.0
   '@popperjs/core': 2.11.6
@@ -1250,14 +1250,15 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxtjs/html-validator/1.2.2:
-    resolution: {integrity: sha512-kaZm4Ks6snS3fRi9yihkVFbpffdaZHiFcOxfTOuRRjDy2vnUKkdBzz6+JsGqliNhunSrCT/mziEeq1icjCle8Q==}
+  /@nuxtjs/html-validator/1.2.3:
+    resolution: {integrity: sha512-SDoqoi3QqcaoFl8yW5Kdqon5rbAgUWZu1cDUEZR85WBl3T2BddXJazrkIg7gq0r2G/hrxSVDHUtaVYvKhq+ILw==}
     dependencies:
       '@nuxt/kit': 3.0.0
       chalk: 5.1.2
       html-validate: 7.10.1
       pathe: 1.0.0
       prettier: 2.8.0
+      std-env: 3.3.1
     transitivePeerDependencies:
       - jest
       - jest-diff
