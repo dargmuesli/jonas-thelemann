@@ -32,7 +32,7 @@ specifiers:
   prettier: 2.8.0
   prettier-plugin-tailwindcss: 0.2.0
   shx: 0.3.4
-  start-server-and-test: 1.14.0
+  start-server-and-test: 1.15.0
   stylelint: 14.16.0
   stylelint-config-prettier: 9.0.4
   stylelint-config-recommended-vue: 1.4.0
@@ -77,7 +77,7 @@ devDependencies:
   prettier: 2.8.0
   prettier-plugin-tailwindcss: 0.2.0_prettier@2.8.0
   shx: 0.3.4
-  start-server-and-test: 1.14.0
+  start-server-and-test: 1.15.0
   stylelint: 14.16.0
   stylelint-config-prettier: 9.0.4_stylelint@14.16.0
   stylelint-config-recommended-vue: 1.4.0_bto6pmslw3cibsiuq6smxboytq
@@ -7701,11 +7701,12 @@ packages:
     resolution: {integrity: sha512-qoRRSyROncaz1z0mvYqIE4lCd9p2R90i6GxW3uZv5ucSu8tU7B5HXUP1gG8pVZsYNVaXjk8ClXHPttLyxAL48A==}
     dev: true
 
-  /start-server-and-test/1.14.0:
-    resolution: {integrity: sha512-on5ELuxO2K0t8EmNj9MtVlFqwBMxfWOhu4U7uZD1xccVpFlOQKR93CSe0u98iQzfNxRyaNTb/CdadbNllplTsw==}
+  /start-server-and-test/1.15.0:
+    resolution: {integrity: sha512-T4Chk9ulFuT5LcKUrtAPjOzMQHCYonvQ8kJTZlXc9gEWLmJk9lhNarkIbR9vpbGZZp6nxTDV7jdL5mpvqP1xMw==}
     engines: {node: '>=6'}
     hasBin: true
     dependencies:
+      arg: 5.0.2
       bluebird: 3.7.2
       check-more-types: 2.24.0
       debug: 4.3.2
