@@ -78,7 +78,7 @@ RUN npm install -g pnpm && \
 # Nuxt: test (integration)
 
 # Should be the specific version of `cypress/included`.
-FROM cypress/included:12.0.1@sha256:d07275228673dbe01bdcd6e8bd5aabba817cfdf51fd0d1cc1311b48c9b2a03e4 AS test-integration_base
+FROM cypress/included:12.0.2@sha256:c12427a9a9e1090a61e31b218a93bc50cdd2306c003fa0c8eda0f34fdec1205b AS test-integration_base
 
 ARG UNAME=cypress
 ARG UID=1000
@@ -114,7 +114,7 @@ VOLUME /srv/app
 # Nuxt: test (integration)
 
 # Should be the specific version of `cypress/included`.
-FROM cypress/included:12.0.1@sha256:d07275228673dbe01bdcd6e8bd5aabba817cfdf51fd0d1cc1311b48c9b2a03e4 AS test-integration
+FROM cypress/included:12.0.2@sha256:c12427a9a9e1090a61e31b218a93bc50cdd2306c003fa0c8eda0f34fdec1205b AS test-integration
 
 # Update and install dependencies.
 RUN apt-get update \
