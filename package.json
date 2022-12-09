@@ -23,7 +23,7 @@
     "lint:fix": "pnpm lint:js --fix && pnpm lint:ts --fix && pnpm lint:style --fix",
     "lint:quiet": "pnpm lint:js --quiet && pnpm lint:style --quiet",
     "lint:staged": "pnpm lint-staged",
-    "prepare": "if [ -d '.git' ] && [ -d '.husky' ]; then husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks; fi",
+    "postinstall": "if [ -d '.git' ] && [ -d '.husky' ]; then husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks; fi",
     "test:integration:dev": "cross-env WAIT_ON_TIMEOUT=40000 NODE_OPTIONS=--use-openssl-ca START_SERVER_AND_TEST_INSECURE=1 start-server-and-test 'pnpm dev' 'http://localhost:3000' 'pnpm cypress:test'",
     "test:integration:prod": "cross-env WAIT_ON_TIMEOUT=10000 NODE_OPTIONS=--use-openssl-ca START_SERVER_AND_TEST_INSECURE=1 NODE_ENV=production start-server-and-test 'pnpm start' 'http://localhost:3000' 'pnpm cypress:test'",
     "test:integration:docker:build": "docker build -t test-integration_base --build-arg UID=$(id -u) --build-arg GID=$(id -g) --target test-integration_base .",
