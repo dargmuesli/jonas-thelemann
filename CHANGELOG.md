@@ -1,3 +1,12 @@
+## [5.0.5](https://github.com/dargmuesli/jonas-thelemann/compare/5.0.4...5.0.5) (2022-12-10)
+
+
+### Bug Fixes
+
+* **commitlint:** tweak body-max-line-length rule ([a5025d7](https://github.com/dargmuesli/jonas-thelemann/commit/a5025d7f87549359e0fc076925b94b9e136cf385))
+* prepare nuxt ([d782877](https://github.com/dargmuesli/jonas-thelemann/commit/d7828772def24d24d5896301998227fdee283651))
+* **tailwind:** exclude nuxt configuration from content ([fce1c20](https://github.com/dargmuesli/jonas-thelemann/commit/fce1c20c474942de134024eebf2a9b66062b2a05))
+
 ## [5.0.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.0.3...5.0.4) (2022-12-04)
 
 
