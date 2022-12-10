@@ -38,8 +38,7 @@ RUN npm install -g pnpm && \
 
 COPY ./ ./
 
-RUN pnpm install --offline \
-  && pnpm nuxi prepare
+RUN pnpm install --offline
 
 ########################
 # Build Nuxt.
@@ -70,7 +69,9 @@ WORKDIR /srv/app/
 
 COPY --from=prepare /srv/app/ ./
 
+# TODO: create ticket about node-jiti folder (https://github.com/dargmuesli/jonas-thelemann/issues/178)
 RUN npm install -g pnpm && \
+    rm -rf ./node-jiti && \
     pnpm run lint
 
 
