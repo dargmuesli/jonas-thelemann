@@ -2,7 +2,6 @@ import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
-import { viteExternalsPlugin } from 'vite-plugin-externals'
 
 import localeDe from './locales/de.json'
 import localeEn from './locales/en.json'
@@ -130,9 +129,6 @@ export default defineNuxtConfig({
   },
   vite: {
     plugins: [
-      viteExternalsPlugin({
-        webpack: 'webpack',
-      }),
       VueI18nPlugin({
         include:
           '!' +

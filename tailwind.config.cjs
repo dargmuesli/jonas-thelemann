@@ -40,11 +40,12 @@ function prose(theme) {
 module.exports = {
   content: [
     './components/**/*.{js,vue,ts}',
+    './composables/**/*.{js,vue,ts}',
     './layouts/**/*.vue',
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
-    './nuxt.config.js',
-    './nuxt.config.ts',
+    // './nuxt.config.{js,ts}', // Does not work with i18n as of 2022-12-01
+    './app.vue',
   ],
   plugins: [
     require('@tailwindcss/typography'),
