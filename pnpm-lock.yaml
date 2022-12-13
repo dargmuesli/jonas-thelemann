@@ -16,7 +16,7 @@ specifiers:
   consola: 2.15.3
   cross-env: 7.0.3
   cypress: 12.1.0
-  cypress-visual-regression: 1.7.0
+  cypress-visual-regression: 2.0.0
   defu: 6.1.1
   eslint: 8.29.0
   eslint-config-prettier: 8.5.0
@@ -59,7 +59,7 @@ devDependencies:
   consola: 2.15.3
   cross-env: 7.0.3
   cypress: 12.1.0
-  cypress-visual-regression: 1.7.0_cypress@12.1.0
+  cypress-visual-regression: 2.0.0_cypress@12.1.0
   defu: 6.1.1
   eslint: 8.29.0
   eslint-config-prettier: 8.5.0_eslint@8.29.0
@@ -2953,10 +2953,10 @@ packages:
     resolution: {integrity: sha512-d4ZVpCW31eWwCMe1YT3ur7mUDnTXbgwyzaL320DrcRT45rfjYxkt5QWLrmOJ+/UEAI2+fQgKe/fCjR8l4TpRgw==}
     dev: true
 
-  /cypress-visual-regression/1.7.0_cypress@12.1.0:
-    resolution: {integrity: sha512-ORWiKAAlSPEyeObrRV0UoLYT7u0//bwgi4MGen/pWu0ByZbsvh+4xY2wOBj5d8kToek5qxKD+yT1+juHRRgK0w==}
+  /cypress-visual-regression/2.0.0_cypress@12.1.0:
+    resolution: {integrity: sha512-IIsPq+7TeNUPTCEJO0Riegj9V8FKex9uQtjXLaIbAI1R3VkKNk7J0RgqNFCOM3FYY64CeFkdnq7zRAk5bX8APg==}
     peerDependencies:
-      cypress: '>=5.6.0'
+      cypress: '>=9.7.0'
     dependencies:
       cypress: 12.1.0
       pixelmatch: 5.3.0
