@@ -1,3 +1,17 @@
+# [5.1.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.0.5...5.1.0) (2022-12-14)
+
+
+### Bug Fixes
+
+* **cypress:** wait for cookie control button mount ([a58948c](https://github.com/dargmuesli/jonas-thelemann/commit/a58948c4838f44ead505f7c9d193b8450d3bedac))
+* **nuxt:** remove vue-i18n-plugin configuration ([d10dbfb](https://github.com/dargmuesli/jonas-thelemann/commit/d10dbfb4f387cecc8947f1e03fd0d97a861b2ce5))
+
+
+### Features
+
+* **docker:** remove node-jiti directory in prepare step ([5b81ceb](https://github.com/dargmuesli/jonas-thelemann/commit/5b81cebe17b940d550ff5c1a542b3eb23fb74a91))
+* **nuxt:** add cookie module ([6e79099](https://github.com/dargmuesli/jonas-thelemann/commit/6e79099913e84d848eca0ec1a8ce0455c81ba215))
+
 ## [5.0.5](https://github.com/dargmuesli/jonas-thelemann/compare/5.0.4...5.0.5) (2022-12-10)
 
 
