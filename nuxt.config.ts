@@ -1,8 +1,3 @@
-import { dirname, resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
-
-import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
-
 import localeDe from './locales/de.json'
 import localeEn from './locales/en.json'
 import { LOCALES } from './utils/constants'
@@ -126,14 +121,5 @@ export default defineNuxtConfig({
         htmlAttributes: [], // https://github.com/johnsoncodehk/volar/issues/1970#issuecomment-1276994634
       },
     },
-  },
-  vite: {
-    plugins: [
-      VueI18nPlugin({
-        include:
-          '!' +
-          resolve(dirname(fileURLToPath(import.meta.url)), './node_modules/**'), // https://github.com/intlify/bundle-tools/issues/168
-      }),
-    ],
   },
 })
