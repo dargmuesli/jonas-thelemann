@@ -43,6 +43,9 @@ describe('index page', () => {
       cy.setCookie('cookie_control_consent', 'true')
       cy.visit('/')
       cy.get('[data-is-loading="false"]').should('be.visible')
+      cy.get('[data-testid="nuxt-cookie-control-control-button"]').should(
+        'be.visible'
+      )
       cy.compareSnapshot('index')
     })
   })
