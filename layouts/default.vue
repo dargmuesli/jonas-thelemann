@@ -1,12 +1,14 @@
 <template>
   <div :data-is-loading="isLoading">
     <slot />
+    <CookieControl :locale="locale" />
   </div>
 </template>
 
 <script setup lang="ts">
 const loadingId = Math.random()
 const loadingIds = useState('loadingIds', () => [loadingId])
+const { locale } = useI18n()
 
 // computations
 const isLoading = computed(() => !!loadingIds.value.length)
