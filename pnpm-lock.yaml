@@ -16,7 +16,7 @@ specifiers:
   autoprefixer: 10.4.13
   consola: 2.15.3
   cross-env: 7.0.3
-  cypress: 12.1.0
+  cypress: 12.2.0
   cypress-visual-regression: 2.0.1
   defu: 6.1.1
   eslint: 8.29.0
@@ -60,8 +60,8 @@ devDependencies:
   autoprefixer: 10.4.13_postcss@8.4.20
   consola: 2.15.3
   cross-env: 7.0.3
-  cypress: 12.1.0
-  cypress-visual-regression: 2.0.1_cypress@12.1.0
+  cypress: 12.2.0
+  cypress-visual-regression: 2.0.1_cypress@12.2.0
   defu: 6.1.1
   eslint: 8.29.0
   eslint-config-prettier: 8.5.0_eslint@8.29.0
@@ -2986,19 +2986,19 @@ packages:
     resolution: {integrity: sha512-d4ZVpCW31eWwCMe1YT3ur7mUDnTXbgwyzaL320DrcRT45rfjYxkt5QWLrmOJ+/UEAI2+fQgKe/fCjR8l4TpRgw==}
     dev: true
 
-  /cypress-visual-regression/2.0.1_cypress@12.1.0:
+  /cypress-visual-regression/2.0.1_cypress@12.2.0:
     resolution: {integrity: sha512-bYQc/SPlXSqUoj8h8AqamLMZ9uoN3kbAN1EPbIZj0dj6cDyiKvRJB5w1jWENUbx/MSUu1J/kXInYLvKI+80mTQ==}
     peerDependencies:
       cypress: '>=9.7.0'
     dependencies:
-      cypress: 12.1.0
+      cypress: 12.2.0
       pixelmatch: 5.3.0
       pngjs: 6.0.0
       sanitize-filename: 1.6.3
     dev: true
 
-  /cypress/12.1.0:
-    resolution: {integrity: sha512-7fz8N84uhN1+ePNDsfQvoWEl4P3/VGKKmAg+bJQFY4onhA37Ys+6oBkGbNdwGeC7n2QqibNVPhk8x3YuQLwzfw==}
+  /cypress/12.2.0:
+    resolution: {integrity: sha512-kvl95ri95KK8mAy++tEU/wUgzAOMiIciZSL97LQvnOinb532m7dGvwN0mDSIGbOd71RREtmT9o4h088RjK5pKw==}
     engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
     hasBin: true
     requiresBuild: true
