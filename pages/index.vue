@@ -278,7 +278,7 @@
           <div class="h-px flex-1 bg-gray-500" />
         </div>
         <p class="p-2 text-center text-gray-500">
-          {{ t('copyright', { year: new Date().getFullYear() }) }}
+          {{ t('copyright', { year }) }}
           <br />
           <AppLink class="text-blue-400" :to="localePath('/legal-notice')">
             {{ t('legalNotice') }}
@@ -293,17 +293,22 @@
 import consola from 'consola'
 
 const { t } = useI18n()
+const config = useRuntimeConfig()
 const localePath = useLocalePath()
 
 let repoCount: string | null = null
 
 // computations
 const age = computed(() =>
-  Math.abs(
-    new Date(Date.now() - Date.parse('1998-12-17')).getUTCFullYear() - 1970
-  )
+  config.public.isTesting
+    ? 1337
+    : Math.abs(
+        new Date(Date.now() - Date.parse('1998-12-17')).getUTCFullYear() - 1970
+      )
 )
-
+const year = computed(() =>
+  config.public.isTesting ? 1337 : new Date().getFullYear()
+)
 // methods
 const init = async () => {
   try {
