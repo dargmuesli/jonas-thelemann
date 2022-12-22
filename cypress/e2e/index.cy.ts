@@ -1,6 +1,6 @@
 describe('index page', () => {
   beforeEach(() => {
-    cy.clock()
+    cy.clock(new Date(2020, 1, 1))
     cy.intercept(
       'GET',
       'https://api.github.com/users/dargmuesli/repos?per_page=1',
