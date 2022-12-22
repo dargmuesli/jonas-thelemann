@@ -16,15 +16,7 @@
           <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
           <h1 class="text-left">Jonas Thelemann</h1>
           <p class="text-right text-2xl font-normal text-gray-500">
-            {{
-              t('metaInfo', {
-                age: Math.abs(
-                  new Date(
-                    Date.now() - Date.parse('1998-12-17')
-                  ).getUTCFullYear() - 1970
-                ),
-              })
-            }}
+            {{ t('metaInfo', { age }) }}
           </p>
         </div>
         <div>
@@ -305,27 +297,40 @@ const localePath = useLocalePath()
 
 let repoCount: string | null = null
 
-try {
-  const res = await $fetch.raw(
-    'https://api.github.com/users/dargmuesli/repos?per_page=1'
+// computations
+const age = computed(() =>
+  Math.abs(
+    new Date(Date.now() - Date.parse('1998-12-17')).getUTCFullYear() - 1970
   )
+)
 
-  if (!res.ok) throw createError('Response is not ok!')
+// methods
+const init = async () => {
+  try {
+    const res = await $fetch.raw(
+      'https://api.github.com/users/dargmuesli/repos?per_page=1'
+    )
 
-  const headerLink = res.headers.get('link')
-  repoCount = headerLink
-    ? new URLSearchParams(
-        new URL(
-          headerLink
-            .split(', ')[1]
-            .split('; ')[0]
-            .replace(/(^<|>$)/g, '')
-        ).searchParams
-      ).get('page')
-    : null
-} catch (e) {
-  consola.error(JSON.stringify(e))
+    if (!res.ok) throw createError('Response is not ok!')
+
+    const headerLink = res.headers.get('link')
+    repoCount = headerLink
+      ? new URLSearchParams(
+          new URL(
+            headerLink
+              .split(', ')[1]
+              .split('; ')[0]
+              .replace(/(^<|>$)/g, '')
+          ).searchParams
+        ).get('page')
+      : null
+  } catch (e) {
+    consola.error(JSON.stringify(e))
+  }
 }
+
+// initialization
+await init()
 </script>
 
 <style scoped>

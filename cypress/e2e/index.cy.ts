@@ -1,6 +1,5 @@
 describe('index page', () => {
   beforeEach(() => {
-    cy.clock(new Date(2020, 1, 1))
     cy.intercept(
       'GET',
       'https://api.github.com/users/dargmuesli/repos?per_page=1',
@@ -41,6 +40,7 @@ describe('index page', () => {
 
   context('visual regression', () => {
     it('looks as before', () => {
+      cy.clock()
       cy.setCookie('cookie_control_consent', 'true')
       cy.visit('/')
       cy.get('[data-is-loading="false"]').should('be.visible')
