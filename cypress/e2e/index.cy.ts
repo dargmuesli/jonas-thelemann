@@ -1,5 +1,6 @@
 describe('index page', () => {
   beforeEach(() => {
+    cy.clock()
     cy.intercept(
       'GET',
       'https://api.github.com/users/dargmuesli/repos?per_page=1',
