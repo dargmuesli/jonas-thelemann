@@ -116,7 +116,7 @@ export default defineNuxtConfig({
       googleAnalytics: {
         debug: process.env.NODE_ENV !== 'production',
       },
-      isTesting: !!process.env.NUXT_PUBLIC_IS_TESTING,
+      isTesting: false, // set via environment variables only
     },
   },
   typescript: {
