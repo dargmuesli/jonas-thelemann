@@ -1,3 +1,10 @@
+## [5.1.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.1.0...5.1.1) (2022-12-23)
+
+
+### Bug Fixes
+
+* **head:** remove query string temporarily ([2e89d40](https://github.com/dargmuesli/jonas-thelemann/commit/2e89d4011be002155a78feee1720279ba73f6673))
+
 # [5.1.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.0.5...5.1.0) (2022-12-14)
 
 
