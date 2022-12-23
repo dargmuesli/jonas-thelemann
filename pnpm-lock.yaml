@@ -17,7 +17,7 @@ specifiers:
   consola: 2.15.3
   cross-env: 7.0.3
   cypress: 12.2.0
-  cypress-visual-regression: 2.0.1
+  cypress-visual-regression: 2.1.0
   defu: 6.1.1
   eslint: 8.30.0
   eslint-config-prettier: 8.5.0
@@ -61,7 +61,7 @@ devDependencies:
   consola: 2.15.3
   cross-env: 7.0.3
   cypress: 12.2.0
-  cypress-visual-regression: 2.0.1_cypress@12.2.0
+  cypress-visual-regression: 2.1.0_cypress@12.2.0
   defu: 6.1.1
   eslint: 8.30.0
   eslint-config-prettier: 8.5.0_eslint@8.30.0
@@ -746,8 +746,8 @@ packages:
       vue-i18n:
         optional: true
     dependencies:
-      '@intlify/message-compiler': 9.3.0-beta.10
-      '@intlify/shared': 9.3.0-beta.10
+      '@intlify/message-compiler': 9.3.0-beta.11
+      '@intlify/shared': 9.3.0-beta.11
       jsonc-eslint-parser: 1.4.1
       source-map: 0.6.1
       vue-i18n: 9.3.0-beta.10_vue@3.2.45
@@ -830,6 +830,14 @@ packages:
       source-map: 0.6.1
     dev: true
 
+  /@intlify/message-compiler/9.3.0-beta.11:
+    resolution: {integrity: sha512-gGGfBGzM7JBXp1Q9gbDAy5jELz9ho3ILqnpxp2yp64+gkqohrqc2YXIvCdwZoc6AtKIh/Zmv4sWVqxkvMsBWtQ==}
+    engines: {node: '>= 14'}
+    dependencies:
+      '@intlify/shared': 9.3.0-beta.11
+      source-map: 0.6.1
+    dev: true
+
   /@intlify/shared/9.2.2:
     resolution: {integrity: sha512-wRwTpsslgZS5HNyM7uDQYZtxnbI12aGiBZURX3BTR9RFIKKRWpllTsgzHWvj3HKm3Y2Sh5LPC1r0PDCKEhVn9Q==}
     engines: {node: '>= 14'}
@@ -837,6 +845,11 @@ packages:
 
   /@intlify/shared/9.3.0-beta.10:
     resolution: {integrity: sha512-h93uAanbAt/XgjDHclrVB7xix6r7Uz11wx0iGNOCdHP7aA2LCJjUT3uNbekJjjbo+Fl5jzTSJZdm2SexzoqhRA==}
+    engines: {node: '>= 14'}
+    dev: true
+
+  /@intlify/shared/9.3.0-beta.11:
+    resolution: {integrity: sha512-CtbotesxTRiC3bRyXyv1NG39fkqJ790f8z8xFaeIXSZpOdiyxoh5BIyypCzSFQZDGLwz0Q9gyWbW1XpxQJm68Q==}
     engines: {node: '>= 14'}
     dev: true
 
@@ -856,7 +869,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/bundle-utils': 3.4.0_vue-i18n@9.3.0-beta.10
-      '@intlify/shared': 9.3.0-beta.10
+      '@intlify/shared': 9.3.0-beta.11
       '@rollup/pluginutils': 4.2.1
       '@vue/compiler-sfc': 3.2.45
       debug: 4.3.4
@@ -2988,8 +3001,8 @@ packages:
     resolution: {integrity: sha512-d4ZVpCW31eWwCMe1YT3ur7mUDnTXbgwyzaL320DrcRT45rfjYxkt5QWLrmOJ+/UEAI2+fQgKe/fCjR8l4TpRgw==}
     dev: true
 
-  /cypress-visual-regression/2.0.1_cypress@12.2.0:
-    resolution: {integrity: sha512-bYQc/SPlXSqUoj8h8AqamLMZ9uoN3kbAN1EPbIZj0dj6cDyiKvRJB5w1jWENUbx/MSUu1J/kXInYLvKI+80mTQ==}
+  /cypress-visual-regression/2.1.0_cypress@12.2.0:
+    resolution: {integrity: sha512-fRBU529SMwlhl6TgJQuX8FmLMHKJ1yAcmVEpwCedxR+kxy9vudCMArL/uD2TILikOl8IWKMgHmhdX6Wgzjn+tQ==}
     peerDependencies:
       cypress: '>=9.7.0'
     dependencies:
@@ -8783,7 +8796,7 @@ packages:
       vue-router:
         optional: true
     dependencies:
-      '@intlify/shared': 9.3.0-beta.10
+      '@intlify/shared': 9.3.0-beta.11
       '@intlify/vue-i18n-bridge': 0.8.0_vue-i18n@9.3.0-beta.10
       '@intlify/vue-router-bridge': 0.8.0_vue@3.2.45
       ufo: 1.0.1
