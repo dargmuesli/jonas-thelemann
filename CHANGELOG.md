@@ -1,3 +1,10 @@
+# [5.2.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.1.1...5.2.0) (2022-12-25)
+
+
+### Features
+
+* **docker:** switch to generate ([98a1da2](https://github.com/dargmuesli/jonas-thelemann/commit/98a1da2506a5e98ab6ebf9ff07ed8b0b174b12b3))
+
 ## [5.1.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.1.0...5.1.1) (2022-12-23)
 
 
