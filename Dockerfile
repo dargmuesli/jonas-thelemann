@@ -58,7 +58,7 @@ COPY --from=prepare /srv/app/ ./
 
 ENV NODE_ENV=production
 RUN npm install -g pnpm && \
-    pnpm run build
+    pnpm run generate
 
 
 ########################
@@ -151,39 +151,39 @@ COPY --from=lint /srv/app/package.json /tmp/lint/package.json
 COPY --from=test-integration /srv/app/package.json /tmp/test/package.json
 
 
-# #######################
-# # Provide a web server.
-
-# # Should be the specific version of `nginx:alpine`.
-# FROM nginx:1.23.2-alpine@sha256:455c39afebd4d98ef26dd70284aa86e6810b0485af5f4f222b19b89758cabf1e AS production
-
-# WORKDIR /usr/share/nginx/html
-
-# COPY ./nginx.conf /etc/nginx/nginx.conf
-
-# COPY --from=build /srv/app/.output/public/ ./
-
-# HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost/api/healthcheck || exit 1
-
-
 #######################
 # Provide a web server.
-# Requires node (cannot be static) as the server acts as backend too.
 
-# Should be the specific version of `node:alpine`.
-FROM node:19.3.0-alpine@sha256:d0b02b1ec5534efb43a926069915c982aec745a8eb0611ebcffc4cafaa4e4a74 AS production
+# Should be the specific version of `nginx:alpine`.
+FROM nginx:1.23.2-alpine@sha256:455c39afebd4d98ef26dd70284aa86e6810b0485af5f4f222b19b89758cabf1e AS production
 
-ENV NODE_ENV=production
+WORKDIR /usr/share/nginx/html
 
-# Update and install dependencies.
-# - `wget` is required by the healthcheck
-RUN apk update \
-    && apk add --no-cache \
-        wget
+COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 
-WORKDIR /srv/app/
+COPY --from=build /srv/app/.output/public/ ./
 
-COPY --from=collect /srv/app/ ./
+HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost/api/healthcheck || exit 1
 
-CMD ["node", ".output/server/index.mjs"]
-HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
+
+# #######################
+# # Provide a web server.
+# # Requires node (cannot be static) as the server acts as backend too.
+
+# # Should be the specific version of `node:alpine`.
+# FROM node:19.3.0-alpine@sha256:d0b02b1ec5534efb43a926069915c982aec745a8eb0611ebcffc4cafaa4e4a74 AS production
+
+# ENV NODE_ENV=production
+
+# # Update and install dependencies.
+# # - `wget` is required by the healthcheck
+# RUN apk update \
+#     && apk add --no-cache \
+#         wget
+
+# WORKDIR /srv/app/
+
+# COPY --from=collect /srv/app/ ./
+
+# CMD ["node", ".output/server/index.mjs"]
+# HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1

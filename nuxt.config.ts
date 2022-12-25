@@ -79,7 +79,7 @@ export default defineNuxtConfig({
     [
       '@nuxtjs/html-validator',
       {
-        failOnError: true,
+        // failOnError: true,
         logLevel: 'warning',
       },
     ],
@@ -103,7 +103,7 @@ export default defineNuxtConfig({
       },
     ],
     '@nuxtjs/robots',
-    '@funken-studio/sitemap-nuxt-3', // Should be declared at the end of the array.
+    ['@funken-studio/sitemap-nuxt-3', { hostname: BASE_URL }], // Should be declared at the end of the array.
   ],
   nitro: {
     compressPublicAssets: true,
