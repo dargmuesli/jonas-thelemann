@@ -161,7 +161,7 @@ WORKDIR /usr/share/nginx/html
 
 COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 
-COPY --from=build /srv/app/.output/public/ ./
+COPY --from=collect /srv/app/.output/public/ ./
 
 HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost/api/healthcheck || exit 1
 
