@@ -1,3 +1,10 @@
+## [5.2.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.2.2...5.2.3) (2022-12-26)
+
+
+### Bug Fixes
+
+* **docker:** reenable visual regression tests ([7a523e4](https://github.com/dargmuesli/jonas-thelemann/commit/7a523e46118591378d9bb834b42b113553ceead0))
+
 ## [5.2.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.2.1...5.2.2) (2022-12-26)
 
 
