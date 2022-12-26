@@ -2,16 +2,18 @@
   <div class="flex flex-col xl:flex-row">
     <img
       alt="Jonas in Tutzing."
-      class="max-h-[85vh] object-cover object-position-custom xl:fixed xl:max-h-[100vh] xl:max-w-[50%]"
+      class="xl:fixed"
+      :class="imageClasses"
       src="/assets/static/images/tutzing.jpg"
     />
     <img
       alt="Jonas in Tutzing."
-      class="invisible hidden max-h-[85vh] object-cover object-top xl:block xl:max-h-[100vh] xl:max-w-[50%]"
+      class="hidden xl:block"
+      :class="imageClasses"
       src="/assets/static/images/tutzing.jpg"
     />
     <div class="p-4 sm:p-8">
-      <main class="min-h-screen min-w-0 space-y-6">
+      <main class="xl:min-h-screen min-w-0 space-y-6 pb-32">
         <div class="flex items-center justify-between">
           <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
           <h1 class="text-left">Jonas Thelemann</h1>
@@ -93,10 +95,14 @@
           <!-- Wrapping div required for paragraph's negative margin to work. -->
           <i18n-t class="mt-[-0.5rem]" keypath="about" tag="p">
             <template #aboutMarkSoftwareTemplate>
-              <mark>{{ t('aboutMarkSoftware') }}</mark>
+              <mark class="bg-[#ffff00] bg-opacity-50">{{
+                t('aboutMarkSoftware')
+              }}</mark>
             </template>
             <template #aboutMarkDjTemplate>
-              <mark>{{ t('aboutMarkDj') }}</mark>
+              <mark class="bg-[#ffff00] bg-opacity-50">
+                {{ t('aboutMarkDj') }}
+              </mark>
             </template>
             <template #aboutAttraction>
               {{ t('aboutAttraction') }}
@@ -112,7 +118,9 @@
             </template>
           </i18n-t>
         </div>
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div
+          class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-2"
+        >
           <section>
             <h2 class="text-2xl">{{ t('experience') }}</h2>
             <div class="mt-2">
@@ -191,18 +199,56 @@
             <h2 class="text-2xl">{{ t('honorsAwards') }}</h2>
             <ul class="mt-2 list-inside list-disc">
               <li>
-                <a
-                  href="https://www.uni-kassel.de/einrichtung/index.php?eID=dumpFile&t=f&f=1988&token=e881e12fc8112d90e46d21d4fbef05530929c5c0"
-                >
-                  <span>{{ t('honorsAwardsIdeasCompetition') }}</span>
-                </a>
-                <!-- eslint-disable-next-line prettier/prettier @intlify/vue-i18n/no-raw-text -->
-                <span class="text-gray-500"> · <a href="https://www.uni-kassel.de/einrichtung/ukt/unikat-von-der-idee-zur-gruendung/unikat-ideenwettbewerb">UNI­KAT</a>, {{ t('monthShortOct') }} 2020</span>
+                <i18n-t keypath="categoryItem">
+                  <template #title>
+                    <a
+                      href="https://www.uni-kassel.de/einrichtung/index.php?eID=dumpFile&t=f&f=1988&token=e881e12fc8112d90e46d21d4fbef05530929c5c0"
+                    >
+                      {{ t('honorsAwardsIdeasCompetition') }}
+                    </a>
+                  </template>
+                  <template #description>
+                    <i18n-t
+                      class="text-gray-500"
+                      keypath="categoryItemDescriptionWithPlace"
+                      tag="label"
+                    >
+                      <template #place>
+                        <a
+                          href="https://www.uni-kassel.de/einrichtung/ukt/unikat-von-der-idee-zur-gruendung/unikat-ideenwettbewerb"
+                        >
+                          {{ t('unikat') }}
+                        </a>
+                      </template>
+                      <template #time>
+                        {{ t('honorsAwardsIdeasCompetitionTime') }}
+                      </template>
+                    </i18n-t>
+                  </template>
+                </i18n-t>
               </li>
               <li>
-                <span>{{ t('nominationScholarship') }}</span>
-                <!-- eslint-disable-next-line prettier/prettier @intlify/vue-i18n/no-raw-text -->
-                <span class="text-gray-500"> · <a href="https://www.studienstiftung.de/">{{ t('studyFoundation') }}</a>, {{ t('monthShortJul') }} 2019</span>
+                <i18n-t keypath="categoryItem">
+                  <template #title>
+                    {{ t('nominationScholarship') }}
+                  </template>
+                  <template #description>
+                    <i18n-t
+                      class="text-gray-500"
+                      keypath="categoryItemDescriptionWithPlace"
+                      tag="label"
+                    >
+                      <template #place>
+                        <a href="https://www.studienstiftung.de/">
+                          {{ t('studyFoundation') }}
+                        </a>
+                      </template>
+                      <template #time>
+                        {{ t('nominationScholarshipTime') }}
+                      </template>
+                    </i18n-t>
+                  </template>
+                </i18n-t>
               </li>
             </ul>
           </section>
@@ -213,11 +259,11 @@
               {{ t('portfolioFull') }}
             </SocialLink>
           </div>
-          <hr class="md:col-span-2" />
-          <section class="md:col-span-2">
+          <hr class="md:col-span-2 xl:col-span-1 2xl:col-span-2" />
+          <section class="md:col-span-2 xl:col-span-1 2xl:col-span-2">
             <h2 class="text-2xl">{{ t('projects') }}</h2>
             <ul class="mt-2 flex flex-wrap items-center justify-around">
-              <li class="my-4 flex w-1/2 justify-center md:w-auto">
+              <li class="m-4">
                 <a href="https://maev.si/">
                   <img
                     alt="maevsi's logo"
@@ -226,7 +272,7 @@
                   />
                 </a>
               </li>
-              <li class="my-4 flex w-1/2 justify-center md:w-auto">
+              <li class="m-4">
                 <a href="https://nearbuy-food.de/">
                   <img
                     alt="nearbuy's logo"
@@ -235,7 +281,7 @@
                   />
                 </a>
               </li>
-              <li class="my-4 flex w-1/2 justify-center md:w-auto">
+              <li class="m-4">
                 <a href="https://creal.jonas-thelemann.de/">
                   <p class="h-12 text-center text-gray-500">
                     <img
@@ -246,7 +292,7 @@
                   </p>
                 </a>
               </li>
-              <li class="my-4 flex w-1/2 justify-center md:w-auto">
+              <li class="m-4">
                 <a href="https://trapparty.jonas-thelemann.de/">
                   <img
                     alt="TrapParty's logo"
@@ -255,7 +301,7 @@
                   />
                 </a>
               </li>
-              <li class="my-4 flex w-1/2 justify-center md:w-auto">
+              <li class="m-4">
                 <SocialLink to="https://github.com/dargmuesli?tab=repositories">
                   {{ t('projectsMore', { repoCount }) }}
                 </SocialLink>
@@ -292,6 +338,9 @@ const { t } = useI18n()
 const config = useRuntimeConfig()
 const localePath = useLocalePath()
 
+// data
+const imageClasses =
+  'max-h-[80vh] xl:max-w-[50vw] object-cover object-position-custom xl:h-[100vh] xl:max-h-[none]'
 let repoCount: string | null = null
 
 // computations
@@ -334,12 +383,6 @@ const init = async () => {
 await init()
 </script>
 
-<style scoped>
-mark {
-  background-color: rgba(255 255 0 / 50%);
-}
-</style>
-
 <i18n lang="yaml">
 de:
   about: '{aboutMarkSoftwareTemplate} irgendwo zwischen Frontend, Backend und DevOps.{br}{aboutMarkDjTemplate}, manchmal am Doubletime rappen.{br}{aboutAttraction}{br}{aboutSidefact}{br}{aboutCreating}'
@@ -348,6 +391,9 @@ de:
   aboutMarkDj: DJ und Event-Organisator
   aboutMarkSoftware: Leidenschaftlicher Software-Entwickler
   aboutSidefact: Freundet sich gerade mit der Mitte von Schwarz und Weiß an, hodlt nebenbei.
+  categoryItem: '{title} · {description}'
+  # categoryItemDescription: '{time}'
+  categoryItemDescriptionWithPlace: '{place}, {time}'
   copyright: © {year} Jonas Thelemann. Alle Rechte vorbehalten.
   descriptionShort: '{ninjaneers}, studiert an der {university}.'
   education: Bildung
@@ -360,6 +406,7 @@ de:
   gi: Gesellschaft für Informatik
   honorsAwards: Ehrungen und Auszeichnungen
   honorsAwardsIdeasCompetition: Ideenwettbewerb Top 10 Projekt
+  honorsAwardsIdeasCompetitionTime: Okt 2020
   kasselAddress: Kassel, Hessen, Deutschland
   languages: Sprachen
   legalNotice: Impressum
@@ -368,8 +415,8 @@ de:
   monthShortJan: Jan
   monthShortJul: Jul
   monthShortMay: Mai
-  monthShortOct: Okt
   nominationScholarship: Nominierung für ein Stipendium
+  nominationScholarshipTime: Jul 2019
   organizations: Organisationen
   portfolioFull: Zum ganzen Portfolio
   present: heute
@@ -379,6 +426,7 @@ de:
   projectsMore: und {repoCount} weitere…
   softwareEngineer: Software-Entwickler
   studyFoundation: Studienstiftung des deutschen Volkes
+  unikat: UNIKAT
   universityKassel: Universität Kassel
 en:
   about: '{aboutMarkSoftwareTemplate} somewhere between frontend, backend and devops.{br}{aboutMarkDjTemplate}, occasionally rapping double times.{br}{aboutAttraction}{br}{aboutSidefact}{br}{aboutCreating}'
@@ -387,6 +435,9 @@ en:
   aboutMarkDj: DJ and event organizer
   aboutMarkSoftware: Passionate software developer
   aboutSidefact: Currently getting used to the middle of black and white, hodling in the meantime.
+  categoryItem: '{title} · {description}'
+  # categoryItemDescription: '{time}'
+  categoryItemDescriptionWithPlace: '{place}, {time}'
   copyright: © {year} Jonas Thelemann. All rights reserved.
   descriptionShort: '{ninjaneers}, studying at {university}.'
   education: Education
@@ -399,6 +450,7 @@ en:
   gi: German Informatics Society
   honorsAwards: Honors & Awards
   honorsAwardsIdeasCompetition: Ideas Competition Top 10 Project
+  honorsAwardsIdeasCompetitionTime: Oct 2020
   kasselAddress: Kassel, Hesse, Germany
   languages: Languages
   legalNotice: Legal notice
@@ -407,8 +459,8 @@ en:
   monthShortJan: Jan
   monthShortJul: Jul
   monthShortMay: May
-  monthShortOct: Oct
   nominationScholarship: Nomination for a scholarship
+  nominationScholarshipTime: Jul 2019
   organizations: Organizations
   portfolioFull: View full portfolio
   present: today
@@ -418,5 +470,6 @@ en:
   projectsMore: and {repoCount} others…
   softwareEngineer: Software Engineer
   studyFoundation: Study Foundation of the German People
+  unikat: UNIKAT
   universityKassel: University of Kassel
 </i18n>

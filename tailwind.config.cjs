@@ -79,7 +79,7 @@ module.exports = {
       })
       addComponents({
         '.object-position-custom': {
-          objectPosition: '0% 30%',
+          objectPosition: '50% 30%',
         },
       })
     },
