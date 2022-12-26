@@ -25,7 +25,7 @@
     "lint:staged": "pnpm lint-staged",
     "postinstall": "pnpm nuxt prepare && if [ -d '.git' ] && [ -d '.husky' ]; then husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks; fi",
     "test:integration:dev": "cross-env NUXT_PUBLIC_IS_TESTING=1 WAIT_ON_TIMEOUT=100000 start-server-and-test 'pnpm dev' 'http://localhost:3000' 'pnpm cypress:test'",
-    "test:integration:prod": "cross-env NODE_ENV=production NUXT_PUBLIC_IS_TESTING=1 WAIT_ON_TIMEOUT=25000 start-server-and-test 'pnpm generate && pnpm start' 'http://localhost:3000' 'pnpm cypress:test'",
+    "test:integration:prod": "cross-env NODE_ENV=production NUXT_PUBLIC_IS_TESTING=1 WAIT_ON_TIMEOUT=50000 start-server-and-test 'pnpm generate && pnpm start' 'http://localhost:3000' 'pnpm cypress:test'",
     "test:integration:docker:build": "docker build -t test-integration_base --build-arg UID=$(id -u) --build-arg GID=$(id -g) --target test-integration_base .",
     "test:integration:docker:run": "docker run --rm --entrypoint docker-entrypoint.sh -v \"$PWD:/srv/app\" test-integration_base",
     "test:integration:docker:br": "pnpm test:integration:docker:build && pnpm test:integration:docker:run",
