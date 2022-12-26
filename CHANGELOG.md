@@ -1,3 +1,10 @@
+## [5.2.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.2.0...5.2.1) (2022-12-26)
+
+
+### Bug Fixes
+
+* **logo:** use svg instead of loader ([1f01744](https://github.com/dargmuesli/jonas-thelemann/commit/1f01744d2ecea8c579b39e623c830473633f4f38))
+
 # [5.2.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.1.1...5.2.0) (2022-12-25)
 
 
