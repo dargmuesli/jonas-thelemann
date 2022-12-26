@@ -88,10 +88,7 @@ export default defineNuxtConfig({
       {
         baseUrl: BASE_URL,
         defaultLocale: 'en', // Must be set for the default prefix_except_default prefix strategy.
-        detectBrowserLanguage: {
-          cookieSecure: true,
-          redirectOn: 'root',
-        },
+        detectBrowserLanguage: false, // Enabling browser language detection does not generate (!) other languages than the default one.
         locales: LOCALES,
         vueI18n: {
           messages: {
