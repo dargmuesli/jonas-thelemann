@@ -1,3 +1,11 @@
+## [5.2.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.2.1...5.2.2) (2022-12-26)
+
+
+### Bug Fixes
+
+* **i18n:** correct non-en language generation ([0ac3843](https://github.com/dargmuesli/jonas-thelemann/commit/0ac3843d0cf309d11b339554cb408d695299cbeb))
+* **layout:** show image full sized ([a813555](https://github.com/dargmuesli/jonas-thelemann/commit/a8135551068bb21292e30658b894512ed6a61e33))
+
 ## [5.2.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.2.0...5.2.1) (2022-12-26)
 
 
