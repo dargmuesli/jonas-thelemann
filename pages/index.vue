@@ -266,16 +266,12 @@
       </main>
       <footer class="text-sm leading-6">
         <div class="mx-auto mt-8 flex w-9/12 items-center">
-          <div class="h-px flex-1 bg-gray-500" />
-          <LoaderImage
-            :alt="t('globalOgImageAlt')"
-            aspect="aspect-square"
-            class="mx-12 h-12 w-12 opacity-50"
-            height="48"
-            src="/assets/static/favicon/safari-pinned-tab.svg"
-            width="48"
+          <Hr />
+          <IconLogo
+            background-fill="rgba(0,0,0,0)"
+            class="mx-12 h-12 w-12 opacity-50 brightness-0 dark:opacity-60 dark:invert"
           />
-          <div class="h-px flex-1 bg-gray-500" />
+          <Hr />
         </div>
         <p class="p-2 text-center text-gray-500">
           {{ t('copyright', { year }) }}
