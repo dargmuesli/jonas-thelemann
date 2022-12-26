@@ -8,6 +8,14 @@ const BASE_URL =
     `${process.env.HOST || 'localhost'}:3000`)
 
 export default defineNuxtConfig({
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en', // fallback data to prevent invalid html at generation
+      },
+      title: 'Jonas Thelemann', // fallback data to prevent invalid html at generation
+    },
+  },
   css: ['@/assets/css/main.css'],
   modules: [
     [
@@ -79,7 +87,7 @@ export default defineNuxtConfig({
     [
       '@nuxtjs/html-validator',
       {
-        // failOnError: true,
+        failOnError: true,
         logLevel: 'warning',
       },
     ],
