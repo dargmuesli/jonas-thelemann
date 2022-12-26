@@ -1,3 +1,10 @@
+## [5.2.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.2.3...5.2.4) (2022-12-26)
+
+
+### Bug Fixes
+
+* **nuxt:** add fallback head data ([c79baa8](https://github.com/dargmuesli/jonas-thelemann/commit/c79baa8e528cd9bda5db06c70c2db45cce74cebd))
+
 ## [5.2.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.2.2...5.2.3) (2022-12-26)
 
 
