@@ -69,6 +69,7 @@
     "stylelint-config-prettier": "9.0.4",
     "stylelint-config-recommended-vue": "1.4.0",
     "stylelint-config-standard": "29.0.0",
+    "stylelint-no-unsupported-browser-features": "6.0.1",
     "tailwindcss": "3.2.4",
     "typescript": "4.9.4",
     "vue": "3.2.45",
@@ -80,9 +81,5 @@
         "webpack"
       ]
     }
-  },
-  "lint-staged": {
-    "*.{js,vue}": "eslint",
-    "*.{css,vue}": "stylelint"
   }
 }

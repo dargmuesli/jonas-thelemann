@@ -354,6 +354,7 @@ const age = computed(() =>
 const year = computed(() =>
   config.public.isTesting ? 1337 : new Date().getFullYear()
 )
+
 // methods
 const init = async () => {
   try {
