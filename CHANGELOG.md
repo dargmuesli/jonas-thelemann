@@ -1,3 +1,10 @@
+# [5.3.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.2.4...5.3.0) (2023-01-06)
+
+
+### Features
+
+* add gtag ([0f1c451](https://github.com/dargmuesli/jonas-thelemann/commit/0f1c451bc13755aa86388a405ec539657bb94ffd))
+
 ## [5.2.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.2.3...5.2.4) (2022-12-26)
 
 
