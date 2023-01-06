@@ -49,41 +49,20 @@ export default defineNuxtConfig({
               targetCookieIds: ['i18n_redirected'],
             },
           ],
-          // optional: [
-          //   {
-          //     name: 'Google Analytics',
-          //     id: 'ga',
-          //     // targetCookieIds: ['_ga', '_gat', '_gid'],
-          //     // accepted: () => {
-          //     //   const { $ga } = useNuxtApp()
-          //     //   $ga.enable()
-          //     // },
-          //     // declined: () => {
-          //     //   const { $ga } = useNuxtApp()
-          //     //   $ga.disable()
-          //     // },
-          //   },
-          // ],
+          optional: [
+            {
+              description: {
+                de: 'Hilft uns dabei Nutzerverhalten zu verstehen und unsere Dienste zu verbessern.',
+                en: 'Helps us understand user behavior and optimize our services.',
+              },
+              name: 'Google Analytics',
+              targetCookieIds: ['_ga', '_ga_K4R41W62BR'],
+            },
+          ],
         },
         locales: ['en', 'de'],
       },
     ],
-    // [
-    //   '@nuxtjs/google-analytics',
-    //   {
-    //     disabled: () => {
-    //       const enabledCookies =
-    //         document.cookie
-    //           .match(
-    //             '(^|;)\\s*' +
-    //               'cookie_control_enabled_cookies' +
-    //               '\\s*=\\s*([^;]+)'
-    //           )
-    //           ?.pop() || ''
-    //       return !enabledCookies.split(',').includes('ga')
-    //     },
-    //   },
-    // ],
     [
       '@nuxtjs/html-validator',
       {
@@ -118,10 +97,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      googleAnalytics: {
-        debug: process.env.NODE_ENV !== 'production',
-      },
-      isTesting: false, // set via environment variables only
+      googleAnalyticsId: '', // set via environment variable `NUXT_PUBLIC_GOOGLE_ANALYTICS_ID` only
+      isTesting: false, // set via environment variable `NUXT_PUBLIC_IS_TESTING` only
     },
   },
   typescript: {
