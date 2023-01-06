@@ -1,3 +1,10 @@
+## [5.3.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.3.0...5.3.1) (2023-01-06)
+
+
+### Bug Fixes
+
+* **nginx:** correct content security policy ([5177847](https://github.com/dargmuesli/jonas-thelemann/commit/51778470fbc50aef626b1c4dcc87ac8b40c4903e))
+
 # [5.3.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.2.4...5.3.0) (2023-01-06)
 
 
