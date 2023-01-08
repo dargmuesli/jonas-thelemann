@@ -1,3 +1,10 @@
+## [5.3.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.3.1...5.3.2) (2023-01-08)
+
+
+### Bug Fixes
+
+* **favicon:** move to root ([ddd23ac](https://github.com/dargmuesli/jonas-thelemann/commit/ddd23ac4c332b2a6df8900597516cba847e7816d))
+
 ## [5.3.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.3.0...5.3.1) (2023-01-06)
 
 
