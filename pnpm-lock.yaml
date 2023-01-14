@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': 17.4.2
   '@commitlint/config-conventional': 17.4.2
-  '@dargmuesli/nuxt-cookie-control': 2.2.4
+  '@dargmuesli/nuxt-cookie-control': 3.0.0
   '@funken-studio/sitemap-nuxt-3': 4.0.4
   '@intlify/eslint-plugin-vue-i18n': 2.0.0
   '@nuxtjs/eslint-config-typescript': 12.0.0
@@ -47,7 +47,7 @@ specifiers:
 devDependencies:
   '@commitlint/cli': 17.4.2
   '@commitlint/config-conventional': 17.4.2
-  '@dargmuesli/nuxt-cookie-control': 2.2.4
+  '@dargmuesli/nuxt-cookie-control': 3.0.0
   '@funken-studio/sitemap-nuxt-3': 4.0.4
   '@intlify/eslint-plugin-vue-i18n': 2.0.0_eslint@8.31.0
   '@nuxtjs/eslint-config-typescript': 12.0.0_iukboom6ndih5an6iafl45j2fe
@@ -636,8 +636,8 @@ packages:
       - supports-color
     dev: true
 
-  /@dargmuesli/nuxt-cookie-control/2.2.4:
-    resolution: {integrity: sha512-MWlhXZDtKB7YBEdmwfrjzz77lVfQGoQG+O2MVDSKG3LZxeHQl+JZmyaHjFppnYBE3KfJ3jc0N30FHkcbNcqZaw==}
+  /@dargmuesli/nuxt-cookie-control/3.0.0:
+    resolution: {integrity: sha512-ewlYK2SXhzbtZmMFQktWCBsYj17ql5zfFHHA7AfTPsQLJx8gf3GbUL5bKe1uoDWwj2E9cuzMmVSVCvuMoZfg/A==}
     dependencies:
       '@nuxt/kit': 3.0.0
       '@sindresorhus/slugify': 2.1.1
@@ -754,8 +754,8 @@ packages:
       vue-i18n:
         optional: true
     dependencies:
-      '@intlify/message-compiler': 9.3.0-beta.15
-      '@intlify/shared': 9.3.0-beta.15
+      '@intlify/message-compiler': 9.3.0-beta.16
+      '@intlify/shared': 9.3.0-beta.16
       jsonc-eslint-parser: 1.4.1
       source-map: 0.6.1
       vue-i18n: 9.3.0-beta.15_vue@3.2.45
@@ -838,6 +838,14 @@ packages:
       source-map: 0.6.1
     dev: true
 
+  /@intlify/message-compiler/9.3.0-beta.16:
+    resolution: {integrity: sha512-CGQI3xRcs1ET75eDQ0DUy3MRYOqTauRIIgaMoISKiF83gqRWg93FqN8lGMKcpBqaF4tI0JhsfosCaGiBL9+dnw==}
+    engines: {node: '>= 14'}
+    dependencies:
+      '@intlify/shared': 9.3.0-beta.16
+      source-map: 0.6.1
+    dev: true
+
   /@intlify/shared/9.2.2:
     resolution: {integrity: sha512-wRwTpsslgZS5HNyM7uDQYZtxnbI12aGiBZURX3BTR9RFIKKRWpllTsgzHWvj3HKm3Y2Sh5LPC1r0PDCKEhVn9Q==}
     engines: {node: '>= 14'}
@@ -850,6 +858,11 @@ packages:
 
   /@intlify/shared/9.3.0-beta.15:
     resolution: {integrity: sha512-thDJ+TGK8GGmOrgh/Vul24pPvRtRGvCyuGXcw/uh2t3lyJsCPfhzY5ZihJFkGvKEl4/J4M0F/SAeWKoZNm7hlw==}
+    engines: {node: '>= 14'}
+    dev: true
+
+  /@intlify/shared/9.3.0-beta.16:
+    resolution: {integrity: sha512-kXbm4svALe3lX+EjdJxfnabOphqS4yQ1Ge/iIlR8tvUiYRCoNz3hig1M4336iY++Dfx5ytEQJPNjIcknNIuvig==}
     engines: {node: '>= 14'}
     dev: true
 
@@ -869,7 +882,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/bundle-utils': 3.4.0_vue-i18n@9.3.0-beta.15
-      '@intlify/shared': 9.3.0-beta.15
+      '@intlify/shared': 9.3.0-beta.16
       '@rollup/pluginutils': 4.2.1
       '@vue/compiler-sfc': 3.2.45
       debug: 4.3.4
@@ -8976,7 +8989,7 @@ packages:
       vue-router:
         optional: true
     dependencies:
-      '@intlify/shared': 9.3.0-beta.15
+      '@intlify/shared': 9.3.0-beta.16
       '@intlify/vue-i18n-bridge': 0.8.0_vue-i18n@9.3.0-beta.15
       '@intlify/vue-router-bridge': 0.8.0_vue@3.2.45
       ufo: 1.0.1
