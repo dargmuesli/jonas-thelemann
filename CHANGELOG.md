@@ -1,3 +1,10 @@
+## [5.3.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.3.3...5.3.4) (2023-01-16)
+
+
+### Bug Fixes
+
+* **open-graph:** add missing logo ([96db2f4](https://github.com/dargmuesli/jonas-thelemann/commit/96db2f445540c104ec745b982f37bed849b8e42a)), closes [#192](https://github.com/dargmuesli/jonas-thelemann/issues/192)
+
 ## [5.3.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.3.2...5.3.3) (2023-01-16)
 
 
