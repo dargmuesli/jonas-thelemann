@@ -1,3 +1,10 @@
+# [5.4.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.3.4...5.4.0) (2023-01-16)
+
+
+### Features
+
+* **cookie-control:** migrate to v3 ([5a53542](https://github.com/dargmuesli/jonas-thelemann/commit/5a5354299cb74aa383bd56d42022c100c68117b4))
+
 ## [5.3.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.3.3...5.3.4) (2023-01-16)
 
 
