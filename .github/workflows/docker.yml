@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     name: Build
-    uses: dargmuesli/github-actions/.github/workflows/docker.yml@0.23.3
+    uses: dargmuesli/github-actions/.github/workflows/docker.yml@0.24.2
     secrets:
       DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
       DOCKER_HUB_USER_NAME: ${{ secrets.DOCKER_HUB_USER_NAME }}
@@ -57,10 +57,10 @@ jobs:
         accountId: f00135e2a8cc575a4bc4817c9521fe71
         projectName: jonas-thelemann
         directory: dist
-        gitHubToken: ${{ secrets.GH_TOKEN }}
+        gitHubToken: ${{ secrets.GITHUB_TOKEN }} # set this to enable GitHub deployments
   release-semantic:
     needs: build
     name: Release (semantic)
-    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@0.23.3
-    secrets:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@0.24.2
+    # secrets:
+    #   GH_TOKEN: ${{ secrets.GH_TOKEN }} # would be needed if created release should trigger workflows on itself
