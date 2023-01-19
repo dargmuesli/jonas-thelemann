@@ -3,8 +3,6 @@ name: Docker
 on:
   pull_request:
   push:
-  release:
-    types: [published]
 
 jobs:
   build:
@@ -66,7 +64,3 @@ jobs:
     uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@0.23.3
     secrets:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
-  release-assets:
-    needs: release-semantic
-    name: Release (assets)
-    uses: dargmuesli/github-actions/.github/workflows/release-assets.yml@0.23.3
