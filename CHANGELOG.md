@@ -1,3 +1,13 @@
+## [5.4.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.4.1...5.4.2) (2023-01-19)
+
+
+### Bug Fixes
+
+* **docker:** correct workflow name ([63fc0e6](https://github.com/dargmuesli/jonas-thelemann/commit/63fc0e6c0c6aa0f1603d82cacb47348bff8ff7cd))
+* **docker:** remove github token secret ([690b254](https://github.com/dargmuesli/jonas-thelemann/commit/690b2548a21e3ce34b8eb3da10b95d22592d323f))
+* **docker:** set directory ([45bd8a8](https://github.com/dargmuesli/jonas-thelemann/commit/45bd8a84aea7b7897dcbf6eb491e430bc838895e))
+* **index:** set high fetch priority for photo ([91870b7](https://github.com/dargmuesli/jonas-thelemann/commit/91870b7735df09d054333ba012a63ec20995fc9d))
+
 ## [5.4.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.4.0...5.4.1) (2023-01-19)
 
 
