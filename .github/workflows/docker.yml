@@ -7,10 +7,12 @@ on:
 jobs:
   build:
     name: Build
-    uses: dargmuesli/github-actions/.github/workflows/docker3.yml@0.25.0
+    uses: dargmuesli/github-actions/.github/workflows/docker3.yml@0.25.2
     secrets:
       DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
       DOCKER_HUB_USER_NAME: ${{ secrets.DOCKER_HUB_USER_NAME }}
+    with:
+      ARTIFACT_PATH: .output/public
   deploy:
     if: github.event_name != 'pull_request'
     name: Deploy
@@ -19,36 +21,11 @@ jobs:
       contents: read
       deployments: write
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [19]
     steps:
-    - name: Checkout git repository
-      uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3.3.0
-
-    - name: Setup package manager
-      run: corepack enable
-
-    - name: Setup Node
-      uses: actions/setup-node@v3
+    - name: Download build artifact
+      uses: actions/download-artifact@v3
       with:
-        cache: ${{ inputs.PACKAGE_MANAGER }}
-        cache-dependency-path: ${{ inputs.CACHE_PATH }}
-        node-version: ${{ matrix.node }}
-
-    - name: Cache node_modules
-      uses: actions/cache@v3
-      with:
-        path: node_modules
-        key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/pnpm-lock.yaml')) }} # TODO: make independent from package manager (https://github.com/dargmuesli/github-actions/issues/7)
-
-    - name: Install dependencies
-      if: steps.cache.outputs.cache-hit != 'true'
-      run: pnpm install # TODO: make independent from package manager (https://github.com/dargmuesli/github-actions/issues/7)
-
-    - name: Build
-      run: pnpm run generate
+        name: build-artifact
 
     - name: Publish to Cloudflare Pages
       uses: cloudflare/pages-action@v1
@@ -56,7 +33,7 @@ jobs:
         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         accountId: f00135e2a8cc575a4bc4817c9521fe71
         projectName: jonas-thelemann
-        directory: dist
+        # directory: dist
         gitHubToken: ${{ secrets.GITHUB_TOKEN }} # set this to enable GitHub deployments
   release-semantic:
     needs: build
