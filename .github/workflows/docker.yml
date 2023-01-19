@@ -7,16 +7,22 @@ on:
 jobs:
   build:
     name: Build
-    uses: dargmuesli/github-actions/.github/workflows/docker3.yml@0.25.2
+    uses: dargmuesli/github-actions/.github/workflows/docker3.yml@0.25.3
     secrets:
       DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
       DOCKER_HUB_USER_NAME: ${{ secrets.DOCKER_HUB_USER_NAME }}
     with:
       ARTIFACT_PATH: .output/public
+  release-semantic:
+    needs: build
+    name: Release (semantic)
+    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@0.24.2
+    secrets:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
   deploy:
+    needs: build
     if: github.event_name != 'pull_request'
     name: Deploy
-    needs: build
     permissions:
       contents: read
       deployments: write
@@ -26,7 +32,6 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: build-artifact
-
     - name: Publish to Cloudflare Pages
       uses: cloudflare/pages-action@v1
       with:
@@ -35,9 +40,3 @@ jobs:
         projectName: jonas-thelemann
         # directory: dist
         gitHubToken: ${{ secrets.GITHUB_TOKEN }} # set this to enable GitHub deployments
-  release-semantic:
-    needs: build
-    name: Release (semantic)
-    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@0.24.2
-    secrets:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
