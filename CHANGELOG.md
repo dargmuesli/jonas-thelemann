@@ -1,3 +1,10 @@
+## [5.4.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.4.0...5.4.1) (2023-01-19)
+
+
+### Bug Fixes
+
+* **index:** prevent list link overlap ([efa553c](https://github.com/dargmuesli/jonas-thelemann/commit/efa553cc45865fea2c6bb65b63138b4d72846870))
+
 # [5.4.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.3.4...5.4.0) (2023-01-16)
 
 
