@@ -38,5 +38,5 @@ jobs:
         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         accountId: f00135e2a8cc575a4bc4817c9521fe71
         projectName: jonas-thelemann
-        # directory: dist
+        directory: .
         gitHubToken: ${{ secrets.GITHUB_TOKEN }} # set this to enable GitHub deployments
