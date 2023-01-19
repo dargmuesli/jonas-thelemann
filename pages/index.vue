@@ -4,12 +4,14 @@
       alt="Jonas in Tutzing."
       class="xl:fixed"
       :class="imageClasses"
+      fetchpriority="high"
       src="/assets/static/images/tutzing.jpg"
     />
     <img
       alt="Jonas in Tutzing."
       class="hidden xl:block"
       :class="imageClasses"
+      fetchpriority="high"
       src="/assets/static/images/tutzing.jpg"
     />
     <div class="p-4 sm:p-8">
