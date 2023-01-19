@@ -153,7 +153,7 @@
           </section>
           <section>
             <h2 class="text-2xl">{{ t('organizations') }}</h2>
-            <ul class="mt-2 list-inside list-disc">
+            <ul class="mt-2 flex flex-col gap-1 list-inside list-disc">
               <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
               <li>
                 <a href="https://gi.de/">{{ t('gi') }}</a>
@@ -178,7 +178,7 @@
           </section>
           <section>
             <h2 class="text-2xl">{{ t('languages') }}</h2>
-            <ul class="mt-2 list-inside list-disc">
+            <ul class="mt-2 flex flex-col gap-1 list-inside list-disc">
               <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
               <li>
                 <span>{{ t('german') }}</span>
@@ -197,7 +197,7 @@
           </section>
           <section>
             <h2 class="text-2xl">{{ t('honorsAwards') }}</h2>
-            <ul class="mt-2 list-inside list-disc">
+            <ul class="mt-2 flex flex-col gap-1 list-inside list-disc">
               <li>
                 <i18n-t keypath="categoryItem">
                   <template #title>
