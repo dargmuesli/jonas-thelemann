@@ -39,5 +39,5 @@ jobs:
     needs: build
     name: Release (semantic)
     uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@0.24.2
-    # secrets:
-    #   GH_TOKEN: ${{ secrets.GH_TOKEN }} # would be needed if created release should trigger workflows on itself
+    secrets:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
