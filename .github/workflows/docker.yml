@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     name: Build
-    uses: dargmuesli/github-actions/.github/workflows/docker3.yml@0.27.1
+    uses: dargmuesli/github-actions/.github/workflows/docker3.yml@0.28.0
     secrets:
       DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
       DOCKER_HUB_USER_NAME: ${{ secrets.DOCKER_HUB_USER_NAME }}
@@ -16,15 +16,16 @@ jobs:
   release-semantic:
     needs: build
     # name: Release (semantic)
-    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@0.27.1
+    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@0.28.0
     secrets:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
   deploy:
     needs: build
     name: Deploy
-    uses: dargmuesli/github-actions/.github/workflows/deploy-cloudflare-pages.yml@0.27.1
+    uses: dargmuesli/github-actions/.github/workflows/deploy-cloudflare-pages.yml@0.28.0
     secrets:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
     with:
       ACCOUNT_ID: f00135e2a8cc575a4bc4817c9521fe71
+      BRANCH: ${{ github.ref_name }}
       PROJECT_NAME: jonas-thelemann
