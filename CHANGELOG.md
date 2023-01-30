@@ -1,3 +1,10 @@
+# [5.5.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.4.4...5.5.0) (2023-01-30)
+
+
+### Features
+
+* **deps:** update dependency @dargmuesli/nuxt-cookie-control to v5-beta ([6976401](https://github.com/dargmuesli/jonas-thelemann/commit/6976401d6d19b38c18b3fde7664ae9a451873fbb))
+
 ## [5.4.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.4.3...5.4.4) (2023-01-28)
 
 
