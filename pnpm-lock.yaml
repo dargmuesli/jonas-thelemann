@@ -15,7 +15,7 @@ specifiers:
   autoprefixer: 10.4.13
   consola: 2.15.3
   cross-env: 7.0.3
-  cypress: 12.5.0
+  cypress: 12.5.1
   cypress-visual-regression: 2.1.0
   defu: 6.1.2
   eslint: 8.33.0
@@ -59,8 +59,8 @@ devDependencies:
   autoprefixer: 10.4.13_postcss@8.4.21
   consola: 2.15.3
   cross-env: 7.0.3
-  cypress: 12.5.0
-  cypress-visual-regression: 2.1.0_cypress@12.5.0
+  cypress: 12.5.1
+  cypress-visual-regression: 2.1.0_cypress@12.5.1
   defu: 6.1.2
   eslint: 8.33.0
   eslint-config-prettier: 8.6.0_eslint@8.33.0
@@ -1677,7 +1677,7 @@ packages:
       '@intlify/shared': 9.3.0-beta.11
       '@intlify/unplugin-vue-i18n': 0.8.1_vue-i18n@9.3.0-beta.16
       '@nuxt/kit': 3.1.1
-      '@vue/compiler-sfc': 3.2.45
+      '@vue/compiler-sfc': 3.2.47
       cookie-es: 0.5.0
       debug: 4.3.4
       estree-walker: 3.0.3
@@ -3513,19 +3513,19 @@ packages:
     resolution: {integrity: sha512-d4ZVpCW31eWwCMe1YT3ur7mUDnTXbgwyzaL320DrcRT45rfjYxkt5QWLrmOJ+/UEAI2+fQgKe/fCjR8l4TpRgw==}
     dev: true
 
-  /cypress-visual-regression/2.1.0_cypress@12.5.0:
+  /cypress-visual-regression/2.1.0_cypress@12.5.1:
     resolution: {integrity: sha512-fRBU529SMwlhl6TgJQuX8FmLMHKJ1yAcmVEpwCedxR+kxy9vudCMArL/uD2TILikOl8IWKMgHmhdX6Wgzjn+tQ==}
     peerDependencies:
       cypress: '>=9.7.0'
     dependencies:
-      cypress: 12.5.0
+      cypress: 12.5.1
       pixelmatch: 5.3.0
       pngjs: 6.0.0
       sanitize-filename: 1.6.3
     dev: true
 
-  /cypress/12.5.0:
-    resolution: {integrity: sha512-CRo1DIr0LoCE3SNb/kJ0TZM9dIdiy7fNlRp/YoPfAv+XOKZV27LQ7zZUi4lMmHIEo3K0dAN5+tJ/8eZc/Jmbyg==}
+  /cypress/12.5.1:
+    resolution: {integrity: sha512-ZmCmJ3lsyeOpBfh410m5+AO2CO1AxAzFBt7k6/uVbNcrNZje1vdiwYTpj2ksPKg9mjr9lR6V8tmlDNMvr4H/YQ==}
     engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
     hasBin: true
     requiresBuild: true
