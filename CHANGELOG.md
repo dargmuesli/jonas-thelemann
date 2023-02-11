@@ -1,3 +1,10 @@
+## [5.5.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.5.1...5.5.2) (2023-02-11)
+
+
+### Reverts
+
+* Revert "fix(head): remove query string temporarily" ([60ce5f5](https://github.com/dargmuesli/jonas-thelemann/commit/60ce5f5c829f406621d3b695005b11b300c204e8))
+
 ## [5.5.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.5.0...5.5.1) (2023-02-11)
 
 
