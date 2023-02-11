@@ -17,8 +17,7 @@
     <div class="p-4 sm:p-8">
       <main class="xl:min-h-screen min-w-0 space-y-6 pb-32">
         <div class="flex items-center justify-between">
-          <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-          <h1 class="text-left">Jonas Thelemann</h1>
+          <h1 class="text-left">{{ t('jonasThelemann') }}</h1>
           <p class="text-right text-2xl font-normal text-gray-500">
             {{ t('metaInfo', { age }) }}
           </p>
@@ -26,12 +25,16 @@
         <div>
           <i18n-t keypath="descriptionShort">
             <template #ninjaneers>
-              <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-              <a href="https://www.ninjaneers.de/">Ninjaneer</a>
+              <a href="https://www.ninjaneers.de/">{{ t('ninjaneer') }}</a>
             </template>
             <template #university>
               <a href="https://www.uni-kassel.de/">
                 <span>{{ t('universityKassel') }}</span>
+              </a>
+            </template>
+            <template #maevsi>
+              <a href="https://maev.si/">
+                <span>{{ t('maevsi') }}</span>
               </a>
             </template>
           </i18n-t>
@@ -43,54 +46,52 @@
         </div>
         <div class="pb-2">
           <ul class="-mx-1.5 flex flex-wrap">
-            <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
             <li class="m-1.5">
-              <SocialLink to="https://giphy.com/channel/dargmuesli"
-                >Giphy</SocialLink
-              >
+              <SocialLink to="https://giphy.com/channel/dargmuesli">
+                {{ t('giphy') }}
+              </SocialLink>
             </li>
             <li class="m-1.5">
-              <SocialLink to="https://github.com/dargmuesli">GitHub</SocialLink>
+              <SocialLink to="https://github.com/dargmuesli">
+                {{ t('gitHub') }}
+              </SocialLink>
             </li>
             <li class="m-1.5">
-              <SocialLink to="https://www.instagram.com/dargmuesli/"
-                >Instagram</SocialLink
-              >
+              <SocialLink to="https://www.instagram.com/dargmuesli/">
+                {{ t('instagram') }}
+              </SocialLink>
             </li>
             <li class="m-1.5">
               <SocialLink
                 to="https://www.linkedin.com/in/jonas-thelemann-148a74205/"
               >
-                LinkedIn
+                {{ t('linkedIn') }}
               </SocialLink>
             </li>
             <li class="m-1.5">
-              <SocialLink to="https://www.mixcloud.com/creal/"
-                >Mixcloud</SocialLink
-              >
+              <SocialLink to="https://www.mixcloud.com/creal/">
+                {{ t('mixcloud') }}
+              </SocialLink>
             </li>
             <li class="m-1.5">
-              <SocialLink
-                to="https://open.spotify.com/user/1153065250?si=cf16bda05fd2491b"
-              >
-                Spotify
+              <SocialLink to="https://open.spotify.com/user/1153065250">
+                {{ t('spotify') }}
               </SocialLink>
             </li>
             <li class="m-1.5">
               <SocialLink
                 to="https://stackoverflow.com/users/4682621/dargmuesli"
               >
-                Stack Overflow
+                {{ t('stackOverflow') }}
               </SocialLink>
             </li>
             <li class="m-1.5">
               <SocialLink
                 to="https://www.youtube.com/channel/UCmIrzQsJeEM5eW6KOAk9nSg"
               >
-                YouTube
+                {{ t('youTube') }}
               </SocialLink>
             </li>
-            <!-- eslint-enable @intlify/vue-i18n/no-raw-text -->
           </ul>
         </div>
         <div>
@@ -126,14 +127,41 @@
           <section>
             <h2 class="text-2xl">{{ t('experience') }}</h2>
             <div class="mt-2">
-              <p>{{ t('softwareEngineer') }}</p>
+              <p>{{ t('foundingScholar') }}</p>
               <p>
-                <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
-                <a href="https://www.ninjaneers.de/">Ninjaneers GmbH</a>
-                <span class="text-gray-500">
-                  · {{ t('monthShortJul') }} 2020 – {{ t('present') }}
-                </span>
-                <!-- eslint-enable @intlify/vue-i18n/no-raw-text -->
+                <i18n-t keypath="titleSubtitle">
+                  <template #title>
+                    <a href="https://hessen-ideen.de/">
+                      {{ t('hessenIdeen') }}
+                    </a>
+                  </template>
+                  <template #subtitle>
+                    <span class="text-gray-500">
+                      {{ t('foundingScholarTimespan') }}
+                    </span>
+                  </template>
+                </i18n-t>
+              </p>
+            </div>
+            <div class="mt-2">
+              <p>{{ t('experienceNinjaneer') }}</p>
+              <p>
+                <i18n-t keypath="titleSubtitle">
+                  <template #title>
+                    <a href="https://www.ninjaneers.de/">
+                      {{ t('ninjaneers') }}
+                    </a>
+                  </template>
+                  <template #subtitle>
+                    <span class="text-gray-500">
+                      {{
+                        t('experienceNinjaneerTimespan', {
+                          present: t('present'),
+                        })
+                      }}
+                    </span>
+                  </template>
+                </i18n-t>
               </p>
             </div>
           </section>
@@ -141,13 +169,13 @@
             <h2 class="text-2xl">{{ t('education') }}</h2>
             <div class="mt-2">
               <p>{{ t('educationGoal') }}</p>
-              <i18n-t keypath="educationContent">
-                <template #place>
+              <i18n-t keypath="titleSubtitle">
+                <template #title>
                   <a href="https://www.uni-kassel.de/">
                     {{ t('universityKassel') }}
                   </a>
                 </template>
-                <template #time>
+                <template #subtitle>
                   <span class="text-gray-500">{{ t('educationTime') }}</span>
                 </template>
               </i18n-t>
@@ -156,45 +184,71 @@
           <section>
             <h2 class="text-2xl">{{ t('organizations') }}</h2>
             <ul class="mt-2 flex flex-col gap-1 list-inside list-disc">
-              <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
               <li>
-                <a href="https://gi.de/">{{ t('gi') }}</a>
-                <span class="text-gray-500">
-                  · {{ t('monthShortJan') }} 2019 – {{ t('present') }}
-                </span>
+                <i18n-t keypath="titleSubtitle">
+                  <template #title>
+                    <a href="https://gi.de/">{{ t('gi') }}</a>
+                  </template>
+                  <template #subtitle>
+                    <span class="text-gray-500">
+                      {{ t('giTimespan', { present: t('present') }) }}
+                    </span>
+                  </template>
+                </i18n-t>
               </li>
               <li>
-                <a href="https://www.ccc.de/">Chaos Computer Club</a>
-                <span class="text-gray-500">
-                  · {{ t('monthShortMay') }} 2018 – {{ t('present') }}
-                </span>
+                <i18n-t keypath="titleSubtitle">
+                  <template #title>
+                    <a href="https://www.ccc.de/">{{ t('ccc') }}</a>
+                  </template>
+                  <template #subtitle>
+                    <span class="text-gray-500">
+                      {{ t('cccTimespan', { present: t('present') }) }}
+                    </span>
+                  </template>
+                </i18n-t>
               </li>
               <li>
-                <a href="https://flipdot.org/">flipdot Hackerspace Kassel</a>
-                <span class="text-gray-500">
-                  · {{ t('monthShortDec') }} 2016 – {{ t('present') }}
-                </span>
+                <i18n-t keypath="titleSubtitle">
+                  <template #title>
+                    <a href="https://flipdot.org/">{{ t('flipdot') }}</a>
+                  </template>
+                  <template #subtitle>
+                    <span class="text-gray-500">
+                      {{ t('flipdotTimespan', { present: t('present') }) }}
+                    </span>
+                  </template>
+                </i18n-t>
               </li>
-              <!-- eslint-enable @intlify/vue-i18n/no-raw-text -->
             </ul>
           </section>
           <section>
             <h2 class="text-2xl">{{ t('languages') }}</h2>
             <ul class="mt-2 flex flex-col gap-1 list-inside list-disc">
-              <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
               <li>
-                <span>{{ t('german') }}</span>
-                <span class="text-gray-500">
-                  · {{ t('proficiencyNative') }}
-                </span>
+                <i18n-t keypath="titleSubtitle">
+                  <template #title>
+                    <span>{{ t('german') }}</span>
+                  </template>
+                  <template #subtitle>
+                    <span class="text-gray-500">
+                      {{ t('proficiencyNative') }}
+                    </span>
+                  </template>
+                </i18n-t>
               </li>
               <li>
-                <span>{{ t('english') }}</span>
-                <span class="text-gray-500">
-                  · {{ t('proficiencyProfessional') }}
-                </span>
+                <i18n-t keypath="titleSubtitle">
+                  <template #title>
+                    <span>{{ t('english') }}</span>
+                  </template>
+                  <template #subtitle>
+                    <span class="text-gray-500">
+                      {{ t('proficiencyProfessional') }}
+                    </span>
+                  </template>
+                </i18n-t>
               </li>
-              <!-- eslint-enable @intlify/vue-i18n/no-raw-text -->
             </ul>
           </section>
           <section>
@@ -393,31 +447,44 @@ de:
   aboutCreating: Ist verliebt darin, Dinge zu erschaffen.
   aboutMarkDj: DJ und Event-Organisator
   aboutMarkSoftware: Leidenschaftlicher Software-Entwickler
-  aboutSidefact: Freundet sich gerade mit der Mitte von Schwarz und Weiß an, hodlt nebenbei.
+  aboutSidefact: Freundet sich mit der Mitte von Schwarz und Weiß an, hodlt nebenbei.
   categoryItem: '{title} · {description}'
-  # categoryItemDescription: '{time}'
   categoryItemDescriptionWithPlace: '{place}, {time}'
+  ccc: Chaos Computer Club
+  cccTimespan: Mai 2018 – {present}
   copyright: © {year} Jonas Thelemann. Alle Rechte vorbehalten.
-  descriptionShort: '{ninjaneers}, studiert an der {university}.'
+  descriptionShort: '{ninjaneers}, studiert an der {university}, gründet {maevsi}.'
   education: Bildung
-  educationContent: '{place} · {time}'
   educationGoal: Master der Software-Entwicklung
   educationTime: 2021 – 2023
   english: Englisch
   experience: Erfahrung
+  experienceNinjaneer: Software-Entwickler
+  experienceNinjaneerTimespan: Jul 2020 – {present}
+  flipdot: flipdot Hackerspace Kassel
+  flipdotTimespan: Dec 2016 – {present}
+  foundingScholar: Gründungs-Stipendiant
+  foundingScholarTimespan: Jan – Jun 2023
   german: Deutsch
   gi: Gesellschaft für Informatik
+  giphy: Giphy
+  gitHub: GitHub
+  giTimespan: Jan 2019 – today
+  hessenIdeen: Hessen Ideen
   honorsAwards: Ehrungen und Auszeichnungen
   honorsAwardsIdeasCompetition: Ideenwettbewerb Top 10 Projekt
   honorsAwardsIdeasCompetitionTime: Okt 2020
+  instagram: Instagram
+  jonasThelemann: Jonas Thelemann
   kasselAddress: Kassel, Hessen, Deutschland
   languages: Sprachen
   legalNotice: Impressum
+  linkedIn: LinkedIn
+  maevsi: maevsi
   metaInfo: '{age}, er/ihn'
-  monthShortDec: Dez
-  monthShortJan: Jan
-  monthShortJul: Jul
-  monthShortMay: Mai
+  mixcloud: Mixcloud
+  ninjaneer: Ninjaneer
+  ninjaneers: Ninjaneers GmbH
   nominationScholarship: Nominierung für ein Stipendium
   nominationScholarshipTime: Jul 2019
   organizations: Organisationen
@@ -427,41 +494,57 @@ de:
   proficiencyProfessional: professionelles Arbeitsniveau
   projects: Projekte
   projectsMore: und {repoCount} weitere…
-  softwareEngineer: Software-Entwickler
+  spotify: Spotify
+  stackOverflow: Stack Overflow
   studyFoundation: Studienstiftung des deutschen Volkes
+  titleSubtitle: '{title} · {subtitle}'
   unikat: UNIKAT
   universityKassel: Universität Kassel
+  youTube: YouTube
 en:
   about: '{aboutMarkSoftwareTemplate} somewhere between frontend, backend and devops.{br}{aboutMarkDjTemplate}, occasionally rapping double times.{br}{aboutAttraction}{br}{aboutSidefact}{br}{aboutCreating}'
   aboutAttraction: Attracted to things he doesn't understand. Bored when videos play at speeds of less than 2x.
   aboutCreating: Loves to create.
   aboutMarkDj: DJ and event organizer
   aboutMarkSoftware: Passionate software developer
-  aboutSidefact: Currently getting used to the middle of black and white, hodling in the meantime.
+  aboutSidefact: Getting used to the middle of black and white, hodling in the meantime.
   categoryItem: '{title} · {description}'
-  # categoryItemDescription: '{time}'
   categoryItemDescriptionWithPlace: '{place}, {time}'
+  ccc: Chaos Computer Club
+  cccTimespan: May 2018 – {present}
   copyright: © {year} Jonas Thelemann. All rights reserved.
-  descriptionShort: '{ninjaneers}, studying at {university}.'
+  descriptionShort: '{ninjaneers}, studying at {university}, founding {maevsi}.'
   education: Education
-  educationContent: '{place} · {time}'
   educationGoal: Master's degree Software Engineering
   educationTime: 2021 – 2023
   english: English
   experience: Experience
+  experienceNinjaneer: Software Engineer
+  experienceNinjaneerTimespan: Jul 2020 – today
+  flipdot: flipdot Hackerspace Kassel
+  flipdotTimespan: Dez 2016 – {present}
+  foundingScholar: Founding Scholar
+  foundingScholarTimespan: Jan – Jun 2023
   german: German
   gi: German Informatics Society
+  giphy: Giphy
+  gitHub: GitHub
+  giTimespan: Jan 2019 – today
+  hessenIdeen: Hesse Ideas
   honorsAwards: Honors & Awards
   honorsAwardsIdeasCompetition: Ideas Competition Top 10 Project
   honorsAwardsIdeasCompetitionTime: Oct 2020
+  instagram: Instagram
+  jonasThelemann: Jonas Thelemann
   kasselAddress: Kassel, Hesse, Germany
   languages: Languages
   legalNotice: Legal notice
+  linkedIn: LinkedIn
+  maevsi: maevsi
   metaInfo: '{age}, he/him'
-  monthShortDec: Dec
-  monthShortJan: Jan
-  monthShortJul: Jul
-  monthShortMay: May
+  mixcloud: Mixcloud
+  ninjaneer: Ninjaneer
+  ninjaneers: Ninjaneers GmbH
   nominationScholarship: Nomination for a scholarship
   nominationScholarshipTime: Jul 2019
   organizations: Organizations
@@ -471,8 +554,11 @@ en:
   proficiencyProfessional: professional working proficiency
   projects: Projects
   projectsMore: and {repoCount} others…
-  softwareEngineer: Software Engineer
+  spotify: Spotify
+  stackOverflow: Stack Overflow
   studyFoundation: Study Foundation of the German People
+  titleSubtitle: '{title} · {subtitle}'
   unikat: UNIKAT
   universityKassel: University of Kassel
+  youTube: YouTube
 </i18n>
