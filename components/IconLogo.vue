@@ -7,6 +7,9 @@
     viewBox="0 0 1000.000000 1000.000000"
     preserveAspectRatio="xMidYMid meet"
   >
+    <title>
+      {{ t('logo') }}
+    </title>
     <g
       transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
       fill="#000000"
@@ -42,8 +45,19 @@
   </svg>
 </template>
 
+<script setup lang="ts">
+const { t } = useI18n()
+</script>
+
 <script lang="ts">
 export default {
   name: 'CustomLogo',
 }
 </script>
+
+<i18n lang="yaml">
+de:
+  logo: Logo
+en:
+  logo: Logo
+</i18n>
