@@ -88,7 +88,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        link: colors.blue['700'],
+        link: {
+          bright: colors.blue['400'],
+          dark: colors.blue['600'],
+        },
       },
       screens: {
         12: { raw: '(min-aspect-ratio: 2/1)' },

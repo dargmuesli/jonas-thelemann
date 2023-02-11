@@ -126,44 +126,58 @@
         >
           <section>
             <h2 class="text-2xl">{{ t('experience') }}</h2>
-            <div class="mt-2">
-              <p>{{ t('foundingScholar') }}</p>
-              <p>
+            <ul class="mt-2 flex flex-col gap-1 list-inside list-disc">
+              <li>
                 <i18n-t keypath="titleSubtitle">
                   <template #title>
-                    <a href="https://hessen-ideen.de/">
-                      {{ t('hessenIdeen') }}
-                    </a>
+                    {{ t('foundingScholar') }}
                   </template>
                   <template #subtitle>
-                    <span class="text-gray-500">
-                      {{ t('foundingScholarTimespan') }}
-                    </span>
+                    <i18n-t
+                      keypath="placeTime"
+                      class="text-gray-500"
+                      tag="span"
+                    >
+                      <template #place>
+                        <a href="https://hessen-ideen.de/">
+                          {{ t('hessenIdeen') }}
+                        </a>
+                      </template>
+                      <template #time>
+                        {{ t('foundingScholarTimespan') }}
+                      </template>
+                    </i18n-t>
                   </template>
                 </i18n-t>
-              </p>
-            </div>
-            <div class="mt-2">
-              <p>{{ t('experienceNinjaneer') }}</p>
-              <p>
+              </li>
+              <li>
                 <i18n-t keypath="titleSubtitle">
                   <template #title>
-                    <a href="https://www.ninjaneers.de/">
-                      {{ t('ninjaneers') }}
-                    </a>
+                    {{ t('experienceNinjaneer') }}
                   </template>
                   <template #subtitle>
-                    <span class="text-gray-500">
-                      {{
-                        t('experienceNinjaneerTimespan', {
-                          present: t('present'),
-                        })
-                      }}
-                    </span>
+                    <i18n-t
+                      keypath="placeTime"
+                      class="text-gray-500"
+                      tag="span"
+                    >
+                      <template #place>
+                        <a href="https://www.ninjaneers.de/">
+                          {{ t('ninjaneers') }}
+                        </a>
+                      </template>
+                      <template #time>
+                        {{
+                          t('experienceNinjaneerTimespan', {
+                            present: t('present'),
+                          })
+                        }}
+                      </template>
+                    </i18n-t>
                   </template>
                 </i18n-t>
-              </p>
-            </div>
+              </li>
+            </ul>
           </section>
           <section>
             <h2 class="text-2xl">{{ t('education') }}</h2>
@@ -266,7 +280,7 @@
                   <template #description>
                     <i18n-t
                       class="text-gray-500"
-                      keypath="categoryItemDescriptionWithPlace"
+                      keypath="placeTime"
                       tag="label"
                     >
                       <template #place>
@@ -291,7 +305,7 @@
                   <template #description>
                     <i18n-t
                       class="text-gray-500"
-                      keypath="categoryItemDescriptionWithPlace"
+                      keypath="placeTime"
                       tag="label"
                     >
                       <template #place>
@@ -375,13 +389,19 @@
           />
           <Hr />
         </div>
-        <p class="p-2 text-center text-gray-500">
-          {{ t('copyright', { year }) }}
-          <br />
-          <AppLink class="text-blue-400" :to="localePath('/legal-notice')">
-            {{ t('legalNotice') }}
-          </AppLink>
-        </p>
+        <div class="flex flex-col items-center opacity-60">
+          <span>
+            {{ t('copyright', { year }) }}
+          </span>
+          <div class="flex gap-2">
+            <AppLink is-colored :to="localePath('/legal-notice')">
+              {{ t('legalNotice') }}
+            </AppLink>
+            <AppLink is-colored :to="localePath('/legal-notice')">
+              {{ t('privacyPolicy') }}
+            </AppLink>
+          </div>
+        </div>
       </footer>
     </div>
   </div>
@@ -449,7 +469,6 @@ de:
   aboutMarkSoftware: Leidenschaftlicher Software-Entwickler
   aboutSidefact: Freundet sich mit der Mitte von Schwarz und Weiß an, hodlt nebenbei.
   categoryItem: '{title} · {description}'
-  categoryItemDescriptionWithPlace: '{place}, {time}'
   ccc: Chaos Computer Club
   cccTimespan: Mai 2018 – {present}
   copyright: © {year} Jonas Thelemann. Alle Rechte vorbehalten.
@@ -488,8 +507,10 @@ de:
   nominationScholarship: Nominierung für ein Stipendium
   nominationScholarshipTime: Jul 2019
   organizations: Organisationen
+  placeTime: '{place}, {time}'
   portfolioFull: Zum ganzen Portfolio
   present: heute
+  privacyPolicy: Datenschutz
   proficiencyNative: muttersprachliches Niveau
   proficiencyProfessional: professionelles Arbeitsniveau
   projects: Projekte
@@ -509,7 +530,6 @@ en:
   aboutMarkSoftware: Passionate software developer
   aboutSidefact: Getting used to the middle of black and white, hodling in the meantime.
   categoryItem: '{title} · {description}'
-  categoryItemDescriptionWithPlace: '{place}, {time}'
   ccc: Chaos Computer Club
   cccTimespan: May 2018 – {present}
   copyright: © {year} Jonas Thelemann. All rights reserved.
@@ -548,8 +568,10 @@ en:
   nominationScholarship: Nomination for a scholarship
   nominationScholarshipTime: Jul 2019
   organizations: Organizations
+  placeTime: '{place}, {time}'
   portfolioFull: View full portfolio
   present: today
+  privacyPolicy: Privacy
   proficiencyNative: native proficiency
   proficiencyProfessional: professional working proficiency
   projects: Projects
