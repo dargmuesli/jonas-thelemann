@@ -155,7 +155,7 @@ COPY --from=test-integration /srv/app/package.json /tmp/test/package.json
 # Provide a web server.
 
 # Should be the specific version of `nginx:alpine`.
-FROM nginx:1.23.3-alpine@sha256:8ca95a5304466bf143cb35d2eae8825ac3cb061f5d1df34b3d9db5c925687560 AS production
+FROM nginx:1.23.3-alpine@sha256:6f94b7f4208b5d5391246c83a96246ca204f15eaf7e636cefda4e6348c8f6101 AS production
 
 WORKDIR /usr/share/nginx/html
 
