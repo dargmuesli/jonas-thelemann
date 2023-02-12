@@ -2,8 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  a:focus {
+    @apply outline-none ring rounded;
+  }
+
+  button:focus {
+    @apply outline-none ring rounded;
+  }
+
+  thead {
+    @apply sticky top-0 z-10 vio-bg-darken;
+  }
+
+  tbody {
+    @apply divide-y vio-divide-darken;
+  }
+}
+
 @layer utilities {
-  .jonas-thelemann-prose {
+  .vio-prose {
     @apply m-auto prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl; /* 2xl:prose-2xl */
+  }
+
+  .vio-prose-scheme {
+    @apply vio-prose dark:prose-invert;
+  }
+
+  .vio-prose-fullwidth {
+    @apply vio-prose max-w-full sm:max-w-full md:max-w-full xl:max-w-full 2xl:max-w-full;
+  }
+
+  .vio-divide-darken {
+    @apply divide-background-brighten dark:divide-background-darken;
+  }
+
+  .vio-bg-darken {
+    @apply bg-background-brighten dark:bg-background-darken;
+  }
+
+  .vio-border-darken {
+    @apply border-background-brighten dark:border-background-darken;
   }
 }

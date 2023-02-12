@@ -24,8 +24,10 @@ describe('index page', () => {
   })
 
   context('internationalization', () => {
-    const textEnglish = 'Ninjaneer, studying at University of Kassel.'
-    const textGerman = 'Ninjaneer, studiert an der Universität Kassel.'
+    const textEnglish =
+      'Ninjaneer, studying at University of Kassel, founding maevsi.'
+    const textGerman =
+      'Ninjaneer, studiert an der Universität Kassel, gründet maevsi.'
 
     it('displays English translations', () => {
       cy.visit('/')
