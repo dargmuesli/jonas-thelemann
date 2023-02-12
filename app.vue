@@ -2,11 +2,13 @@
   <div :data-is-loading="isLoading">
     <NuxtLayout>
       <NuxtPage />
+      <CookieControl :locale="locale" />
     </NuxtLayout>
   </div>
 </template>
 
 <script setup lang="ts">
+const { locale } = useI18n()
 const cookieControl = useCookieControl()
 
 const loadingId = Math.random()
