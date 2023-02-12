@@ -1,3 +1,17 @@
+# [5.6.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.5.2...5.6.0) (2023-02-12)
+
+
+### Bug Fixes
+
+* **icon-logo:** add title ([b1a76ba](https://github.com/dargmuesli/jonas-thelemann/commit/b1a76baf788fc9ceb9a06386172344ba119090e3))
+
+
+### Features
+
+* add privacy policy ([b68dc01](https://github.com/dargmuesli/jonas-thelemann/commit/b68dc01aa366dfb056e91b127be1c9b6c80e5f78))
+* add scholarship ([63ec1f0](https://github.com/dargmuesli/jonas-thelemann/commit/63ec1f0b1ac777bd0a77b04cc899dc774ca1c209))
+* **experience:** use list ([c4e7440](https://github.com/dargmuesli/jonas-thelemann/commit/c4e74405e5c7b9b2bf20dec85223776e58737afb))
+
 ## [5.5.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.5.1...5.5.2) (2023-02-11)
 
 
