@@ -334,42 +334,46 @@
             <h2 class="text-2xl">{{ t('projects') }}</h2>
             <ul class="mt-2 flex flex-wrap items-center justify-around">
               <li class="m-4">
-                <a href="https://maev.si/">
+                <AppLink class="inline-block" to="https://maev.si/">
                   <img
                     alt="maevsi's logo"
                     class="h-12"
                     src="/assets/static/logos/maevsi.svg"
                   />
-                </a>
+                </AppLink>
               </li>
               <li class="m-4">
-                <a href="https://nearbuy-food.de/">
+                <AppLink class="inline-block" to="https://nearbuy-food.de/">
                   <img
                     alt="nearbuy's logo"
                     class="h-12"
                     src="/assets/static/logos/nearbuy.svg"
                   />
-                </a>
+                </AppLink>
               </li>
               <li class="m-4">
-                <a href="https://creal.jonas-thelemann.de/">
-                  <p class="h-12 text-center text-gray-500">
-                    <img
-                      alt="cReal's logo"
-                      class="h-12"
-                      src="/assets/static/logos/creal.svg"
-                    />
-                  </p>
-                </a>
+                <AppLink
+                  class="inline-block"
+                  to="https://creal.jonas-thelemann.de/"
+                >
+                  <img
+                    alt="cReal's logo"
+                    class="h-12"
+                    src="/assets/static/logos/creal.svg"
+                  />
+                </AppLink>
               </li>
               <li class="m-4">
-                <a href="https://trapparty.jonas-thelemann.de/">
+                <AppLink
+                  class="inline-block"
+                  to="https://trapparty.jonas-thelemann.de/"
+                >
                   <img
                     alt="TrapParty's logo"
                     class="h-12"
                     src="/assets/static/logos/trapparty.svg"
                   />
-                </a>
+                </AppLink>
               </li>
               <li class="m-4">
                 <SocialLink to="https://github.com/dargmuesli?tab=repositories">
@@ -393,11 +397,11 @@
           <span>
             {{ t('copyright', { year }) }}
           </span>
-          <div class="flex gap-2">
+          <div class="flex gap-4">
             <AppLink is-colored :to="localePath('/legal-notice')">
               {{ t('legalNotice') }}
             </AppLink>
-            <AppLink is-colored :to="localePath('/legal-notice')">
+            <AppLink is-colored :to="localePath('/privacy-policy')">
               {{ t('privacyPolicy') }}
             </AppLink>
           </div>
@@ -409,6 +413,10 @@
 
 <script setup lang="ts">
 import consola from 'consola'
+
+definePageMeta({
+  layout: false,
+})
 
 const { t } = useI18n()
 const config = useRuntimeConfig()

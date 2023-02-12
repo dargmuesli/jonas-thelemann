@@ -8,6 +8,8 @@ function heading(theme) {
   }
 }
 
+const gray = colors.gray // or slate, zinc, neutral, stone
+
 function prose(theme) {
   return {
     css: {
@@ -88,9 +90,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        background: {
+          bright: colors.white,
+          brighten: gray['200'],
+          dark: gray['800'],
+          darken: gray['700'],
+        },
         link: {
           bright: colors.blue['400'],
           dark: colors.blue['600'],
+        },
+        text: {
+          bright: gray['50'],
+          dark: gray['900'],
         },
       },
       screens: {

@@ -1,5 +1,5 @@
 <template>
-  <div class="jonas-thelemann-prose p-4 sm:p-8">
+  <div class="vio-prose-scheme">
     <h1>{{ title }}</h1>
     <h2>{{ t('tmg') }}</h2>
     <p>

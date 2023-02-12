@@ -1,6 +1,8 @@
 <template>
-  <div :data-is-loading="isLoading">
-    <slot />
+  <div class="p-4 md:px-8" :data-is-loading="isLoading">
+    <main>
+      <slot />
+    </main>
     <CookieControl :locale="locale" />
   </div>
 </template>
