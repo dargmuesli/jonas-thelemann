@@ -1,3 +1,10 @@
+# [5.7.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.6.0...5.7.0) (2023-02-13)
+
+
+### Features
+
+* **cypress:** add tests for legal pages ([d392110](https://github.com/dargmuesli/jonas-thelemann/commit/d392110981102c3c0f3966eeff64da7b55832e53))
+
 # [5.6.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.5.2...5.6.0) (2023-02-12)
 
 
