@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
+@layer base {
   a:focus {
-    @apply outline-none ring rounded;
+    @apply outline-none ring;
   }
 
   button:focus {
-    @apply outline-none ring rounded;
+    @apply outline-none ring;
   }
 
   thead {

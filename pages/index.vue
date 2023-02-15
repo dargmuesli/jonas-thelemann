@@ -128,16 +128,18 @@
             <h2 class="text-2xl">{{ t('experience') }}</h2>
             <ul class="mt-2 flex flex-col gap-1 list-inside list-disc">
               <li>
-                <i18n-t keypath="titleSubtitle">
+                <i18n-t
+                  keypath="titleSubtitle"
+                  class="text-gray-500"
+                  tag="span"
+                >
                   <template #title>
-                    {{ t('foundingScholar') }}
+                    <span class="text-text-dark">
+                      {{ t('foundingScholar') }}
+                    </span>
                   </template>
                   <template #subtitle>
-                    <i18n-t
-                      keypath="placeTime"
-                      class="text-gray-500"
-                      tag="span"
-                    >
+                    <i18n-t keypath="placeTime">
                       <template #place>
                         <a href="https://hessen-ideen.de/">
                           {{ t('hessenIdeen') }}
@@ -151,16 +153,18 @@
                 </i18n-t>
               </li>
               <li>
-                <i18n-t keypath="titleSubtitle">
+                <i18n-t
+                  keypath="titleSubtitle"
+                  class="text-gray-500"
+                  tag="span"
+                >
                   <template #title>
-                    {{ t('experienceNinjaneer') }}
+                    <span class="text-text-dark">
+                      {{ t('experienceNinjaneer') }}
+                    </span>
                   </template>
                   <template #subtitle>
-                    <i18n-t
-                      keypath="placeTime"
-                      class="text-gray-500"
-                      tag="span"
-                    >
+                    <i18n-t keypath="placeTime">
                       <template #place>
                         <a href="https://www.ninjaneers.de/">
                           {{ t('ninjaneers') }}
@@ -183,14 +187,14 @@
             <h2 class="text-2xl">{{ t('education') }}</h2>
             <div class="mt-2">
               <p>{{ t('educationGoal') }}</p>
-              <i18n-t keypath="titleSubtitle">
+              <i18n-t keypath="titleSubtitle" class="text-gray-500" tag="span">
                 <template #title>
-                  <a href="https://www.uni-kassel.de/">
+                  <a class="text-text-dark" href="https://www.uni-kassel.de/">
                     {{ t('universityKassel') }}
                   </a>
                 </template>
                 <template #subtitle>
-                  <span class="text-gray-500">{{ t('educationTime') }}</span>
+                  <span>{{ t('educationTime') }}</span>
                 </template>
               </i18n-t>
             </div>
@@ -199,36 +203,54 @@
             <h2 class="text-2xl">{{ t('organizations') }}</h2>
             <ul class="mt-2 flex flex-col gap-1 list-inside list-disc">
               <li>
-                <i18n-t keypath="titleSubtitle">
+                <i18n-t
+                  keypath="titleSubtitle"
+                  class="text-gray-500"
+                  tag="span"
+                >
                   <template #title>
-                    <a href="https://gi.de/">{{ t('gi') }}</a>
+                    <a class="text-text-dark" href="https://gi.de/">{{
+                      t('gi')
+                    }}</a>
                   </template>
                   <template #subtitle>
-                    <span class="text-gray-500">
+                    <span>
                       {{ t('giTimespan', { present: t('present') }) }}
                     </span>
                   </template>
                 </i18n-t>
               </li>
               <li>
-                <i18n-t keypath="titleSubtitle">
+                <i18n-t
+                  keypath="titleSubtitle"
+                  class="text-gray-500"
+                  tag="span"
+                >
                   <template #title>
-                    <a href="https://www.ccc.de/">{{ t('ccc') }}</a>
+                    <a class="text-text-dark" href="https://www.ccc.de/">{{
+                      t('ccc')
+                    }}</a>
                   </template>
                   <template #subtitle>
-                    <span class="text-gray-500">
+                    <span>
                       {{ t('cccTimespan', { present: t('present') }) }}
                     </span>
                   </template>
                 </i18n-t>
               </li>
               <li>
-                <i18n-t keypath="titleSubtitle">
+                <i18n-t
+                  keypath="titleSubtitle"
+                  class="text-gray-500"
+                  tag="span"
+                >
                   <template #title>
-                    <a href="https://flipdot.org/">{{ t('flipdot') }}</a>
+                    <a class="text-text-dark" href="https://flipdot.org/">{{
+                      t('flipdot')
+                    }}</a>
                   </template>
                   <template #subtitle>
-                    <span class="text-gray-500">
+                    <span>
                       {{ t('flipdotTimespan', { present: t('present') }) }}
                     </span>
                   </template>
@@ -240,24 +262,32 @@
             <h2 class="text-2xl">{{ t('languages') }}</h2>
             <ul class="mt-2 flex flex-col gap-1 list-inside list-disc">
               <li>
-                <i18n-t keypath="titleSubtitle">
+                <i18n-t
+                  keypath="titleSubtitle"
+                  class="text-gray-500"
+                  tag="span"
+                >
                   <template #title>
-                    <span>{{ t('german') }}</span>
+                    <span class="text-text-dark">{{ t('german') }}</span>
                   </template>
                   <template #subtitle>
-                    <span class="text-gray-500">
+                    <span>
                       {{ t('proficiencyNative') }}
                     </span>
                   </template>
                 </i18n-t>
               </li>
               <li>
-                <i18n-t keypath="titleSubtitle">
+                <i18n-t
+                  keypath="titleSubtitle"
+                  class="text-gray-500"
+                  tag="span"
+                >
                   <template #title>
-                    <span>{{ t('english') }}</span>
+                    <span class="text-text-dark">{{ t('english') }}</span>
                   </template>
                   <template #subtitle>
-                    <span class="text-gray-500">
+                    <span>
                       {{ t('proficiencyProfessional') }}
                     </span>
                   </template>
@@ -269,20 +299,21 @@
             <h2 class="text-2xl">{{ t('honorsAwards') }}</h2>
             <ul class="mt-2 flex flex-col gap-1 list-inside list-disc">
               <li>
-                <i18n-t keypath="categoryItem">
+                <i18n-t
+                  keypath="titleSubtitle"
+                  class="text-gray-500"
+                  tag="span"
+                >
                   <template #title>
                     <a
+                      class="text-text-dark"
                       href="https://www.uni-kassel.de/einrichtung/index.php?eID=dumpFile&t=f&f=1988&token=e881e12fc8112d90e46d21d4fbef05530929c5c0"
                     >
                       {{ t('honorsAwardsIdeasCompetition') }}
                     </a>
                   </template>
-                  <template #description>
-                    <i18n-t
-                      class="text-gray-500"
-                      keypath="placeTime"
-                      tag="label"
-                    >
+                  <template #subtitle>
+                    <i18n-t keypath="placeTime">
                       <template #place>
                         <a
                           href="https://www.uni-kassel.de/einrichtung/ukt/unikat-von-der-idee-zur-gruendung/unikat-ideenwettbewerb"
@@ -298,16 +329,18 @@
                 </i18n-t>
               </li>
               <li>
-                <i18n-t keypath="categoryItem">
+                <i18n-t
+                  keypath="titleSubtitle"
+                  class="text-gray-500"
+                  tag="span"
+                >
                   <template #title>
-                    {{ t('nominationScholarship') }}
+                    <span class="text-text-dark">
+                      {{ t('nominationScholarship') }}
+                    </span>
                   </template>
-                  <template #description>
-                    <i18n-t
-                      class="text-gray-500"
-                      keypath="placeTime"
-                      tag="label"
-                    >
+                  <template #subtitle>
+                    <i18n-t keypath="placeTime">
                       <template #place>
                         <a href="https://www.studienstiftung.de/">
                           {{ t('studyFoundation') }}
@@ -476,7 +509,6 @@ de:
   aboutMarkDj: DJ und Event-Organisator
   aboutMarkSoftware: Leidenschaftlicher Software-Entwickler
   aboutSidefact: Freundet sich mit der Mitte von Schwarz und Weiß an, hodlt nebenbei.
-  categoryItem: '{title} · {description}'
   ccc: Chaos Computer Club
   cccTimespan: Mai 2018 – {present}
   copyright: © {year} Jonas Thelemann. Alle Rechte vorbehalten.
@@ -537,7 +569,6 @@ en:
   aboutMarkDj: DJ and event organizer
   aboutMarkSoftware: Passionate software developer
   aboutSidefact: Getting used to the middle of black and white, hodling in the meantime.
-  categoryItem: '{title} · {description}'
   ccc: Chaos Computer Club
   cccTimespan: May 2018 – {present}
   copyright: © {year} Jonas Thelemann. All rights reserved.
