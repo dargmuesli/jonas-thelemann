@@ -1,3 +1,10 @@
+## [5.8.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.8.0...5.8.1) (2023-02-15)
+
+
+### Performance Improvements
+
+* **docker:** optimize cypress tests ([9a3bd72](https://github.com/dargmuesli/jonas-thelemann/commit/9a3bd72b936e334cc9527df5e944bf9ba8928a57))
+
 # [5.8.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.7.0...5.8.0) (2023-02-15)
 
 
