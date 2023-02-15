@@ -1,3 +1,10 @@
+# [5.9.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.8.1...5.9.0) (2023-02-15)
+
+
+### Features
+
+* **sitemap:** add exclusions ([4c68d00](https://github.com/dargmuesli/jonas-thelemann/commit/4c68d001a485863ffe8c085fd3fafec768419db6))
+
 ## [5.8.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.8.0...5.8.1) (2023-02-15)
 
 
