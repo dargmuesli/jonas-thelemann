@@ -75,7 +75,7 @@ RUN npm install -g pnpm && \
     pnpm run lint
 
 
-  ########################
+########################
 # Nuxt: test (integration)
 
 # Should be the specific version of `cypress/included`.
