@@ -1,3 +1,15 @@
+# [5.8.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.7.0...5.8.0) (2023-02-15)
+
+
+### Bug Fixes
+
+* **css:** correct separator color ([e26452d](https://github.com/dargmuesli/jonas-thelemann/commit/e26452d8b20c3d9c4818ffbb28af374c5ec7d534))
+
+
+### Features
+
+* **css:** no rounded on rings ([0177c1f](https://github.com/dargmuesli/jonas-thelemann/commit/0177c1f18243032d47385ddaafe2f072400715f8))
+
 # [5.7.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.6.0...5.7.0) (2023-02-13)
 
 
