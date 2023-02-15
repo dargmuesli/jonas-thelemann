@@ -87,24 +87,16 @@ ARG GID=1000
 
 WORKDIR /srv/app/
 
-# Update and install dependencies.
-RUN apt-get update \
-    && apt-get install --no-install-recommends -y \
-        # `curl ca-certificates libnss3-tools` are required by `mkcert`
-        curl ca-certificates libnss3-tools \
+RUN cp /usr/local/bin/cypress /root/.cache/Cypress \
     # pnpm
     && npm install -g pnpm \
     # user
     && groupadd -g $GID -o $UNAME \
     && useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME \
-    # mkcert
-    && curl -JLO "https://dl.filippo.io/mkcert/latest?for=linux/amd64" \
-    && chmod +x mkcert-v*-linux-amd64 \
-    && cp mkcert-v*-linux-amd64 /usr/local/bin/mkcert \
-    && mkcert -install \
     # clean
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && cypress verify
 
 USER $UNAME
 
@@ -112,30 +104,38 @@ VOLUME /srv/app
 
 
 ########################
-# Nuxt: test (integration)
+# Nuxt: test (integration, development)
 
 # Should be the specific version of `cypress/included`.
-FROM cypress/included:12.5.1@sha256:5cd0a6192ccf93739ce8c1f080ead0d6058eab991bc093a15adcf1c34e443972 AS test-integration
+FROM cypress/included:12.5.1@sha256:5cd0a6192ccf93739ce8c1f080ead0d6058eab991bc093a15adcf1c34e443972 AS test-integration-dev
 
-# Update and install dependencies.
-RUN apt-get update \
-    && apt-get install --no-install-recommends -y \
-        # `curl ca-certificates libnss3-tools` are required by `mkcert`
-        curl ca-certificates libnss3-tools \
+RUN cp /usr/local/bin/cypress /root/.cache/Cypress \
     # pnpm
-    && npm install -g pnpm \
-    # mkcert
-    && curl -JLO "https://dl.filippo.io/mkcert/latest?for=linux/amd64" \
-    && chmod +x mkcert-v*-linux-amd64 \
-    && cp mkcert-v*-linux-amd64 /usr/local/bin/mkcert
-
-COPY --from=prepare /root/.cache/Cypress /root/.cache/Cypress
-COPY --from=build /srv/app/ /srv/app/
+    && npm install -g pnpm
 
 WORKDIR /srv/app/
 
-RUN pnpm test:integration:prod \
-    && pnpm test:integration:dev
+COPY --from=prepare /srv/app/ ./
+
+RUN pnpm test:integration:dev
+
+
+########################
+# Nuxt: test (integration, production)
+
+# Should be the specific version of `cypress/included`.
+FROM cypress/included:12.5.1@sha256:5cd0a6192ccf93739ce8c1f080ead0d6058eab991bc093a15adcf1c34e443972 AS test-integration-prod
+
+RUN cp /usr/local/bin/cypress /root/.cache/Cypress \
+    # pnpm
+    && npm install -g pnpm
+
+WORKDIR /srv/app/
+
+COPY --from=build /srv/app/ /srv/app/
+COPY --from=test-integration-dev /srv/app/package.json /tmp/test/package.json
+
+RUN pnpm test:integration:prod
 
 
 #######################
@@ -148,7 +148,8 @@ WORKDIR /srv/app/
 
 COPY --from=build /srv/app/.output ./.output
 COPY --from=lint /srv/app/package.json /tmp/lint/package.json
-COPY --from=test-integration /srv/app/package.json /tmp/test/package.json
+COPY --from=test-integration-dev /srv/app/package.json /tmp/test/package.json
+COPY --from=test-integration-prod /srv/app/package.json /tmp/test/package.json
 
 
 #######################
