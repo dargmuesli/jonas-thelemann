@@ -6,6 +6,7 @@ const BASE_URL =
   'https://' +
   (process.env.NUXT_PUBLIC_STACK_DOMAIN ||
     `${process.env.HOST || 'localhost'}:3000`)
+const SITEMAP_EXCLUSIONS = ['/200.html', '/404.html', '/robots.txt']
 
 export default defineNuxtConfig({
   app: {
@@ -22,7 +23,10 @@ export default defineNuxtConfig({
     '@nuxtjs/html-validator',
     '@nuxtjs/i18n',
     '@nuxtjs/robots',
-    ['@funken-studio/sitemap-nuxt-3', { hostname: BASE_URL }], // Should be declared at the end of the array.
+    [
+      '@funken-studio/sitemap-nuxt-3',
+      { exclude: SITEMAP_EXCLUSIONS, hostname: BASE_URL },
+    ], // Should be declared at the end of the array.
   ],
   nitro: {
     compressPublicAssets: true,
