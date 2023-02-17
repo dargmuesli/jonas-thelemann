@@ -79,7 +79,7 @@ RUN npm install -g pnpm && \
 # Nuxt: test (integration)
 
 # Should be the specific version of `cypress/included`.
-FROM cypress/included:12.5.1@sha256:5cd0a6192ccf93739ce8c1f080ead0d6058eab991bc093a15adcf1c34e443972 AS test-integration_base
+FROM cypress/included:12.6.0@sha256:c94488e51545b6604c5a511d1dc99e225914c45b16a2778b2fabcb29fb5563a4 AS test-integration_base
 
 ARG UNAME=cypress
 ARG UID=1000
@@ -107,7 +107,7 @@ VOLUME /srv/app
 # Nuxt: test (integration, development)
 
 # Should be the specific version of `cypress/included`.
-FROM cypress/included:12.5.1@sha256:5cd0a6192ccf93739ce8c1f080ead0d6058eab991bc093a15adcf1c34e443972 AS test-integration-dev
+FROM cypress/included:12.6.0@sha256:c94488e51545b6604c5a511d1dc99e225914c45b16a2778b2fabcb29fb5563a4 AS test-integration-dev
 
 RUN cp /usr/local/bin/cypress /root/.cache/Cypress \
     # pnpm
@@ -124,7 +124,7 @@ RUN pnpm test:integration:dev
 # Nuxt: test (integration, production)
 
 # Should be the specific version of `cypress/included`.
-FROM cypress/included:12.5.1@sha256:5cd0a6192ccf93739ce8c1f080ead0d6058eab991bc093a15adcf1c34e443972 AS test-integration-prod
+FROM cypress/included:12.6.0@sha256:c94488e51545b6604c5a511d1dc99e225914c45b16a2778b2fabcb29fb5563a4 AS test-integration-prod
 
 RUN cp /usr/local/bin/cypress /root/.cache/Cypress \
     # pnpm
