@@ -6,7 +6,7 @@ FROM node:19.6.1-alpine@sha256:64b0af3059f2471184168d366aa5a9fbad9c29e104e87e353
 
 COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
-RUN npm install -g pnpm
+RUN corepack enable
 
 WORKDIR /srv/app/
 
@@ -33,7 +33,7 @@ WORKDIR /srv/app/
 
 COPY ./pnpm-lock.yaml ./
 
-RUN npm install -g pnpm && \
+RUN corepack enable && \
     pnpm fetch
 
 COPY ./ ./
@@ -57,7 +57,7 @@ WORKDIR /srv/app/
 COPY --from=prepare /srv/app/ ./
 
 ENV NODE_ENV=production
-RUN npm install -g pnpm && \
+RUN corepack enable && \
     pnpm run generate
 
 
@@ -71,7 +71,7 @@ WORKDIR /srv/app/
 
 COPY --from=prepare /srv/app/ ./
 
-RUN npm install -g pnpm && \
+RUN corepack enable && \
     pnpm run lint
 
 
@@ -87,9 +87,7 @@ ARG GID=1000
 
 WORKDIR /srv/app/
 
-RUN cp /usr/local/bin/cypress /root/.cache/Cypress \
-    # pnpm
-    && npm install -g pnpm \
+RUN corepack enable \
     # user
     && groupadd -g $GID -o $UNAME \
     && useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME \
@@ -97,6 +95,9 @@ RUN cp /usr/local/bin/cypress /root/.cache/Cypress \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && cypress verify
+
+# Use the Cypress version installed by pnpm, not as provided by the Docker image.
+COPY --from=prepare /root/.cache/Cypress /root/.cache/Cypress
 
 USER $UNAME
 
@@ -109,12 +110,12 @@ VOLUME /srv/app
 # Should be the specific version of `cypress/included`.
 FROM cypress/included:12.6.0@sha256:c94488e51545b6604c5a511d1dc99e225914c45b16a2778b2fabcb29fb5563a4 AS test-integration-dev
 
-RUN cp /usr/local/bin/cypress /root/.cache/Cypress \
-    # pnpm
-    && npm install -g pnpm
+RUN corepack enable
 
 WORKDIR /srv/app/
 
+# Use the Cypress version installed by pnpm, not as provided by the Docker image.
+COPY --from=prepare /root/.cache/Cypress /root/.cache/Cypress
 COPY --from=prepare /srv/app/ ./
 
 RUN pnpm test:integration:dev
@@ -126,12 +127,12 @@ RUN pnpm test:integration:dev
 # Should be the specific version of `cypress/included`.
 FROM cypress/included:12.6.0@sha256:c94488e51545b6604c5a511d1dc99e225914c45b16a2778b2fabcb29fb5563a4 AS test-integration-prod
 
-RUN cp /usr/local/bin/cypress /root/.cache/Cypress \
-    # pnpm
-    && npm install -g pnpm
+RUN corepack enable
 
 WORKDIR /srv/app/
 
+# Use the Cypress version installed by pnpm, not as provided by the Docker image.
+COPY --from=prepare /root/.cache/Cypress /root/.cache/Cypress
 COPY --from=build /srv/app/ /srv/app/
 COPY --from=test-integration-dev /srv/app/package.json /tmp/test/package.json
 
