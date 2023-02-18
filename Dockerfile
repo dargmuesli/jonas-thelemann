@@ -2,7 +2,7 @@
 # Serve Nuxt in development mode.
 
 # Should be the specific version of `node:alpine`.
-FROM node:19.6.0-alpine@sha256:ebd018afea26341e981ce1b01d6859a5d185b2d840f89c075239e3b7e6e92715 AS development
+FROM node:19.6.1-alpine@sha256:64b0af3059f2471184168d366aa5a9fbad9c29e104e87e35336d03e409a27623 AS development
 
 COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
@@ -27,7 +27,7 @@ CMD ["pnpm", "run", "dev"]
 # Prepare Nuxt.
 
 # Should be the specific version of `node:slim`.
-FROM node:19.6.0-alpine@sha256:ebd018afea26341e981ce1b01d6859a5d185b2d840f89c075239e3b7e6e92715 AS prepare
+FROM node:19.6.1-alpine@sha256:64b0af3059f2471184168d366aa5a9fbad9c29e104e87e35336d03e409a27623 AS prepare
 
 WORKDIR /srv/app/
 
@@ -46,7 +46,7 @@ RUN pnpm install --offline \
 # Build Nuxt.
 
 # Should be the specific version of `node:alpine`.
-FROM node:19.6.0-alpine@sha256:ebd018afea26341e981ce1b01d6859a5d185b2d840f89c075239e3b7e6e92715 AS build
+FROM node:19.6.1-alpine@sha256:64b0af3059f2471184168d366aa5a9fbad9c29e104e87e35336d03e409a27623 AS build
 
 ARG NUXT_PUBLIC_STACK_DOMAIN=jonas-thelemann.de
 ENV NUXT_PUBLIC_STACK_DOMAIN=${NUXT_PUBLIC_STACK_DOMAIN}
@@ -65,7 +65,7 @@ RUN npm install -g pnpm && \
 # Nuxt: lint
 
 # Should be the specific version of `node:alpine`.
-FROM node:19.6.0-alpine@sha256:ebd018afea26341e981ce1b01d6859a5d185b2d840f89c075239e3b7e6e92715 AS lint
+FROM node:19.6.1-alpine@sha256:64b0af3059f2471184168d366aa5a9fbad9c29e104e87e35336d03e409a27623 AS lint
 
 WORKDIR /srv/app/
 
@@ -142,7 +142,7 @@ RUN pnpm test:integration:prod
 # Collect build, lint and test results.
 
 # Should be the specific version of `node:alpine`.
-FROM node:19.6.0-alpine@sha256:ebd018afea26341e981ce1b01d6859a5d185b2d840f89c075239e3b7e6e92715 AS collect
+FROM node:19.6.1-alpine@sha256:64b0af3059f2471184168d366aa5a9fbad9c29e104e87e35336d03e409a27623 AS collect
 
 WORKDIR /srv/app/
 
