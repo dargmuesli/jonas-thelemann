@@ -1,3 +1,15 @@
+## [5.9.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.9.1...5.9.2) (2023-02-21)
+
+
+### Bug Fixes
+
+* **docker:** add missing chown to copy ([e714d4c](https://github.com/dargmuesli/jonas-thelemann/commit/e714d4cf9025eddd183b158d41569d92b8ee3799))
+
+
+### Performance Improvements
+
+* **docker:** optimize cypress tests ([9c5288e](https://github.com/dargmuesli/jonas-thelemann/commit/9c5288e4b4ddcda2f9377ea597726e8e6de92ba0))
+
 ## [5.9.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.9.0...5.9.1) (2023-02-21)
 
 
