@@ -93,7 +93,7 @@ RUN corepack enable \
     && useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
 
 # Use the Cypress version installed by pnpm, not as provided by the Docker image.
-COPY --from=prepare /root/.cache/Cypress /root/.cache/Cypress
+COPY --from=prepare --chown=$UNAME /root/.cache/Cypress /root/.cache/Cypress
 
 USER $UNAME
 
