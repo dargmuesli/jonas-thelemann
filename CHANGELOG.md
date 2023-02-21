@@ -1,3 +1,10 @@
+## [5.9.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.9.0...5.9.1) (2023-02-21)
+
+
+### Reverts
+
+* Revert "perf(docker): optimize cypress tests" ([9da9d76](https://github.com/dargmuesli/jonas-thelemann/commit/9da9d76236d01448a85f5eef3a9aa9e1f8754eb7))
+
 # [5.9.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.8.1...5.9.0) (2023-02-15)
 
 
