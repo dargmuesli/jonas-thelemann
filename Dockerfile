@@ -6,7 +6,7 @@ FROM node:19.6.1-alpine@sha256:64b0af3059f2471184168d366aa5a9fbad9c29e104e87e353
 
 COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
-RUN npm install -g pnpm
+RUN corepack enable
 
 WORKDIR /srv/app/
 
@@ -33,7 +33,7 @@ WORKDIR /srv/app/
 
 COPY ./pnpm-lock.yaml ./
 
-RUN npm install -g pnpm && \
+RUN corepack enable && \
     pnpm fetch
 
 COPY ./ ./
@@ -57,7 +57,7 @@ WORKDIR /srv/app/
 COPY --from=prepare /srv/app/ ./
 
 ENV NODE_ENV=production
-RUN npm install -g pnpm && \
+RUN corepack enable && \
     pnpm run generate
 
 
@@ -71,7 +71,7 @@ WORKDIR /srv/app/
 
 COPY --from=prepare /srv/app/ ./
 
-RUN npm install -g pnpm && \
+RUN corepack enable && \
     pnpm run lint
 
 
@@ -79,7 +79,7 @@ RUN npm install -g pnpm && \
 # Nuxt: test (integration)
 
 # Should be the specific version of `cypress/included`.
-FROM cypress/included:12.5.1@sha256:5cd0a6192ccf93739ce8c1f080ead0d6058eab991bc093a15adcf1c34e443972 AS test-integration_base
+FROM cypress/included:12.6.0@sha256:c94488e51545b6604c5a511d1dc99e225914c45b16a2778b2fabcb29fb5563a4 AS test-integration_base
 
 ARG UNAME=cypress
 ARG UID=1000
@@ -87,24 +87,13 @@ ARG GID=1000
 
 WORKDIR /srv/app/
 
-# Update and install dependencies.
-RUN apt-get update \
-    && apt-get install --no-install-recommends -y \
-        # `curl ca-certificates libnss3-tools` are required by `mkcert`
-        curl ca-certificates libnss3-tools \
-    # pnpm
-    && npm install -g pnpm \
+RUN corepack enable \
     # user
     && groupadd -g $GID -o $UNAME \
-    && useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME \
-    # mkcert
-    && curl -JLO "https://dl.filippo.io/mkcert/latest?for=linux/amd64" \
-    && chmod +x mkcert-v*-linux-amd64 \
-    && cp mkcert-v*-linux-amd64 /usr/local/bin/mkcert \
-    && mkcert -install \
-    # clean
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+    && useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
+
+# Use the Cypress version installed by pnpm, not as provided by the Docker image.
+COPY --from=prepare --chown=$UNAME /root/.cache/Cypress /root/.cache/Cypress
 
 USER $UNAME
 
@@ -112,30 +101,38 @@ VOLUME /srv/app
 
 
 ########################
-# Nuxt: test (integration)
+# Nuxt: test (integration, development)
 
 # Should be the specific version of `cypress/included`.
-FROM cypress/included:12.5.1@sha256:5cd0a6192ccf93739ce8c1f080ead0d6058eab991bc093a15adcf1c34e443972 AS test-integration
+FROM cypress/included:12.6.0@sha256:c94488e51545b6604c5a511d1dc99e225914c45b16a2778b2fabcb29fb5563a4 AS test-integration-dev
 
-# Update and install dependencies.
-RUN apt-get update \
-    && apt-get install --no-install-recommends -y \
-        # `curl ca-certificates libnss3-tools` are required by `mkcert`
-        curl ca-certificates libnss3-tools \
-    # pnpm
-    && npm install -g pnpm \
-    # mkcert
-    && curl -JLO "https://dl.filippo.io/mkcert/latest?for=linux/amd64" \
-    && chmod +x mkcert-v*-linux-amd64 \
-    && cp mkcert-v*-linux-amd64 /usr/local/bin/mkcert
-
-COPY --from=prepare /root/.cache/Cypress /root/.cache/Cypress
-COPY --from=build /srv/app/ /srv/app/
+RUN corepack enable
 
 WORKDIR /srv/app/
 
-RUN pnpm test:integration:prod \
-    && pnpm test:integration:dev
+# Use the Cypress version installed by pnpm, not as provided by the Docker image.
+COPY --from=prepare /root/.cache/Cypress /root/.cache/Cypress
+COPY --from=prepare /srv/app/ ./
+
+RUN pnpm test:integration:dev
+
+
+########################
+# Nuxt: test (integration, production)
+
+# Should be the specific version of `cypress/included`.
+FROM cypress/included:12.6.0@sha256:c94488e51545b6604c5a511d1dc99e225914c45b16a2778b2fabcb29fb5563a4 AS test-integration-prod
+
+RUN corepack enable
+
+WORKDIR /srv/app/
+
+# Use the Cypress version installed by pnpm, not as provided by the Docker image.
+COPY --from=prepare /root/.cache/Cypress /root/.cache/Cypress
+COPY --from=build /srv/app/ /srv/app/
+COPY --from=test-integration-dev /srv/app/package.json /tmp/test/package.json
+
+RUN pnpm test:integration:prod
 
 
 #######################
@@ -148,7 +145,8 @@ WORKDIR /srv/app/
 
 COPY --from=build /srv/app/.output ./.output
 COPY --from=lint /srv/app/package.json /tmp/lint/package.json
-COPY --from=test-integration /srv/app/package.json /tmp/test/package.json
+COPY --from=test-integration-dev /srv/app/package.json /tmp/test/package.json
+COPY --from=test-integration-prod /srv/app/package.json /tmp/test/package.json
 
 
 #######################
