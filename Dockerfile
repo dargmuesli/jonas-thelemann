@@ -90,11 +90,7 @@ WORKDIR /srv/app/
 RUN corepack enable \
     # user
     && groupadd -g $GID -o $UNAME \
-    && useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME \
-    # clean
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* \
-    && cypress verify
+    && useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
 
 # Use the Cypress version installed by pnpm, not as provided by the Docker image.
 COPY --from=prepare /root/.cache/Cypress /root/.cache/Cypress
