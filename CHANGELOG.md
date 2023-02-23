@@ -1,3 +1,10 @@
+## [5.9.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.9.2...5.9.3) (2023-02-23)
+
+
+### Bug Fixes
+
+* **docker:** do not ignore dockerfile ([65e0db2](https://github.com/dargmuesli/jonas-thelemann/commit/65e0db285a034507409c9f21050e2296ef60d6d7))
+
 ## [5.9.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.9.1...5.9.2) (2023-02-21)
 
 
