@@ -499,6 +499,7 @@ const init = async () => {
 
 // initialization
 await init()
+useSeoMeta({ title: 'Portfolio' })
 </script>
 
 <i18n lang="yaml">

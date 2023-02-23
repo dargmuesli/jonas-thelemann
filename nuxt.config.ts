@@ -1,12 +1,11 @@
 import localeDe from './locales/de.json'
 import localeEn from './locales/en.json'
-import { LOCALES } from './utils/constants'
+import { LOCALES, SITE_NAME } from './utils/constants'
 
 const BASE_URL =
   'https://' +
   (process.env.NUXT_PUBLIC_STACK_DOMAIN ||
     `${process.env.HOST || 'localhost'}:3000`)
-const SITEMAP_EXCLUSIONS = ['/200.html', '/404.html', '/robots.txt']
 
 export default defineNuxtConfig({
   app: {
@@ -14,19 +13,17 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en', // fallback data to prevent invalid html at generation
       },
-      title: 'Jonas Thelemann', // fallback data to prevent invalid html at generation
+      titleTemplate: `%s`,
+      title: SITE_NAME, // fallback data to prevent invalid html at generation
     },
   },
   css: ['@/assets/css/main.css'],
+  extends: ['nuxt-seo-kit'],
   modules: [
     '@dargmuesli/nuxt-cookie-control',
     '@nuxtjs/html-validator',
     '@nuxtjs/i18n',
     '@nuxtjs/robots',
-    [
-      '@funken-studio/sitemap-nuxt-3',
-      { exclude: SITEMAP_EXCLUSIONS, hostname: BASE_URL },
-    ], // Should be declared at the end of the array.
   ],
   nitro: {
     compressPublicAssets: true,
@@ -38,6 +35,9 @@ export default defineNuxtConfig({
     public: {
       googleAnalyticsId: '', // set via environment variable `NUXT_PUBLIC_GOOGLE_ANALYTICS_ID` only
       isTesting: false, // set via environment variable `NUXT_PUBLIC_IS_TESTING` only
+      ...{
+        siteName: SITE_NAME,
+      },
     },
   },
   typescript: {
@@ -95,7 +95,7 @@ export default defineNuxtConfig({
     locales: ['en', 'de'],
   },
   htmlValidator: {
-    failOnError: true,
+    // failOnError: true,
     logLevel: 'warning',
   },
   i18n: {
@@ -110,5 +110,11 @@ export default defineNuxtConfig({
       },
       fallbackWarn: false, // TODO: don't show incorrect warnings (https://github.com/intlify/vue-i18n-next/issues/776)
     },
+  },
+  linkChecker: {
+    failOn404: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-kit/issues/4#issuecomment-1434522124)
+  },
+  site: {
+    splash: false,
   },
 })

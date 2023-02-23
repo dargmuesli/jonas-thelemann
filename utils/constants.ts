@@ -13,3 +13,4 @@ export const LOCALES: LocaleObject[] = [
     iso: 'de',
   },
 ]
+export const SITE_NAME = 'Jonas Thelemann'

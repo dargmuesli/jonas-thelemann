@@ -50,9 +50,20 @@ module.exports = {
     // './nuxt.config.{js,ts}', // Does not work with i18n as of 2022-12-01
     './app.vue',
   ],
+  daisyui: {
+    // styled: true,
+    themes: false,
+    base: false,
+    utils: false,
+    // logs: true,
+    // rtl: false,
+    // prefix: '',
+    // darkTheme: 'dark',
+  },
   darkMode: 'class',
   plugins: [
     require('@tailwindcss/typography'),
+    require('daisyui'),
     function ({ addBase, addComponents, theme }) {
       addBase({
         h1: {
