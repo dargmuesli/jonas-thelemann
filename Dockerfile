@@ -10,9 +10,6 @@ RUN corepack enable
 
 WORKDIR /srv/app/
 
-ENV CERTIFICATE_PATH=/srv/certificates/jonas-thelemann
-ENV NODE_OPTIONS=--openssl-legacy-provider
-
 VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 
@@ -50,7 +47,6 @@ FROM node:19.7.0-alpine@sha256:51dd437f31812df71108b81385e2945071ec813d5815fa340
 
 ARG NUXT_PUBLIC_STACK_DOMAIN=jonas-thelemann.de
 ENV NUXT_PUBLIC_STACK_DOMAIN=${NUXT_PUBLIC_STACK_DOMAIN}
-ENV NODE_OPTIONS=--openssl-legacy-provider
 
 WORKDIR /srv/app/
 
