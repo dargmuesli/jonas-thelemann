@@ -37,6 +37,7 @@ export default defineNuxtConfig({
       isTesting: false, // set via environment variable `NUXT_PUBLIC_IS_TESTING` only
       ...{
         siteName: SITE_NAME,
+        siteUrl: BASE_URL,
       },
     },
   },
