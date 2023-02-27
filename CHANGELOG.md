@@ -1,3 +1,10 @@
+## [5.11.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.11.0...5.11.1) (2023-02-27)
+
+
+### Bug Fixes
+
+* **cookies:** correct targets ([8b5561d](https://github.com/dargmuesli/jonas-thelemann/commit/8b5561dc1f9290dc03096b51caa21d1502f78671))
+
 # [5.11.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.10.0...5.11.0) (2023-02-27)
 
 
