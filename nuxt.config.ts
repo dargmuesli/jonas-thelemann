@@ -92,12 +92,7 @@ export default defineNuxtConfig({
             'https://policies.google.com/terms': 'Google Terms of Service',
           },
           name: 'Analytics',
-          targetCookieIds: [
-            '_ga',
-            '_ga_WMQ1JY99XH',
-            '_gat_gtag_UA_186047809_1',
-            '_gid',
-          ],
+          targetCookieIds: ['_ga', '_ga_K4R41W62BR'],
         },
       ],
     },
