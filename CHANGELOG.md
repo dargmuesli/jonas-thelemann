@@ -1,3 +1,10 @@
+## [5.11.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.11.1...5.11.2) (2023-02-27)
+
+
+### Bug Fixes
+
+* **cypress:** use chrome ([fe81616](https://github.com/dargmuesli/jonas-thelemann/commit/fe816163fb825d18c6fe564b20f110fc4073b04c))
+
 ## [5.11.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.11.0...5.11.1) (2023-02-27)
 
 
