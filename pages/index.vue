@@ -5,18 +5,14 @@
       class="xl:fixed"
       :class="imageClasses"
       fetchpriority="high"
-      height="3009"
       src="/assets/static/images/tutzing.jpg"
-      width="2081"
     />
     <img
       alt="Jonas in Tutzing."
       class="hidden xl:block"
       :class="imageClasses"
       fetchpriority="high"
-      height="3009"
       src="/assets/static/images/tutzing.jpg"
-      width="2081"
     />
     <div class="p-4 sm:p-8">
       <main class="xl:min-h-screen min-w-0 space-y-6 pb-32">
