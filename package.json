@@ -15,7 +15,7 @@
     "start": "npx http-server .output/public -p 3000",
     "generate": "nuxt generate",
     "cypress:open": "cypress open",
-    "cypress:test": "cypress run --env type=actual",
+    "cypress:test": "./cypress/snapshots/test.sh",
     "lint": "pnpm lint:js && pnpm lint:ts && pnpm lint:style",
     "lint:js": "eslint --cache --ext .js,.ts,.vue --ignore-path .gitignore .",
     "lint:ts": "pnpm nuxt typecheck",
