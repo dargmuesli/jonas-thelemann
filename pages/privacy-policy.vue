@@ -284,7 +284,7 @@ const { t } = useI18n()
 const title = t('title')
 
 // initialization
-useHeadDefault(title)
+useSeoMeta({ title })
 </script>
 
 <i18n lang="yaml">

@@ -1,6 +1,11 @@
 <template>
   <div :data-is-loading="isLoading">
     <NuxtLayout>
+      <SeoKit
+        :site-description="t('globalOgSeoDescription')"
+        :language="locale"
+      />
+      <OgImageStatic :alt="t('globalOgImageAlt')" component="OgImage" />
       <NuxtPage />
       <CookieControl :locale="locale" />
     </NuxtLayout>
@@ -8,6 +13,7 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
 const { locale } = useI18n()
 const cookieControl = useCookieControl()
 
@@ -31,4 +37,6 @@ watch(
   },
   { deep: true }
 )
+// initialization
+useHeadLayout()
 </script>

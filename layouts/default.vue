@@ -5,8 +5,3 @@
     </main>
   </div>
 </template>
-
-<script setup lang="ts">
-// initialization
-useHeadLayout()
-</script>
