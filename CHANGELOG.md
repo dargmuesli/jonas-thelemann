@@ -1,3 +1,17 @@
+# [5.11.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.10.0...5.11.0) (2023-02-27)
+
+
+### Bug Fixes
+
+* **index:** use name as page title ([76c47f4](https://github.com/dargmuesli/jonas-thelemann/commit/76c47f4f3f89c9b1fcfc4b14281e0646cba755f1))
+* **nuxt:** correct site url ([9b557f7](https://github.com/dargmuesli/jonas-thelemann/commit/9b557f7c1a4ddc900aa5a343fc780776e56b0ee5))
+
+
+### Features
+
+* **breadcrumbs:** remove daisy-ui ([1bd3829](https://github.com/dargmuesli/jonas-thelemann/commit/1bd382980bfb6fcc950e415a5982d4271f00485e))
+* **nuxt:** use seo toolkit ([0f6b3f9](https://github.com/dargmuesli/jonas-thelemann/commit/0f6b3f9a2c7a146ac15de0b3dc8e713d0bc7f2e0))
+
 # [5.10.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.9.3...5.10.0) (2023-02-27)
 
 
