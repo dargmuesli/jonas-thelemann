@@ -1,3 +1,10 @@
+# [5.10.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.9.3...5.10.0) (2023-02-27)
+
+
+### Features
+
+* **nuxt-cookie-control:** migrate to v5 ([4dd3c6a](https://github.com/dargmuesli/jonas-thelemann/commit/4dd3c6a55be96dc44377c2347f6912bbc1e989f4))
+
 ## [5.9.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.9.2...5.9.3) (2023-02-23)
 
 
