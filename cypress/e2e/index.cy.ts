@@ -42,7 +42,7 @@ describe('index page', () => {
 
   context('visual regression', () => {
     it('looks as before', () => {
-      cy.setCookie('cookie_control_is_consent_given', 'true')
+      cy.setCookie('ncc_c', 'clga')
       cy.visit('/')
       cy.get('[data-is-loading="false"]').should('be.visible')
       cy.get('[data-testid="nuxt-cookie-control-control-button"]').should(
