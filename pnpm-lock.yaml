@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': 17.4.4
   '@commitlint/config-conventional': 17.4.4
-  '@dargmuesli/nuxt-cookie-control': 5.0.0
+  '@dargmuesli/nuxt-cookie-control': 5.0.1
   '@intlify/eslint-plugin-vue-i18n': 2.0.0
   '@nuxtjs/eslint-config-typescript': 12.0.0
   '@nuxtjs/html-validator': 1.2.3
@@ -48,7 +48,7 @@ specifiers:
 devDependencies:
   '@commitlint/cli': 17.4.4
   '@commitlint/config-conventional': 17.4.4
-  '@dargmuesli/nuxt-cookie-control': 5.0.0
+  '@dargmuesli/nuxt-cookie-control': 5.0.1
   '@intlify/eslint-plugin-vue-i18n': 2.0.0_eslint@8.35.0
   '@nuxtjs/eslint-config-typescript': 12.0.0_ycpbpc6yetojsgtrx3mwntkhsu
   '@nuxtjs/html-validator': 1.2.3
@@ -999,10 +999,10 @@ packages:
       - supports-color
     dev: true
 
-  /@dargmuesli/nuxt-cookie-control/5.0.0:
-    resolution: {integrity: sha512-onKFouUrHP4H+310t1Q4B3EA8mGaeVViEmDLKc26NlCOdkTyt9DK1uPZ0sewQfCzp+1jCVjrIgHq1CkKz4Dutg==}
+  /@dargmuesli/nuxt-cookie-control/5.0.1:
+    resolution: {integrity: sha512-xczLjKgoBvDX+Z5WOeYZxPcGIyWYg9lYGRo2J1+JEmPchYAoFEwICohGe4fqrrVx8y/ERwg4bD9KuViSI5OrYQ==}
     dependencies:
-      '@nuxt/kit': 3.2.2
+      '@nuxt/kit': 3.2.3
       '@sindresorhus/slugify': 2.2.0
       css-vars-ponyfill: 2.4.8
       js-cookie: 3.0.1
@@ -5378,6 +5378,16 @@ packages:
     resolution: {integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==}
     dev: true
 
+  /follow-redirects/1.15.2:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: true
+
   /follow-redirects/1.15.2_debug@4.3.4:
     resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
     engines: {node: '>=4.0'}
@@ -5951,7 +5961,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.15.2_debug@4.3.4
+      follow-redirects: 1.15.2
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
