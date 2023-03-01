@@ -1,4 +1,4 @@
-[![build status](https://github.com/dargmuesli/jonas-thelemann/workflows/CI/badge.svg)](https://github.com/dargmuesli/jonas-thelemann/actions?query=workflow%3A%22CI%22 "build status")
+[![CI](https://github.com/dargmuesli/jonas-thelemann/actions/workflows/ci.yml/badge.svg)](https://github.com/dargmuesli/jonas-thelemann/actions/workflows/ci.yml)
 [![website uptime monitoring](https://app.statuscake.com/button/index.php?Track=BkiZnQ1xpj&Days=1000&Design=3)](https://www.statuscake.com "website uptime monitoring")
 
 # jonas-thelemann
