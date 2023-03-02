@@ -27,7 +27,7 @@ specifiers:
   is-https: 4.0.0
   lint-staged: 13.1.2
   nuxt: 3.2.3
-  nuxt-seo-kit: 1.3.1
+  nuxt-seo-kit: 1.3.2
   postcss: 8.4.21
   postcss-html: 1.5.0
   prettier: 2.8.4
@@ -72,7 +72,7 @@ devDependencies:
   is-https: 4.0.0
   lint-staged: 13.1.2
   nuxt: 3.2.3_zwzlqmv4u4rkma4fj7cavlrolu
-  nuxt-seo-kit: 1.3.1_b4rbb7fwrfqsf7vgpohdpv7a5u
+  nuxt-seo-kit: 1.3.2_fx4nzjuhxrwe6biyxxyafue2la
   postcss: 8.4.21
   postcss-html: 1.5.0
   prettier: 2.8.4
@@ -2690,11 +2690,11 @@ packages:
       '@unhead/shared': 1.1.14
     dev: true
 
-  /@unhead/schema-org-vue/0.4.1_@unhead+vue@1.1.14:
-    resolution: {integrity: sha512-+tbDolfNdGYhtJWadAWrDGhNRoG6W4Ezpg5j7jbPvu4tmqHmeBEVmzw2YoyWYRQ6xn5jGBFoJ4d+tFty6A7hhQ==}
+  /@unhead/schema-org-vue/0.5.0_@unhead+vue@1.1.14:
+    resolution: {integrity: sha512-UEB54jF2+HBoHKqyqdw7oNLqdhDfEX/FSImtPT3oTDTfGBWpc7RGUPe2RG/j4N78Kk3SsfnHxxJO0GKIGPJRwQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
-      '@unhead/vue': '>=1.0.10'
+      '@unhead/vue': '>=1.1.9'
     dependencies:
       '@unhead/vue': 1.1.14_vue@3.2.47
     dev: true
@@ -7468,10 +7468,10 @@ packages:
       - supports-color
     dev: true
 
-  /nuxt-og-image/1.4.21_ws@8.12.1:
-    resolution: {integrity: sha512-/Mv/iz4ufozbLMYbUtzndnjWx0d324BYhn6Xpbdm3Wb80YMV1ZoMuXXdcP6sSizoYJqIns5ukuJFCpMewworVQ==}
+  /nuxt-og-image/1.4.22:
+    resolution: {integrity: sha512-PVdcOD38warEvxatnWDunLYVTfXBs+Vc5V0xlZMe6iwU8Frlg+O8ITEl66MILbrggB9bvJE2C67/4m3S7BZvMA==}
     dependencies:
-      '@nuxt/kit': 3.2.2
+      '@nuxt/kit': 3.2.3
       '@types/fs-extra': 11.0.1
       birpc: 0.2.5
       chalk: 5.2.0
@@ -7494,18 +7494,20 @@ packages:
       tinyws: 0.1.0_ws@8.12.1
       twemoji: 14.0.2
       ufo: 1.1.1
+      ws: 8.12.1
       yoga-wasm-web: 0.3.2
     transitivePeerDependencies:
+      - bufferutil
       - rollup
       - supports-color
-      - ws
+      - utf-8-validate
     dev: true
 
-  /nuxt-schema-org/2.1.1_@unhead+vue@1.1.14:
-    resolution: {integrity: sha512-qvudrf61fOde96eJBAvp0HOoUDTLMLYzg+jZudVGJ0uwGJLDT4v20r8/IorSu0P49Rf9AfkvAvLPchdpcXWfSQ==}
+  /nuxt-schema-org/2.1.2_@unhead+vue@1.1.14:
+    resolution: {integrity: sha512-2mao0slpJgR4vOaDjhVKHn1apQ4ZH6T9FmmOmFus9YI9wAD6X6Q4USKWWoYRqNIyMEF2WX26sGr4uSPrhp1U9A==}
     dependencies:
-      '@nuxt/kit': 3.1.1
-      '@unhead/schema-org-vue': 0.4.1_@unhead+vue@1.1.14
+      '@nuxt/kit': 3.2.2
+      '@unhead/schema-org-vue': 0.5.0_@unhead+vue@1.1.14
       pathe: 1.1.0
     transitivePeerDependencies:
       - '@unhead/vue'
@@ -7513,24 +7515,25 @@ packages:
       - supports-color
     dev: true
 
-  /nuxt-seo-kit/1.3.1_b4rbb7fwrfqsf7vgpohdpv7a5u:
-    resolution: {integrity: sha512-4S+vmaxNmLC+BBqhiJzmTdvG1VZNUdMNjfnT8BmGMMABPUQ3DqEfcPr3nnwInBN01/KxzEU74SZC2eW/Dd4kDQ==}
+  /nuxt-seo-kit/1.3.2_fx4nzjuhxrwe6biyxxyafue2la:
+    resolution: {integrity: sha512-b6xVsck1uTs90plteG1n8i2Sllc6DziuY2+q0UDzQHQoid5M/iXOGZZ0q/MkmAlFTISOV4PZpjN0YlNhoc7aZA==}
     dependencies:
       '@nuxt/kit': 3.2.3
       defu: 6.1.2
       nuxt-link-checker: 1.0.3
-      nuxt-og-image: 1.4.21_ws@8.12.1
-      nuxt-schema-org: 2.1.1_@unhead+vue@1.1.14
+      nuxt-og-image: 1.4.22
+      nuxt-schema-org: 2.1.2_@unhead+vue@1.1.14
       nuxt-simple-robots: 1.0.2
       nuxt-simple-sitemap: 1.0.7
-      nuxt-unhead: 1.4.8_vue@3.2.47
+      nuxt-unhead: 1.4.11_vue@3.2.47
       ufo: 1.1.1
     transitivePeerDependencies:
       - '@unhead/vue'
+      - bufferutil
       - rollup
       - supports-color
+      - utf-8-validate
       - vue
-      - ws
     dev: true
 
   /nuxt-simple-robots/1.0.2:
@@ -7561,10 +7564,10 @@ packages:
       - supports-color
     dev: true
 
-  /nuxt-unhead/1.4.8_vue@3.2.47:
-    resolution: {integrity: sha512-Hfl70C3Ub3Z31pRRULkaye5pG/EJIXLVYU6z/8zKqyoW2Lw4CnpBL488n/ptSWPY4ofOEiTqFnFGDIzjfDCQ9Q==}
+  /nuxt-unhead/1.4.11_vue@3.2.47:
+    resolution: {integrity: sha512-uT2yN/gq4UwvbeF9c6c8E3cpr85/kjVbhGMziTpqvqVloTPsJWlqzXcLPSzCEBCgXXeogKNhdMBh76fHBGWcow==}
     dependencies:
-      '@nuxt/kit': 3.2.2
+      '@nuxt/kit': 3.2.3
       '@unhead/addons': 1.1.14
       '@vueuse/head': 1.1.9_vue@3.2.47
       fast-glob: 3.2.12
