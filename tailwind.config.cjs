@@ -1,43 +1,39 @@
 const colors = require('tailwindcss/colors')
 
-function heading(theme) {
-  return {
-    fontWeight: theme('fontWeight.bold'),
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-  }
-}
+const heading = (theme) => ({
+  fontWeight: theme('fontWeight.bold'),
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+})
 
 const gray = colors.gray // or slate, zinc, neutral, stone
 
-function prose(theme) {
-  return {
-    css: {
-      a: {
-        color: theme('colors.link'),
-        textDecoration: 'none',
-      },
-      h1: {
-        lineHeight: theme('lineHeight.snug'),
-      },
-      h2: {
-        lineHeight: theme('lineHeight.snug'),
-      },
-      h3: {
-        lineHeight: theme('lineHeight.snug'),
-      },
-      h4: {
-        lineHeight: theme('lineHeight.snug'),
-      },
-      h5: {
-        lineHeight: theme('lineHeight.snug'),
-      },
-      h6: {
-        lineHeight: theme('lineHeight.snug'),
-      },
+const prose = (theme) => ({
+  css: {
+    a: {
+      color: theme('colors.link'),
+      textDecoration: 'none',
     },
-  }
-}
+    h1: {
+      lineHeight: theme('lineHeight.snug'),
+    },
+    h2: {
+      lineHeight: theme('lineHeight.snug'),
+    },
+    h3: {
+      lineHeight: theme('lineHeight.snug'),
+    },
+    h4: {
+      lineHeight: theme('lineHeight.snug'),
+    },
+    h5: {
+      lineHeight: theme('lineHeight.snug'),
+    },
+    h6: {
+      lineHeight: theme('lineHeight.snug'),
+    },
+  },
+})
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -53,7 +49,7 @@ module.exports = {
   darkMode: 'class',
   plugins: [
     require('@tailwindcss/typography'),
-    function ({ addBase, addComponents, theme }) {
+    ({ addBase, addComponents, theme }) => {
       addBase({
         h1: {
           ...heading(theme),
