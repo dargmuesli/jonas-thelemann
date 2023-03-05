@@ -6,7 +6,7 @@ specifiers:
   '@dargmuesli/nuxt-cookie-control': 5.1.0
   '@intlify/eslint-plugin-vue-i18n': 2.0.0
   '@nuxtjs/eslint-config-typescript': 12.0.0
-  '@nuxtjs/html-validator': 1.2.3
+  '@nuxtjs/html-validator': 1.2.4
   '@nuxtjs/i18n': npm:@nuxtjs/i18n-edge@8.0.0-beta.10-27964275.182098b
   '@nuxtjs/robots': 3.0.0
   '@tailwindcss/typography': 0.5.9
@@ -51,7 +51,7 @@ devDependencies:
   '@dargmuesli/nuxt-cookie-control': 5.1.0
   '@intlify/eslint-plugin-vue-i18n': 2.0.0_eslint@8.35.0
   '@nuxtjs/eslint-config-typescript': 12.0.0_ycpbpc6yetojsgtrx3mwntkhsu
-  '@nuxtjs/html-validator': 1.2.3
+  '@nuxtjs/html-validator': 1.2.4
   '@nuxtjs/i18n': /@nuxtjs/i18n-edge/8.0.0-beta.10-27964275.182098b_vue@3.2.47
   '@nuxtjs/robots': 3.0.0
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
@@ -2111,12 +2111,12 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxtjs/html-validator/1.2.3:
-    resolution: {integrity: sha512-SDoqoi3QqcaoFl8yW5Kdqon5rbAgUWZu1cDUEZR85WBl3T2BddXJazrkIg7gq0r2G/hrxSVDHUtaVYvKhq+ILw==}
+  /@nuxtjs/html-validator/1.2.4:
+    resolution: {integrity: sha512-IKy/+lR516ls7gXbXsCzLKdIhzyjxo5b7//6yZ8hNIvaLljb3yyCTiEM139B7RchIvIyBpf0GJ5GKWn2rPmRhw==}
     dependencies:
       '@nuxt/kit': 3.2.3
       chalk: 5.2.0
-      html-validate: 7.10.1
+      html-validate: 7.13.2
       pathe: 1.1.0
       prettier: 2.8.4
       std-env: 3.3.2
@@ -5913,8 +5913,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /html-validate/7.10.1:
-    resolution: {integrity: sha512-2MjthTcMfqAZ8V1YyXshINGsdmPKc3RW9IKJ3kgfjXq59BuvSVM+vBhfOu0dJvlpRVH117vZ5JImYNsMfca3nA==}
+  /html-validate/7.13.2:
+    resolution: {integrity: sha512-ZUinzQ/a9zC0vP3uoCAKhHWogkCCK8KXcl5gMd+d8esuCl+p5d8P4zL/qSuvhc+zJ3qiIFyDaZ/wyUE1A78vNA==}
     engines: {node: '>= 14.0'}
     hasBin: true
     peerDependencies:
