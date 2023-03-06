@@ -35,9 +35,7 @@ RUN corepack enable && \
 
 COPY ./ ./
 
-# TODO: create ticket about node-jiti folder (https://github.com/dargmuesli/jonas-thelemann/issues/178)
-RUN pnpm install --offline \
-    && rm -rf ./node-jiti
+RUN pnpm install --offline
 
 ########################
 # Build Nuxt.
