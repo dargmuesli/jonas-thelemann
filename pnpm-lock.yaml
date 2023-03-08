@@ -11,7 +11,7 @@ specifiers:
   '@nuxtjs/robots': 3.0.0
   '@tailwindcss/typography': 0.5.9
   '@types/node': 18.14.6
-  '@unhead/vue': 1.1.20
+  '@unhead/vue': 1.1.21
   autoprefixer: 10.4.13
   consola: 2.15.3
   cross-env: 7.0.3
@@ -56,7 +56,7 @@ devDependencies:
   '@nuxtjs/robots': 3.0.0
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
   '@types/node': 18.14.6
-  '@unhead/vue': 1.1.20_vue@3.2.47
+  '@unhead/vue': 1.1.21_vue@3.2.47
   autoprefixer: 10.4.13_postcss@8.4.21
   consola: 2.15.3
   cross-env: 7.0.3
@@ -72,7 +72,7 @@ devDependencies:
   is-https: 4.0.0
   lint-staged: 13.1.2
   nuxt: 3.2.3_keeknbwaormsoeq3zcfv2i7xii
-  nuxt-seo-kit: 1.3.3_vt2edyzsjxe3ebe45zv5qxbzxi
+  nuxt-seo-kit: 1.3.3_263jsa7s2ermddz2qqqqjm2hi4
   postcss: 8.4.21
   postcss-html: 1.5.0
   prettier: 2.8.4
@@ -2691,13 +2691,6 @@ packages:
       '@unhead/shared': 1.1.17
     dev: true
 
-  /@unhead/dom/1.1.19:
-    resolution: {integrity: sha512-P45nMOV2onnrdyafF6BomMGo9zahl7O31MLrvvzB6rODOtCpRj6eauA8f+WRK87wkUt0gZU2LJeNCTeOqHzG4A==}
-    dependencies:
-      '@unhead/schema': 1.1.19
-      '@unhead/shared': 1.1.19
-    dev: true
-
   /@unhead/dom/1.1.20:
     resolution: {integrity: sha512-LKd3Wq1myQmhea/5ysa9LsWWYFgtRhJ8D75PQfsIz9SOvjAUs6gNJi2Tv9adXr5gfFGXd0s2EMTLk/0IPTBwdg==}
     dependencies:
@@ -2705,24 +2698,24 @@ packages:
       '@unhead/shared': 1.1.20
     dev: true
 
-  /@unhead/schema-org-vue/0.5.0_@unhead+vue@1.1.20:
+  /@unhead/dom/1.1.21:
+    resolution: {integrity: sha512-69kip2vrJIoAD7NKQXS9VhNeTyzRp90vIRFsaOM6L6emWlBc3NmMVdmFUrEcBmGNnGBN6/+vAESPGGG+vvQSIQ==}
+    dependencies:
+      '@unhead/schema': 1.1.21
+      '@unhead/shared': 1.1.21
+    dev: true
+
+  /@unhead/schema-org-vue/0.5.0_@unhead+vue@1.1.21:
     resolution: {integrity: sha512-UEB54jF2+HBoHKqyqdw7oNLqdhDfEX/FSImtPT3oTDTfGBWpc7RGUPe2RG/j4N78Kk3SsfnHxxJO0GKIGPJRwQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       '@unhead/vue': '>=1.1.9'
     dependencies:
-      '@unhead/vue': 1.1.20_vue@3.2.47
+      '@unhead/vue': 1.1.21_vue@3.2.47
     dev: true
 
   /@unhead/schema/1.1.17:
     resolution: {integrity: sha512-9cs5gPkppwWLQfb3LD/svICmRlaX42NRvpxZxJ+bxtXE3q9i8cFvelBFH9U9xlu+eKjrEiDuPbgSIsfWvpp7Xw==}
-    dependencies:
-      hookable: 5.4.2
-      zhead: 2.0.4
-    dev: true
-
-  /@unhead/schema/1.1.19:
-    resolution: {integrity: sha512-pDvVnO4qyQ5RMw7a8jc6usgXyw2gdeoCuxrCLuxeNiz03hBRtcU8crKm1HqkjFKF+6mrHWbsai6RhgwkuOOfeg==}
     dependencies:
       hookable: 5.4.2
       zhead: 2.0.4
@@ -2735,22 +2728,29 @@ packages:
       zhead: 2.0.4
     dev: true
 
+  /@unhead/schema/1.1.21:
+    resolution: {integrity: sha512-JfOX2TGlxWY/ZRpEeOJohzDn0MWGjgvsI8O7nwqpOEIr/hu/sMz7Y4+3UYVAKkbHUAIi7edXtiDKLvKvfC7wtg==}
+    dependencies:
+      hookable: 5.4.2
+      zhead: 2.0.4
+    dev: true
+
   /@unhead/shared/1.1.17:
     resolution: {integrity: sha512-jwpNeoTP+uEk7eROmHK2YNoFcP67CBBIgIo4TQrK9unx7S9LiX05yXPsCAsgmxTjvCbirxk0v4EcwU1rUkzaxg==}
     dependencies:
       '@unhead/schema': 1.1.17
     dev: true
 
-  /@unhead/shared/1.1.19:
-    resolution: {integrity: sha512-4CKfeNAr9mE9dquAvdcPDZJ5iU5rhNNLXxmmg6w9jecLBjShzOIJU8RwdMXxNKMxybqwPIfKhMOlBSGyglmNBw==}
-    dependencies:
-      '@unhead/schema': 1.1.19
-    dev: true
-
   /@unhead/shared/1.1.20:
     resolution: {integrity: sha512-8fJ1hB8bRw7JM9Lq98OSmLeDmajHHA9ymg8y7aDBC/R5lq+/WWSMtmXs+JNs4rsl+1gHPdl4YbjdEHp6OvcnpA==}
     dependencies:
       '@unhead/schema': 1.1.20
+    dev: true
+
+  /@unhead/shared/1.1.21:
+    resolution: {integrity: sha512-LuWYzcrt6TouUeQ4Qr5En1VluTUBLD7an60FGCp2U/Nzl8go4RQBZ9LLMKkWaLKjv5LqnGTuH3MfL8e0xcrUVQ==}
+    dependencies:
+      '@unhead/schema': 1.1.21
     dev: true
 
   /@unhead/ssr/1.1.17:
@@ -2767,15 +2767,15 @@ packages:
       '@unhead/shared': 1.1.20
     dev: true
 
-  /@unhead/vue/1.1.20_vue@3.2.47:
-    resolution: {integrity: sha512-I6TaAcO+B+czD/W6I6HQ2EFu/aJ7r0/EEz4Ltlg/YrdKL1beqh2nDY+R1Xz43EqKS0yvxGTlJHJ9cBmtSP2b0g==}
+  /@unhead/vue/1.1.21_vue@3.2.47:
+    resolution: {integrity: sha512-zX4tIoHAhF7SRe2N89b1bylo2yWY6ClQ5PRdaZzaK5FcwTi6i7RCYC/feQdP9U5TxZLLmdBw3aqBxx4s1m6tyQ==}
     peerDependencies:
       vue: '>=2.7 || >=3'
     dependencies:
-      '@unhead/schema': 1.1.20
-      '@unhead/shared': 1.1.20
+      '@unhead/schema': 1.1.21
+      '@unhead/shared': 1.1.21
       hookable: 5.4.2
-      unhead: 1.1.20
+      unhead: 1.1.21
       vue: 3.2.47
     dev: true
 
@@ -2979,10 +2979,10 @@ packages:
     peerDependencies:
       vue: '>=2.7 || >=3'
     dependencies:
-      '@unhead/dom': 1.1.20
-      '@unhead/schema': 1.1.20
+      '@unhead/dom': 1.1.21
+      '@unhead/schema': 1.1.21
       '@unhead/ssr': 1.1.20
-      '@unhead/vue': 1.1.20_vue@3.2.47
+      '@unhead/vue': 1.1.21_vue@3.2.47
       vue: 3.2.47
     dev: true
 
@@ -2991,10 +2991,10 @@ packages:
     peerDependencies:
       vue: '>=2.7 || >=3'
     dependencies:
-      '@unhead/dom': 1.1.19
-      '@unhead/schema': 1.1.19
+      '@unhead/dom': 1.1.21
+      '@unhead/schema': 1.1.21
       '@unhead/ssr': 1.1.20
-      '@unhead/vue': 1.1.20_vue@3.2.47
+      '@unhead/vue': 1.1.21_vue@3.2.47
       vue: 3.2.47
     dev: true
 
@@ -7568,11 +7568,11 @@ packages:
       - utf-8-validate
     dev: true
 
-  /nuxt-schema-org/2.1.2_@unhead+vue@1.1.20:
+  /nuxt-schema-org/2.1.2_@unhead+vue@1.1.21:
     resolution: {integrity: sha512-2mao0slpJgR4vOaDjhVKHn1apQ4ZH6T9FmmOmFus9YI9wAD6X6Q4USKWWoYRqNIyMEF2WX26sGr4uSPrhp1U9A==}
     dependencies:
       '@nuxt/kit': 3.2.2
-      '@unhead/schema-org-vue': 0.5.0_@unhead+vue@1.1.20
+      '@unhead/schema-org-vue': 0.5.0_@unhead+vue@1.1.21
       pathe: 1.1.0
     transitivePeerDependencies:
       - '@unhead/vue'
@@ -7580,14 +7580,14 @@ packages:
       - supports-color
     dev: true
 
-  /nuxt-seo-kit/1.3.3_vt2edyzsjxe3ebe45zv5qxbzxi:
+  /nuxt-seo-kit/1.3.3_263jsa7s2ermddz2qqqqjm2hi4:
     resolution: {integrity: sha512-jyVEXrnXe5525vQE4XAccouhZjpjhNz9Al02cxMbw59RE3NHnF20subV3efhhU77keFb6YaINeKfQAfDAVcNDA==}
     dependencies:
       '@nuxt/kit': 3.2.3
       defu: 6.1.2
       nuxt-link-checker: 1.0.3
       nuxt-og-image: 1.4.22
-      nuxt-schema-org: 2.1.2_@unhead+vue@1.1.20
+      nuxt-schema-org: 2.1.2_@unhead+vue@1.1.21
       nuxt-simple-robots: 1.0.3
       nuxt-simple-sitemap: 1.0.8
       nuxt-unhead: 1.4.14_vue@3.2.47
@@ -10002,6 +10002,15 @@ packages:
       '@unhead/dom': 1.1.20
       '@unhead/schema': 1.1.20
       '@unhead/shared': 1.1.20
+      hookable: 5.4.2
+    dev: true
+
+  /unhead/1.1.21:
+    resolution: {integrity: sha512-+ZFPAfHDVEpYpS8ucz0jjreIsgcMnR/NEiDuGXV3w6uWGzP9Tcyyi8Z5k5zhSVCEksSP98C2cbfhWa0CGFK4zA==}
+    dependencies:
+      '@unhead/dom': 1.1.21
+      '@unhead/schema': 1.1.21
+      '@unhead/shared': 1.1.21
       hookable: 5.4.2
     dev: true
 
