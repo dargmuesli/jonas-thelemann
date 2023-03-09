@@ -454,6 +454,7 @@ definePageMeta({
 const { t } = useI18n()
 const config = useRuntimeConfig()
 const localePath = useLocalePath()
+const { indicateLoadingDone } = useLoadingDoneIndicator()
 
 // data
 const imageClasses =
@@ -496,6 +497,8 @@ const init = async () => {
     consola.error(JSON.stringify(e))
   }
 }
+
+onMounted(() => indicateLoadingDone())
 
 // initialization
 await init()

@@ -17,14 +17,13 @@ const { t } = useI18n()
 const { locale } = useI18n()
 const cookieControl = useCookieControl()
 
-const loadingId = Math.random()
-const loadingIds = useState('loadingIds', () => [loadingId])
+const { loadingIds, indicateLoadingDone } = useLoadingDoneIndicator('app')
 
 // computations
 const isLoading = computed(() => !!loadingIds.value.length)
 
 // lifecycle
-onMounted(() => loadingIds.value.splice(loadingIds.value.indexOf(loadingId), 1))
+onMounted(() => indicateLoadingDone())
 watch(
   () => cookieControl.cookiesEnabledIds.value,
   (current, previous) => {
