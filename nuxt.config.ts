@@ -34,7 +34,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       googleAnalyticsId: '', // set via environment variable `NUXT_PUBLIC_GOOGLE_ANALYTICS_ID` only
-      isTesting: false, // set via environment variable `NUXT_PUBLIC_IS_TESTING` only
       ...{
         siteName: SITE_NAME,
         siteUrl: BASE_URL,
