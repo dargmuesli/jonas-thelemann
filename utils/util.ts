@@ -8,3 +8,11 @@ export const getHost = (req: IncomingMessage) => {
 
   return req.headers.host
 }
+
+export const isTesting = () => process.client && window.Cypress
+
+declare global {
+  interface Window {
+    Cypress: any
+  }
+}
