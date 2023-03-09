@@ -1,3 +1,10 @@
+# [5.12.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.11.2...5.12.0) (2023-03-09)
+
+
+### Features
+
+* **composables:** add loading done indicator ([2dd6d3f](https://github.com/dargmuesli/jonas-thelemann/commit/2dd6d3ff49f4807b426e056fb7383265615043cf))
+
 ## [5.11.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.11.1...5.11.2) (2023-02-27)
 
 
