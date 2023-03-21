@@ -11,13 +11,13 @@ ERROR=$?
 
 files=$(find "$THIS/diff" -type f || 'true')
 
-# if [ "$CI" != "" ]; then
-for file in $files; do
-  echo "@$file"
-  curl -i -F file="@$file" "https://tmpfiles.org/api/v1/upload"
-  printf "\n"
-  break
-done
-# fi
+if [ -n "$CI" ]; then
+  for file in $files; do
+    echo "@$file"
+    curl -i -F file="@$file" "https://tmpfiles.org/api/v1/upload"
+    printf "\n"
+    break
+  done
+fi
 
 exit "$ERROR"
