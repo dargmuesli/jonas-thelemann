@@ -1,5 +1,8 @@
 lockfileVersion: 5.4
 
+overrides:
+  nuxt-og-image: 1.5.2
+
 specifiers:
   '@commitlint/cli': 17.5.0
   '@commitlint/config-conventional': 17.4.4
@@ -7129,10 +7132,10 @@ packages:
       - supports-color
     dev: true
 
-  /nuxt-og-image/1.5.5:
-    resolution: {integrity: sha512-p7JeEBs9TJ3y9ZHwUWnpUFVrBjt3QuVX/7yqst1G9MyDv3wzkkwubyd9ELlaAbytjSgUtczf9oOjEA3FG470eA==}
+  /nuxt-og-image/1.5.2:
+    resolution: {integrity: sha512-aHAFLFDuzRE2+YObngqBJXY7cZSEOYU8Fv4eRJp85lKXglOQZwDcN1d0Gbfh82hCQ3RASqJU5MZQ7UBUO4p9jw==}
     dependencies:
-      '@nuxt/kit': 3.3.1
+      '@nuxt/kit': 3.2.3
       '@types/fs-extra': 11.0.1
       birpc: 0.2.10
       chalk: 5.2.0
@@ -7147,7 +7150,7 @@ packages:
       pathe: 1.1.0
       playwright-core: 1.31.2
       radix3: 1.0.0
-      satori: 0.4.3
+      satori: 0.4.1
       satori-html: 0.3.2
       sirv: 2.0.2
       std-env: 3.3.2
@@ -7182,7 +7185,7 @@ packages:
       '@nuxt/kit': 3.3.1
       defu: 6.1.2
       nuxt-link-checker: 1.0.3
-      nuxt-og-image: 1.5.5
+      nuxt-og-image: 1.5.2
       nuxt-schema-org: 2.1.2_@unhead+vue@1.1.23
       nuxt-simple-robots: 1.0.5
       nuxt-simple-sitemap: 1.0.9
@@ -8522,8 +8525,8 @@ packages:
       ultrahtml: 1.2.0
     dev: true
 
-  /satori/0.4.3:
-    resolution: {integrity: sha512-gGiXXD52Rk0vkknf0ntf7Bmn0BzoMp9bU/wVdQiUFTf1vRLpxixlsMlT4hP6oqF+Z7sb98+dNtLGJ3ZVVPDyrg==}
+  /satori/0.4.1:
+    resolution: {integrity: sha512-uQm4+vQj57E9PO/ASAlxsRb+78fHkRUmkNLBBmfuEeGNLGqJ9ufYU7TzYP4XH60PLHYt9Wz1jSsgcAe2cz7+ng==}
     engines: {node: '>=16'}
     dependencies:
       '@shuding/opentype.js': 1.4.0-beta.0
