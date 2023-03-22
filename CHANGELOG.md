@@ -1,3 +1,10 @@
+## [5.12.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.12.1...5.12.2) (2023-03-22)
+
+
+### Bug Fixes
+
+* **seo:** work around nuxt/rollup bug ([55a0f25](https://github.com/dargmuesli/jonas-thelemann/commit/55a0f258dd565cba6c5247f284af60b648c87045))
+
 ## [5.12.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.12.0...5.12.1) (2023-03-18)
 
 
