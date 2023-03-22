@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': 17.4.4
   '@commitlint/config-conventional': 17.4.4
-  '@dargmuesli/nuxt-cookie-control': 5.2.0
+  '@dargmuesli/nuxt-cookie-control': 5.2.1
   '@intlify/eslint-plugin-vue-i18n': 2.0.0
   '@nuxtjs/eslint-config-typescript': 12.0.0
   '@nuxtjs/html-validator': 1.2.4
@@ -48,7 +48,7 @@ specifiers:
 devDependencies:
   '@commitlint/cli': 17.4.4
   '@commitlint/config-conventional': 17.4.4
-  '@dargmuesli/nuxt-cookie-control': 5.2.0
+  '@dargmuesli/nuxt-cookie-control': 5.2.1
   '@intlify/eslint-plugin-vue-i18n': 2.0.0_eslint@8.36.0
   '@nuxtjs/eslint-config-typescript': 12.0.0_j4766f7ecgqbon3u7zlxn5zszu
   '@nuxtjs/html-validator': 1.2.4
@@ -668,8 +668,8 @@ packages:
       - supports-color
     dev: true
 
-  /@dargmuesli/nuxt-cookie-control/5.2.0:
-    resolution: {integrity: sha512-YPJuM/qSrHdpzT5sw4A42CDlEHzLXPjfKYJsW/06lAfOHb+n8attwXePv51/LAxuiHXvLRH6lajOmY16St7TyA==}
+  /@dargmuesli/nuxt-cookie-control/5.2.1:
+    resolution: {integrity: sha512-NeheanRrEy/APjWp/TCO+unEG2Au4uaF3cEUxxr1NkaKkjX10n1arRl2Sm0DfW7ztKQMUEzeiMC9XEYW0Xx0xQ==}
     dependencies:
       '@nuxt/kit': 3.2.3
       '@sindresorhus/slugify': 2.2.0
@@ -1527,7 +1527,7 @@ packages:
     engines: {node: ^14.18.0 || ^16.10.0 || ^17.0.0 || ^18.0.0 || ^19.0.0}
     dependencies:
       '@nuxt/schema': 3.2.3
-      c12: 1.1.2
+      c12: 1.2.0
       consola: 2.15.3
       defu: 6.1.2
       globby: 13.1.3
@@ -1536,7 +1536,7 @@ packages:
       jiti: 1.17.2
       knitwork: 1.0.0
       lodash.template: 4.5.0
-      mlly: 1.1.1
+      mlly: 1.2.0
       pathe: 1.1.0
       pkg-types: 1.0.2
       scule: 1.0.0
@@ -3131,21 +3131,6 @@ packages:
     resolution: {integrity: sha512-qwVpFEHNfhYJIzNRBvd2C1kyo6jz3ZSMPyyuR47OPdiKWlbYnZNyDWuyR175qDnAJLiCo5fBBqPb3RiXgWlkOQ==}
     dependencies:
       semver: 7.3.8
-    dev: true
-
-  /c12/1.1.2:
-    resolution: {integrity: sha512-fHT5HDEHNMb2oImnqJ88/UlpEOkY/chdyYxSd3YCpvBqBvU0IDlHTkNc7GnjObDMxdis2lL+rwlQcNq8VeZESA==}
-    dependencies:
-      defu: 6.1.2
-      dotenv: 16.0.3
-      giget: 1.1.2
-      jiti: 1.17.2
-      mlly: 1.2.0
-      pathe: 1.1.0
-      pkg-types: 1.0.2
-      rc9: 2.0.1
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /c12/1.2.0:
@@ -4793,15 +4778,6 @@ packages:
       eslint-visitor-keys: 1.3.0
     dev: true
 
-  /espree/9.4.1:
-    resolution: {integrity: sha512-XwctdmTO6SIvCzd9810yyNzIrOrqNYV9Koizx4C/mRhf9uq0o4yHoCEU/670pOxOL/MSraektvSAji79kX90Vg==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dependencies:
-      acorn: 8.8.2
-      acorn-jsx: 5.3.2_acorn@8.8.2
-      eslint-visitor-keys: 3.3.0
-    dev: true
-
   /espree/9.5.0:
     resolution: {integrity: sha512-JPbJGhKc47++oo4JkEoTe2wjy4fmMwvFpgJT9cQzmfXKp22Dr6Hf1tdCteLz1h0P3t+mGvWZ+4Uankvh8+c6zw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -5648,7 +5624,7 @@ packages:
       acorn-walk: 8.2.0
       ajv: 8.12.0
       deepmerge: 4.3.0
-      espree: 9.4.1
+      espree: 9.5.0
       glob: 8.1.0
       ignore: 5.2.4
       kleur: 4.1.5
@@ -6856,15 +6832,6 @@ packages:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
     engines: {node: '>=10'}
     hasBin: true
-    dev: true
-
-  /mlly/1.1.1:
-    resolution: {integrity: sha512-Jnlh4W/aI4GySPo6+DyTN17Q75KKbLTyFK8BrGhjNP4rxuUjbRWhE6gHg3bs33URWAF44FRm7gdQA348i3XxRw==}
-    dependencies:
-      acorn: 8.8.2
-      pathe: 1.1.0
-      pkg-types: 1.0.2
-      ufo: 1.1.1
     dev: true
 
   /mlly/1.2.0:
