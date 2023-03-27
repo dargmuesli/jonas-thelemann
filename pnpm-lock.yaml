@@ -11,7 +11,6 @@ specifiers:
   '@nuxtjs/eslint-config-typescript': 12.0.0
   '@nuxtjs/html-validator': 1.2.4
   '@nuxtjs/i18n': npm:@nuxtjs/i18n-edge@8.0.0-beta.10-27995650.c1d4ec9
-  '@nuxtjs/robots': 3.0.0
   '@tailwindcss/typography': 0.5.9
   '@types/node': 18.15.10
   '@unhead/vue': 1.1.25
@@ -56,7 +55,6 @@ devDependencies:
   '@nuxtjs/eslint-config-typescript': 12.0.0_j4766f7ecgqbon3u7zlxn5zszu
   '@nuxtjs/html-validator': 1.2.4
   '@nuxtjs/i18n': /@nuxtjs/i18n-edge/8.0.0-beta.10-27995650.c1d4ec9_vue@3.2.47
-  '@nuxtjs/robots': 3.0.0
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
   '@types/node': 18.15.10
   '@unhead/vue': 1.1.25_vue@3.2.47
@@ -1770,16 +1768,6 @@ packages:
       - vue
       - vue-i18n-bridge
       - vue-router
-    dev: true
-
-  /@nuxtjs/robots/3.0.0:
-    resolution: {integrity: sha512-qsHGW1KXBvV5Kq7u3huPnFCUTbHS4Fk8Za2mNPgmUXcwLgp3exvhPtdZfIdjrCF/aZk3A8OZONNmGghs6CecBA==}
-    dependencies:
-      '@nuxt/kit': 3.2.3
-      h3: 1.5.0
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
     dev: true
 
   /@pkgr/utils/2.3.1:
@@ -5370,18 +5358,6 @@ packages:
       duplexer: 0.1.2
     dev: true
 
-  /h3/1.5.0:
-    resolution: {integrity: sha512-M+T6P4iOB0ipkC/ZCdw2w8iTF7yY6phmkILOwlrtcPuVv+KW9BilOspYlvnblpKx1nnNl+3iBsZIvZ8pvKM8Nw==}
-    dependencies:
-      cookie-es: 0.5.0
-      defu: 6.1.2
-      destr: 1.2.2
-      iron-webcrypto: 0.5.0
-      radix3: 1.0.0
-      ufo: 1.1.1
-      uncrypto: 0.1.2
-    dev: true
-
   /h3/1.6.2:
     resolution: {integrity: sha512-1v/clj/qCzWbuiG+DbpViuOVO789sEYNjlwRjekkmyLGsezIJk30gazbnjcWvF8L/ffUdRz2SwxE5HNgNx+Yjg==}
     dependencies:
@@ -5697,10 +5673,6 @@ packages:
   /ip-regex/5.0.0:
     resolution: {integrity: sha512-fOCG6lhoKKakwv+C6KdsOnGvgXnmgfmp0myi3bcNwj3qfwPAxRKWEuFhvEFF7ceYIz6+1jRZ+yguLFAmUNPEfw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dev: true
-
-  /iron-webcrypto/0.5.0:
-    resolution: {integrity: sha512-9m0tDUIo+GPwDYi1CNlAW3ToIFTS9y88lf41KsEwbBsL4PKNjhrNDGoA0WlB6WWaJ6pgp+FOP1+6ls0YftivyA==}
     dev: true
 
   /iron-webcrypto/0.6.0:
