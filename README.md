@@ -20,4 +20,4 @@ After that, use `pnpm dev` for development or `pnpm build` to generate the [stat
 Alternatively, build the provided [Dockerfile](https://www.docker.com/) using `docker build -t dargmuesli/jonas-thelemann .` and run the resulting image using `docker run dargmuesli/jonas-thelemann`.
 
 ## Deployment
-This project is deployed within the [jonas-thelemann_stack](https://github.com/dargmuesli/jonas-thelemann_stack/) in accordance to the [DargStack template](https://github.com/dargmuesli/dargstack_template/) to make deployment a breeze.
+This project is deployed within the [jonas-thelemann_stack](https://github.com/dargmuesli/jonas-thelemann_stack/) in accordance to the [DargStack template](https://github.com/dargstack/dargstack_template/) to make deployment a breeze.
