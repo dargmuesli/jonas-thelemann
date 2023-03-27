@@ -23,7 +23,6 @@ export default defineNuxtConfig({
     '@dargmuesli/nuxt-cookie-control',
     '@nuxtjs/html-validator',
     '@nuxtjs/i18n',
-    '@nuxtjs/robots',
   ],
   nitro: {
     compressPublicAssets: true,
