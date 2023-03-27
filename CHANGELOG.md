@@ -1,3 +1,10 @@
+## [5.12.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.12.2...5.12.3) (2023-03-27)
+
+
+### Bug Fixes
+
+* **robots:** remove nuxt's robots module ([791e561](https://github.com/dargmuesli/jonas-thelemann/commit/791e56107e01fd1db4a149ccc4cab7a3e878a618))
+
 ## [5.12.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.12.1...5.12.2) (2023-03-22)
 
 
