@@ -1,7 +1,11 @@
 <template>
   <div
-    class="w-full h-full flex"
-    style="background: linear-gradient(to bottom, #dbf4ff, #fff1f1)"
+    style="
+      background: linear-gradient(to bottom, #dbf4ff, #fff1f1);
+      display: flex;
+      height: 100%;
+      width: 100%;
+    "
   >
     <img
       alt="Jonas in Tutzing."
@@ -9,9 +13,25 @@
       width="436"
       height="630"
     />
-    <div class="flex flex-col justify-center ml-16">
-      <h1 class="text-7xl">{{ title }}</h1>
-      <div class="text-3xl text-gray-600 mt-8">{{ description }}</div>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 64px;
+      "
+    >
+      <h1 style="font-size: 72px; line-height: 1">{{ title }}</h1>
+      <div
+        style="
+          color: rgb(75 85 99);
+          font-size: 30px;
+          line-height: 36px;
+          margin-top: 64px;
+        "
+      >
+        {{ description }}
+      </div>
     </div>
   </div>
 </template>
