@@ -1,3 +1,10 @@
+## [5.12.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.12.3...5.12.4) (2023-04-02)
+
+
+### Bug Fixes
+
+* **og-image:** override beta usage ([b6b7081](https://github.com/dargmuesli/jonas-thelemann/commit/b6b7081248dc88670b65cbad845a48552a5ac5f4))
+
 ## [5.12.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.12.2...5.12.3) (2023-03-27)
 
 
