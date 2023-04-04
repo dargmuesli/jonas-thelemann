@@ -13,6 +13,9 @@ devDependencies:
   '@dargmuesli/nuxt-cookie-control':
     specifier: 5.3.0
     version: 5.3.0
+  '@dargmuesli/nuxt-vio':
+    specifier: 1.0.1
+    version: 1.0.1
   '@intlify/eslint-plugin-vue-i18n':
     specifier: 2.0.0
     version: 2.0.0(eslint@8.38.0)
@@ -720,6 +723,11 @@ packages:
       - rollup
       - supports-color
       - webpack
+    dev: true
+
+  /@dargmuesli/nuxt-vio@1.0.1:
+    resolution: {integrity: sha512-wU3ip+84QJIPrUv97dqb3RmpYhH8z3/0b3plHHqy7weKUGM7DmHoBSzk2k1xtLSdlQzB35WpZUDUfbUrW1EKiA==}
+    engines: {node: '19'}
     dev: true
 
   /@esbuild/android-arm64@0.17.15:

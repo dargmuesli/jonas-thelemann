@@ -1,7 +1,7 @@
 import { defineConfig } from 'cypress'
 import getCompareSnapshotsPlugin from 'cypress-visual-regression/dist/plugin'
 
-import { CYPRESS_BASE_URL } from './utils/constants'
+import { CYPRESS_BASE_URL } from '@dargmuesli/nuxt-vio/utils/constants'
 
 export default defineConfig({
   e2e: {
