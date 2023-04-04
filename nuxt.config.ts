@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     },
   },
   css: ['@/assets/css/main.css'],
-  extends: ['nuxt-seo-kit'],
+  extends: ['github:dargmuesli/vio#master', 'nuxt-seo-kit'],
   modules: [
     '@dargmuesli/nuxt-cookie-control',
     '@nuxtjs/html-validator',

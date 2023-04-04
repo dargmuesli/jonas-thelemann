@@ -1,6 +1,5 @@
 import { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables'
 
-export const CYPRESS_BASE_URL = 'http://localhost:3000'
 export const LOCALES: LocaleObject[] = [
   {
     code: 'en',

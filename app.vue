@@ -37,5 +37,6 @@ watch(
   { deep: true }
 )
 // initialization
-useHeadLayout()
+useAppLayout()
+useFavicons()
 </script>
