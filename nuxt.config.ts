@@ -24,9 +24,6 @@ export default defineNuxtConfig({
     '@nuxtjs/html-validator',
     '@nuxtjs/i18n',
   ],
-  nitro: {
-    compressPublicAssets: true,
-  },
   postcss: {
     plugins: { tailwindcss: {}, autoprefixer: {} },
   },

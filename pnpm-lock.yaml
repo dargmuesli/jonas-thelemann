@@ -14,8 +14,8 @@ devDependencies:
     specifier: 5.3.0
     version: 5.3.0
   '@dargmuesli/nuxt-vio':
-    specifier: 1.0.1
-    version: 1.0.1
+    specifier: 1.2.2
+    version: 1.2.2(vue@3.2.47)
   '@intlify/eslint-plugin-vue-i18n':
     specifier: 2.0.0
     version: 2.0.0(eslint@8.38.0)
@@ -124,9 +124,6 @@ devDependencies:
   vue:
     specifier: 3.2.47
     version: 3.2.47
-  vue-gtag:
-    specifier: 2.0.1
-    version: 2.0.1(vue@3.2.47)
   vue-tsc:
     specifier: 1.2.0
     version: 1.2.0(typescript@5.0.4)
@@ -725,9 +722,13 @@ packages:
       - webpack
     dev: true
 
-  /@dargmuesli/nuxt-vio@1.0.1:
-    resolution: {integrity: sha512-wU3ip+84QJIPrUv97dqb3RmpYhH8z3/0b3plHHqy7weKUGM7DmHoBSzk2k1xtLSdlQzB35WpZUDUfbUrW1EKiA==}
+  /@dargmuesli/nuxt-vio@1.2.2(vue@3.2.47):
+    resolution: {integrity: sha512-qPU6v2tcdt6uTafgMQGswTIPvfuB++e51w4Dxgm7equHteYKNihhQrX8Y/dLgAv8i84TVbzRCu+hIkdZE40U9Q==}
     engines: {node: '19'}
+    dependencies:
+      vue-gtag: 2.0.1(vue@3.2.47)
+    transitivePeerDependencies:
+      - vue
     dev: true
 
   /@esbuild/android-arm64@0.17.15:
