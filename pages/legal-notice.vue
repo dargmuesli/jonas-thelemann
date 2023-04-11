@@ -31,7 +31,7 @@
     <p>{{ t('copyrightDescription2') }}</p>
 
     <p>
-      <AppLink to="https://www.e-recht24.de">{{ t('source') }}</AppLink>
+      <VioLink to="https://www.e-recht24.de">{{ t('source') }}</VioLink>
     </p>
   </div>
 </template>

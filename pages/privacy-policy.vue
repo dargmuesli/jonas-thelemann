@@ -168,12 +168,12 @@
       <p>{{ t('pluginsToolsYouTubeDescription6') }}</p>
       <i18n-t keypath="pluginsToolsYouTubeDescription7" tag="p">
         <template #linkPrivacy>
-          <AppLink
+          <VioLink
             :aria-label="t('pluginsToolsYouTubeDescription7s')"
             :to="t('pluginsToolsYouTubeDescription7s')"
           >
             {{ t('pluginsToolsYouTubeDescription7s') }}
-          </AppLink>
+          </VioLink>
         </template>
       </i18n-t> -->
 
@@ -181,20 +181,20 @@
       <p>{{ t('pluginsToolsGoogleWebFontsDescription1') }}</p>
       <i18n-t keypath="pluginsToolsGoogleWebFontsDescription2" tag="p">
         <template #linkFaq>
-          <AppLink
+          <VioLink
             :aria-label="t('pluginsToolsGoogleWebFontsDescription2s1')"
             :to="t('pluginsToolsGoogleWebFontsDescription2s1')"
           >
             {{ t('pluginsToolsGoogleWebFontsDescription2s1') }}
-          </AppLink>
+          </VioLink>
         </template>
         <template #linkPrivacy>
-          <AppLink
+          <VioLink
             :aria-label="t('pluginsToolsGoogleWebFontsDescription2s2')"
             :to="t('pluginsToolsGoogleWebFontsDescription2s2')"
           >
             {{ t('pluginsToolsGoogleWebFontsDescription2s2') }}
-          </AppLink>
+          </VioLink>
         </template>
       </i18n-t>
 
@@ -202,12 +202,12 @@
       <p>{{ t('pluginsToolsFontAwesomeDescription1') }}</p>
       <i18n-t keypath="pluginsToolsFontAwesomeDescription2" tag="p">
         <template #linkPrivacy>
-          <AppLink
+          <VioLink
             :aria-label="t('pluginsToolsFontAwesomeDescription2s')"
             :to="t('pluginsToolsFontAwesomeDescription2s')"
           >
             {{ t('pluginsToolsFontAwesomeDescription2s') }}
-          </AppLink>
+          </VioLink>
         </template>
       </i18n-t> -->
 
@@ -217,30 +217,30 @@
       <p>{{ t('pluginsToolsGoogleMapsDescription3') }}</p>
       <i18n-t keypath="pluginsToolsGoogleMapsDescription4" tag="p">
         <template #linkGdpr>
-          <AppLink
+          <VioLink
             :aria-label="t('pluginsToolsGoogleMapsDescription4s1')"
             to="https://privacy.google.com/businesses/gdprcontrollerterms/"
           >
             {{ t('pluginsToolsGoogleMapsDescription4s1') }}
-          </AppLink>
+          </VioLink>
         </template>
         <template #linkGdprScss>
-          <AppLink
+          <VioLink
             :aria-label="t('pluginsToolsGoogleMapsDescription4s1')"
             to="https://privacy.google.com/businesses/gdprcontrollerterms/sccs/"
           >
             {{ t('pluginsToolsGoogleMapsDescription4s2') }}
-          </AppLink>
+          </VioLink>
         </template>
       </i18n-t>
       <i18n-t keypath="pluginsToolsGoogleMapsDescription5" tag="p">
         <template #linkPrivacy>
-          <AppLink
+          <VioLink
             :aria-label="t('pluginsToolsGoogleMapsDescription5s')"
             :to="t('pluginsToolsGoogleMapsDescription5s')"
           >
             {{ t('pluginsToolsGoogleMapsDescription5s') }}
-          </AppLink>
+          </VioLink>
         </template>
       </i18n-t> -->
 
@@ -251,27 +251,27 @@
       <p>{{ t('pluginsToolsGoogleReCaptchaDescription4') }}</p>
       <i18n-t keypath="pluginsToolsGoogleReCaptchaDescription5" tag="p">
         <template #linkPrivacy>
-          <AppLink
+          <VioLink
             :aria-label="t('pluginsToolsGoogleReCaptchaDescription5s1')"
             :to="t('pluginsToolsGoogleReCaptchaDescription5s1')"
           >
             {{ t('pluginsToolsGoogleReCaptchaDescription5s1') }}
-          </AppLink>
+          </VioLink>
         </template>
         <template #linkTerms>
-          <AppLink
+          <VioLink
             :aria-label="t('pluginsToolsGoogleReCaptchaDescription5s2')"
             :to="t('pluginsToolsGoogleReCaptchaDescription5s2')"
           >
             {{ t('pluginsToolsGoogleReCaptchaDescription5s2') }}
-          </AppLink>
+          </VioLink>
         </template>
       </i18n-t> -->
 
       <p>
-        <AppLink :aria-label="t('source')" to="https://www.e-recht24.de">
+        <VioLink :aria-label="t('source')" to="https://www.e-recht24.de">
           {{ t('source') }}
-        </AppLink>
+        </VioLink>
       </p>
     </div>
   </div>

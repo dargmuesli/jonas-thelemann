@@ -367,25 +367,25 @@
             <h2 class="text-2xl">{{ t('projects') }}</h2>
             <ul class="mt-2 flex flex-wrap items-center justify-around">
               <li class="m-4">
-                <AppLink class="inline-block" to="https://maev.si/">
+                <VioLink class="inline-block" to="https://maev.si/">
                   <img
                     alt="maevsi's logo"
                     class="h-12"
                     src="/assets/static/logos/maevsi.svg"
                   />
-                </AppLink>
+                </VioLink>
               </li>
               <li class="m-4">
-                <AppLink class="inline-block" to="https://nearbuy-food.de/">
+                <VioLink class="inline-block" to="https://nearbuy-food.de/">
                   <img
                     alt="nearbuy's logo"
                     class="h-12"
                     src="/assets/static/logos/nearbuy.svg"
                   />
-                </AppLink>
+                </VioLink>
               </li>
               <li class="m-4">
-                <AppLink
+                <VioLink
                   class="inline-block"
                   to="https://creal.jonas-thelemann.de/"
                 >
@@ -394,10 +394,10 @@
                     class="h-12"
                     src="/assets/static/logos/creal.svg"
                   />
-                </AppLink>
+                </VioLink>
               </li>
               <li class="m-4">
-                <AppLink
+                <VioLink
                   class="inline-block"
                   to="https://trapparty.jonas-thelemann.de/"
                 >
@@ -406,7 +406,7 @@
                     class="h-12"
                     src="/assets/static/logos/trapparty.svg"
                   />
-                </AppLink>
+                </VioLink>
               </li>
               <li class="m-4">
                 <SocialLink to="https://github.com/dargmuesli?tab=repositories">
@@ -419,24 +419,24 @@
       </main>
       <footer class="text-sm leading-6">
         <div class="mx-auto mt-8 flex w-9/12 items-center">
-          <Hr />
+          <VioHr />
           <IconLogo
             background-fill="rgba(0,0,0,0)"
             class="mx-12 h-12 w-12 opacity-50 brightness-0 dark:opacity-60 dark:invert"
           />
-          <Hr />
+          <VioHr />
         </div>
         <div class="flex flex-col items-center opacity-60">
           <span>
             {{ t('copyright', { year }) }}
           </span>
           <div class="flex gap-4">
-            <AppLink is-colored :to="localePath('/legal-notice')">
+            <VioLink is-colored :to="localePath('/legal-notice')">
               {{ t('legalNotice') }}
-            </AppLink>
-            <AppLink is-colored :to="localePath('/privacy-policy')">
+            </VioLink>
+            <VioLink is-colored :to="localePath('/privacy-policy')">
               {{ t('privacyPolicy') }}
-            </AppLink>
+            </VioLink>
           </div>
         </div>
       </footer>
