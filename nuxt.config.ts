@@ -1,6 +1,7 @@
+import { LOCALES, SITE_NAME } from '@dargmuesli/nuxt-vio/utils/constants'
+
 import localeDe from './locales/de.json'
 import localeEn from './locales/en.json'
-import { LOCALES, SITE_NAME } from './utils/constants'
 
 const BASE_URL =
   'https://' +
@@ -8,40 +9,18 @@ const BASE_URL =
     `${process.env.HOST || 'localhost'}:3000`)
 
 export default defineNuxtConfig({
-  app: {
-    head: {
-      htmlAttrs: {
-        lang: 'en', // fallback data to prevent invalid html at generation
-      },
-      titleTemplate: `%s`,
-      title: SITE_NAME, // fallback data to prevent invalid html at generation
-    },
-  },
-  css: ['@/assets/css/main.css'],
   extends: ['@dargmuesli/nuxt-vio', 'nuxt-seo-kit'],
   modules: [
     '@dargmuesli/nuxt-cookie-control',
     '@nuxtjs/html-validator',
     '@nuxtjs/i18n',
   ],
-  postcss: {
-    plugins: { tailwindcss: {}, autoprefixer: {} },
-  },
   runtimeConfig: {
     public: {
       googleAnalyticsId: '', // set via environment variable `NUXT_PUBLIC_GOOGLE_ANALYTICS_ID` only
       ...{
         siteName: SITE_NAME,
         siteUrl: BASE_URL,
-      },
-    },
-  },
-  typescript: {
-    shim: false,
-    strict: true,
-    tsConfig: {
-      vueCompilerOptions: {
-        htmlAttributes: [], // https://github.com/johnsoncodehk/volar/issues/1970#issuecomment-1276994634
       },
     },
   },
