@@ -1,3 +1,11 @@
+## [5.12.5](https://github.com/dargmuesli/jonas-thelemann/compare/5.12.4...5.12.5) (2023-04-12)
+
+
+### Bug Fixes
+
+* **cypress:** hardcode base url ([efc5d3a](https://github.com/dargmuesli/jonas-thelemann/commit/efc5d3a1ad1e07446b55f3ea04de5a9eca1e2b2c))
+* **vio:** switch to npm ([03a7a84](https://github.com/dargmuesli/jonas-thelemann/commit/03a7a84062975ba4c7d3b3a3169512ff903bea01))
+
 ## [5.12.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.12.3...5.12.4) (2023-04-02)
 
 
