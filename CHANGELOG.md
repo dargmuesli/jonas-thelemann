@@ -1,3 +1,10 @@
+## [5.12.6](https://github.com/dargmuesli/jonas-thelemann/compare/5.12.5...5.12.6) (2023-04-12)
+
+
+### Bug Fixes
+
+* move cypress ([668d30a](https://github.com/dargmuesli/jonas-thelemann/commit/668d30ae7b6921dbcd047409a7f38e9ebfbc6cfe))
+
 ## [5.12.5](https://github.com/dargmuesli/jonas-thelemann/compare/5.12.4...5.12.5) (2023-04-12)
 
 
