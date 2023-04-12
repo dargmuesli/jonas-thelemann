@@ -28,12 +28,12 @@ FROM node:18.15.0-alpine@sha256:a3f2350bd3eb48525f801b57934300c11aa3610086b70885
 
 WORKDIR /srv/app/
 
-COPY ./pnpm-lock.yaml ./
+COPY ./nuxt/pnpm-lock.yaml ./
 
 RUN corepack enable && \
     pnpm fetch
 
-COPY ./ ./
+COPY ./nuxt/ ./
 
 RUN pnpm install --offline
 
