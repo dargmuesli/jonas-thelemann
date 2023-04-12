@@ -22,7 +22,7 @@ jobs:
     secrets:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     with:
-      CACHE_PATH: nuxt/pnpm-lock.yaml
+      CACHE_PATH: pnpm-lock.yaml
   deploy:
     needs: build
     name: Deploy
