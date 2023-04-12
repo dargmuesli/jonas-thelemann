@@ -28,12 +28,12 @@ FROM node:18.15.0-alpine@sha256:a3f2350bd3eb48525f801b57934300c11aa3610086b70885
 
 WORKDIR /srv/app/
 
-COPY ./nuxt/pnpm-lock.yaml ./
+COPY ./pnpm-lock.yaml ./
 
 RUN corepack enable && \
     pnpm fetch
 
-COPY ./nuxt/ ./
+COPY ./ ./
 
 RUN pnpm install --offline
 
@@ -52,7 +52,7 @@ COPY --from=prepare /srv/app/ ./
 
 ENV NODE_ENV=production
 RUN corepack enable && \
-    pnpm run generate
+    pnpm --dir nuxt run generate
 
 
 ########################
@@ -66,7 +66,7 @@ WORKDIR /srv/app/
 COPY --from=prepare /srv/app/ ./
 
 RUN corepack enable && \
-    pnpm run lint
+    pnpm --dir nuxt run lint
 
 
 ########################
@@ -108,7 +108,7 @@ WORKDIR /srv/app/
 COPY --from=prepare /root/.cache/Cypress /root/.cache/Cypress
 COPY --from=prepare /srv/app/ ./
 
-RUN pnpm test:integration:dev
+RUN pnpm --dir nuxt test:integration:dev
 
 
 ########################
@@ -126,7 +126,7 @@ COPY --from=prepare /root/.cache/Cypress /root/.cache/Cypress
 COPY --from=build /srv/app/ /srv/app/
 COPY --from=test-integration-dev /srv/app/package.json /tmp/test/package.json
 
-RUN pnpm test:integration:prod
+RUN pnpm --dir nuxt test:integration:prod
 
 
 #######################
@@ -137,7 +137,7 @@ FROM node:18.15.0-alpine@sha256:a3f2350bd3eb48525f801b57934300c11aa3610086b70885
 
 WORKDIR /srv/app/
 
-COPY --from=build /srv/app/.output ./.output
+COPY --from=build /srv/app/nuxt/.output ./.output
 COPY --from=lint /srv/app/package.json /tmp/lint/package.json
 COPY --from=test-integration-dev /srv/app/package.json /tmp/test/package.json
 COPY --from=test-integration-prod /srv/app/package.json /tmp/test/package.json
