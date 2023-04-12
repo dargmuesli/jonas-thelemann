@@ -14,13 +14,15 @@ jobs:
       DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
       DOCKER_HUB_USER_NAME: ${{ secrets.DOCKER_HUB_USER_NAME }}
     with:
-      ARTIFACT_PATH: .output/public
+      ARTIFACT_PATH: nuxt/.output/public
   release-semantic:
     needs: build
     name: Release (semantic)
     uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@0.35.6
     secrets:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
+    with:
+      CACHE_PATH: nuxt/pnpm-lock.yaml
   deploy:
     needs: build
     name: Deploy
