@@ -445,7 +445,7 @@
 </template>
 
 <script setup lang="ts">
-import consola from 'consola'
+import { consola } from 'consola'
 
 definePageMeta({
   layout: false,
