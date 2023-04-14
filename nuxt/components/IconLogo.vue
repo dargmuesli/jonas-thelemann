@@ -49,12 +49,6 @@
 const { t } = useI18n()
 </script>
 
-<script lang="ts">
-export default {
-  name: 'CustomLogo',
-}
-</script>
-
 <i18n lang="yaml">
 de:
   logo: Logo
