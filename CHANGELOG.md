@@ -1,3 +1,10 @@
+## [5.12.7](https://github.com/dargmuesli/jonas-thelemann/compare/5.12.6...5.12.7) (2023-04-14)
+
+
+### Bug Fixes
+
+* **vio:** update to v1.8.2 ([62ff9b5](https://github.com/dargmuesli/jonas-thelemann/commit/62ff9b5fc80fd0cdfc7d05c40e79d861ec092c91))
+
 ## [5.12.6](https://github.com/dargmuesli/jonas-thelemann/compare/5.12.5...5.12.6) (2023-04-12)
 
 
