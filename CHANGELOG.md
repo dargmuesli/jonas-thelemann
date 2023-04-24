@@ -1,3 +1,10 @@
+## [5.12.8](https://github.com/dargmuesli/jonas-thelemann/compare/5.12.7...5.12.8) (2023-04-24)
+
+
+### Bug Fixes
+
+* **docker:** correct development command ([f035dd0](https://github.com/dargmuesli/jonas-thelemann/commit/f035dd0b17af960b24867735df4aafe363043167))
+
 ## [5.12.7](https://github.com/dargmuesli/jonas-thelemann/compare/5.12.6...5.12.7) (2023-04-14)
 
 
