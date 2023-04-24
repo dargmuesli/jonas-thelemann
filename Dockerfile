@@ -14,7 +14,7 @@ VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["pnpm", "run", "dev"]
+CMD ["pnpm", "run", "--dir", "nuxt", "dev"]
 
 # Waiting for https://github.com/nuxt/framework/issues/6915
 # HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
