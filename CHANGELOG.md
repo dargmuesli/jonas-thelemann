@@ -1,3 +1,10 @@
+# [5.13.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.12.8...5.13.0) (2023-04-25)
+
+
+### Features
+
+* **pages:** add oauth ([e27abee](https://github.com/dargmuesli/jonas-thelemann/commit/e27abee8d8ff45113c2e7b23ff30ac5f3b699c8c)), closes [#260](https://github.com/dargmuesli/jonas-thelemann/issues/260)
+
 ## [5.12.8](https://github.com/dargmuesli/jonas-thelemann/compare/5.12.7...5.12.8) (2023-04-24)
 
 
