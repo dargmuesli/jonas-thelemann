@@ -1,7 +1,6 @@
 #############
 # Serve Nuxt in development mode.
 
-# Should be the specific version of `node:alpine`.
 FROM node:20.0.0-alpine@sha256:2ffec31a58e85fbcd575c544a3584f6f4d128779e6b856153a04366b8dd01bb0 AS development
 
 COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
@@ -23,7 +22,6 @@ CMD ["pnpm", "run", "--dir", "nuxt", "dev"]
 ########################
 # Prepare Nuxt.
 
-# Should be the specific version of `node:slim`.
 FROM node:20.0.0-alpine@sha256:2ffec31a58e85fbcd575c544a3584f6f4d128779e6b856153a04366b8dd01bb0 AS prepare
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
@@ -44,7 +42,6 @@ RUN pnpm install --offline
 ########################
 # Build Nuxt.
 
-# Should be the specific version of `node:alpine`.
 FROM node:20.0.0-alpine@sha256:2ffec31a58e85fbcd575c544a3584f6f4d128779e6b856153a04366b8dd01bb0 AS build
 
 ARG NUXT_PUBLIC_STACK_DOMAIN=jonas-thelemann.de
@@ -62,7 +59,6 @@ RUN corepack enable && \
 ########################
 # Nuxt: lint
 
-# Should be the specific version of `node:alpine`.
 FROM node:20.0.0-alpine@sha256:2ffec31a58e85fbcd575c544a3584f6f4d128779e6b856153a04366b8dd01bb0 AS lint
 
 WORKDIR /srv/app/
@@ -76,7 +72,6 @@ RUN corepack enable && \
 ########################
 # Nuxt: test (integration)
 
-# Should be the specific version of `cypress/included`.
 FROM cypress/included:12.11.0@sha256:f9c3930d94b49104949d4ff4ed567d0bc76d76b1567e65938408e9dae26d1603 AS test-integration_base
 
 ARG UNAME=cypress
@@ -101,7 +96,6 @@ VOLUME /srv/app
 ########################
 # Nuxt: test (integration, development)
 
-# Should be the specific version of `cypress/included`.
 FROM cypress/included:12.11.0@sha256:f9c3930d94b49104949d4ff4ed567d0bc76d76b1567e65938408e9dae26d1603 AS test-integration-dev
 
 RUN corepack enable
@@ -118,7 +112,6 @@ RUN pnpm --dir nuxt test:integration:dev
 ########################
 # Nuxt: test (integration, production)
 
-# Should be the specific version of `cypress/included`.
 FROM cypress/included:12.11.0@sha256:f9c3930d94b49104949d4ff4ed567d0bc76d76b1567e65938408e9dae26d1603 AS test-integration-prod
 
 RUN corepack enable
@@ -136,7 +129,6 @@ RUN pnpm --dir nuxt test:integration:prod
 #######################
 # Collect build, lint and test results.
 
-# Should be the specific version of `node:alpine`.
 FROM node:20.0.0-alpine@sha256:2ffec31a58e85fbcd575c544a3584f6f4d128779e6b856153a04366b8dd01bb0 AS collect
 
 WORKDIR /srv/app/
@@ -150,7 +142,6 @@ COPY --from=test-integration-prod /srv/app/package.json /tmp/test/package.json
 #######################
 # Provide a web server.
 
-# Should be the specific version of `nginx:alpine`.
 FROM nginx:1.24.0-alpine@sha256:b7db705c8986070be8aa99ec0886886ddb3c75b1e46301f54865b16db79e9e52 AS production
 
 WORKDIR /usr/share/nginx/html
@@ -166,7 +157,6 @@ HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost/api/healthchec
 # # Provide a web server.
 # # Requires node (cannot be static) as the server acts as backend too.
 
-# # Should be the specific version of `node:alpine`.
 # FROM node:18.15.0-alpine@sha256:19eaf41f3b8c2ac2f609ac8103f9246a6a6d46716cdbe49103fdb116e55ff0cc AS production
 
 # ENV NODE_ENV=production
