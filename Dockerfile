@@ -80,7 +80,11 @@ ARG GID=1000
 
 WORKDIR /srv/app/
 
+
 RUN corepack enable \
+    && apt-get update \
+    && apt-get install --no-install-recommends -y \
+        curl \
     # user
     && groupadd -g $GID -o $UNAME \
     && useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
@@ -98,7 +102,10 @@ VOLUME /srv/app
 
 FROM cypress/included:12.11.0@sha256:f9c3930d94b49104949d4ff4ed567d0bc76d76b1567e65938408e9dae26d1603 AS test-integration-dev
 
-RUN corepack enable
+RUN corepack enable \
+    && apt-get update \
+    && apt-get install --no-install-recommends -y \
+        curl
 
 WORKDIR /srv/app/
 
@@ -114,7 +121,10 @@ RUN pnpm --dir nuxt test:integration:dev
 
 FROM cypress/included:12.11.0@sha256:f9c3930d94b49104949d4ff4ed567d0bc76d76b1567e65938408e9dae26d1603 AS test-integration-prod
 
-RUN corepack enable
+RUN corepack enable \
+    && apt-get update \
+    && apt-get install --no-install-recommends -y \
+        curl
 
 WORKDIR /srv/app/
 
