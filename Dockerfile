@@ -80,6 +80,7 @@ ARG GID=1000
 
 WORKDIR /srv/app/
 
+COPY ./docker/entrypoint-dev.sh /usr/local/bin/
 
 RUN corepack enable \
     && apt-get update \
@@ -87,14 +88,17 @@ RUN corepack enable \
         curl \
     # user
     && groupadd -g $GID -o $UNAME \
-    && useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
+    && useradd -m -l -u $UID -g $GID -o -s /bin/bash $UNAME
 
 # Use the Cypress version installed by pnpm, not as provided by the Docker image.
 COPY --from=prepare --chown=$UNAME /root/.cache/Cypress /root/.cache/Cypress
 
 USER $UNAME
 
+VOLUME /srv/.pnpm-store
 VOLUME /srv/app
+
+ENTRYPOINT ["entrypoint-dev.sh"]
 
 
 ########################

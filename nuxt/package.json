@@ -24,11 +24,11 @@
     "prepare": "nuxt prepare",
     "test:integration:dev": "cross-env WAIT_ON_TIMEOUT=100000 start-server-and-test 'pnpm dev' 'http://localhost:3000' 'pnpm cypress:test'",
     "test:integration:prod": "cross-env NODE_ENV=production WAIT_ON_TIMEOUT=50000 start-server-and-test 'pnpm start' 'http://localhost:3000' 'pnpm cypress:test'",
-    "test:integration:docker:build": "docker build -t test-integration_base --build-arg UID=$(id -u) --build-arg GID=$(id -g) --target test-integration_base .",
-    "test:integration:docker:run": "docker run --rm --entrypoint '' -v \"$PWD:/srv/app\" test-integration_base",
+    "test:integration:docker:build": "docker build -t test-integration_base --build-arg UID=$(id -u) --build-arg GID=$(id -g) --target test-integration_base ../",
+    "test:integration:docker:run": "docker run --rm -v \"$PWD/..:/srv/app\" -v \"$(pnpm store path):/srv/.pnpm-store\" test-integration_base",
     "test:integration:docker:br": "pnpm test:integration:docker:build && pnpm test:integration:docker:run",
-    "test:integration:docker:dev": "pnpm test:integration:docker:br pnpm test:integration:dev",
-    "test:integration:docker:prod": "pnpm test:integration:docker:br pnpm test:integration:prod"
+    "test:integration:docker:dev": "pnpm test:integration:docker:br pnpm --dir nuxt test:integration:dev",
+    "test:integration:docker:prod": "pnpm test:integration:docker:br pnpm --dir nuxt test:integration:prod"
   },
   "devDependencies": {
     "@dargmuesli/nuxt-vio": "2.0.0-beta.1",
