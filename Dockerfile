@@ -72,7 +72,7 @@ RUN corepack enable && \
 ########################
 # Nuxt: test (integration)
 
-FROM cypress/included:12.11.0@sha256:f9c3930d94b49104949d4ff4ed567d0bc76d76b1567e65938408e9dae26d1603 AS test-integration_base
+FROM cypress/included:12.12.0@sha256:ed3195f01d2d0eecd71d508eed05ee600db5609187da7d531954a082438db54b AS test-integration_base
 
 ARG UNAME=cypress
 ARG UID=1000
@@ -96,7 +96,7 @@ VOLUME /srv/app
 ########################
 # Nuxt: test (integration, development)
 
-FROM cypress/included:12.11.0@sha256:f9c3930d94b49104949d4ff4ed567d0bc76d76b1567e65938408e9dae26d1603 AS test-integration-dev
+FROM cypress/included:12.12.0@sha256:ed3195f01d2d0eecd71d508eed05ee600db5609187da7d531954a082438db54b AS test-integration-dev
 
 RUN corepack enable
 
@@ -112,7 +112,7 @@ RUN pnpm --dir nuxt test:integration:dev
 ########################
 # Nuxt: test (integration, production)
 
-FROM cypress/included:12.11.0@sha256:f9c3930d94b49104949d4ff4ed567d0bc76d76b1567e65938408e9dae26d1603 AS test-integration-prod
+FROM cypress/included:12.12.0@sha256:ed3195f01d2d0eecd71d508eed05ee600db5609187da7d531954a082438db54b AS test-integration-prod
 
 RUN corepack enable
 
