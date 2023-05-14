@@ -3,8 +3,9 @@ name: CI
 on:
   pull_request:
   push:
-  - master
-  - 'renovate/**'
+    branches:
+      - master
+      - renovate/**
   release:
     types: [published]
 
