@@ -1,3 +1,10 @@
+## [5.13.3-beta.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.3-beta.1...5.13.3-beta.2) (2023-05-14)
+
+
+### Bug Fixes
+
+* add personal access token ([8e1f30c](https://github.com/dargmuesli/jonas-thelemann/commit/8e1f30c0bae4ec1d72152e2a8d09d0c85e903764))
+
 ## [5.13.3-beta.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.2...5.13.3-beta.1) (2023-05-14)
 
 
