@@ -39,7 +39,6 @@ jobs:
       packages: write
     with:
       ARTIFACT_PATH: nuxt/.output/public
-    with:
       TAG: ${{ needs.release_semantic_dry.outputs.new_release_version }}
   release_semantic:
     needs: build
