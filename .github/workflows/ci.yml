@@ -30,6 +30,7 @@ jobs:
     uses: dargmuesli/github-actions/.github/workflows/release-semantic-next.yml@0.39.1
     if: needs.prepare_jobs.outputs.pr_found == 'false' || github.event_name == 'pull_request'
     with:
+      DRY_RUN: true
       CACHE_PATH: pnpm-lock.yaml
   build:
     name: Build
