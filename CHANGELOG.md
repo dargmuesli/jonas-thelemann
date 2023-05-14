@@ -1,3 +1,10 @@
+## [5.13.3-beta.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.2...5.13.3-beta.1) (2023-05-14)
+
+
+### Bug Fixes
+
+* **deps:** update dargmuesli/github-actions action to v0.40.0 ([8c78d6b](https://github.com/dargmuesli/jonas-thelemann/commit/8c78d6b93628ba1c93241e7747404e81631bf160))
+
 ## [5.13.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.1...5.13.2) (2023-05-09)
 
 
