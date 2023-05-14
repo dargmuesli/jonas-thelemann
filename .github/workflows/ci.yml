@@ -44,8 +44,6 @@ jobs:
     needs: build
     name: Release (semantic)
     uses: dargmuesli/github-actions/.github/workflows/release-semantic-next.yml@0.39.0
-    secrets:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     with:
       CACHE_PATH: pnpm-lock.yaml
   deploy:
