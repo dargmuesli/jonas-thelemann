@@ -1,3 +1,11 @@
+## [5.13.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.2...5.13.3) (2023-05-23)
+
+
+### Bug Fixes
+
+* add personal access token ([8e1f30c](https://github.com/dargmuesli/jonas-thelemann/commit/8e1f30c0bae4ec1d72152e2a8d09d0c85e903764))
+* **deps:** update dargmuesli/github-actions action to v0.40.0 ([8c78d6b](https://github.com/dargmuesli/jonas-thelemann/commit/8c78d6b93628ba1c93241e7747404e81631bf160))
+
 ## [5.13.3-beta.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.3-beta.1...5.13.3-beta.2) (2023-05-14)
 
 
