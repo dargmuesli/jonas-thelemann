@@ -1,7 +1,7 @@
 #############
 # Serve Nuxt in development mode.
 
-FROM node:20.3.0-alpine@sha256:18bc68b6aae9d829ee898c12cc7907e648a12b7a6aa6fa3a6eec8fe3c48a0732 AS development
+FROM node:20.3.0-alpine@sha256:2d5e8a8a51bc341fd5f2eed6d91455c3a3d147e91a14298fc564b5dc519c1666 AS development
 
 COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
@@ -22,7 +22,7 @@ CMD ["pnpm", "run", "--dir", "nuxt", "dev"]
 ########################
 # Prepare Nuxt.
 
-FROM node:20.3.0-alpine@sha256:18bc68b6aae9d829ee898c12cc7907e648a12b7a6aa6fa3a6eec8fe3c48a0732 AS prepare
+FROM node:20.3.0-alpine@sha256:2d5e8a8a51bc341fd5f2eed6d91455c3a3d147e91a14298fc564b5dc519c1666 AS prepare
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -42,7 +42,7 @@ RUN pnpm install --offline
 ########################
 # Build Nuxt.
 
-FROM node:20.3.0-alpine@sha256:18bc68b6aae9d829ee898c12cc7907e648a12b7a6aa6fa3a6eec8fe3c48a0732 AS build
+FROM node:20.3.0-alpine@sha256:2d5e8a8a51bc341fd5f2eed6d91455c3a3d147e91a14298fc564b5dc519c1666 AS build
 
 ARG NUXT_PUBLIC_STACK_DOMAIN=jonas-thelemann.de
 ENV NUXT_PUBLIC_STACK_DOMAIN=${NUXT_PUBLIC_STACK_DOMAIN}
@@ -59,7 +59,7 @@ RUN corepack enable && \
 ########################
 # Nuxt: lint
 
-FROM node:20.3.0-alpine@sha256:18bc68b6aae9d829ee898c12cc7907e648a12b7a6aa6fa3a6eec8fe3c48a0732 AS lint
+FROM node:20.3.0-alpine@sha256:2d5e8a8a51bc341fd5f2eed6d91455c3a3d147e91a14298fc564b5dc519c1666 AS lint
 
 WORKDIR /srv/app/
 
@@ -129,7 +129,7 @@ RUN pnpm --dir nuxt test:integration:prod
 #######################
 # Collect build, lint and test results.
 
-FROM node:20.3.0-alpine@sha256:18bc68b6aae9d829ee898c12cc7907e648a12b7a6aa6fa3a6eec8fe3c48a0732 AS collect
+FROM node:20.3.0-alpine@sha256:2d5e8a8a51bc341fd5f2eed6d91455c3a3d147e91a14298fc564b5dc519c1666 AS collect
 
 WORKDIR /srv/app/
 
