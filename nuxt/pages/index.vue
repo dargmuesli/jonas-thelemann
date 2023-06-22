@@ -454,6 +454,7 @@ definePageMeta({
 const { t } = useI18n()
 const localePath = useLocalePath()
 const { indicateLoadingDone } = useLoadingDoneIndicator()
+const runtimeConfig = useRuntimeConfig()
 
 // data
 const imageClasses =
@@ -462,13 +463,15 @@ let repoCount: string | null = null
 
 // computations
 const age = computed(() =>
-  isTesting()
+  runtimeConfig.public.isTesting
     ? 1337
     : Math.abs(
         new Date(Date.now() - Date.parse('1998-12-17')).getUTCFullYear() - 1970
       )
 )
-const year = computed(() => (isTesting() ? 1337 : new Date().getFullYear()))
+const year = computed(() =>
+  runtimeConfig.public.isTesting ? 1337 : new Date().getFullYear()
+)
 
 // methods
 const init = async () => {
