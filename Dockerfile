@@ -3,20 +3,24 @@
 
 FROM node:20.3.1-alpine@sha256:7a6e3b7dcc549a2af31be9dab80038e29e46df43c2e36f2a185e5239c45b9da2 AS development
 
-COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+# The `CI` environment variable must be set for pnpm to run in headless mode
+ENV CI=true
 
 RUN corepack enable
 
 WORKDIR /srv/app/
+
+COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["pnpm", "run", "--dir", "nuxt", "dev"]
+EXPOSE 3000
 
-# Waiting for https://github.com/nuxt/framework/issues/6915
-# HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
+# TODO: support healthcheck while starting (https://github.com/nuxt/framework/issues/6915)
+# HEALTHCHECK --interval=10s --start-period=60s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
 
 
 ########################
@@ -47,6 +51,9 @@ FROM node:20.3.1-alpine@sha256:7a6e3b7dcc549a2af31be9dab80038e29e46df43c2e36f2a1
 ARG NUXT_PUBLIC_STACK_DOMAIN=jonas-thelemann.de
 ENV NUXT_PUBLIC_STACK_DOMAIN=${NUXT_PUBLIC_STACK_DOMAIN}
 
+# The `CI` environment variable must be set for pnpm to run in headless mode
+ENV CI=true
+
 WORKDIR /srv/app/
 
 COPY --from=prepare /srv/app/ ./
@@ -61,6 +68,9 @@ RUN corepack enable && \
 
 FROM node:20.3.1-alpine@sha256:7a6e3b7dcc549a2af31be9dab80038e29e46df43c2e36f2a185e5239c45b9da2 AS lint
 
+# The `CI` environment variable must be set for pnpm to run in headless mode
+ENV CI=true
+
 WORKDIR /srv/app/
 
 COPY --from=prepare /srv/app/ ./
@@ -70,60 +80,91 @@ RUN corepack enable && \
 
 
 ########################
-# Nuxt: test (integration)
+# Nuxt: test (e2e)
 
-FROM cypress/included:12.14.0@sha256:0f86976b54fd1d7b28caf6c45504ee50e82a42baf6279c245c41d141412e8b4d AS test-integration_base
+FROM mcr.microsoft.com/playwright:v1.34.2@sha256:d6cc296a938177cfaae55c8428c68ab81d143b2c54d2d1872136411228dbec20 AS test-e2e_base
 
-ARG UNAME=cypress
+ARG UNAME=e2e
 ARG UID=1000
 ARG GID=1000
 
+# The `CI` environment variable must be set for pnpm to run in headless mode
+ENV CI=true
+ENV NODE_ENV=development
+ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
+
 WORKDIR /srv/app/
+
+COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 RUN corepack enable \
     # user
     && groupadd -g $GID -o $UNAME \
-    && useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
-
-# Use the Cypress version installed by pnpm, not as provided by the Docker image.
-COPY --from=prepare --chown=$UNAME /root/.cache/Cypress /root/.cache/Cypress
+    && useradd -m -l -u $UID -g $GID -o -s /bin/bash $UNAME
 
 USER $UNAME
 
+VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 
+ENTRYPOINT ["docker-entrypoint.sh"]
+
 
 ########################
-# Nuxt: test (integration, development)
+# Nuxt: test (e2e, preparation)
 
-FROM cypress/included:12.14.0@sha256:0f86976b54fd1d7b28caf6c45504ee50e82a42baf6279c245c41d141412e8b4d AS test-integration-dev
+FROM mcr.microsoft.com/playwright:v1.34.2@sha256:d6cc296a938177cfaae55c8428c68ab81d143b2c54d2d1872136411228dbec20 AS test-e2e-prepare
 
-RUN corepack enable
+# The `CI` environment variable must be set for pnpm to run in headless mode
+ENV CI=true
+ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 
 WORKDIR /srv/app/
 
-# Use the Cypress version installed by pnpm, not as provided by the Docker image.
-COPY --from=prepare /root/.cache/Cypress /root/.cache/Cypress
+RUN corepack enable
+
 COPY --from=prepare /srv/app/ ./
 
-RUN pnpm --dir nuxt test:integration:dev
+RUN pnpm rebuild
 
 
 ########################
-# Nuxt: test (integration, production)
+# Nuxt: test (e2e, development)
 
-FROM cypress/included:12.14.0@sha256:0f86976b54fd1d7b28caf6c45504ee50e82a42baf6279c245c41d141412e8b4d AS test-integration-prod
+FROM mcr.microsoft.com/playwright:v1.34.2@sha256:d6cc296a938177cfaae55c8428c68ab81d143b2c54d2d1872136411228dbec20 AS test-e2e-dev
 
-RUN corepack enable
+# The `CI` environment variable must be set for pnpm to run in headless mode
+ENV CI=true
+ENV NODE_ENV=development
 
 WORKDIR /srv/app/
 
-# Use the Cypress version installed by pnpm, not as provided by the Docker image.
-COPY --from=prepare /root/.cache/Cypress /root/.cache/Cypress
-COPY --from=build /srv/app/ /srv/app/
-COPY --from=test-integration-dev /srv/app/package.json /tmp/test/package.json
+RUN corepack enable
 
-RUN pnpm --dir nuxt test:integration:prod
+COPY --from=test-e2e-prepare /srv/app/ ./
+
+RUN pnpm --dir nuxt run test:e2e:dev
+
+
+########################
+# Nuxt: test (e2e, production)
+
+FROM mcr.microsoft.com/playwright:v1.34.2@sha256:d6cc296a938177cfaae55c8428c68ab81d143b2c54d2d1872136411228dbec20 AS test-e2e-prod
+
+# The `CI` environment variable must be set for pnpm to run in headless mode
+ENV CI=true
+
+WORKDIR /srv/app/
+
+RUN corepack enable
+
+COPY --from=test-e2e-prepare /srv/app/ ./
+COPY --from=build /srv/app/nuxt/.output /srv/app/nuxt/.output
+
+# # Do not run in parallel with `test-e2e-dev`
+# COPY --from=test-e2e-dev /srv/app/package.json /tmp/test/package.json
+
+RUN pnpm --dir nuxt run test:e2e:prod
 
 
 #######################
@@ -131,12 +172,15 @@ RUN pnpm --dir nuxt test:integration:prod
 
 FROM node:20.3.1-alpine@sha256:7a6e3b7dcc549a2af31be9dab80038e29e46df43c2e36f2a185e5239c45b9da2 AS collect
 
+# The `CI` environment variable must be set for pnpm to run in headless mode
+ENV CI=true
+
 WORKDIR /srv/app/
 
 COPY --from=build /srv/app/nuxt/.output ./.output
-COPY --from=lint /srv/app/package.json /tmp/lint/package.json
-COPY --from=test-integration-dev /srv/app/package.json /tmp/test/package.json
-COPY --from=test-integration-prod /srv/app/package.json /tmp/test/package.json
+COPY --from=lint /srv/app/package.json /tmp/package.json
+COPY --from=test-e2e-dev /srv/app/package.json /tmp/package.json
+COPY --from=test-e2e-prod /srv/app/package.json /tmp/package.json
 
 
 #######################
@@ -144,13 +188,18 @@ COPY --from=test-integration-prod /srv/app/package.json /tmp/test/package.json
 
 FROM nginx:1.25.1-alpine@sha256:2d194184b067db3598771b4cf326cfe6ad5051937ba1132b8b7d4b0184e0d0a6 AS production
 
+# The `CI` environment variable must be set for pnpm to run in headless mode
+ENV CI=true
+ENV NODE_ENV=production
+
 WORKDIR /usr/share/nginx/html
 
 COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 
 COPY --from=collect /srv/app/.output/public/ ./
 
-HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost/api/healthcheck || exit 1
+HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3001/api/healthcheck || exit 1
+EXPOSE 3001
 
 
 # #######################
