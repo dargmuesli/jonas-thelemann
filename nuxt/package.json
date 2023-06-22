@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
-    "start": "npx http-server .output/public -p 3001",
+    "start": "http-server .output/public -p 3001",
     "generate": "nuxt generate",
     "lint": "pnpm lint:js && pnpm lint:ts && pnpm lint:style",
     "lint:js": "eslint --cache --ext .js,.ts,.vue --ignore-path .gitignore .",
@@ -45,6 +45,7 @@
     "eslint-plugin-nuxt": "4.0.0",
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-yml": "1.8.0",
+    "http-server": "14.1.1",
     "lint-staged": "13.2.2",
     "nuxt": "3.5.3",
     "prettier": "2.8.8",
