@@ -27,8 +27,8 @@ importers:
         specifier: 4.7.3
         version: 4.7.3(playwright-core@1.35.1)
       '@dargmuesli/nuxt-vio':
-        specifier: 1.11.3
-        version: 1.11.3(@unhead/vue@1.1.27)(tailwindcss@3.3.2)(ts-node@10.9.1)(vue@3.3.4)(webpack@5.88.0)
+        specifier: 1.11.4
+        version: 1.11.4(@unhead/vue@1.1.27)(tailwindcss@3.3.2)(ts-node@10.9.1)(vue@3.3.4)(webpack@5.88.0)
       '@intlify/eslint-plugin-vue-i18n':
         specifier: 3.0.0-beta.1
         version: 3.0.0-beta.1(eslint@8.43.0)
@@ -676,8 +676,8 @@ packages:
       - webpack
     dev: true
 
-  /@dargmuesli/nuxt-vio@1.11.3(@unhead/vue@1.1.27)(tailwindcss@3.3.2)(ts-node@10.9.1)(vue@3.3.4)(webpack@5.88.0):
-    resolution: {integrity: sha512-LtdYzh3On8z7LSvROnPzMrTPWZ47fnnycBztKDLvgmryEsZTwbhevZWicL6KqR//eEZdDkasDlGknD2GE6B6Vg==}
+  /@dargmuesli/nuxt-vio@1.11.4(@unhead/vue@1.1.27)(tailwindcss@3.3.2)(ts-node@10.9.1)(vue@3.3.4)(webpack@5.88.0):
+    resolution: {integrity: sha512-T/VbS5bwgQXlcMan0HGPIm4dItSUdRTAOK5SgjfHZ2YrHk8D/Y2iHqpQE6S33f3TUEWVfhMkxIs7gFf2mYVooA==}
     engines: {node: '20'}
     dependencies:
       '@dargmuesli/nuxt-cookie-control': 5.10.3(webpack@5.88.0)
@@ -1671,7 +1671,7 @@ packages:
       postcss-import: 13.0.0(postcss@8.4.24)
       postcss-loader: 4.3.0(postcss@8.4.24)(webpack@5.88.0)
       postcss-url: 10.1.3(postcss@8.4.24)
-      semver: 7.5.2
+      semver: 7.5.3
     transitivePeerDependencies:
       - webpack
     dev: true
@@ -1928,7 +1928,7 @@ packages:
       '@intlify/bundle-utils': 4.0.0(vue-i18n@9.3.0-beta.16)
       '@intlify/shared': 9.3.0-beta.16
       '@intlify/unplugin-vue-i18n': 0.8.2(vue-i18n@9.3.0-beta.16)
-      '@nuxt/kit': 3.5.3
+      '@nuxt/kit': 3.6.1
       '@vue/compiler-sfc': 3.3.4
       cookie-es: 0.5.0
       debug: 4.3.4
@@ -1957,7 +1957,7 @@ packages:
   /@nuxtjs/tailwindcss@6.8.0(ts-node@10.9.1)(webpack@5.88.0):
     resolution: {integrity: sha512-jzuvD1nfA2BPnSbHtKK0aiI51ndMa7lNGL1iDEFuEPsltzilZ9ED7zOP6niGTrImg0n5Yt4GEJpixi6yWwp9Hw==}
     dependencies:
-      '@nuxt/kit': 3.5.3
+      '@nuxt/kit': 3.6.1
       '@nuxt/postcss8': 1.1.3(webpack@5.88.0)
       autoprefixer: 10.4.14(postcss@8.4.24)
       chokidar: 3.5.3
@@ -5954,7 +5954,7 @@ packages:
       kleur: 4.1.5
       minimist: 1.2.8
       prompts: 2.4.2
-      semver: 7.5.2
+      semver: 7.5.3
     dev: true
 
   /htmlparser2@8.0.2:
