@@ -119,8 +119,8 @@ packages:
       '@jridgewell/trace-mapping': 0.3.18
     dev: true
 
-  /@antfu/utils@0.7.4:
-    resolution: {integrity: sha512-qe8Nmh9rYI/HIspLSTwtbMFPj6dISG6+dJnOguTlPNXtCvS2uezdxscVBb7/3DrmNbQK49TDqpkSQ1chbRGdpQ==}
+  /@antfu/utils@0.7.5:
+    resolution: {integrity: sha512-dlR6LdS+0SzOAPx/TPRhnoi7hE251OVeT2Snw0RguNbBSbjUHdWr0l3vcUUDg26rEysT89kCbtw1lVorBXLLCg==}
     dev: true
 
   /@axe-core/playwright@4.7.3(playwright-core@1.35.1):
@@ -1538,7 +1538,7 @@ packages:
       c12: 1.4.2
       consola: 3.2.2
       defu: 6.1.2
-      globby: 13.2.0
+      globby: 13.2.1
       hash-sum: 2.0.0
       ignore: 5.2.4
       jiti: 1.18.2
@@ -1565,7 +1565,7 @@ packages:
       c12: 1.4.2
       consola: 3.2.2
       defu: 6.1.2
-      globby: 13.2.0
+      globby: 13.2.1
       hash-sum: 2.0.0
       ignore: 5.2.4
       jiti: 1.18.2
@@ -1592,7 +1592,7 @@ packages:
       c12: 1.4.2
       consola: 3.2.2
       defu: 6.1.2
-      globby: 13.2.0
+      globby: 13.2.1
       hash-sum: 2.0.0
       ignore: 5.2.4
       jiti: 1.18.2
@@ -3246,7 +3246,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.9
-      caniuse-lite: 1.0.30001509
+      caniuse-lite: 1.0.30001510
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -3360,7 +3360,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001509
+      caniuse-lite: 1.0.30001510
       electron-to-chromium: 1.4.447
       node-releases: 2.0.12
       update-browserslist-db: 1.0.11(browserslist@4.21.9)
@@ -3486,13 +3486,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.21.9
-      caniuse-lite: 1.0.30001509
+      caniuse-lite: 1.0.30001510
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
-  /caniuse-lite@1.0.30001509:
-    resolution: {integrity: sha512-2uDDk+TRiTX5hMcUYT/7CSyzMZxjfGu0vAUjS2g0LSD8UoXOv0LtpH4LxGMemsiPq6LCVIUjNwVM0erkOkGCDA==}
+  /caniuse-lite@1.0.30001510:
+    resolution: {integrity: sha512-z35lD6xjHklPNgjW4P68R30Er5OCIZE0C1bUf8IMXSh34WJYXfIy+GxIEraQXYJ2dvTU8TumjYAeLrPhpMlsuw==}
     dev: true
 
   /chalk@2.4.2:
@@ -4379,7 +4379,7 @@ packages:
     hasBin: true
     dependencies:
       browserslist: 4.21.9
-      caniuse-lite: 1.0.30001509
+      caniuse-lite: 1.0.30001510
       css-rule-stream: 1.1.0
       duplexer2: 0.0.2
       ldjson-stream: 1.2.1
@@ -4733,7 +4733,7 @@ packages:
       eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-node@0.3.7)(eslint-import-resolver-typescript@3.5.5)(eslint@8.44.0)
       eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-typescript@3.5.5)(eslint@8.44.0)
       get-tsconfig: 4.6.2
-      globby: 13.2.0
+      globby: 13.2.1
       is-core-module: 2.12.1
       is-glob: 4.0.3
       synckit: 0.8.5
@@ -5689,8 +5689,8 @@ packages:
       slash: 3.0.0
     dev: true
 
-  /globby@13.2.0:
-    resolution: {integrity: sha512-jWsQfayf13NvqKUIL3Ta+CIqMnvlaIDFveWE/dpOZ9+3AMEJozsxDvKA02zync9UuvOM8rOXzsD5GqKP4OnWPQ==}
+  /globby@13.2.1:
+    resolution: {integrity: sha512-DPCBxctI7dN4EeIqjW2KGqgdcUMbrhJ9AzON+PlxCtvppWhubTLD4+a0GFxiym14ZvacUydTPjLPc2DlKz7EIg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       dir-glob: 3.0.1
@@ -7357,7 +7357,7 @@ packages:
       escape-string-regexp: 5.0.0
       etag: 1.8.1
       fs-extra: 11.1.1
-      globby: 13.2.0
+      globby: 13.2.1
       gzip-size: 7.0.0
       h3: 1.7.1
       hookable: 5.5.3
@@ -7566,7 +7566,7 @@ packages:
       fast-glob: 3.3.0
       flatted: 3.2.7
       fs-extra: 11.1.1
-      globby: 13.2.0
+      globby: 13.2.1
       image-size: 1.0.2
       inline-css: 4.0.2
       launch-editor: 2.6.0
@@ -7716,7 +7716,7 @@ packages:
       escape-string-regexp: 5.0.0
       estree-walker: 3.0.3
       fs-extra: 11.1.1
-      globby: 13.2.0
+      globby: 13.2.1
       h3: 1.7.1
       hookable: 5.5.3
       jiti: 1.18.2
@@ -10368,7 +10368,7 @@ packages:
     resolution: {integrity: sha512-CCE34NDUtsVNelz6mR1XUeb0iZ4WBx9MJx0J5uIIyUBqwkIkykMSsRJPAhqVqhkH59Ch5f3qtXH9ne3v6vXTuw==}
     engines: {node: '>=16.14.0'}
     dependencies:
-      '@antfu/utils': 0.7.4
+      '@antfu/utils': 0.7.5
       '@babel/generator': 7.22.5
       '@babel/parser': 7.22.5
       '@rollup/pluginutils': 5.0.2(rollup@3.26.0)
