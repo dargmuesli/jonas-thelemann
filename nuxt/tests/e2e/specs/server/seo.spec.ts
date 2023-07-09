@@ -18,7 +18,7 @@ test.describe('seo', () => {
     await page.goto('/api/pages/og')
     await expect(page.getByTestId('is-loading')).toHaveAttribute(
       'data-is-loading',
-      'false'
+      'false',
     )
     await page.getByRole('button', { name: 'Cookie control' }).isVisible()
     await expect(page).toHaveScreenshot({ fullPage: true })

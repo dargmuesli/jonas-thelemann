@@ -466,18 +466,18 @@ const age = computed(() =>
   runtimeConfig.public.isTesting
     ? 1337
     : Math.abs(
-        new Date(Date.now() - Date.parse('1998-12-17')).getUTCFullYear() - 1970
-      )
+        new Date(Date.now() - Date.parse('1998-12-17')).getUTCFullYear() - 1970,
+      ),
 )
 const year = computed(() =>
-  runtimeConfig.public.isTesting ? 1337 : new Date().getFullYear()
+  runtimeConfig.public.isTesting ? 1337 : new Date().getFullYear(),
 )
 
 // methods
 const init = async () => {
   try {
     const res = await $fetch.raw(
-      'https://api.github.com/users/dargmuesli/repos?per_page=1'
+      'https://api.github.com/users/dargmuesli/repos?per_page=1',
     )
 
     if (!res.ok) throw createError('Response is not ok!')
@@ -489,8 +489,8 @@ const init = async () => {
             headerLink
               .split(', ')[1]
               .split('; ')[0]
-              .replace(/(^<|>$)/g, '')
-          ).searchParams
+              .replace(/(^<|>$)/g, ''),
+          ).searchParams,
         ).get('page')
       : null
   } catch (e) {

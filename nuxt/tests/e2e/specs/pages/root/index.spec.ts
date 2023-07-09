@@ -23,7 +23,7 @@ test.beforeEach(async ({ context }) => {
         headers: {
           link: '<https://api.github.com/user/4778485/repos?per_page=1&page=2>; rel="next", <https://api.github.com/user/4778485/repos?per_page=1&page=1337>; rel="last"',
         },
-      })
+      }),
   )
 })
 
@@ -66,7 +66,7 @@ test.describe('visual regression', () => {
     await page.goto('/')
     await expect(page.getByTestId('is-loading')).toHaveAttribute(
       'data-is-loading',
-      'false'
+      'false',
     )
     await page.getByRole('button', { name: 'Cookie control' }).isVisible()
     await expect(page).toHaveScreenshot({ fullPage: true })
@@ -79,7 +79,7 @@ test.describe('visual regression', () => {
     await page.goto('/')
     await expect(page.getByTestId('is-loading')).toHaveAttribute(
       'data-is-loading',
-      'false'
+      'false',
     )
     await expect(page).toHaveScreenshot({ fullPage: true })
   })
