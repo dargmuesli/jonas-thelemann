@@ -1,3 +1,10 @@
+## [5.13.8](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.7...5.13.8) (2023-07-18)
+
+
+### Bug Fixes
+
+* schedule release ([20a54aa](https://github.com/dargmuesli/jonas-thelemann/commit/20a54aa46c95ca7e5e965a6c50eeaa0a8bcfefb8))
+
 ## [5.13.7](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.6...5.13.7) (2023-07-11)
 
 
