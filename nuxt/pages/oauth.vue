@@ -7,22 +7,11 @@
       {{ t('copy') }}
     </VioButton>
   </div>
+  <VioError v-else :status-code="400" />
 </template>
 
 <script setup lang="ts">
 import clipboard from 'clipboardy'
-
-definePageMeta({
-  middleware: [
-    (to) => {
-      const localePath = useLocalePath()
-
-      if (!to.query.code) {
-        return navigateTo(localePath('/'))
-      }
-    },
-  ],
-})
 
 const route = useRoute()
 const { t } = useI18n()
