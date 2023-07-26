@@ -1,3 +1,10 @@
+## [5.13.9](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.8...5.13.9) (2023-07-26)
+
+
+### Bug Fixes
+
+* **pages:** replace middleware with error fallback ([363b7c0](https://github.com/dargmuesli/jonas-thelemann/commit/363b7c0deaf0200a6c23a9031eec231c68405d6d))
+
 ## [5.13.8](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.7...5.13.8) (2023-07-18)
 
 
