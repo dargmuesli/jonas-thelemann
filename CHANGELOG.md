@@ -1,3 +1,10 @@
+## [5.13.10](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.9...5.13.10) (2023-07-27)
+
+
+### Bug Fixes
+
+* **deps:** upgrade to vio v1.14.0 ([ac8254b](https://github.com/dargmuesli/jonas-thelemann/commit/ac8254b7dc4b01f6807c8ec2b7199c20b35ecff4))
+
 ## [5.13.9](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.8...5.13.9) (2023-07-26)
 
 
