@@ -7,7 +7,7 @@
       {{ t('copy') }}
     </VioButton>
   </div>
-  <VioError v-else :status-code="400" />
+  <VioError v-else :description="t('codeError')" :status-code="400" />
 </template>
 
 <script setup lang="ts">
@@ -30,9 +30,11 @@ useSeoMeta({ title: 'OAuth' })
 
 <i18n lang="yaml">
 de:
+  codeError: Code fehlt
   copy: Kopieren
   copySuccess: In die Zwischenablage kopiert
 en:
+  codeError: Code is missing
   copy: Copy
   copySuccess: Copied to the clipboard
 </i18n>
