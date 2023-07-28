@@ -13,4 +13,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  sitemap: {
+    exclude: ['/api/**'],
+  },
 })
