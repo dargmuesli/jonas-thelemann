@@ -1,3 +1,12 @@
+## [5.13.11](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.10...5.13.11) (2023-07-30)
+
+
+### Bug Fixes
+
+* **i18n:** hardcode configuration ([83330a1](https://github.com/dargmuesli/jonas-thelemann/commit/83330a125a3ab137476d9ee31959b2e3e9d72dd9))
+* **oauth:** move to api route ([ac8f4eb](https://github.com/dargmuesli/jonas-thelemann/commit/ac8f4ebd1ab895b8b2f3389e9d93b6bbace0e8f8))
+* **sitemap:** exclude api routes ([9a6d0f9](https://github.com/dargmuesli/jonas-thelemann/commit/9a6d0f9073adeba7654756dc6b50385bc474dedc))
+
 ## [5.13.10](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.9...5.13.10) (2023-07-27)
 
 
