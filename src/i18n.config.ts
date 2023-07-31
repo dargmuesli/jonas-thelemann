@@ -1,8 +1,3 @@
-// // TODO: find out why the following does not work
-// import { i18nConfig } from '@dargmuesli/nuxt-vio/i18n.config'
-// export default defineI18nConfig(() => i18nConfig)
+import { I18N_VUE_CONFIG } from '@dargmuesli/nuxt-vio/utils/constants'
 
-export default defineI18nConfig(() => ({
-  fallbackWarn: false, // covered by linting
-  missingWarn: false, // covered by linting
-}))
+export default defineI18nConfig(() => I18N_VUE_CONFIG)
