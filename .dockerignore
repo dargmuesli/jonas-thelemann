@@ -1,16 +1,9 @@
-# Created by https://www.toptal.com/developers/gitignore/api/node
-# Edit at https://www.toptal.com/developers/gitignore?templates=node
-# UNUSED PROPERTIES REMOVED!
-
 # Dependency directories
-node_modules
-nuxt/node_modules
+**/node_modules/
 
 # Nuxt.js build / generate output
-nuxt/.nuxt
-nuxt/.output
-
-# End of https://www.toptal.com/developers/gitignore/api/node
+**/.nuxt
+**/.output
 
 # Git
 **/!.gitkeep
@@ -19,13 +12,8 @@ nuxt/.output
 **/.env
 
 # ESLint
-.eslintcache
+**/.eslintcache
 
-# Cypress
-cypress/results
-cypress/reports
-cypress/screenshots
-cypress/snapshots/actual
-cypress/snapshots/diff
-cypress/snapshots/result
-cypress/videos
+# Playwright
+**/tests/e2e/report
+**/tests/e2e/results

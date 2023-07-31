@@ -8,8 +8,8 @@ on:
 jobs:
   release-schedule:
     name: 'Release: Scheduled'
-    uses: dargmuesli/github-actions/.github/workflows/release-schedule.yml@0.37.4
+    uses: dargmuesli/github-actions/.github/workflows/release-schedule.yml@0.40.15
     secrets:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
     with:
       IS_DEBOUNCED: ${{ github.event_name != 'workflow_dispatch' }}

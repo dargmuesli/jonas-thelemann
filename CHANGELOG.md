@@ -1,3 +1,97 @@
+## [5.13.12](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.11...5.13.12) (2023-07-31)
+
+
+### Bug Fixes
+
+* **locales:** correct typo ([59e40a9](https://github.com/dargmuesli/jonas-thelemann/commit/59e40a91e2bd4abeac074d1e1fa908c4b881733a))
+
+## [5.13.11](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.10...5.13.11) (2023-07-30)
+
+
+### Bug Fixes
+
+* **i18n:** hardcode configuration ([83330a1](https://github.com/dargmuesli/jonas-thelemann/commit/83330a125a3ab137476d9ee31959b2e3e9d72dd9))
+* **oauth:** move to api route ([ac8f4eb](https://github.com/dargmuesli/jonas-thelemann/commit/ac8f4ebd1ab895b8b2f3389e9d93b6bbace0e8f8))
+* **sitemap:** exclude api routes ([9a6d0f9](https://github.com/dargmuesli/jonas-thelemann/commit/9a6d0f9073adeba7654756dc6b50385bc474dedc))
+
+## [5.13.10](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.9...5.13.10) (2023-07-27)
+
+
+### Bug Fixes
+
+* **deps:** upgrade to vio v1.14.0 ([ac8254b](https://github.com/dargmuesli/jonas-thelemann/commit/ac8254b7dc4b01f6807c8ec2b7199c20b35ecff4))
+
+## [5.13.9](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.8...5.13.9) (2023-07-26)
+
+
+### Bug Fixes
+
+* **pages:** replace middleware with error fallback ([363b7c0](https://github.com/dargmuesli/jonas-thelemann/commit/363b7c0deaf0200a6c23a9031eec231c68405d6d))
+
+## [5.13.8](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.7...5.13.8) (2023-07-18)
+
+
+### Bug Fixes
+
+* schedule release ([20a54aa](https://github.com/dargmuesli/jonas-thelemann/commit/20a54aa46c95ca7e5e965a6c50eeaa0a8bcfefb8))
+
+## [5.13.7](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.6...5.13.7) (2023-07-11)
+
+
+### Bug Fixes
+
+* schedule release ([c662b48](https://github.com/dargmuesli/jonas-thelemann/commit/c662b48b6841ed206420547ae8820c9244d08eb1))
+
+## [5.13.6](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.5...5.13.6) (2023-06-27)
+
+
+### Bug Fixes
+
+* schedule release ([4c40f55](https://github.com/dargmuesli/jonas-thelemann/commit/4c40f5523d20538a87eecb4cd4a315b002fae46a))
+
+## [5.13.5](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.4...5.13.5) (2023-06-20)
+
+
+### Bug Fixes
+
+* schedule release ([f1cde16](https://github.com/dargmuesli/jonas-thelemann/commit/f1cde16d1a62ca79ebfb668cf48de206964560bc))
+
+## [5.13.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.3...5.13.4) (2023-06-06)
+
+
+### Bug Fixes
+
+* schedule release ([710bc28](https://github.com/dargmuesli/jonas-thelemann/commit/710bc2885058e331c7faac39cf5cf3f97090b2cc))
+
+## [5.13.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.2...5.13.3) (2023-05-23)
+
+
+### Bug Fixes
+
+* add personal access token ([8e1f30c](https://github.com/dargmuesli/jonas-thelemann/commit/8e1f30c0bae4ec1d72152e2a8d09d0c85e903764))
+* **deps:** update dargmuesli/github-actions action to v0.40.0 ([8c78d6b](https://github.com/dargmuesli/jonas-thelemann/commit/8c78d6b93628ba1c93241e7747404e81631bf160))
+
+## [5.13.3-beta.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.3-beta.1...5.13.3-beta.2) (2023-05-14)
+
+
+### Bug Fixes
+
+* add personal access token ([8e1f30c](https://github.com/dargmuesli/jonas-thelemann/commit/8e1f30c0bae4ec1d72152e2a8d09d0c85e903764))
+
+## [5.13.3-beta.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.2...5.13.3-beta.1) (2023-05-14)
+
+
+### Bug Fixes
+
+* **deps:** update dargmuesli/github-actions action to v0.40.0 ([8c78d6b](https://github.com/dargmuesli/jonas-thelemann/commit/8c78d6b93628ba1c93241e7747404e81631bf160))
+
+## [5.13.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.1...5.13.2) (2023-05-09)
+
+
+### Bug Fixes
+
+* schedule release ([b0ffeff](https://github.com/dargmuesli/jonas-thelemann/commit/b0ffeff7e745071e9c0ca74aebbf29d9ef9b9165))
+
 ## [5.13.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.0...5.13.1) (2023-04-25)
 
 

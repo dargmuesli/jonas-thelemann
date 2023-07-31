@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,node,windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,node,windows
+# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,node,nuxtjs,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,node,nuxtjs,windows
 
 ### Linux ###
 *~
@@ -189,6 +189,17 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
+### NuxtJS ###
+# Generated dirs
+.nuxt-*
+.output
+.gen
+
+# Node dependencies
+node_modules
+
+# System files
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -215,4 +226,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/linux,macos,node,windows
+# End of https://www.toptal.com/developers/gitignore/api/linux,macos,node,nuxtjs,windows
+
+tests/e2e/report
+tests/e2e/results

@@ -1,0 +1,63 @@
+{
+  "name": "jonas-thelemann",
+  "version": "5.13.12",
+  "private": true,
+  "description": "The source code of `jonas-thelemann.de`.",
+  "type": "module",
+  "engines": {
+    "node": "20"
+  },
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "http-server .output/public -p 3001",
+    "generate": "nuxt generate",
+    "lint": "pnpm lint:js && pnpm lint:ts && pnpm lint:style",
+    "lint:js": "eslint --cache --ext .js,.ts,.vue --ignore-path .gitignore .",
+    "lint:ts": "nuxt typecheck",
+    "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
+    "lint:fix": "pnpm lint:js --fix && pnpm lint:ts --fix && pnpm lint:style --fix",
+    "lint:quiet": "pnpm lint:js --quiet && pnpm lint:style --quiet",
+    "lint:staged": "pnpm lint-staged",
+    "prepare": "nuxt prepare",
+    "test:e2e": "playwright test",
+    "test:e2e:dev": "cross-env NUXT_PUBLIC_IS_TESTING=1 WAIT_ON_TIMEOUT=100000 pnpm test:e2e",
+    "test:e2e:prod": "cross-env NUXT_PUBLIC_IS_TESTING=1 WAIT_ON_TIMEOUT=10000 NODE_ENV=production pnpm test:e2e",
+    "test:e2e:docker:build": "docker build -t test-e2e_base --build-arg UID=$(id -u) --build-arg GID=$(id -g) --target test-e2e_base ..",
+    "test:e2e:docker:run": "docker run --rm -v \"$PWD/..:/srv/app\" -v \"$(pnpm store path):/srv/.pnpm-store\" test-e2e_base",
+    "test:e2e:docker:br": "pnpm test:e2e:docker:build && pnpm test:e2e:docker:run",
+    "test:e2e:docker:dev": "pnpm test:e2e:docker:br pnpm --dir src run test:e2e:dev",
+    "test:e2e:docker:dev:update": "pnpm test:e2e:docker:br pnpm --dir src run test:e2e:dev --update-snapshots",
+    "test:e2e:docker:prod": "pnpm test:e2e:docker:br pnpm --dir src run test:e2e:prod"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.7.3",
+    "@dargmuesli/nuxt-vio": "1.16.0",
+    "@intlify/eslint-plugin-vue-i18n": "3.0.0-next.3",
+    "@nuxtjs/eslint-config-typescript": "12.0.0",
+    "@playwright/test": "1.36.2",
+    "@types/node": "20.4.5",
+    "clipboardy": "3.0.0",
+    "consola": "3.2.3",
+    "cross-env": "7.0.3",
+    "eslint": "8.46.0",
+    "eslint-config-prettier": "8.9.0",
+    "eslint-plugin-nuxt": "4.0.0",
+    "eslint-plugin-prettier": "5.0.0",
+    "eslint-plugin-yml": "1.8.0",
+    "http-server": "14.1.1",
+    "lint-staged": "13.2.3",
+    "nuxt": "3.6.5",
+    "prettier": "3.0.0",
+    "prettier-plugin-tailwindcss": "0.4.1",
+    "stylelint": "15.10.2",
+    "stylelint-config-recommended-vue": "1.5.0",
+    "stylelint-config-standard": "34.0.0",
+    "stylelint-no-unsupported-browser-features": "7.0.0",
+    "typescript": "5.1.6",
+    "vue-tsc": "1.8.8"
+  },
+  "peerDependencies": {
+    "playwright-core": "1.36.2"
+  }
+}
