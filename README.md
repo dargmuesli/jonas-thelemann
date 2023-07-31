@@ -5,7 +5,7 @@
 
 The source code of [jonas-thelemann.de](https://jonas-thelemann.de/).
 
-![Welcome](docs/assets/hero.jpg "Jonas Thelemann")
+![Welcome](https://jonas-thelemann.de/__og_image__/og.png "Jonas Thelemann")
 
 ## Table of Contents
 1. **[Development](#development)**
