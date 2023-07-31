@@ -16,7 +16,7 @@ VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["pnpm", "run", "--dir", "nuxt", "dev"]
+CMD ["pnpm", "run", "--dir", "src", "dev"]
 EXPOSE 3000
 
 # TODO: support healthcheck while starting (https://github.com/nuxt/framework/issues/6915)
@@ -60,7 +60,7 @@ COPY --from=prepare /srv/app/ ./
 
 ENV NODE_ENV=production
 RUN corepack enable && \
-    pnpm --dir nuxt run generate
+    pnpm --dir src run generate
 
 
 ########################
@@ -76,7 +76,7 @@ WORKDIR /srv/app/
 COPY --from=prepare /srv/app/ ./
 
 RUN corepack enable && \
-    pnpm --dir nuxt run lint
+    pnpm --dir src run lint
 
 
 ########################
@@ -143,7 +143,7 @@ RUN corepack enable
 
 COPY --from=test-e2e-prepare /srv/app/ ./
 
-RUN pnpm --dir nuxt run test:e2e:dev
+RUN pnpm --dir src run test:e2e:dev
 
 
 ########################
@@ -159,12 +159,12 @@ WORKDIR /srv/app/
 RUN corepack enable
 
 COPY --from=test-e2e-prepare /srv/app/ ./
-COPY --from=build /srv/app/nuxt/.output /srv/app/nuxt/.output
+COPY --from=build /srv/app/src/.output /srv/app/src/.output
 
 # # Do not run in parallel with `test-e2e-dev`
 # COPY --from=test-e2e-dev /srv/app/package.json /tmp/test/package.json
 
-RUN pnpm --dir nuxt run test:e2e:prod
+RUN pnpm --dir src run test:e2e:prod
 
 
 #######################
@@ -177,7 +177,7 @@ ENV CI=true
 
 WORKDIR /srv/app/
 
-COPY --from=build /srv/app/nuxt/.output ./.output
+COPY --from=build /srv/app/src/.output ./.output
 COPY --from=lint /srv/app/package.json /tmp/package.json
 COPY --from=test-e2e-dev /srv/app/package.json /tmp/package.json
 COPY --from=test-e2e-prod /srv/app/package.json /tmp/package.json

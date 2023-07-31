@@ -26,9 +26,9 @@
     "test:e2e:docker:build": "docker build -t test-e2e_base --build-arg UID=$(id -u) --build-arg GID=$(id -g) --target test-e2e_base ..",
     "test:e2e:docker:run": "docker run --rm -v \"$PWD/..:/srv/app\" -v \"$(pnpm store path):/srv/.pnpm-store\" test-e2e_base",
     "test:e2e:docker:br": "pnpm test:e2e:docker:build && pnpm test:e2e:docker:run",
-    "test:e2e:docker:dev": "pnpm test:e2e:docker:br pnpm --dir nuxt run test:e2e:dev",
-    "test:e2e:docker:dev:update": "pnpm test:e2e:docker:br pnpm --dir nuxt run test:e2e:dev --update-snapshots",
-    "test:e2e:docker:prod": "pnpm test:e2e:docker:br pnpm --dir nuxt run test:e2e:prod"
+    "test:e2e:docker:dev": "pnpm test:e2e:docker:br pnpm --dir src run test:e2e:dev",
+    "test:e2e:docker:dev:update": "pnpm test:e2e:docker:br pnpm --dir src run test:e2e:dev --update-snapshots",
+    "test:e2e:docker:prod": "pnpm test:e2e:docker:br pnpm --dir src run test:e2e:prod"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.7.3",
