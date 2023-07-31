@@ -1,3 +1,10 @@
+## [5.13.12](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.11...5.13.12) (2023-07-31)
+
+
+### Bug Fixes
+
+* **locales:** correct typo ([59e40a9](https://github.com/dargmuesli/jonas-thelemann/commit/59e40a91e2bd4abeac074d1e1fa908c4b881733a))
+
 ## [5.13.11](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.10...5.13.11) (2023-07-30)
 
 
