@@ -15,12 +15,7 @@ test.beforeEach(async ({ context }) => {
 
 test.describe('seo', () => {
   test('generates the open graph image', async ({ page }) => {
-    await page.goto('/api/pages/og')
-    await expect(page.getByTestId('is-loading')).toHaveAttribute(
-      'data-is-loading',
-      'false',
-    )
-    await page.getByRole('button', { name: 'Cookie control' }).isVisible()
+    await page.goto('/__og_image__/og.png')
     await expect(page).toHaveScreenshot({ fullPage: true })
   })
 })
