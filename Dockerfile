@@ -98,9 +98,6 @@ WORKDIR /srv/app/
 COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 RUN corepack enable \
-    && apt-get update \
-    && apt-get install --no-install-recommends -y \
-        curl \
     # user
     && groupadd -g $GID -o $UNAME \
     && useradd -m -l -u $UID -g $GID -o -s /bin/bash $UNAME
