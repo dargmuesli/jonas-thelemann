@@ -2,6 +2,7 @@ import { I18N_MODULE_CONFIG } from '@dargmuesli/nuxt-vio/utils/constants'
 
 export default defineNuxtConfig({
   extends: ['@dargmuesli/nuxt-vio'],
+  modules: ['@nuxt/image'],
 
   // modules
   i18n: {
