@@ -1,17 +1,21 @@
 <template>
   <div class="flex flex-col xl:flex-row">
-    <img
+    <nuxt-img
       alt="Jonas in Tutzing."
       class="xl:fixed"
       :class="imageClasses"
       fetchpriority="high"
+      format="webp"
+      preload
       src="/assets/static/images/tutzing.jpg"
     />
-    <img
+    <nuxt-img
       alt="Jonas in Tutzing."
       class="hidden xl:block"
       :class="imageClasses"
       fetchpriority="high"
+      format="webp"
+      preload
       src="/assets/static/images/tutzing.jpg"
     />
     <div class="p-4 sm:p-8">
@@ -458,7 +462,7 @@ const runtimeConfig = useRuntimeConfig()
 
 // data
 const imageClasses =
-  'max-h-[80vh] xl:max-w-[50vw] object-cover object-position-custom xl:h-[100vh] xl:max-h-[none]'
+  'xl:h-[100vh] max-h-[80vh] xl:max-h-[none] xl:max-w-[50vw] object-cover object-position-custom'
 let repoCount: string | null = null
 
 // computations
