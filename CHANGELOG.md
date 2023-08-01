@@ -1,3 +1,10 @@
+## [5.14.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.14.0...5.14.1) (2023-08-01)
+
+
+### Performance Improvements
+
+* **image:** use `@nuxt/image` ([b2af613](https://github.com/dargmuesli/jonas-thelemann/commit/b2af6136588cfa729bd5945f12d1742ffe9751ec))
+
 # [5.14.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.12...5.14.0) (2023-08-01)
 
 
