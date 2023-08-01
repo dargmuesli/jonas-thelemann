@@ -1,3 +1,16 @@
+# [5.14.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.12...5.14.0) (2023-08-01)
+
+
+### Bug Fixes
+
+* **docker:** correct integration base ([9ee5bf4](https://github.com/dargmuesli/jonas-thelemann/commit/9ee5bf4063149128c73e9f5dd1a99dec23e5df68))
+* **docker:** install curl for cypress ([bf79572](https://github.com/dargmuesli/jonas-thelemann/commit/bf79572e4efe26a47dcf8ecd02500b0dc6ebb8f7))
+
+
+### Features
+
+* **vio:** update to v2.0.0-beta.1 ([2e55385](https://github.com/dargmuesli/jonas-thelemann/commit/2e55385afd69a808a5c6c5df0fd4de8d7141c019))
+
 ## [5.13.12](https://github.com/dargmuesli/jonas-thelemann/compare/5.13.11...5.13.12) (2023-07-31)
 
 
