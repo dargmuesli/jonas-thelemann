@@ -22,7 +22,9 @@
       <main class="xl:min-h-screen min-w-0 space-y-6 pb-32">
         <div class="flex items-center justify-between">
           <h1 class="text-left">{{ t('jonasThelemann') }}</h1>
-          <p class="text-right text-2xl font-normal text-gray-500">
+          <p
+            class="text-right text-2xl font-normal text-gray-500 dark:text-gray-400"
+          >
             {{ t('metaInfo', { age }) }}
           </p>
         </div>
@@ -42,7 +44,7 @@
               </a>
             </template>
           </i18n-t>
-          <p class="text-gray-500">
+          <p class="text-gray-500 dark:text-gray-400">
             <a href="https://www.google.com/maps/place/Kassel">
               {{ t('kasselAddress') }}
             </a>
@@ -102,12 +104,16 @@
           <!-- Wrapping div required for paragraph's negative margin to work. -->
           <i18n-t class="mt-[-0.5rem]" keypath="about" tag="p">
             <template #aboutMarkSoftwareTemplate>
-              <mark class="bg-[#ffff00] bg-opacity-50">{{
-                t('aboutMarkSoftware')
-              }}</mark>
+              <mark
+                class="bg-[#ffff00] bg-opacity-50 dark:text-text-bright dark:bg-gray-700"
+              >
+                {{ t('aboutMarkSoftware') }}
+              </mark>
             </template>
             <template #aboutMarkDjTemplate>
-              <mark class="bg-[#ffff00] bg-opacity-50">
+              <mark
+                class="bg-[#ffff00] bg-opacity-50 dark:text-text-bright dark:bg-gray-700"
+              >
                 {{ t('aboutMarkDj') }}
               </mark>
             </template>
@@ -134,11 +140,11 @@
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
-                  class="text-gray-500"
+                  class="text-gray-500 dark:text-gray-400"
                   tag="span"
                 >
                   <template #title>
-                    <span class="text-text-dark">
+                    <span class="text-text-dark dark:text-text-bright">
                       {{ t('foundingScholar') }}
                     </span>
                   </template>
@@ -159,11 +165,11 @@
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
-                  class="text-gray-500"
+                  class="text-gray-500 dark:text-gray-400"
                   tag="span"
                 >
                   <template #title>
-                    <span class="text-text-dark">
+                    <span class="text-text-dark dark:text-text-bright">
                       {{ t('experienceNinjaneer') }}
                     </span>
                   </template>
@@ -191,9 +197,16 @@
             <h2 class="text-2xl">{{ t('education') }}</h2>
             <div class="mt-2">
               <p>{{ t('educationGoal') }}</p>
-              <i18n-t keypath="titleSubtitle" class="text-gray-500" tag="span">
+              <i18n-t
+                keypath="titleSubtitle"
+                class="text-gray-500 dark:text-gray-400"
+                tag="span"
+              >
                 <template #title>
-                  <a class="text-text-dark" href="https://www.uni-kassel.de/">
+                  <a
+                    class="text-text-dark dark:text-text-bright"
+                    href="https://www.uni-kassel.de/"
+                  >
                     {{ t('universityKassel') }}
                   </a>
                 </template>
@@ -209,13 +222,16 @@
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
-                  class="text-gray-500"
+                  class="text-gray-500 dark:text-gray-400"
                   tag="span"
                 >
                   <template #title>
-                    <a class="text-text-dark" href="https://gi.de/">{{
-                      t('gi')
-                    }}</a>
+                    <a
+                      class="text-text-dark dark:text-text-bright"
+                      href="https://gi.de/"
+                    >
+                      {{ t('gi') }}
+                    </a>
                   </template>
                   <template #subtitle>
                     <span>
@@ -227,13 +243,16 @@
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
-                  class="text-gray-500"
+                  class="text-gray-500 dark:text-gray-400"
                   tag="span"
                 >
                   <template #title>
-                    <a class="text-text-dark" href="https://www.ccc.de/">{{
-                      t('ccc')
-                    }}</a>
+                    <a
+                      class="text-text-dark dark:text-text-bright"
+                      href="https://www.ccc.de/"
+                    >
+                      {{ t('ccc') }}
+                    </a>
                   </template>
                   <template #subtitle>
                     <span>
@@ -245,13 +264,16 @@
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
-                  class="text-gray-500"
+                  class="text-gray-500 dark:text-gray-400"
                   tag="span"
                 >
                   <template #title>
-                    <a class="text-text-dark" href="https://flipdot.org/">{{
-                      t('flipdot')
-                    }}</a>
+                    <a
+                      class="text-text-dark dark:text-text-bright"
+                      href="https://flipdot.org/"
+                    >
+                      {{ t('flipdot') }}
+                    </a>
                   </template>
                   <template #subtitle>
                     <span>
@@ -268,11 +290,13 @@
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
-                  class="text-gray-500"
+                  class="text-gray-500 dark:text-gray-400"
                   tag="span"
                 >
                   <template #title>
-                    <span class="text-text-dark">{{ t('german') }}</span>
+                    <span class="text-text-dark dark:text-text-bright">
+                      {{ t('german') }}
+                    </span>
                   </template>
                   <template #subtitle>
                     <span>
@@ -284,11 +308,13 @@
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
-                  class="text-gray-500"
+                  class="text-gray-500 dark:text-gray-400"
                   tag="span"
                 >
                   <template #title>
-                    <span class="text-text-dark">{{ t('english') }}</span>
+                    <span class="text-text-dark dark:text-text-bright">
+                      {{ t('english') }}
+                    </span>
                   </template>
                   <template #subtitle>
                     <span>
@@ -305,12 +331,12 @@
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
-                  class="text-gray-500"
+                  class="text-gray-500 dark:text-gray-400"
                   tag="span"
                 >
                   <template #title>
                     <a
-                      class="text-text-dark"
+                      class="text-text-dark dark:text-text-bright"
                       href="https://www.uni-kassel.de/einrichtung/index.php?eID=dumpFile&t=f&f=1988&token=e881e12fc8112d90e46d21d4fbef05530929c5c0"
                     >
                       {{ t('honorsAwardsIdeasCompetition') }}
@@ -335,11 +361,11 @@
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
-                  class="text-gray-500"
+                  class="text-gray-500 dark:text-gray-400"
                   tag="span"
                 >
                   <template #title>
-                    <span class="text-text-dark">
+                    <span class="text-text-dark dark:text-text-bright">
                       {{ t('nominationScholarship') }}
                     </span>
                   </template>
@@ -371,46 +397,46 @@
             <h2 class="text-2xl">{{ t('projects') }}</h2>
             <ul class="mt-2 flex flex-wrap items-center justify-around">
               <li class="m-4">
-                <VioLink class="inline-block" to="https://maev.si/">
+                <a class="inline-block" href="https://maev.si/">
                   <img
                     alt="maevsi's logo"
                     class="h-12"
                     src="/assets/static/logos/maevsi.svg"
                   />
-                </VioLink>
+                </a>
               </li>
               <li class="m-4">
-                <VioLink class="inline-block" to="https://nearbuy-food.de/">
+                <a class="inline-block" href="https://nearbuy-food.de/">
                   <img
                     alt="nearbuy's logo"
                     class="h-12"
                     src="/assets/static/logos/nearbuy.svg"
                   />
-                </VioLink>
+                </a>
               </li>
               <li class="m-4">
-                <VioLink
+                <a
                   class="inline-block"
-                  to="https://creal.jonas-thelemann.de/"
+                  href="https://creal.jonas-thelemann.de/"
                 >
                   <img
                     alt="cReal's logo"
                     class="h-12"
                     src="/assets/static/logos/creal.svg"
                   />
-                </VioLink>
+                </a>
               </li>
               <li class="m-4">
-                <VioLink
+                <a
                   class="inline-block"
-                  to="https://trapparty.jonas-thelemann.de/"
+                  href="https://trapparty.jonas-thelemann.de/"
                 >
                   <img
                     alt="TrapParty's logo"
                     class="h-12"
                     src="/assets/static/logos/trapparty.svg"
                   />
-                </VioLink>
+                </a>
               </li>
               <li class="m-4">
                 <SocialLink to="https://github.com/dargmuesli?tab=repositories">
@@ -423,12 +449,12 @@
       </main>
       <footer class="text-sm leading-6">
         <div class="mx-auto mt-8 flex w-9/12 items-center">
-          <VioHr />
+          <VioLayoutHr />
           <IconLogo
             background-fill="rgba(0,0,0,0)"
             class="mx-12 h-12 w-12 opacity-50 brightness-0 dark:opacity-60 dark:invert"
           />
-          <VioHr />
+          <VioLayoutHr />
         </div>
         <div class="flex flex-col items-center opacity-60">
           <span>
