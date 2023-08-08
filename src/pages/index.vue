@@ -452,6 +452,7 @@
 import { consola } from 'consola'
 
 definePageMeta({
+  colorMode: 'light',
   layout: false,
 })
 
