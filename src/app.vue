@@ -1,8 +1,8 @@
 <template>
   <VioApp
-    :site-description="t('globalOgSeoDescription')"
+    :site-description="t('globalSeoSiteDescription')"
     og-image-component="Default"
-    :og-image-alt="t('globalOgImageAlt')"
+    :og-image-alt="t('globalSeoOgImageAlt')"
   />
 </template>
 
