@@ -476,6 +476,7 @@
 
 <script setup lang="ts">
 import { consola } from 'consola'
+import { getQuery } from 'ufo'
 
 definePageMeta({
   colorMode: 'light',
@@ -515,14 +516,12 @@ const init = async () => {
 
     const headerLink = res.headers.get('link')
     repoCount = headerLink
-      ? new URLSearchParams(
-          new URL(
-            headerLink
-              .split(', ')[1]
-              .split('; ')[0]
-              .replace(/(^<|>$)/g, ''),
-          ).searchParams,
-        ).get('page')
+      ? (getQuery(
+          headerLink
+            .split(', ')[1]
+            .split('; ')[0]
+            .replace(/(^<|>$)/g, ''),
+        ).page as string)
       : null
   } catch (e) {
     consola.error(JSON.stringify(e))

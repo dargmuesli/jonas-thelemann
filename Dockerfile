@@ -1,7 +1,7 @@
 #############
 # Serve Nuxt in development mode.
 
-FROM node:20.5.0-alpine@sha256:11087abe911baf2fd7e34192f4598bf7e438239e9914f5b7ecda5fb5a7b1a2dd AS development
+FROM node:20.5.1-alpine@sha256:254989045b0555ee411cd8fe7bd8e3ae306fef34b4c9d5dfd020bdda86cdad97 AS development
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -26,7 +26,7 @@ EXPOSE 3000
 ########################
 # Prepare Nuxt.
 
-FROM node:20.5.0-alpine@sha256:11087abe911baf2fd7e34192f4598bf7e438239e9914f5b7ecda5fb5a7b1a2dd AS prepare
+FROM node:20.5.1-alpine@sha256:254989045b0555ee411cd8fe7bd8e3ae306fef34b4c9d5dfd020bdda86cdad97 AS prepare
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -46,7 +46,7 @@ RUN pnpm install --offline
 ########################
 # Build Nuxt.
 
-FROM node:20.5.0-alpine@sha256:11087abe911baf2fd7e34192f4598bf7e438239e9914f5b7ecda5fb5a7b1a2dd AS build
+FROM node:20.5.1-alpine@sha256:254989045b0555ee411cd8fe7bd8e3ae306fef34b4c9d5dfd020bdda86cdad97 AS build
 
 ARG NUXT_PUBLIC_STACK_DOMAIN=jonas-thelemann.de
 ENV NUXT_PUBLIC_STACK_DOMAIN=${NUXT_PUBLIC_STACK_DOMAIN}
@@ -66,7 +66,7 @@ RUN corepack enable && \
 ########################
 # Nuxt: lint
 
-FROM node:20.5.0-alpine@sha256:11087abe911baf2fd7e34192f4598bf7e438239e9914f5b7ecda5fb5a7b1a2dd AS lint
+FROM node:20.5.1-alpine@sha256:254989045b0555ee411cd8fe7bd8e3ae306fef34b4c9d5dfd020bdda86cdad97 AS lint
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -82,7 +82,7 @@ RUN corepack enable && \
 ########################
 # Nuxt: test (e2e)
 
-FROM mcr.microsoft.com/playwright:v1.36.2@sha256:11ef7660a29bb886c8bfb1d59e7ebcb1c49fc7c43d116d225b1c8e881b1147a3 AS test-e2e_base
+FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e_base
 
 ARG UNAME=e2e
 ARG UID=1000
@@ -113,7 +113,7 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 ########################
 # Nuxt: test (e2e, preparation)
 
-FROM mcr.microsoft.com/playwright:v1.36.2@sha256:11ef7660a29bb886c8bfb1d59e7ebcb1c49fc7c43d116d225b1c8e881b1147a3 AS test-e2e-prepare
+FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e-prepare
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -131,7 +131,7 @@ RUN pnpm rebuild -r
 ########################
 # Nuxt: test (e2e, development)
 
-FROM mcr.microsoft.com/playwright:v1.36.2@sha256:11ef7660a29bb886c8bfb1d59e7ebcb1c49fc7c43d116d225b1c8e881b1147a3 AS test-e2e-dev
+FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e-dev
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -149,7 +149,7 @@ RUN pnpm --dir src run test:e2e:dev
 ########################
 # Nuxt: test (e2e, production)
 
-FROM mcr.microsoft.com/playwright:v1.36.2@sha256:11ef7660a29bb886c8bfb1d59e7ebcb1c49fc7c43d116d225b1c8e881b1147a3 AS test-e2e-prod
+FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e-prod
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -170,7 +170,7 @@ RUN pnpm --dir src run test:e2e:prod
 #######################
 # Collect build, lint and test results.
 
-FROM node:20.5.0-alpine@sha256:11087abe911baf2fd7e34192f4598bf7e438239e9914f5b7ecda5fb5a7b1a2dd AS collect
+FROM node:20.5.1-alpine@sha256:254989045b0555ee411cd8fe7bd8e3ae306fef34b4c9d5dfd020bdda86cdad97 AS collect
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -186,7 +186,7 @@ COPY --from=test-e2e-prod /srv/app/package.json /tmp/package.json
 #######################
 # Provide a web server.
 
-FROM nginx:1.25.1-alpine@sha256:1713c88213a02f5595dd34520e9b7b26aa58dbfd192cf55b57209507dd7ed113 AS production
+FROM nginx:1.25.2-alpine@sha256:cac882be2b7305e0c8d3e3cd0575a2fd58f5fde6dd5d6299605aa0f3e67ca385 AS production
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
