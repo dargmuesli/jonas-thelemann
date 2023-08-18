@@ -1,6 +1,13 @@
 import { I18N_MODULE_CONFIG } from '@dargmuesli/nuxt-vio/utils/constants'
 
+const SITE_NAME = 'Jonas Thelemann'
+
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: SITE_NAME, // fallback data to prevent invalid html at generation
+    },
+  },
   extends: ['@dargmuesli/nuxt-vio'],
 
   // modules
@@ -14,6 +21,6 @@ export default defineNuxtConfig({
     failOnError: false, // TODO: enable (https://github.com/harlan-zw/nuxt-link-checker/issues/13)
   },
   site: {
-    name: 'Jonas Thelemann',
+    name: SITE_NAME,
   },
 })
