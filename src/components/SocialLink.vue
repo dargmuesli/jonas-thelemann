@@ -1,5 +1,5 @@
 <template>
-  <div class="border dark:border-gray-700 text-center">
+  <div class="border text-center dark:border-gray-700">
     <a class="px-4" :href="to">
       <slot />
     </a>

@@ -19,7 +19,7 @@
       src="/assets/static/images/tutzing.jpg"
     />
     <div class="p-4 sm:p-8">
-      <main class="xl:min-h-screen min-w-0 space-y-6 pb-32">
+      <main class="min-w-0 space-y-6 pb-32 xl:min-h-screen">
         <div class="flex items-center justify-between">
           <h1 class="text-left">{{ t('jonasThelemann') }}</h1>
           <p
@@ -105,14 +105,14 @@
           <i18n-t class="mt-[-0.5rem]" keypath="about" tag="p">
             <template #aboutMarkSoftwareTemplate>
               <mark
-                class="bg-[#ffff00] bg-opacity-50 dark:text-text-bright dark:bg-gray-700"
+                class="dark:text-text-bright bg-[#ffff00] bg-opacity-50 dark:bg-gray-700"
               >
                 {{ t('aboutMarkSoftware') }}
               </mark>
             </template>
             <template #aboutMarkDjTemplate>
               <mark
-                class="bg-[#ffff00] bg-opacity-50 dark:text-text-bright dark:bg-gray-700"
+                class="dark:text-text-bright bg-[#ffff00] bg-opacity-50 dark:bg-gray-700"
               >
                 {{ t('aboutMarkDj') }}
               </mark>
@@ -136,7 +136,7 @@
         >
           <section>
             <h2 class="text-2xl">{{ t('experience') }}</h2>
-            <ul class="mt-2 flex flex-col gap-1 list-inside list-disc">
+            <ul class="mt-2 flex list-inside list-disc flex-col gap-1">
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
@@ -218,7 +218,7 @@
           </section>
           <section>
             <h2 class="text-2xl">{{ t('organizations') }}</h2>
-            <ul class="mt-2 flex flex-col gap-1 list-inside list-disc">
+            <ul class="mt-2 flex list-inside list-disc flex-col gap-1">
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
@@ -286,7 +286,7 @@
           </section>
           <section>
             <h2 class="text-2xl">{{ t('languages') }}</h2>
-            <ul class="mt-2 flex flex-col gap-1 list-inside list-disc">
+            <ul class="mt-2 flex list-inside list-disc flex-col gap-1">
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
@@ -327,7 +327,7 @@
           </section>
           <section>
             <h2 class="text-2xl">{{ t('honorsAwards') }}</h2>
-            <ul class="mt-2 flex flex-col gap-1 list-inside list-disc">
+            <ul class="mt-2 flex list-inside list-disc flex-col gap-1">
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
