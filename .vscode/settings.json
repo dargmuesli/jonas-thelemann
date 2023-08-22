@@ -5,13 +5,8 @@
       "directory": "src" // needed to correctly lint global locale strings like `t('globalStatusLoading')`
     }
   ],
-  "shellcheck.customArgs": [
-    "-x"
-  ],
-  "stylelint.validate": [
-    "css",
-    "vue"
-  ],
+  "shellcheck.customArgs": ["-x"],
+  "stylelint.validate": ["css", "vue"],
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -19,6 +14,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
