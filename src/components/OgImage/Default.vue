@@ -1,6 +1,7 @@
 <template>
   <div
     style="
+      /* stylelint-disable plugin/no-unsupported-browser-features */
       background: linear-gradient(to bottom, #dbf4ff, #fff1f1);
       display: flex;
       height: 100%;

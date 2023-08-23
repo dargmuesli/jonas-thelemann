@@ -1,5 +1,5 @@
 <template>
-  <VioPrivacyPolicy
+  <VioPagePrivacyPolicy
     :is-enabled="{
       summary: {
         generalNotes: true,
@@ -55,3 +55,9 @@
     }"
   />
 </template>
+
+<script setup lang="ts">
+definePageMeta({
+  colorMode: 'light',
+})
+</script>

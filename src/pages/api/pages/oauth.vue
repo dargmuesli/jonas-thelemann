@@ -25,7 +25,7 @@ const copy = async () => {
 }
 
 // initialization
-useSeoMeta({ title: 'OAuth' })
+useHeadDefault({ title: 'OAuth' })
 </script>
 
 <i18n lang="yaml">

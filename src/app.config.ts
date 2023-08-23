@@ -5,32 +5,36 @@ const address = {
 }
 
 export default defineAppConfig({
-  legalNotice: {
-    contact: {
-      email: 'email+legal-notice@jonas-thelemann.de',
-    },
-    responsibility: {
-      address,
-    },
-    tmg: {
-      address,
-    },
-  },
-  privacyPolicy: {
-    hostingCdn: {
-      external: {
-        address: {
-          city: '91710 Gunzenhausen, Deutschland',
-          name: 'Hetzner Online GmbH',
-          street: 'Industriestr. 25',
+  vio: {
+    pages: {
+      legalNotice: {
+        contact: {
+          email: 'e-mail+legal-notice@jonas-thelemann.de',
+        },
+        responsibility: {
+          address,
+        },
+        tmg: {
+          address,
         },
       },
-    },
-    mandatoryInfo: {
-      responsible: {
-        address: {
-          ...address,
-          email: 'email+privacy-policy@jonas-thelemann.de',
+      privacyPolicy: {
+        hostingCdn: {
+          external: {
+            address: {
+              city: '91710 Gunzenhausen, Deutschland',
+              name: 'Hetzner Online GmbH',
+              street: 'Industriestr. 25',
+            },
+          },
+        },
+        mandatoryInfo: {
+          responsible: {
+            address: {
+              ...address,
+              email: 'e-mail+privacy-policy@jonas-thelemann.de',
+            },
+          },
         },
       },
     },
