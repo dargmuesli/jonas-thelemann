@@ -1,7 +1,7 @@
 import { expect } from '@playwright/test'
 import type { Page } from 'playwright-core'
 
-export const COOKIE_CONTROL_DEFAULT = 'acltga'
+export const COOKIE_CONTROL_DEFAULT = 'cltga'
 export const PAGE_READY = async ({
   page,
   options,
@@ -14,11 +14,18 @@ export const PAGE_READY = async ({
   }
 }) => {
   if (!options || options.cookieControl !== false) {
-    await page.getByRole('button', { name: 'Cookie control' }).isVisible()
+    await expect(
+      page.getByRole('button', { name: 'Cookie control' }),
+    ).toBeVisible()
   }
 
-  if (!options || options.devTools !== false) {
-    await page.getByRole('button', { name: 'Toggle Nuxt DevTools' }).isVisible()
+  if (
+    process.env.NODE_ENV === 'development' &&
+    (!options || options.devTools !== false)
+  ) {
+    await expect(
+      page.getByRole('button', { name: 'Toggle Nuxt DevTools' }),
+    ).toBeVisible()
   }
 
   if (!options || options.isLoading !== false) {
