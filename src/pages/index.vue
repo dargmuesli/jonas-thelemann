@@ -532,7 +532,7 @@ onMounted(() => indicateLoadingDone())
 
 // initialization
 await init()
-useSeoMeta({ title: 'Jonas Thelemann' })
+useHeadDefault({ title: SITE_NAME })
 </script>
 
 <i18n lang="yaml">

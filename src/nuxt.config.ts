@@ -1,6 +1,6 @@
 import { I18N_MODULE_CONFIG } from '@dargmuesli/nuxt-vio/utils/constants'
 
-const SITE_NAME = 'Jonas Thelemann'
+import { SITE_NAME } from './utils/constants'
 
 export default defineNuxtConfig({
   app: {
