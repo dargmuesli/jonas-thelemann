@@ -1,3 +1,15 @@
+## [5.14.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.14.2...5.14.3) (2023-08-23)
+
+
+### Bug Fixes
+
+* **app:** correct email address ([ff0b383](https://github.com/dargmuesli/jonas-thelemann/commit/ff0b383b780d409a2af59e2aafb7cdd0f6fd6fc0))
+* **app:** set site name ([702baab](https://github.com/dargmuesli/jonas-thelemann/commit/702baab80a7c2df3b1f550b88045316c4da0c5ac))
+* **nuxt:** disable link-checker ([8461e6d](https://github.com/dargmuesli/jonas-thelemann/commit/8461e6d1b1f22670e9a2d429d3bf1e45e9414b74))
+* **nuxt:** properly extend configuration ([085ba28](https://github.com/dargmuesli/jonas-thelemann/commit/085ba28182413bc438999762bc556d91ef4253b4))
+* **package:** readd start script ([100fadc](https://github.com/dargmuesli/jonas-thelemann/commit/100fadc49bf384514fec427194abc6364e49be4e))
+* **pages:** improve title ([6e6257d](https://github.com/dargmuesli/jonas-thelemann/commit/6e6257de49104c66722a4fbe351f48215af7f510))
+
 ## [5.14.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.14.1...5.14.2) (2023-08-15)
 
 
