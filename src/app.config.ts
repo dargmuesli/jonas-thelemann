@@ -9,7 +9,7 @@ export default defineAppConfig({
     pages: {
       legalNotice: {
         contact: {
-          email: 'email+legal-notice@jonas-thelemann.de',
+          email: 'e-mail+legal-notice@jonas-thelemann.de',
         },
         responsibility: {
           address,
@@ -32,7 +32,7 @@ export default defineAppConfig({
           responsible: {
             address: {
               ...address,
-              email: 'email+privacy-policy@jonas-thelemann.de',
+              email: 'e-mail+privacy-policy@jonas-thelemann.de',
             },
           },
         },
