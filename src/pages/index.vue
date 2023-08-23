@@ -495,14 +495,14 @@ let repoCount: string | null = null
 
 // computations
 const age = computed(() =>
-  runtimeConfig.public.isTesting
+  runtimeConfig.public.vio.isTesting
     ? 1337
     : Math.abs(
         new Date(Date.now() - Date.parse('1998-12-17')).getUTCFullYear() - 1970,
       ),
 )
 const year = computed(() =>
-  runtimeConfig.public.isTesting ? 1337 : new Date().getFullYear(),
+  runtimeConfig.public.vio.isTesting ? 1337 : new Date().getFullYear(),
 )
 
 // methods
