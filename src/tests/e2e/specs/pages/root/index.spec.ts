@@ -2,7 +2,7 @@ import AxeBuilder from '@axe-core/playwright'
 import { test, expect } from '@playwright/test'
 
 import fixture from '../../../fixtures/githubApi.json' assert { type: 'json' }
-import { COOKIE_CONTROL_DEFAULT } from '../../../utils/constants'
+import { COOKIE_CONTROL_DEFAULT, PAGE_READY } from '../../../utils/constants'
 
 test.beforeEach(async ({ context }) => {
   await context.addCookies([
@@ -32,6 +32,7 @@ test.describe('a11y', () => {
     page,
   }) => {
     await page.goto('/')
+    await PAGE_READY({ page })
     const accessibilityScanResults = await new AxeBuilder({ page }).analyze()
     expect(accessibilityScanResults.violations.length).toEqual(2) // TODO: get rid of all violations
   })
@@ -64,11 +65,7 @@ test.describe('internationalization', () => {
 test.describe('visual regression', () => {
   test('looks as before', async ({ page }) => {
     await page.goto('/')
-    await expect(page.getByTestId('is-loading')).toHaveAttribute(
-      'data-is-loading',
-      'false',
-    )
-    await page.getByRole('button', { name: 'Cookie control' }).isVisible()
+    await PAGE_READY({ page })
     await expect(page).toHaveScreenshot({ fullPage: true })
   })
 
@@ -77,10 +74,7 @@ test.describe('visual regression', () => {
     await context.clearCookies()
 
     await page.goto('/')
-    await expect(page.getByTestId('is-loading')).toHaveAttribute(
-      'data-is-loading',
-      'false',
-    )
+    await PAGE_READY({ page, options: { cookieControl: false } })
     await expect(page).toHaveScreenshot({ fullPage: true })
   })
 })
