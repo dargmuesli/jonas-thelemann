@@ -186,7 +186,7 @@ COPY --from=test-e2e-prod /srv/app/package.json /tmp/package.json
 #######################
 # Provide a web server.
 
-FROM nginx:1.25.2-alpine@sha256:cac882be2b7305e0c8d3e3cd0575a2fd58f5fde6dd5d6299605aa0f3e67ca385 AS production
+FROM nginx:1.25.2-alpine@sha256:16164a43b5faec40adb521e98272edc528e74f31c1352719132b8f7e53418d70 AS production
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
