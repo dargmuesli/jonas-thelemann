@@ -487,6 +487,7 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 const { indicateLoadingDone } = useLoadingDoneIndicator()
 const runtimeConfig = useRuntimeConfig()
+const siteConfig = useSiteConfig()
 
 // data
 const imageClasses =
@@ -532,7 +533,7 @@ onMounted(() => indicateLoadingDone())
 
 // initialization
 await init()
-useHeadDefault({ title: SITE_NAME })
+useHeadDefault({ title: siteConfig.name })
 </script>
 
 <i18n lang="yaml">
