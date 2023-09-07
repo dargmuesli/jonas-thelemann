@@ -8,11 +8,11 @@ export default defineNuxtConfig(
     {
       extends: ['@dargmuesli/nuxt-vio'],
 
+      // modules
       linkChecker: {
         excludeLinks: [
           'https://www.linkedin.com/in/jonas-thelemann-148a74205/', // requires login
         ],
-        failOnError: false, // TODO: enable (https://github.com/harlan-zw/nuxt-link-checker/issues/13)
       },
     },
     VIO_NUXT_BASE_CONFIG({
