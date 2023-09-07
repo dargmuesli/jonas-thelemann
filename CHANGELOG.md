@@ -1,3 +1,11 @@
+## [5.14.5](https://github.com/dargmuesli/jonas-thelemann/compare/5.14.4...5.14.5) (2023-09-07)
+
+
+### Bug Fixes
+
+* **layout:** add cookie control ([165ea60](https://github.com/dargmuesli/jonas-thelemann/commit/165ea6076da9ac11e5138d432e285daeaac29b54))
+* **layout:** differentiate between root and default ([744ce3c](https://github.com/dargmuesli/jonas-thelemann/commit/744ce3ced2f65a2a8fdb4a186d49b511cc7f0061))
+
 ## [5.14.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.14.3...5.14.4) (2023-09-05)
 
 
