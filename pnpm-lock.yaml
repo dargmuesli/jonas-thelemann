@@ -31,8 +31,8 @@ importers:
         specifier: 4.7.3
         version: 4.7.3(playwright-core@1.37.1)
       '@dargmuesli/nuxt-vio':
-        specifier: 3.5.1
-        version: 3.5.1(@nuxt/devtools@0.8.3)(@unhead/shared@1.5.3)(graphql@16.8.0)(nuxt@3.7.1)(playwright-core@1.37.1)(postcss@8.4.29)(tailwindcss@3.3.3)(ts-node@10.9.1)(typescript@5.2.2)(unhead@1.5.3)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2)
+        specifier: 3.6.0
+        version: 3.6.0(@nuxt/devtools@0.8.3)(@unhead/shared@1.5.3)(graphql@16.8.0)(nuxt@3.7.1)(playwright-core@1.37.1)(postcss@8.4.29)(tailwindcss@3.3.3)(ts-node@10.9.1)(typescript@5.2.2)(unhead@1.5.3)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2)
       '@intlify/eslint-plugin-vue-i18n':
         specifier: 3.0.0-next.3
         version: 3.0.0-next.3(eslint@8.48.0)
@@ -714,8 +714,8 @@ packages:
       - webpack
     dev: true
 
-  /@dargmuesli/nuxt-vio@3.5.1(@nuxt/devtools@0.8.3)(@unhead/shared@1.5.3)(graphql@16.8.0)(nuxt@3.7.1)(playwright-core@1.37.1)(postcss@8.4.29)(tailwindcss@3.3.3)(ts-node@10.9.1)(typescript@5.2.2)(unhead@1.5.3)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2):
-    resolution: {integrity: sha512-GHOsCeHeGpX5Mj1JK5WpSdlFHDUifDGzETmqoezUBDkxT/K8pKJK9DMWAEO7dRCJd9ZnfB97lTFwWJy7jTn6Bw==}
+  /@dargmuesli/nuxt-vio@3.6.0(@nuxt/devtools@0.8.3)(@unhead/shared@1.5.3)(graphql@16.8.0)(nuxt@3.7.1)(playwright-core@1.37.1)(postcss@8.4.29)(tailwindcss@3.3.3)(ts-node@10.9.1)(typescript@5.2.2)(unhead@1.5.3)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2):
+    resolution: {integrity: sha512-518Gp1hzNC0GNX3YxeafMRcmaEqb5DoLtREWBcY5AYYTUg/ywPk7ljiCvh6eUkvZW+WVA4doCmTggZ99YSG+8Q==}
     engines: {node: '20'}
     peerDependencies:
       playwright-core: 1.37.1
@@ -745,7 +745,7 @@ packages:
       cookie: 0.5.0
       dayjs: 2.0.0-alpha.4
       is-https: 4.0.0
-      jiti: 1.19.3
+      jiti: 1.20.0
       jose: 4.14.6
       lodash-es: 4.17.21
       pinia: 2.1.6(typescript@5.2.2)(vue@3.3.4)
@@ -1454,7 +1454,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/bundle-utils': 7.2.0(vue-i18n@9.3.0-beta.27)
-      '@intlify/shared': 9.3.0-beta.27
+      '@intlify/shared': 9.3.0
       '@rollup/pluginutils': 5.0.4(rollup@3.29.0)
       '@vue/compiler-sfc': 3.3.4
       debug: 4.3.4
@@ -7913,6 +7913,11 @@ packages:
     hasBin: true
     dev: true
 
+  /jiti@1.20.0:
+    resolution: {integrity: sha512-3TV69ZbrvV6U5DfQimop50jE9Dl6J8O1ja1dvBbMba/sZ3YBEQqJ2VZRoQPVnhlzjNtU1vaXRZVrVjU4qtm8yA==}
+    hasBin: true
+    dev: true
+
   /joi@17.10.1:
     resolution: {integrity: sha512-vIiDxQKmRidUVp8KngT8MZSOcmRVm2zV7jbMjNYWuHcJWI0bUck3nRTGQjhpPlQenIQIBC5Vp9AhcnHbWQqafw==}
     dependencies:
@@ -12109,7 +12114,7 @@ packages:
       fast-glob: 3.3.1
       glob-parent: 6.0.2
       is-glob: 4.0.3
-      jiti: 1.19.3
+      jiti: 1.20.0
       lilconfig: 2.1.0
       micromatch: 4.0.5
       normalize-path: 3.0.0
@@ -12568,7 +12573,7 @@ packages:
     dependencies:
       '@antfu/utils': 0.7.6
       defu: 6.1.2
-      jiti: 1.19.3
+      jiti: 1.20.0
       mlly: 1.4.2
     dev: true
 
