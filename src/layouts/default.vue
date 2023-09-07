@@ -1,16 +1,5 @@
 <template>
-  <div>
+  <VioLayout>
     <slot />
-    <CookieControl :locale="locale" />
-  </div>
+  </VioLayout>
 </template>
-
-<script setup lang="ts">
-import type { Locale } from '@dargmuesli/nuxt-cookie-control/dist/runtime/types'
-import type { WritableComputedRef } from 'vue'
-
-const i18n = useI18n()
-
-// data
-const locale = i18n.locale as WritableComputedRef<Locale>
-</script>
