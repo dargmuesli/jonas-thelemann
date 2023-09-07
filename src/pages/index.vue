@@ -480,7 +480,6 @@ import { getQuery } from 'ufo'
 
 definePageMeta({
   colorMode: 'light',
-  layout: false,
 })
 
 const { t } = useI18n()
