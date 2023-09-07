@@ -1,3 +1,10 @@
+## [5.14.6](https://github.com/dargmuesli/jonas-thelemann/compare/5.14.5...5.14.6) (2023-09-07)
+
+
+### Bug Fixes
+
+* **nuxt:** do not check instagram link from ci ([5af94dc](https://github.com/dargmuesli/jonas-thelemann/commit/5af94dc42206d62d743084ec0f81d63fba5fb5e8))
+
 ## [5.14.5](https://github.com/dargmuesli/jonas-thelemann/compare/5.14.4...5.14.5) (2023-09-07)
 
 
