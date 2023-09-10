@@ -1,3 +1,11 @@
+## [5.15.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.14.6...5.15.0) (2023-09-10)
+
+
+### Features
+
+* **environment:** rework variables ([30f9357](https://github.com/dargmuesli/jonas-thelemann/commit/30f9357ea8f5f1cab164f004753f2ba09d8f0826))
+* **site:** add identity and twitter ([086ab67](https://github.com/dargmuesli/jonas-thelemann/commit/086ab67fefda04e83fb864ed138a84e37c7b56a1))
+
 ## [5.14.6](https://github.com/dargmuesli/jonas-thelemann/compare/5.14.5...5.14.6) (2023-09-07)
 
 
