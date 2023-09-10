@@ -15,6 +15,12 @@ export default defineNuxtConfig(
           'https://www.linkedin.com/in/jonas-thelemann-148a74205/', // requires login
         ],
       },
+      site: {
+        identity: {
+          type: 'Person',
+        },
+        twitter: '@dargmuesli',
+      },
     },
     VIO_NUXT_BASE_CONFIG({
       siteName: SITE_NAME,
