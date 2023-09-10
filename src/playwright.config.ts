@@ -91,7 +91,7 @@ export default defineConfig({
         ? 'pnpm run dev'
         : 'pnpm run start',
     env: {
-      NUXT_PUBLIC_IS_TESTING: 'true',
+      NUXT_PUBLIC_VIO_IS_TESTING: 'true',
     },
     timeout:
       !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
