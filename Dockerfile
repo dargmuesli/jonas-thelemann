@@ -1,7 +1,7 @@
 #############
 # Serve Nuxt in development mode.
 
-FROM node:20.6.0-alpine@sha256:c843f4a4060246a25f62c80b3d4cf4a6b4c4639cdce421e4f2ee3102257225b4 AS development
+FROM node:20.6.1-alpine@sha256:d75175d449921d06250afd87d51f39a74fc174789fa3c50eba0d3b18369cc749 AS development
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -26,7 +26,7 @@ EXPOSE 3000
 ########################
 # Prepare Nuxt.
 
-FROM node:20.6.0-alpine@sha256:c843f4a4060246a25f62c80b3d4cf4a6b4c4639cdce421e4f2ee3102257225b4 AS prepare
+FROM node:20.6.1-alpine@sha256:d75175d449921d06250afd87d51f39a74fc174789fa3c50eba0d3b18369cc749 AS prepare
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -46,7 +46,7 @@ RUN pnpm install --offline
 ########################
 # Build Nuxt.
 
-FROM node:20.6.0-alpine@sha256:c843f4a4060246a25f62c80b3d4cf4a6b4c4639cdce421e4f2ee3102257225b4 AS build
+FROM node:20.6.1-alpine@sha256:d75175d449921d06250afd87d51f39a74fc174789fa3c50eba0d3b18369cc749 AS build
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -63,7 +63,7 @@ RUN corepack enable && \
 ########################
 # Nuxt: lint
 
-FROM node:20.6.0-alpine@sha256:c843f4a4060246a25f62c80b3d4cf4a6b4c4639cdce421e4f2ee3102257225b4 AS lint
+FROM node:20.6.1-alpine@sha256:d75175d449921d06250afd87d51f39a74fc174789fa3c50eba0d3b18369cc749 AS lint
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -167,7 +167,7 @@ RUN pnpm --dir src run test:e2e:prod
 #######################
 # Collect build, lint and test results.
 
-FROM node:20.6.0-alpine@sha256:c843f4a4060246a25f62c80b3d4cf4a6b4c4639cdce421e4f2ee3102257225b4 AS collect
+FROM node:20.6.1-alpine@sha256:d75175d449921d06250afd87d51f39a74fc174789fa3c50eba0d3b18369cc749 AS collect
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
