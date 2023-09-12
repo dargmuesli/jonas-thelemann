@@ -1,19 +1,10 @@
-# Dependency directories
-**/node_modules/
-
-# Nuxt.js build / generate output
-**/.nuxt
-**/.output
-
-# Git
-**/!.gitkeep
-
-# Environment variables
-**/.env
-
-# ESLint
-**/.eslintcache
-
-# Playwright
-**/tests/e2e/report
-**/tests/e2e/results
+.git/
+node_modules/
+src/.nuxt/
+src/.output/
+src/dist/
+src/node_modules/
+src/tsts/e2e/report/
+src/tsts/e2e/results/
+src/.env
+src/.eslintcache
