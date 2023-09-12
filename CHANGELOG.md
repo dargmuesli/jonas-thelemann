@@ -1,3 +1,10 @@
+## [5.15.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.15.1...5.15.2) (2023-09-12)
+
+
+### Bug Fixes
+
+* **deps:** upgrade ([c5b01fb](https://github.com/dargmuesli/jonas-thelemann/commit/c5b01fb5322d4dcf1e9c2aae01759f3c36b711dc))
+
 ## [5.15.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.15.0...5.15.1) (2023-09-12)
 
 
