@@ -1,3 +1,10 @@
+## [5.15.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.15.2...5.15.3) (2023-09-12)
+
+
+### Bug Fixes
+
+* **environment:** correct host ([74ca440](https://github.com/dargmuesli/jonas-thelemann/commit/74ca44061683b970b452b0908970dff48279c959))
+
 ## [5.15.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.15.1...5.15.2) (2023-09-12)
 
 
