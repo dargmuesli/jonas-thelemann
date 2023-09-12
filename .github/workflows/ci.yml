@@ -42,6 +42,7 @@ jobs:
     with:
       ARTIFACT_PATH: src/.output/public
       BUILD_ARGUMENTS: SITE_URL=https://jonas-thelemann.de
+      BUILD_TARGET: build-static
       TAG: ${{ needs.release_semantic_dry.outputs.new_release_version }}
   release_semantic:
     needs: build
