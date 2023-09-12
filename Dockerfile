@@ -48,6 +48,10 @@ RUN pnpm install --offline
 
 FROM node:20.6.1-alpine@sha256:d75175d449921d06250afd87d51f39a74fc174789fa3c50eba0d3b18369cc749 AS build
 
+ARG SITE_URL=http://example.com
+ENV NUXT_PUBLIC_SITE_URL=${SITE_URL}
+ENV NUXT_PUBLIC_I18N_BASE_URL=${SITE_URL}
+
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
 
@@ -125,28 +129,28 @@ COPY --from=prepare /srv/app/ ./
 RUN pnpm rebuild -r
 
 
+# ########################
+# # Nuxt: test (e2e, development)
+
+# FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e-dev
+
+# # The `CI` environment variable must be set for pnpm to run in headless mode
+# ENV CI=true
+# ENV NODE_ENV=development
+
+# WORKDIR /srv/app/
+
+# RUN corepack enable
+
+# COPY --from=test-e2e-prepare /srv/app/ ./
+
+# RUN pnpm --dir src run test:e2e:dev
+
+
 ########################
-# Nuxt: test (e2e, development)
+# Nuxt: test (e2e, static)
 
-FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e-dev
-
-# The `CI` environment variable must be set for pnpm to run in headless mode
-ENV CI=true
-ENV NODE_ENV=development
-
-WORKDIR /srv/app/
-
-RUN corepack enable
-
-COPY --from=test-e2e-prepare /srv/app/ ./
-
-RUN pnpm --dir src run test:e2e:dev
-
-
-########################
-# Nuxt: test (e2e, production)
-
-FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e-prod
+FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e-static
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -157,9 +161,6 @@ RUN corepack enable
 
 COPY --from=test-e2e-prepare /srv/app/ ./
 COPY --from=build /srv/app/src/.output /srv/app/src/.output
-
-# # Do not run in parallel with `test-e2e-dev`
-# COPY --from=test-e2e-dev /srv/app/package.json /tmp/test/package.json
 
 RUN pnpm --dir src run test:e2e:prod
 
@@ -176,8 +177,8 @@ WORKDIR /srv/app/
 
 COPY --from=build /srv/app/src/.output ./.output
 COPY --from=lint /srv/app/package.json /tmp/package.json
-COPY --from=test-e2e-dev /srv/app/package.json /tmp/package.json
-COPY --from=test-e2e-prod /srv/app/package.json /tmp/package.json
+# COPY --from=test-e2e-dev /srv/app/package.json /tmp/package.json
+COPY --from=test-e2e-static /srv/app/package.json /tmp/package.json
 
 
 #######################

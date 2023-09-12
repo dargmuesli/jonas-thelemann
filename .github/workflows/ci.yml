@@ -41,7 +41,7 @@ jobs:
       packages: write
     with:
       ARTIFACT_PATH: src/.output/public
-      # PUSH: false
+      BUILD_ARGUMENTS: SITE_URL=https://jonas-thelemann.de
       TAG: ${{ needs.release_semantic_dry.outputs.new_release_version }}
   release_semantic:
     needs: build
