@@ -48,6 +48,10 @@ RUN pnpm install --offline
 
 FROM node:20.6.0-alpine@sha256:c843f4a4060246a25f62c80b3d4cf4a6b4c4639cdce421e4f2ee3102257225b4 AS build
 
+ARG SITE_URL=http://example.com
+ENV NUXT_PUBLIC_SITE_URL=${SITE_URL}
+ENV NUXT_PUBLIC_I18N_BASE_URL=${SITE_URL}
+
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
 
