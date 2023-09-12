@@ -1,3 +1,11 @@
+## [5.15.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.15.0...5.15.1) (2023-09-12)
+
+
+### Bug Fixes
+
+* **ci:** add site url environment variable ([c313512](https://github.com/dargmuesli/jonas-thelemann/commit/c313512373bcb6f80ed9e00f87af3d3e7ef5373d))
+* **docker:** use whole project for e2e test ([b830490](https://github.com/dargmuesli/jonas-thelemann/commit/b8304907c58da6f94b62d87880f49be0b4717d4f))
+
 ## [5.15.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.14.6...5.15.0) (2023-09-10)
 
 
