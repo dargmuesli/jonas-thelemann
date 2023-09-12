@@ -160,10 +160,7 @@ WORKDIR /srv/app/
 RUN corepack enable
 
 COPY --from=test-e2e-prepare /srv/app/ ./
-COPY --from=build /srv/app/src/.output /srv/app/src/.output
-
-# # Do not run in parallel with `test-e2e-dev`
-# COPY --from=test-e2e-dev /srv/app/package.json /tmp/test/package.json
+COPY --from=build /srv/app/ ./
 
 RUN pnpm --dir src run test:e2e:prod
 
