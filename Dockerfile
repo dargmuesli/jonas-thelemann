@@ -129,28 +129,28 @@ COPY --from=prepare /srv/app/ ./
 RUN pnpm rebuild -r
 
 
+# ########################
+# # Nuxt: test (e2e, development)
+
+# FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e-dev
+
+# # The `CI` environment variable must be set for pnpm to run in headless mode
+# ENV CI=true
+# ENV NODE_ENV=development
+
+# WORKDIR /srv/app/
+
+# RUN corepack enable
+
+# COPY --from=test-e2e-prepare /srv/app/ ./
+
+# RUN pnpm --dir src run test:e2e:dev
+
+
 ########################
-# Nuxt: test (e2e, development)
+# Nuxt: test (e2e, static)
 
-FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e-dev
-
-# The `CI` environment variable must be set for pnpm to run in headless mode
-ENV CI=true
-ENV NODE_ENV=development
-
-WORKDIR /srv/app/
-
-RUN corepack enable
-
-COPY --from=test-e2e-prepare /srv/app/ ./
-
-RUN pnpm --dir src run test:e2e:dev
-
-
-########################
-# Nuxt: test (e2e, production)
-
-FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e-prod
+FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e-static
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -177,8 +177,8 @@ WORKDIR /srv/app/
 
 COPY --from=build /srv/app/src/.output ./.output
 COPY --from=lint /srv/app/package.json /tmp/package.json
-COPY --from=test-e2e-dev /srv/app/package.json /tmp/package.json
-COPY --from=test-e2e-prod /srv/app/package.json /tmp/package.json
+# COPY --from=test-e2e-dev /srv/app/package.json /tmp/package.json
+COPY --from=test-e2e-static /srv/app/package.json /tmp/package.json
 
 
 #######################
