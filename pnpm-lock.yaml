@@ -31,8 +31,8 @@ importers:
         specifier: 4.7.3
         version: 4.7.3(playwright-core@1.37.1)
       '@dargmuesli/nuxt-vio':
-        specifier: 3.8.0
-        version: 3.8.0(@nuxt/devtools@0.8.3)(@unhead/shared@1.6.2)(graphql@16.8.0)(nuxt@3.7.1)(playwright-core@1.37.1)(postcss@8.4.29)(tailwindcss@3.3.3)(ts-node@10.9.1)(typescript@5.2.2)(unhead@1.6.2)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2)
+        specifier: 4.0.0
+        version: 4.0.0(@nuxt/devtools@0.8.3)(@unhead/shared@1.6.2)(graphql@16.8.0)(nuxt@3.7.1)(playwright-core@1.37.1)(postcss@8.4.29)(tailwindcss@3.3.3)(ts-node@10.9.1)(typescript@5.2.2)(unhead@1.6.2)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2)
       '@intlify/eslint-plugin-vue-i18n':
         specifier: 3.0.0-next.3
         version: 3.0.0-next.3(eslint@8.49.0)
@@ -745,8 +745,8 @@ packages:
       - webpack
     dev: true
 
-  /@dargmuesli/nuxt-vio@3.8.0(@nuxt/devtools@0.8.3)(@unhead/shared@1.6.2)(graphql@16.8.0)(nuxt@3.7.1)(playwright-core@1.37.1)(postcss@8.4.29)(tailwindcss@3.3.3)(ts-node@10.9.1)(typescript@5.2.2)(unhead@1.6.2)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2):
-    resolution: {integrity: sha512-cyd15BJFkLxh/sr6jwGLSmmA/VCuazL2LyLIYtSTF5aTIMKc4c13CSI317AQzU4pPbiIQrCoIuEs+cP2gFP1lQ==}
+  /@dargmuesli/nuxt-vio@4.0.0(@nuxt/devtools@0.8.3)(@unhead/shared@1.6.2)(graphql@16.8.0)(nuxt@3.7.1)(playwright-core@1.37.1)(postcss@8.4.29)(tailwindcss@3.3.3)(ts-node@10.9.1)(typescript@5.2.2)(unhead@1.6.2)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2):
+    resolution: {integrity: sha512-/auR9WOjTwVJA7pAtqLie3yGKrePTStMI+rJksUy+jQ81EqW3IBML9S5D5hRqV2QTa+YXgXZ+TTTLsQUDlhUKA==}
     engines: {node: '20'}
     peerDependencies:
       playwright-core: 1.37.1
@@ -782,6 +782,7 @@ packages:
       lodash-es: 4.17.21
       pinia: 2.1.6(typescript@5.2.2)(vue@3.3.4)
       playwright-core: 1.37.1
+      serve: 14.2.1
       sweetalert2: 11.7.27
       vue-gtag: 2.0.1(vue@3.3.4)
       vue-tsc: 1.8.10(typescript@5.2.2)
@@ -1389,7 +1390,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/message-compiler': 9.3.0
-      '@intlify/shared': 9.3.0
+      '@intlify/shared': 9.4.0
       acorn: 8.10.0
       escodegen: 2.1.0
       estree-walker: 2.0.2
@@ -1491,7 +1492,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/bundle-utils': 7.2.0(vue-i18n@9.3.0-beta.27)
-      '@intlify/shared': 9.3.0
+      '@intlify/shared': 9.4.0
       '@rollup/pluginutils': 5.0.4(rollup@3.29.1)
       '@vue/compiler-sfc': 3.3.4
       debug: 4.3.4
