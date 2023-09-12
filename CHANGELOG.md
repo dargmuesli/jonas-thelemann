@@ -1,3 +1,10 @@
+## [5.15.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.15.3...5.15.4) (2023-09-12)
+
+
+### Bug Fixes
+
+* **deps:** update ([577ec27](https://github.com/dargmuesli/jonas-thelemann/commit/577ec2727f3d9ddeb2fc55635cf637e35d896c62))
+
 ## [5.15.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.15.2...5.15.3) (2023-09-12)
 
 
