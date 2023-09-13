@@ -8,7 +8,7 @@
     "node": "20"
   },
   "scripts": {
-    "build": "pnpm run build:node",
+    "build": "pnpm run build:static",
     "build:node": "nuxt build",
     "build:static": "nuxt generate",
     "dev": "pnpm run start:dev",
@@ -21,6 +21,7 @@
     "lint": "pnpm run lint:js && pnpm run lint:ts && pnpm run lint:style",
     "prepare": "nuxt prepare",
     "preview": "nuxt preview",
+    "start": "pnpm run start:static",
     "start:dev": "nuxt dev",
     "start:node": "node .output/server/index.mjs",
     "start:static": "serve .output/public",
