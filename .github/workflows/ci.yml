@@ -40,7 +40,7 @@ jobs:
     permissions:
       packages: write
     with:
-      ARTIFACT_PATH: ''
+      ARTIFACT_PATH: '/'
       BUILD_ARGUMENTS_RELEASE: SITE_URL=https://jonas-thelemann.de
       BUILD_TARGET_RELEASE: build-static
       TAG: ${{ needs.release_semantic_dry.outputs.new_release_version }}
