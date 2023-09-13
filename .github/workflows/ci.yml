@@ -40,7 +40,7 @@ jobs:
     permissions:
       packages: write
     with:
-      ARTIFACT_PATH: src/.output/public
+      ARTIFACT_PATH: ./
       BUILD_ARGUMENTS_RELEASE: SITE_URL=https://jonas-thelemann.de
       BUILD_TARGET_RELEASE: build-static
       TAG: ${{ needs.release_semantic_dry.outputs.new_release_version }}
@@ -60,5 +60,5 @@ jobs:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
     with:
       ACCOUNT_ID: f00135e2a8cc575a4bc4817c9521fe71
-      BRANCH: ${{ github.ref_name }}
+      BRANCH: ${{ github.head_ref || github.ref_name }}
       PROJECT_NAME: ${{ github.event.repository.name }}
