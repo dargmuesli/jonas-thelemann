@@ -1,17 +1,25 @@
-import mailchannelsPlugin from '@cloudflare/pages-plugin-mailchannels'
+import mailChannelsPlugin from "@cloudflare/pages-plugin-mailchannels";
 
-export const onRequest = mailchannelsPlugin({
-  personalizations: [
-    {
-      to: [
-        { name: 'Jonas Thelemann', email: 'e-mail+form@jonas-thelemann.de' },
-      ],
-    },
-  ],
-  from: { name: 'jonas-thelemann.de', email: 'no-reply@cloudflare.com' },
-  respondWith: () =>
-    new Response(null, {
-      status: 302,
-      headers: { Location: '/thank-you' },
-    }),
-})
+interface Env {
+  DKIM_PRIVATE_KEY: string;
+}
+
+export const onRequest: PagesFunction<Env> = (context) =>
+  mailChannelsPlugin({
+    personalizations: [
+      {
+        dkim_domain: "jonas-thelemann.de",
+        dkim_selector: "mailchannels",
+        dkim_private_key: context.env.DKIM_PRIVATE_KEY,
+        to: [
+          { name: "Jonas Thelemann", email: "e-mail+form@jonas-thelemann.de" },
+        ],
+      },
+    ],
+    from: { name: "jonas-thelemann.de", email: "no-reply@cloudflare.com" },
+    respondWith: () =>
+      new Response(null, {
+        status: 302,
+        headers: { Location: "/thank-you" },
+      }),
+  })(context);
