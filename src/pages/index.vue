@@ -1,14 +1,19 @@
 <template>
   <div class="flex flex-col xl:flex-row">
-    <aside>
-      <!-- TODO: let preload use fetchpriority="high" -->
-      <nuxt-img
-        alt="Jonas in Tutzing."
-        class="aspect-[2081/3009] xl:block"
-        :class="imageClasses"
-        preload
-        src="/assets/static/images/tutzing.jpg"
-      />
+    <aside class="relative flex">
+      <div
+        class="flex aspect-[2081/3009] max-h-[80vh] flex-1 xl:fixed xl:h-[100vh] xl:max-h-[none] xl:max-w-[50vw]"
+      >
+        <!-- TODO: let preload use fetchpriority="high" -->
+        <nuxt-img
+          alt="Jonas in Tutzing."
+          class="object-position-custom flex-1 object-cover"
+          format="webp"
+          preload
+          src="/assets/static/images/tutzing.jpg"
+        />
+      </div>
+      <div class="hidden aspect-[2081/3009] h-[100vh] max-w-[50vw] xl:block" />
     </aside>
     <div class="p-4 sm:p-8">
       <main class="min-w-0 space-y-6 pb-32 xl:min-h-screen">
@@ -460,8 +465,6 @@ const runtimeConfig = useRuntimeConfig()
 const siteConfig = useSiteConfig()
 
 // data
-const imageClasses =
-  'xl:h-[100vh] max-h-[80vh] xl:max-h-[none] xl:max-w-[50vw] object-cover object-position-custom'
 let repoCount: string | null = null
 
 // computations
