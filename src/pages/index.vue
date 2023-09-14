@@ -1,20 +1,10 @@
 <template>
   <div class="flex flex-col xl:flex-row">
+    <!-- TODO: let preload use fetchpriority="high" -->
     <nuxt-img
       alt="Jonas in Tutzing."
-      class="xl:fixed"
+      class="aspect-[2081/3009] xl:block"
       :class="imageClasses"
-      fetchpriority="high"
-      format="webp"
-      preload
-      src="/assets/static/images/tutzing.jpg"
-    />
-    <nuxt-img
-      alt="Jonas in Tutzing."
-      class="hidden xl:block"
-      :class="imageClasses"
-      fetchpriority="high"
-      format="webp"
       preload
       src="/assets/static/images/tutzing.jpg"
     />
