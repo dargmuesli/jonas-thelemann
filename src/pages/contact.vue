@@ -9,7 +9,6 @@
     >
       <VioFormInput
         id-label="input-name"
-        is-required
         :placeholder="t('placeholderName')"
         :title="t('name')"
         type="text"
@@ -33,12 +32,10 @@
       </VioFormInput>
       <VioFormInputEmailAddress
         :form-input="v$.emailAddress"
-        is-required
         @input="form.emailAddress = $event"
       />
       <VioFormInput
         id-label="input-message"
-        is-required
         :title="t('message')"
         type="textarea"
         :value="v$.message"
