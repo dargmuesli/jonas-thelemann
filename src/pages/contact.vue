@@ -40,7 +40,7 @@
         id-label="input-message"
         is-required
         :title="t('message')"
-        type="text"
+        type="textarea"
         :value="v$.message"
       >
         <textarea
