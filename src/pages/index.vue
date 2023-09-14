@@ -53,6 +53,11 @@
         <div class="pb-2">
           <ul class="-mx-1.5 flex flex-wrap">
             <li class="m-1.5">
+              <SocialLink :to="localePath('/contact')">
+                {{ t('contactForm') }}
+              </SocialLink>
+            </li>
+            <li class="m-1.5">
               <SocialLink to="https://giphy.com/channel/dargmuesli">
                 {{ t('giphy') }}
               </SocialLink>
@@ -385,13 +390,6 @@
               </li>
             </ul>
           </section>
-          <div class="flex flex-col items-center justify-center">
-            <SocialLink
-              to="https://www.linkedin.com/in/jonas-thelemann-148a74205/"
-            >
-              {{ t('portfolioFull') }}
-            </SocialLink>
-          </div>
           <hr class="md:col-span-2 xl:col-span-1 2xl:col-span-2" />
           <section class="md:col-span-2 xl:col-span-1 2xl:col-span-2">
             <h2 class="text-2xl">{{ t('projects') }}</h2>
@@ -523,7 +521,7 @@ de:
   aboutSidefact: Freundet sich mit der Mitte von Schwarz und Weiß an, hodlt nebenbei.
   ccc: Chaos Computer Club
   cccTimespan: Mai 2018 – {present}
-  copyright: © {year} Jonas Thelemann. Alle Rechte vorbehalten.
+  contactForm: Kontaktformular
   descriptionShort: '{ninjaneers}, studiert an der {university}, gründet {maevsi}.'
   education: Bildung
   educationGoal: Master der Software-Entwicklung
@@ -559,7 +557,6 @@ de:
   nominationScholarshipTime: Jul 2019
   organizations: Organisationen
   placeTime: '{place}, {time}'
-  portfolioFull: Zum ganzen Portfolio
   present: heute
   proficiencyNative: muttersprachliches Niveau
   proficiencyProfessional: professionelles Arbeitsniveau
@@ -581,7 +578,7 @@ en:
   aboutSidefact: Getting used to the middle of black and white, hodling in the meantime.
   ccc: Chaos Computer Club
   cccTimespan: May 2018 – {present}
-  copyright: © {year} Jonas Thelemann. All rights reserved.
+  contactForm: Contact form
   descriptionShort: '{ninjaneers}, studying at {university}, founding {maevsi}.'
   education: Education
   educationGoal: Master's degree Software Engineering
@@ -617,7 +614,6 @@ en:
   nominationScholarshipTime: Jul 2019
   organizations: Organizations
   placeTime: '{place}, {time}'
-  portfolioFull: View full portfolio
   present: today
   proficiencyNative: native proficiency
   proficiencyProfessional: professional working proficiency
