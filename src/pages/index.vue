@@ -448,27 +448,7 @@
         </div>
       </main>
       <footer class="text-sm leading-6">
-        <div class="mx-auto mt-8 flex w-9/12 items-center">
-          <VioLayoutHr />
-          <IconLogo
-            background-fill="rgba(0,0,0,0)"
-            class="mx-12 h-12 w-12 opacity-50 brightness-0 dark:opacity-60 dark:invert"
-          />
-          <VioLayoutHr />
-        </div>
-        <div class="flex flex-col items-center opacity-60">
-          <span>
-            {{ t('copyright', { year }) }}
-          </span>
-          <div class="flex gap-4">
-            <VioLink is-colored :to="localePath('/legal-notice')">
-              {{ t('legalNotice') }}
-            </VioLink>
-            <VioLink is-colored :to="localePath('/privacy-policy')">
-              {{ t('privacyPolicy') }}
-            </VioLink>
-          </div>
-        </div>
+        <JtFooter />
       </footer>
     </div>
   </div>
@@ -501,9 +481,6 @@ const age = computed(() =>
     : Math.abs(
         new Date(Date.now() - Date.parse('1998-12-17')).getUTCFullYear() - 1970,
       ),
-)
-const year = computed(() =>
-  runtimeConfig.public.vio.isTesting ? 1337 : new Date().getFullYear(),
 )
 
 // methods
@@ -572,7 +549,6 @@ de:
   jonasThelemann: Jonas Thelemann
   kasselAddress: Kassel, Hessen, Deutschland
   languages: Sprachen
-  legalNotice: Impressum
   linkedIn: LinkedIn
   maevsi: maevsi
   metaInfo: '{age}, er/ihn'
@@ -585,7 +561,6 @@ de:
   placeTime: '{place}, {time}'
   portfolioFull: Zum ganzen Portfolio
   present: heute
-  privacyPolicy: Datenschutz
   proficiencyNative: muttersprachliches Niveau
   proficiencyProfessional: professionelles Arbeitsniveau
   projects: Projekte
@@ -632,7 +607,6 @@ en:
   jonasThelemann: Jonas Thelemann
   kasselAddress: Kassel, Hesse, Germany
   languages: Languages
-  legalNotice: Legal notice
   linkedIn: LinkedIn
   maevsi: maevsi
   metaInfo: '{age}, he/him'
@@ -645,7 +619,6 @@ en:
   placeTime: '{place}, {time}'
   portfolioFull: View full portfolio
   present: today
-  privacyPolicy: Privacy
   proficiencyNative: native proficiency
   proficiencyProfessional: professional working proficiency
   projects: Projects
