@@ -1,23 +1,25 @@
 <template>
   <div class="flex flex-col xl:flex-row">
-    <nuxt-img
-      alt="Jonas in Tutzing."
-      class="xl:fixed"
-      :class="imageClasses"
-      fetchpriority="high"
-      format="webp"
-      preload
-      src="/assets/static/images/tutzing.jpg"
-    />
-    <nuxt-img
-      alt="Jonas in Tutzing."
-      class="hidden xl:block"
-      :class="imageClasses"
-      fetchpriority="high"
-      format="webp"
-      preload
-      src="/assets/static/images/tutzing.jpg"
-    />
+    <aside>
+      <nuxt-img
+        alt="Jonas in Tutzing."
+        class="xl:fixed"
+        :class="imageClasses"
+        fetchpriority="high"
+        format="webp"
+        preload
+        src="/assets/static/images/tutzing.jpg"
+      />
+      <nuxt-img
+        alt="Jonas in Tutzing."
+        class="hidden xl:block"
+        :class="imageClasses"
+        fetchpriority="high"
+        format="webp"
+        preload
+        src="/assets/static/images/tutzing.jpg"
+      />
+    </aside>
     <div class="p-4 sm:p-8">
       <main class="min-w-0 space-y-6 pb-32 xl:min-h-screen">
         <div class="flex items-center justify-between">
