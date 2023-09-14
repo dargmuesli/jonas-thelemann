@@ -43,3 +43,9 @@ en:
   legalNotice: Legal notice
   privacyPolicy: Privacy policy
 </i18n>
+
+<script lang="ts">
+export default {
+  name: 'JtFooter',
+}
+</script>

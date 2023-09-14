@@ -438,7 +438,7 @@
         </div>
       </main>
       <footer class="text-sm leading-6">
-        <JtFooter />
+        <Footer />
       </footer>
     </div>
   </div>
