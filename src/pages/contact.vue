@@ -45,7 +45,9 @@
       >
         <textarea
           v-if="v$.message"
-          id="input-message"
+          :id="`${
+            runtimeConfig.public.vio.isInProduction ? 'prod' : 'dev'
+          }-input-message`"
           class="form-input"
           :placeholder="t('placeholderMessage')"
           rows="10"
@@ -80,6 +82,7 @@ definePageMeta({
 })
 
 const { t } = useI18n()
+const runtimeConfig = useRuntimeConfig()
 
 // data
 const form = reactive({
