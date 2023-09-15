@@ -1,3 +1,10 @@
+## [5.16.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.16.0...5.16.1) (2023-09-15)
+
+
+### Bug Fixes
+
+* **contact:** update sender email address ([48b2b5b](https://github.com/dargmuesli/jonas-thelemann/commit/48b2b5bbca47f6b15f49f091e8e51049b7ec43bb))
+
 ## [5.16.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.15.5...5.16.0) (2023-09-15)
 
 
