@@ -16,7 +16,7 @@ export const onRequest: PagesFunction<Env> = (context) =>
         ],
       },
     ],
-    from: { name: "jonas-thelemann.de", email: "no-reply@cloudflare.com" },
+    from: { name: "jonas-thelemann.de", email: "no-reply@jonas-thelemann.de" },
     respondWith: () =>
       new Response(null, {
         status: 302,
