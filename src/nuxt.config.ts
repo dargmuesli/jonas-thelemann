@@ -16,6 +16,7 @@ export default defineNuxtConfig(
         ],
       },
       site: {
+        id: 'jonas-thelemann',
         identity: {
           type: 'Person',
         },
