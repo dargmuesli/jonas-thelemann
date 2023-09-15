@@ -1,3 +1,10 @@
+## [5.17.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.16.1...5.17.0) (2023-09-15)
+
+
+### Features
+
+* **contact:** add thank you note ([b5a05c8](https://github.com/dargmuesli/jonas-thelemann/commit/b5a05c8ea63d3a1061b33f69d16b8771d91386e5))
+
 ## [5.16.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.16.0...5.16.1) (2023-09-15)
 
 
