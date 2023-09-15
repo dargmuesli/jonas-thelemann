@@ -1,4 +1,4 @@
-import mailChannelsPlugin from "@cloudflare/pages-plugin-mailchannels";
+import mailChannelsPlugin from "@dargmuesli/pages-plugin-mailchannels";
 
 interface Env {
   DKIM_PRIVATE_KEY: string;

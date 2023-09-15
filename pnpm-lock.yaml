@@ -8,9 +8,6 @@ importers:
 
   .:
     devDependencies:
-      '@cloudflare/pages-plugin-mailchannels':
-        specifier: 0.1.2
-        version: 0.1.2
       '@cloudflare/workers-types':
         specifier: 4.20230904.0
         version: 4.20230904.0
@@ -20,6 +17,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.7.0
         version: 17.7.0
+      '@dargmuesli/pages-plugin-mailchannels':
+        specifier: 0.0.1
+        version: 0.0.1
       conventional-changelog-conventionalcommits:
         specifier: 7.0.2
         version: 7.0.2
@@ -441,10 +441,6 @@ packages:
       mime: 3.0.0
     dev: true
 
-  /@cloudflare/pages-plugin-mailchannels@0.1.2:
-    resolution: {integrity: sha512-xPZNM4NEhFkxnx6JNqoWzk3zgvyoPTFb5KbBz5Z1bc4X/D3gidR776WyUVQzR5OphzTqZfFiC9B8mYUyG0WEVg==}
-    dev: true
-
   /@cloudflare/workers-types@4.20230904.0:
     resolution: {integrity: sha512-IX4oJCe14ctblSPZBlW64BVZ9nYLUo6sD2I5gu3hX0ywByYWm1OuoKm9Xb/Zpbj8Ph18Z7Ryii6u2/ocnncXdA==}
     dev: true
@@ -828,6 +824,10 @@ packages:
       - vue-router
       - webpack
       - xml2js
+    dev: true
+
+  /@dargmuesli/pages-plugin-mailchannels@0.0.1:
+    resolution: {integrity: sha512-S5kqpMumsYFLfbNoVwBy+QNzYqrpZpbYSi+O8ALAlUPkMUcz/pP7HinS2qE6K/JkGMcg6/xH50WzT4GOkRKpWg==}
     dev: true
 
   /@esbuild-kit/cjs-loader@2.4.4:
