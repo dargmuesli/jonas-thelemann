@@ -1,3 +1,10 @@
+## [5.15.5](https://github.com/dargmuesli/jonas-thelemann/compare/5.15.4...5.15.5) (2023-09-14)
+
+
+### Performance Improvements
+
+* rectify layout shift ([6dae0a2](https://github.com/dargmuesli/jonas-thelemann/commit/6dae0a242d99057ab7903c1760fd9dcfa7a81a19))
+
 ## [5.15.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.15.3...5.15.4) (2023-09-12)
 
 
