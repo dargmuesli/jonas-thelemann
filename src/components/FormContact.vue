@@ -1,10 +1,6 @@
 <template>
-  <VioForm
-    data-static-form-name="contact"
-    :form="v$"
-    :is-form-sent="isFormSent"
-    @submit="submit"
-  >
+  <VioForm :form="v$" :is-form-sent="isFormSent" @submit="submit">
+    <input type="hidden" name="static-form-name" value="contact" />
     <VioFormInput
       id-label="input-name"
       :placeholder="t('placeholderName')"
@@ -44,6 +40,7 @@
           runtimeConfig.public.vio.isInProduction ? 'prod' : 'dev'
         }-input-message`"
         class="form-input"
+        name="message"
         :placeholder="t('placeholderMessage')"
         rows="10"
         :value="v$.message.$model"
