@@ -1,13 +1,20 @@
 <template>
   <div class="flex flex-col xl:flex-row">
-    <!-- TODO: let preload use fetchpriority="high" -->
-    <nuxt-img
-      alt="Jonas in Tutzing."
-      class="aspect-[2081/3009] xl:block"
-      :class="imageClasses"
-      preload
-      src="/assets/static/images/tutzing.jpg"
-    />
+    <aside class="relative flex">
+      <div
+        class="flex aspect-[2081/3009] max-h-[80vh] flex-1 xl:fixed xl:h-[100vh] xl:max-h-[none] xl:max-w-[50vw]"
+      >
+        <!-- TODO: let preload use fetchpriority="high" -->
+        <nuxt-img
+          alt="Jonas in Tutzing."
+          class="object-position-custom flex-1 object-cover"
+          format="webp"
+          preload
+          src="/assets/static/images/tutzing.jpg"
+        />
+      </div>
+      <div class="hidden aspect-[2081/3009] h-[100vh] max-w-[50vw] xl:block" />
+    </aside>
     <div class="p-4 sm:p-8">
       <main class="min-w-0 space-y-6 pb-32 xl:min-h-screen">
         <div class="flex items-center justify-between">
@@ -42,6 +49,11 @@
         </div>
         <div class="pb-2">
           <ul class="-mx-1.5 flex flex-wrap">
+            <li class="m-1.5">
+              <SocialLink :to="localePath('/contact')">
+                {{ t('contactForm') }}
+              </SocialLink>
+            </li>
             <li class="m-1.5">
               <SocialLink to="https://giphy.com/channel/dargmuesli">
                 {{ t('giphy') }}
@@ -375,13 +387,6 @@
               </li>
             </ul>
           </section>
-          <div class="flex flex-col items-center justify-center">
-            <SocialLink
-              to="https://www.linkedin.com/in/jonas-thelemann-148a74205/"
-            >
-              {{ t('portfolioFull') }}
-            </SocialLink>
-          </div>
           <hr class="md:col-span-2 xl:col-span-1 2xl:col-span-2" />
           <section class="md:col-span-2 xl:col-span-1 2xl:col-span-2">
             <h2 class="text-2xl">{{ t('projects') }}</h2>
@@ -438,27 +443,7 @@
         </div>
       </main>
       <footer class="text-sm leading-6">
-        <div class="mx-auto mt-8 flex w-9/12 items-center">
-          <VioLayoutHr />
-          <IconLogo
-            background-fill="rgba(0,0,0,0)"
-            class="mx-12 h-12 w-12 opacity-50 brightness-0 dark:opacity-60 dark:invert"
-          />
-          <VioLayoutHr />
-        </div>
-        <div class="flex flex-col items-center opacity-60">
-          <span>
-            {{ t('copyright', { year }) }}
-          </span>
-          <div class="flex gap-4">
-            <VioLink is-colored :to="localePath('/legal-notice')">
-              {{ t('legalNotice') }}
-            </VioLink>
-            <VioLink is-colored :to="localePath('/privacy-policy')">
-              {{ t('privacyPolicy') }}
-            </VioLink>
-          </div>
-        </div>
+        <Footer />
       </footer>
     </div>
   </div>
@@ -480,8 +465,6 @@ const runtimeConfig = useRuntimeConfig()
 const siteConfig = useSiteConfig()
 
 // data
-const imageClasses =
-  'xl:h-[100vh] max-h-[80vh] xl:max-h-[none] xl:max-w-[50vw] object-cover object-position-custom'
 let repoCount: string | null = null
 
 // computations
@@ -491,9 +474,6 @@ const age = computed(() =>
     : Math.abs(
         new Date(Date.now() - Date.parse('1998-12-17')).getUTCFullYear() - 1970,
       ),
-)
-const year = computed(() =>
-  runtimeConfig.public.vio.isTesting ? 1337 : new Date().getFullYear(),
 )
 
 // methods
@@ -536,7 +516,7 @@ de:
   aboutSidefact: Freundet sich mit der Mitte von Schwarz und Weiß an, hodlt nebenbei.
   ccc: Chaos Computer Club
   cccTimespan: Mai 2018 – {present}
-  copyright: © {year} Jonas Thelemann. Alle Rechte vorbehalten.
+  contactForm: Kontaktformular
   descriptionShort: '{ninjaneers}, studiert an der {university}, gründet {maevsi}.'
   education: Bildung
   educationGoal: Master der Software-Entwicklung
@@ -562,7 +542,6 @@ de:
   jonasThelemann: Jonas Thelemann
   kasselAddress: Kassel, Hessen, Deutschland
   languages: Sprachen
-  legalNotice: Impressum
   linkedIn: LinkedIn
   maevsi: maevsi
   metaInfo: '{age}, er/ihn'
@@ -573,9 +552,7 @@ de:
   nominationScholarshipTime: Jul 2019
   organizations: Organisationen
   placeTime: '{place}, {time}'
-  portfolioFull: Zum ganzen Portfolio
   present: heute
-  privacyPolicy: Datenschutz
   proficiencyNative: muttersprachliches Niveau
   proficiencyProfessional: professionelles Arbeitsniveau
   projects: Projekte
@@ -596,7 +573,7 @@ en:
   aboutSidefact: Getting used to the middle of black and white, hodling in the meantime.
   ccc: Chaos Computer Club
   cccTimespan: May 2018 – {present}
-  copyright: © {year} Jonas Thelemann. All rights reserved.
+  contactForm: Contact form
   descriptionShort: '{ninjaneers}, studying at {university}, founding {maevsi}.'
   education: Education
   educationGoal: Master's degree Software Engineering
@@ -622,7 +599,6 @@ en:
   jonasThelemann: Jonas Thelemann
   kasselAddress: Kassel, Hesse, Germany
   languages: Languages
-  legalNotice: Legal notice
   linkedIn: LinkedIn
   maevsi: maevsi
   metaInfo: '{age}, he/him'
@@ -633,9 +609,7 @@ en:
   nominationScholarshipTime: Jul 2019
   organizations: Organizations
   placeTime: '{place}, {time}'
-  portfolioFull: View full portfolio
   present: today
-  privacyPolicy: Privacy
   proficiencyNative: native proficiency
   proficiencyProfessional: professional working proficiency
   projects: Projects

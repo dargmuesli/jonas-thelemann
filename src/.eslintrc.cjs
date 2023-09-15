@@ -36,7 +36,14 @@ module.exports = {
   },
   settings: {
     'vue-i18n': {
-      localeDir: './locales/*.json',
+      localeDir: [
+        {
+          pattern: './locales/*.json',
+        },
+        {
+          pattern: './node_modules/@dargmuesli/nuxt-vio/locales/*.json',
+        },
+      ],
       messageSyntaxVersion: '^9.0.0',
     },
   },

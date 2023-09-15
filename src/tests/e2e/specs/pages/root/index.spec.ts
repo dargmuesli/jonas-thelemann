@@ -34,7 +34,17 @@ test.describe('a11y', () => {
     await page.goto('/')
     await PAGE_READY({ page })
     const accessibilityScanResults = await new AxeBuilder({ page }).analyze()
-    expect(accessibilityScanResults.violations.length).toEqual(2) // TODO: get rid of all violations
+    // expect(
+    //   accessibilityScanResults.violations
+    //     .map(
+    //       (x) =>
+    //         `${x.id}\n${x.nodes.map(
+    //           (y) => `${y.failureSummary}\n(${y.html})`,
+    //         )}`,
+    //     )
+    //     .join('\n'),
+    // ).toEqual('')
+    expect(accessibilityScanResults.violations.length).toEqual(0)
   })
 })
 
