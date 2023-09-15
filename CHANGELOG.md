@@ -1,3 +1,26 @@
+## [5.16.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.15.5...5.16.0) (2023-09-15)
+
+
+### Features
+
+* add contact form ([32cd8b0](https://github.com/dargmuesli/jonas-thelemann/commit/32cd8b08cf6eee95d38e59f487f83eede9e468c5))
+* add link to contact form ([f19ce83](https://github.com/dargmuesli/jonas-thelemann/commit/f19ce83e4eaad228c38f8ecccee65ca3211c031c))
+* **components:** extract footer ([19ab14c](https://github.com/dargmuesli/jonas-thelemann/commit/19ab14cd50eb56c8fa2e6c8bfd5ce7050d23685c))
+* **contact:** remove "required" indicators ([d86e567](https://github.com/dargmuesli/jonas-thelemann/commit/d86e5675dbff5abe9973e2aebe3874559a7b74a5))
+* **contact:** use `vio` form ([4fe2494](https://github.com/dargmuesli/jonas-thelemann/commit/4fe249400a1cd158517c6b94cef196ac265d4f84))
+* **mail-channels:** add dkim ([6e66a3e](https://github.com/dargmuesli/jonas-thelemann/commit/6e66a3e1c15547c0f4733e5d34e8fc29847fb092))
+* **site:** add id ([01cfd61](https://github.com/dargmuesli/jonas-thelemann/commit/01cfd616a16ef64e0ac65d5748af2b28d9d95919))
+
+
+### Bug Fixes
+
+* **cloudflare:** correct functions placement ([28e3a2c](https://github.com/dargmuesli/jonas-thelemann/commit/28e3a2cf6605db2d9354b69404b1f8433169f779))
+* **contact:** correct `textarea` id ([97853f1](https://github.com/dargmuesli/jonas-thelemann/commit/97853f1885c36383d9e9ff2b1233e881c7d672e1))
+* **contact:** correct input type ([5807282](https://github.com/dargmuesli/jonas-thelemann/commit/5807282fde001454917c97ff57064fdb5c6bf9af))
+* contain all page content in landmarks ([6900320](https://github.com/dargmuesli/jonas-thelemann/commit/69003209daa92361380d4829503334b9af7fc742))
+* correct image layout ([9bae61d](https://github.com/dargmuesli/jonas-thelemann/commit/9bae61d57dceb33373bc3c16cc145de8bae18e54))
+* **form-contact:** add required input names ([075d7f2](https://github.com/dargmuesli/jonas-thelemann/commit/075d7f2b2c268d857f6b5211b0b9bf5359136e76))
+
 ## [5.15.5](https://github.com/dargmuesli/jonas-thelemann/compare/5.15.4...5.15.5) (2023-09-14)
 
 
