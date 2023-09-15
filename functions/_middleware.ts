@@ -17,9 +17,9 @@ export const onRequest: PagesFunction<Env> = (context) =>
       },
     ],
     from: { name: "jonas-thelemann.de", email: "no-reply@jonas-thelemann.de" },
-    respondWith: () =>
+    respondWith: (submission) =>
       new Response(null, {
         status: 302,
-        headers: { Location: "/thank-you" },
+        headers: { Location: `${submission.request.url}?success` },
       }),
   })(context);
