@@ -63,12 +63,12 @@ test.describe('internationalization', () => {
 
   test('displays English translations', async ({ page }) => {
     await page.goto('/')
-    expect(page.getByText(textEnglish)).toBeDefined()
+    await expect(page.getByText(textEnglish)).toBeVisible()
   })
 
   test('displays German translations', async ({ page }) => {
     await page.goto('/de')
-    expect(page.getByText(textGerman)).toBeDefined()
+    await expect(page.getByText(textGerman)).toBeVisible()
   })
 })
 
