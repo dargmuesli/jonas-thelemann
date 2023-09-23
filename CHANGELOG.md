@@ -1,3 +1,10 @@
+## [5.18.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.17.0...5.18.0) (2023-09-23)
+
+
+### Features
+
+* **root:** add label to `aside` ([a7c98f1](https://github.com/dargmuesli/jonas-thelemann/commit/a7c98f1c7bd38f400b6a071a0b9a50e8190cd3df))
+
 ## [5.17.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.16.1...5.17.0) (2023-09-15)
 
 
