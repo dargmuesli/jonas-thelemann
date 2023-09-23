@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col xl:flex-row">
-    <aside class="relative flex">
+    <aside :aria-label="t('asideLabel')" class="relative flex">
       <div
         class="flex aspect-[2081/3009] max-h-[80vh] flex-1 xl:fixed xl:h-[100vh] xl:max-h-[none] xl:max-w-[50vw]"
       >
@@ -514,6 +514,7 @@ de:
   aboutMarkDj: DJ und Event-Organisator
   aboutMarkSoftware: Leidenschaftlicher Software-Entwickler
   aboutSidefact: Freundet sich mit der Mitte von Schwarz und Weiß an, hodlt nebenbei.
+  asideLabel: Titelbild
   ccc: Chaos Computer Club
   cccTimespan: Mai 2018 – {present}
   contactForm: Kontaktformular
@@ -571,6 +572,7 @@ en:
   aboutMarkDj: DJ and event organizer
   aboutMarkSoftware: Passionate software developer
   aboutSidefact: Getting used to the middle of black and white, hodling in the meantime.
+  asideLabel: Title image
   ccc: Chaos Computer Club
   cccTimespan: May 2018 – {present}
   contactForm: Contact form
