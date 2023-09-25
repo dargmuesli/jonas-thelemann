@@ -10,13 +10,8 @@ export default defineNuxtConfig(
 
       // modules
       linkChecker: {
+        fetchRemoteUrls: !process.env.CI,
         excludeLinks: [
-          ...(process.env.CI
-            ? [
-                'https://www.instagram.com/dargmuesli/',
-                'https://www.uni-kassel.de/',
-              ]
-            : []),
           'https://www.linkedin.com/in/jonas-thelemann-148a74205/', // requires login
         ],
       },
