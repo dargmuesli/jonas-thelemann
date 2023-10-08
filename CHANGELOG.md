@@ -1,3 +1,11 @@
+## [5.19.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.18.1...5.19.0) (2023-10-08)
+
+
+### Features
+
+* **education:** update time ([44c57dc](https://github.com/dargmuesli/jonas-thelemann/commit/44c57dc1df2b8669e8a372107184545c919fce9b))
+* **honors:** add electoral office ([2383611](https://github.com/dargmuesli/jonas-thelemann/commit/238361179bfcd6c4a1c9efc1cf7e2595e6a3f23d))
+
 ## [5.18.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.18.0...5.18.1) (2023-10-03)
 
 
