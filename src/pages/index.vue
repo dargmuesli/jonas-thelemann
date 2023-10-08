@@ -539,7 +539,7 @@ de:
   descriptionShort: '{ninjaneers}, studiert an der {university}, gründet {maevsi}.'
   education: Bildung
   educationGoal: Master der Software-Entwicklung
-  educationTime: 2021 – 2023
+  educationTime: 2021 – 2024
   english: Englisch
   experience: Erfahrung
   experienceNinjaneer: Software-Entwickler
@@ -599,7 +599,7 @@ en:
   descriptionShort: '{ninjaneers}, studying at {university}, founding {maevsi}.'
   education: Education
   educationGoal: Master's degree Software Engineering
-  educationTime: 2021 – 2023
+  educationTime: 2021 – 2024
   english: English
   experience: Experience
   experienceNinjaneer: Software Engineer
