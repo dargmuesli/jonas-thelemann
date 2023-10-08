@@ -337,6 +337,24 @@
                   tag="span"
                 >
                   <template #title>
+                    <span class="text-text-dark dark:text-text-bright">
+                      {{ t('honorsAwardsElectoralOfficer') }}
+                    </span>
+                  </template>
+                  <template #subtitle>
+                    <a href="https://www.kassel.de/">
+                      {{ t('kasselCity') }}
+                    </a>
+                  </template>
+                </i18n-t>
+              </li>
+              <li>
+                <i18n-t
+                  keypath="titleSubtitle"
+                  class="text-gray-500 dark:text-gray-400"
+                  tag="span"
+                >
+                  <template #title>
                     <a
                       class="text-text-dark dark:text-text-bright"
                       href="https://www.uni-kassel.de/einrichtung/index.php?eID=dumpFile&t=f&f=1988&token=e881e12fc8112d90e46d21d4fbef05530929c5c0"
@@ -521,7 +539,7 @@ de:
   descriptionShort: '{ninjaneers}, studiert an der {university}, gründet {maevsi}.'
   education: Bildung
   educationGoal: Master der Software-Entwicklung
-  educationTime: 2021 – 2023
+  educationTime: 2021 – 2024
   english: Englisch
   experience: Erfahrung
   experienceNinjaneer: Software-Entwickler
@@ -537,11 +555,13 @@ de:
   giTimespan: Jan 2019 – today
   hessenIdeen: Hessen Ideen
   honorsAwards: Ehrungen und Auszeichnungen
+  honorsAwardsElectoralOfficer: Wahlvorsteher
   honorsAwardsIdeasCompetition: Ideenwettbewerb Top 10 Projekt
   honorsAwardsIdeasCompetitionTime: Okt 2020
   instagram: Instagram
   jonasThelemann: Jonas Thelemann
   kasselAddress: Kassel, Hessen, Deutschland
+  kasselCity: Stadt Kassel
   languages: Sprachen
   linkedIn: LinkedIn
   maevsi: maevsi
@@ -579,7 +599,7 @@ en:
   descriptionShort: '{ninjaneers}, studying at {university}, founding {maevsi}.'
   education: Education
   educationGoal: Master's degree Software Engineering
-  educationTime: 2021 – 2023
+  educationTime: 2021 – 2024
   english: English
   experience: Experience
   experienceNinjaneer: Software Engineer
@@ -595,11 +615,13 @@ en:
   giTimespan: Jan 2019 – today
   hessenIdeen: Hesse Ideas
   honorsAwards: Honors & Awards
+  honorsAwardsElectoralOfficer: Electoral Officer
   honorsAwardsIdeasCompetition: Ideas Competition Top 10 Project
   honorsAwardsIdeasCompetitionTime: Oct 2020
   instagram: Instagram
   jonasThelemann: Jonas Thelemann
   kasselAddress: Kassel, Hesse, Germany
+  kasselCity: City of Kassel
   languages: Languages
   linkedIn: LinkedIn
   maevsi: maevsi
