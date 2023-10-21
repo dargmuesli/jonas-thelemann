@@ -25,7 +25,7 @@ jobs:
   release_semantic_dry:
     needs: prepare_jobs
     name: Release (semantic, dry)
-    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@1.0.0-beta.8
+    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@1.1.0
     if: needs.prepare_jobs.outputs.pr_found == 'false' || github.event_name == 'pull_request'
     permissions:
       contents: write
@@ -35,7 +35,7 @@ jobs:
       DRY_RUN: true
   build:
     name: Build
-    uses: dargmuesli/github-actions/.github/workflows/docker.yml@1.0.0-beta.8
+    uses: dargmuesli/github-actions/.github/workflows/docker.yml@1.1.0
     needs: release_semantic_dry
     permissions:
       packages: write
@@ -47,7 +47,7 @@ jobs:
   release_semantic:
     needs: build
     name: Release (semantic)
-    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@1.0.0-beta.8
+    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@1.1.0
     permissions:
       contents: write
     secrets:
@@ -55,7 +55,7 @@ jobs:
   deploy:
     needs: build
     name: Deploy
-    uses: dargmuesli/github-actions/.github/workflows/deploy-cloudflare-pages.yml@1.0.0-beta.8
+    uses: dargmuesli/github-actions/.github/workflows/deploy-cloudflare-pages.yml@1.1.0
     secrets:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
     with:
