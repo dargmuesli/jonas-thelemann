@@ -60,8 +60,8 @@ importers:
         specifier: 7.0.3
         version: 7.0.3
       defu:
-        specifier: 6.1.2
-        version: 6.1.2
+        specifier: 6.1.3
+        version: 6.1.3
       jiti:
         specifier: 1.20.0
         version: 1.20.0
@@ -1894,7 +1894,7 @@ packages:
       '@vueuse/core': 10.5.0(vue@3.3.6)
       '@vueuse/integrations': 10.5.0(focus-trap@7.5.4)(fuse.js@6.6.2)(vue@3.3.6)
       '@vueuse/nuxt': 10.5.0(nuxt@3.8.0)(vue@3.3.6)
-      defu: 6.1.2
+      defu: 6.1.3
       focus-trap: 7.5.4
       splitpanes: 3.1.5
       unocss: 0.56.5(@unocss/webpack@0.56.5)(postcss@8.4.31)(vite@4.5.0)
@@ -2012,7 +2012,7 @@ packages:
     dependencies:
       '@nuxt/kit': 3.8.0
       consola: 3.2.3
-      defu: 6.1.2
+      defu: 6.1.3
       h3: 1.8.2
       image-meta: 0.2.0
       node-fetch-native: 1.4.0
@@ -2045,7 +2045,7 @@ packages:
       '@nuxt/schema': 3.8.0
       c12: 1.5.1
       consola: 3.2.3
-      defu: 6.1.2
+      defu: 6.1.3
       globby: 13.2.2
       hash-sum: 2.0.0
       ignore: 5.2.4
@@ -2086,7 +2086,7 @@ packages:
     dependencies:
       '@nuxt/ui-templates': 1.3.1
       consola: 3.2.3
-      defu: 6.1.2
+      defu: 6.1.3
       hookable: 5.5.3
       pathe: 1.1.1
       pkg-types: 1.0.3
@@ -2108,7 +2108,7 @@ packages:
       ci-info: 3.9.0
       consola: 3.2.3
       create-require: 1.1.1
-      defu: 6.1.2
+      defu: 6.1.3
       destr: 2.0.1
       dotenv: 16.3.1
       git-url-parse: 13.1.1
@@ -2144,7 +2144,7 @@ packages:
       clear: 0.1.0
       consola: 3.2.3
       cssnano: 6.0.1(postcss@8.4.31)
-      defu: 6.1.2
+      defu: 6.1.3
       esbuild: 0.19.5
       escape-string-regexp: 5.0.0
       estree-walker: 3.0.3
@@ -2270,7 +2270,7 @@ packages:
       '@nuxt/kit': 3.8.0
       '@vue/compiler-sfc': 3.3.6
       debug: 4.3.4
-      defu: 6.1.2
+      defu: 6.1.3
       estree-walker: 3.0.3
       is-https: 4.0.0
       knitwork: 1.0.0
@@ -2313,7 +2313,7 @@ packages:
       clear-module: 4.1.2
       colorette: 2.0.20
       cookie-es: 1.0.0
-      defu: 6.1.2
+      defu: 6.1.3
       destr: 2.0.1
       h3: 1.8.2
       iron-webcrypto: 0.7.1
@@ -2339,7 +2339,7 @@ packages:
     dependencies:
       '@nuxt/kit': 3.8.0
       chalk: 5.3.0
-      defu: 6.1.2
+      defu: 6.1.3
       nuxt-link-checker: 2.1.9(@nuxt/devtools@1.0.0)(nuxt@3.8.0)(postcss@8.4.31)(vite@4.5.0)(vue@3.3.6)(webpack@5.89.0)
       nuxt-og-image: 2.1.3(vue@3.3.6)
       nuxt-schema-org: 3.0.1(@unhead/shared@1.7.4)(unhead@1.7.4)(vue@3.3.6)
@@ -2464,6 +2464,7 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
+      napi-wasm: 1.1.0
     dev: true
     bundledDependencies:
       - napi-wasm
@@ -4441,6 +4442,7 @@ packages:
 
   /b4a@1.6.4:
     resolution: {integrity: sha512-fpWrvyVHEKyeEvbKZTVOeZF3VSKKWtJxFIxX/jaVPf+cLbGUSitjb49pHLqPV2BUNNZ0LcoeEGfE/YCpyDYHIw==}
+    requiresBuild: true
     dev: true
 
   /balanced-match@1.0.2:
@@ -4603,7 +4605,7 @@ packages:
     resolution: {integrity: sha512-BWZRJgDEveT8uI+cliCwvYSSSSvb4xKoiiu5S0jaDbKBopQLQF7E+bq9xKk1pTcG+mUa3yXuFO7bD9d8Lr9Xxg==}
     dependencies:
       chokidar: 3.5.3
-      defu: 6.1.2
+      defu: 6.1.3
       dotenv: 16.3.1
       giget: 1.1.3
       jiti: 1.20.0
@@ -5547,6 +5549,10 @@ packages:
 
   /defu@6.1.2:
     resolution: {integrity: sha512-+uO4+qr7msjNNWKYPHqN/3+Dx3NFkmIzayk2L1MyZQlvgZb/J1A0fo410dpKrN2SnqFjt8n4JL8fDJE0wIgjFQ==}
+    dev: true
+
+  /defu@6.1.3:
+    resolution: {integrity: sha512-Vy2wmG3NTkmHNg/kzpuvHhkqeIx3ODWqasgCRbKtbXEN0G+HpEEv9BtJLp7ZG1CZloFaC41Ah3ZFbq7aqCqMeQ==}
     dev: true
 
   /delegate@3.2.0:
@@ -6524,6 +6530,7 @@ packages:
 
   /fast-fifo@1.3.2:
     resolution: {integrity: sha512-/d9sfos4yxzpwkDkuN7k2SqFKtYNmCTzgfEpz82x34IM9/zc8KGxQoXg1liNC/izpRM/MBdt44Nmx41ZWqk+FQ==}
+    requiresBuild: true
     dev: true
 
   /fast-glob@3.3.1:
@@ -6834,7 +6841,7 @@ packages:
     hasBin: true
     dependencies:
       colorette: 2.0.20
-      defu: 6.1.2
+      defu: 6.1.3
       https-proxy-agent: 7.0.2
       mri: 1.2.0
       node-fetch-native: 1.4.0
@@ -7062,7 +7069,7 @@ packages:
     resolution: {integrity: sha512-1Ca0orJJlCaiFY68BvzQtP2lKLk46kcLAxVM8JgYbtm2cUg6IY7pjpYgWMwUvDO9QI30N5JAukOKoT8KD3Q0PQ==}
     dependencies:
       cookie-es: 1.0.0
-      defu: 6.1.2
+      defu: 6.1.3
       destr: 2.0.1
       iron-webcrypto: 0.10.1
       radix3: 1.1.0
@@ -7472,7 +7479,7 @@ packages:
       '@fastify/accept-negotiator': 1.1.0
       citty: 0.1.4
       consola: 3.2.3
-      defu: 6.1.2
+      defu: 6.1.3
       destr: 2.0.1
       etag: 1.8.1
       h3: 1.8.2
@@ -8129,7 +8136,7 @@ packages:
       citty: 0.1.4
       clipboardy: 3.0.0
       consola: 3.2.3
-      defu: 6.1.2
+      defu: 6.1.3
       get-port-please: 3.1.1
       h3: 1.8.2
       http-shutdown: 1.2.2
@@ -8788,6 +8795,10 @@ packages:
     dev: true
     optional: true
 
+  /napi-wasm@1.1.0:
+    resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
+    dev: true
+
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
@@ -8831,7 +8842,7 @@ packages:
       citty: 0.1.4
       consola: 3.2.3
       cookie-es: 1.0.0
-      defu: 6.1.2
+      defu: 6.1.3
       destr: 2.0.1
       dot-prop: 8.0.2
       esbuild: 0.19.5
@@ -9126,7 +9137,7 @@ packages:
     resolution: {integrity: sha512-FGQXdBFYs4w5XqVT0xbgut64BujbuVjejNTD7ki3ITaebhuUhTO/tt6O65c3wT5mDU10oks3ytSUMLbTcIPQHg==}
     dependencies:
       '@nuxt/kit': 3.8.0
-      defu: 6.1.2
+      defu: 6.1.3
       uncsrf: 1.1.1
     transitivePeerDependencies:
       - rollup
@@ -9198,7 +9209,7 @@ packages:
       chalk: 5.3.0
       chrome-launcher: 1.1.0
       css-inline: 0.11.0
-      defu: 6.1.2
+      defu: 6.1.3
       execa: 8.0.1
       fast-glob: 3.3.1
       flatted: 3.2.9
@@ -9254,7 +9265,7 @@ packages:
     dependencies:
       '@nuxt/kit': 3.8.0
       basic-auth: 2.0.1
-      defu: 6.1.2
+      defu: 6.1.3
       nuxt-csurf: 1.3.1
       pathe: 1.1.1
       unplugin-remove: 0.1.3(vite@4.5.0)(webpack@5.89.0)
@@ -9272,7 +9283,7 @@ packages:
     dependencies:
       '@nuxt/kit': 3.8.0
       '@unhead/addons': 1.7.4
-      defu: 6.1.2
+      defu: 6.1.3
       escape-string-regexp: 5.0.0
       fast-glob: 3.3.1
       image-size: 1.0.2
@@ -9306,7 +9317,7 @@ packages:
     resolution: {integrity: sha512-P7gocVzAjozWzRwwG2GlOte0y6Ni5brY1xyM5ehQTfDG9s1jWUfgTLgZPo1MFTFOxShknwdFyl5fS1iB032wVQ==}
     dependencies:
       '@nuxt/kit': 3.8.0
-      defu: 6.1.2
+      defu: 6.1.3
       nuxt-site-config: 1.5.4(vue@3.3.6)
       nuxt-site-config-kit: 1.5.4(vue@3.3.6)
       pathe: 1.1.1
@@ -9323,7 +9334,7 @@ packages:
       '@nuxt/devtools-kit': 0.8.5(nuxt@3.8.0)(vite@4.5.0)
       '@nuxt/kit': 3.8.0
       chalk: 5.3.0
-      defu: 6.1.2
+      defu: 6.1.3
       escape-string-regexp: 5.0.0
       fast-glob: 3.3.1
       knitwork: 1.0.0
@@ -9431,7 +9442,7 @@ packages:
       c12: 1.5.1
       chokidar: 3.5.3
       cookie-es: 1.0.0
-      defu: 6.1.2
+      defu: 6.1.3
       destr: 2.0.1
       devalue: 4.3.2
       esbuild: 0.19.5
@@ -10629,6 +10640,7 @@ packages:
 
   /queue-tick@1.0.1:
     resolution: {integrity: sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag==}
+    requiresBuild: true
     dev: true
 
   /queue@6.0.2:
@@ -10670,7 +10682,7 @@ packages:
   /rc9@2.1.1:
     resolution: {integrity: sha512-lNeOl38Ws0eNxpO3+wD1I9rkHGQyj1NU1jlzv4go2CtEnEQEUfqnIvZG7W+bC/aXdJ27n5x/yUjb6RoT9tko+Q==}
     dependencies:
-      defu: 6.1.2
+      defu: 6.1.3
       destr: 2.0.1
       flat: 5.0.2
     dev: true
@@ -11127,7 +11139,7 @@ packages:
   /serve-placeholder@2.0.1:
     resolution: {integrity: sha512-rUzLlXk4uPFnbEaIz3SW8VISTxMuONas88nYWjAWaM2W9VDbt9tyFOr3lq8RhVOFrT3XISoBw8vni5una8qMnQ==}
     dependencies:
-      defu: 6.1.2
+      defu: 6.1.3
     dev: true
 
   /serve-static@1.15.0:
@@ -11502,6 +11514,7 @@ packages:
 
   /streamx@2.15.1:
     resolution: {integrity: sha512-fQMzy2O/Q47rgwErk/eGeLu/roaFWV0jVsogDmrszM9uIw8L5OA+t+V93MgYlufNptfjmYR1tOMWhei/Eh7TQA==}
+    requiresBuild: true
     dependencies:
       fast-fifo: 1.3.2
       queue-tick: 1.0.1
@@ -12343,7 +12356,7 @@ packages:
     resolution: {integrity: sha512-bV/nqePAKv71v3HdVUn6UefbsDKQWRX+bJIkiSm0+twIds6WiD2bJLWWT3i214+J/B4edufZpG2w7Y63Vbwxow==}
     dependencies:
       '@antfu/utils': 0.7.6
-      defu: 6.1.2
+      defu: 6.1.3
       jiti: 1.20.0
       mlly: 1.4.2
     dev: true
@@ -12380,7 +12393,7 @@ packages:
     resolution: {integrity: sha512-fjYsXYi30It0YCQYqLOcT6fHfMXsBr2hw9XC7ycf8rTG7Xxpe3ZssiqUnD0khrjiZEmkBXWLwm42yCSCH46fMw==}
     dependencies:
       consola: 3.2.3
-      defu: 6.1.2
+      defu: 6.1.3
       mime: 3.0.0
       node-fetch-native: 1.4.0
       pathe: 1.1.1
@@ -12647,7 +12660,7 @@ packages:
       '@babel/core': 7.23.2
       '@babel/standalone': 7.23.2
       '@babel/types': 7.23.0
-      defu: 6.1.2
+      defu: 6.1.3
       jiti: 1.20.0
       mri: 1.2.0
       scule: 1.0.0
