@@ -485,7 +485,7 @@ const runtimeConfig = useRuntimeConfig()
 const siteConfig = useSiteConfig()
 
 // data
-let repoCount: string | null = null
+const repoCount = useState<string | undefined>('repoCount', () => undefined)
 
 // computations
 const age = computed(() =>
@@ -498,6 +498,8 @@ const age = computed(() =>
 
 // methods
 const init = async () => {
+  if (repoCount.value) return
+
   try {
     const res = await $fetch.raw(
       'https://api.github.com/users/dargmuesli/repos?per_page=1',
@@ -506,14 +508,14 @@ const init = async () => {
     if (!res.ok) throw createError('Response is not ok!')
 
     const headerLink = res.headers.get('link')
-    repoCount = headerLink
+    repoCount.value = headerLink
       ? (getQuery(
           headerLink
             .split(', ')[1]
             .split('; ')[0]
             .replace(/(^<|>$)/g, ''),
         ).page as string)
-      : null
+      : undefined
   } catch (e) {
     consola.error(JSON.stringify(e))
   }
