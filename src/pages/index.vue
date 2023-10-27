@@ -2,7 +2,7 @@
   <div class="flex flex-col xl:flex-row">
     <aside :aria-label="t('asideLabel')" class="relative flex">
       <div
-        class="flex aspect-[2081/3009] max-h-[80vh] flex-1 xl:fixed xl:h-[100vh] xl:max-h-[none] xl:max-w-[50vw]"
+        class="flex aspect-[2081/3009] max-h-[80vh] flex-1 xl:fixed xl:h-[100vh] xl:max-h-[none] xl:max-w-[38.2vw]"
       >
         <!-- TODO: let preload use fetchpriority="high" -->
         <nuxt-img
@@ -13,7 +13,9 @@
           src="/assets/static/images/tutzing.jpg"
         />
       </div>
-      <div class="hidden aspect-[2081/3009] h-[100vh] max-w-[50vw] xl:block" />
+      <div
+        class="hidden aspect-[2081/3009] h-[100vh] max-w-[38.2vw] xl:block"
+      />
     </aside>
     <div class="p-4 sm:p-8">
       <main class="min-w-0 space-y-6 pb-32 xl:min-h-screen">
@@ -185,6 +187,35 @@
                       <template #time>
                         {{
                           t('experienceNinjaneerTimespan', {
+                            present: t('present'),
+                          })
+                        }}
+                      </template>
+                    </i18n-t>
+                  </template>
+                </i18n-t>
+              </li>
+              <li>
+                <i18n-t
+                  keypath="titleSubtitle"
+                  class="text-gray-500 dark:text-gray-400"
+                  tag="span"
+                >
+                  <template #title>
+                    <span class="text-text-dark dark:text-text-bright">
+                      {{ t('experienceFederalVolunteerService') }}
+                    </span>
+                  </template>
+                  <template #subtitle>
+                    <i18n-t keypath="placeTime">
+                      <template #place>
+                        <a href="https://www.landkreiskassel.de/">
+                          {{ t('kasselCounty') }}
+                        </a>
+                      </template>
+                      <template #time>
+                        {{
+                          t('experienceFederalVolunteerServiceTimespan', {
                             present: t('present'),
                           })
                         }}
@@ -483,7 +514,7 @@ const runtimeConfig = useRuntimeConfig()
 const siteConfig = useSiteConfig()
 
 // data
-let repoCount: string | null = null
+const repoCount = useState<string | undefined>('repoCount', () => undefined)
 
 // computations
 const age = computed(() =>
@@ -496,6 +527,8 @@ const age = computed(() =>
 
 // methods
 const init = async () => {
+  if (repoCount.value) return
+
   try {
     const res = await $fetch.raw(
       'https://api.github.com/users/dargmuesli/repos?per_page=1',
@@ -504,14 +537,14 @@ const init = async () => {
     if (!res.ok) throw createError('Response is not ok!')
 
     const headerLink = res.headers.get('link')
-    repoCount = headerLink
+    repoCount.value = headerLink
       ? (getQuery(
           headerLink
             .split(', ')[1]
             .split('; ')[0]
             .replace(/(^<|>$)/g, ''),
         ).page as string)
-      : null
+      : undefined
   } catch (e) {
     consola.error(JSON.stringify(e))
   }
@@ -542,6 +575,8 @@ de:
   educationTime: 2021 – 2024
   english: Englisch
   experience: Erfahrung
+  experienceFederalVolunteerService: 'Freiwilligendienstler: Flüchlingshilfe'
+  experienceFederalVolunteerServiceTimespan: Jan 2017 – Aug 2017
   experienceNinjaneer: Software-Entwickler
   experienceNinjaneerTimespan: Jul 2020 – {present}
   flipdot: flipdot Hackerspace Kassel
@@ -562,6 +597,7 @@ de:
   jonasThelemann: Jonas Thelemann
   kasselAddress: Kassel, Hessen, Deutschland
   kasselCity: Stadt Kassel
+  kasselCounty: Landkreis Kassel
   languages: Sprachen
   linkedIn: LinkedIn
   maevsi: maevsi
@@ -602,6 +638,8 @@ en:
   educationTime: 2021 – 2024
   english: English
   experience: Experience
+  experienceFederalVolunteerService: 'Volunteer Service Worker: refugee aid'
+  experienceFederalVolunteerServiceTimespan: Jan 2017 – Aug 2017
   experienceNinjaneer: Software Engineer
   experienceNinjaneerTimespan: Jul 2020 – today
   flipdot: flipdot Hackerspace Kassel
@@ -622,6 +660,7 @@ en:
   jonasThelemann: Jonas Thelemann
   kasselAddress: Kassel, Hesse, Germany
   kasselCity: City of Kassel
+  kasselCounty: Kassel County
   languages: Languages
   linkedIn: LinkedIn
   maevsi: maevsi

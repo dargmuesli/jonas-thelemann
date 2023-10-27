@@ -1,5 +1,5 @@
 [![CI](https://github.com/dargmuesli/jonas-thelemann/actions/workflows/ci.yml/badge.svg)](https://github.com/dargmuesli/jonas-thelemann/actions/workflows/ci.yml)
-[![website uptime monitoring](https://app.statuscake.com/button/index.php?Track=BkiZnQ1xpj&Days=1000&Design=3)](https://www.statuscake.com "website uptime monitoring")
+[![website uptime monitoring](https://app.statuscake.com/button/index.php?Track=7038276&Days=1&Design=3)](https://www.statuscake.com "website uptime monitoring")
 
 # jonas-thelemann
 
