@@ -195,6 +195,35 @@
                   </template>
                 </i18n-t>
               </li>
+              <li>
+                <i18n-t
+                  keypath="titleSubtitle"
+                  class="text-gray-500 dark:text-gray-400"
+                  tag="span"
+                >
+                  <template #title>
+                    <span class="text-text-dark dark:text-text-bright">
+                      {{ t('experienceFederalVolunteerService') }}
+                    </span>
+                  </template>
+                  <template #subtitle>
+                    <i18n-t keypath="placeTime">
+                      <template #place>
+                        <a href="https://www.landkreiskassel.de/">
+                          {{ t('kasselCounty') }}
+                        </a>
+                      </template>
+                      <template #time>
+                        {{
+                          t('experienceFederalVolunteerServiceTimespan', {
+                            present: t('present'),
+                          })
+                        }}
+                      </template>
+                    </i18n-t>
+                  </template>
+                </i18n-t>
+              </li>
             </ul>
           </section>
           <section>
@@ -546,6 +575,8 @@ de:
   educationTime: 2021 – 2024
   english: Englisch
   experience: Erfahrung
+  experienceFederalVolunteerService: 'Freiwilligendienstler: Flüchlingshilfe'
+  experienceFederalVolunteerServiceTimespan: Jan 2017 – Aug 2017
   experienceNinjaneer: Software-Entwickler
   experienceNinjaneerTimespan: Jul 2020 – {present}
   flipdot: flipdot Hackerspace Kassel
@@ -566,6 +597,7 @@ de:
   jonasThelemann: Jonas Thelemann
   kasselAddress: Kassel, Hessen, Deutschland
   kasselCity: Stadt Kassel
+  kasselCounty: Landkreis Kassel
   languages: Sprachen
   linkedIn: LinkedIn
   maevsi: maevsi
@@ -606,6 +638,8 @@ en:
   educationTime: 2021 – 2024
   english: English
   experience: Experience
+  experienceFederalVolunteerService: 'Volunteer Service Worker: refugee aid'
+  experienceFederalVolunteerServiceTimespan: Jan 2017 – Aug 2017
   experienceNinjaneer: Software Engineer
   experienceNinjaneerTimespan: Jul 2020 – today
   flipdot: flipdot Hackerspace Kassel
@@ -626,6 +660,7 @@ en:
   jonasThelemann: Jonas Thelemann
   kasselAddress: Kassel, Hesse, Germany
   kasselCity: City of Kassel
+  kasselCounty: Kassel County
   languages: Languages
   linkedIn: LinkedIn
   maevsi: maevsi
