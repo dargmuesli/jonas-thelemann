@@ -9,6 +9,7 @@
           alt="Jonas in Tutzing."
           class="object-position-custom flex-1 object-cover"
           format="webp"
+          :nonce="nonce"
           preload
           src="/assets/static/images/tutzing.jpg"
         />
@@ -483,6 +484,7 @@ const runtimeConfig = useRuntimeConfig()
 const siteConfig = useSiteConfig()
 
 // data
+const nonce = useNonce()
 let repoCount: string | null = null
 
 // computations
