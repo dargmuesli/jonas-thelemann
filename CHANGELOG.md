@@ -1,3 +1,21 @@
+## [5.20.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.19.1...5.20.0) (2023-10-27)
+
+
+### Features
+
+* add volunteer service experience ([b08c56d](https://github.com/dargmuesli/jonas-thelemann/commit/b08c56d66feefd3156a15dd13c36b92677ec4c08))
+* **layout:** use golden ratio ([4481311](https://github.com/dargmuesli/jonas-thelemann/commit/44813112e8a79589f283844eb7b81af416e8aa31))
+
+
+### Bug Fixes
+
+* **csp:** whitelist github api as connect source ([f36740b](https://github.com/dargmuesli/jonas-thelemann/commit/f36740b7f58f298530adfaa2a99a5bea7dadd09e))
+
+
+### Performance Improvements
+
+* **fetch:** request api server side only ([73c9287](https://github.com/dargmuesli/jonas-thelemann/commit/73c928768488801934400f11e84a3470fc789788))
+
 ## [5.19.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.19.0...5.19.1) (2023-10-17)
 
 
