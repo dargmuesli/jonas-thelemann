@@ -84,8 +84,8 @@ importers:
         specifier: 1.3.1
         version: 1.3.1
       unhead:
-        specifier: 1.8.0
-        version: 1.8.0
+        specifier: 1.8.1
+        version: 1.8.1
       vue:
         specifier: 3.3.7
         version: 3.3.7(typescript@5.2.2)
@@ -3201,13 +3201,6 @@ packages:
       '@unhead/shared': 1.7.4
     dev: true
 
-  /@unhead/dom@1.8.0:
-    resolution: {integrity: sha512-6L/KS/R8GdnsAA/bS8qTc4AML6zp+v+L9cDtS1CBb8ra5ZjEkOpqFFqSbdvrlkQZqB0t7LPQxNAXl9HIAudUnA==}
-    dependencies:
-      '@unhead/schema': 1.8.0
-      '@unhead/shared': 1.8.0
-    dev: true
-
   /@unhead/dom@1.8.1:
     resolution: {integrity: sha512-cBGCXSeJVizG95dTudB069N0DMzWCHznbjYAJUv6sh0fwPUXUfKSHgf3h+Av3rkKeWEYguULN+bpnPOIfs7fJQ==}
     dependencies:
@@ -3233,13 +3226,6 @@ packages:
       zhead: 2.2.4
     dev: true
 
-  /@unhead/schema@1.8.0:
-    resolution: {integrity: sha512-4xI8wgC2bobvuhNG/MbZcFdmS/Xx0JgPc2xgSimvrvSeZUZzFvsXvzerMT9R4XXuSaQt2g8DwjJrF3dh7suGNA==}
-    dependencies:
-      hookable: 5.5.3
-      zhead: 2.2.4
-    dev: true
-
   /@unhead/schema@1.8.1:
     resolution: {integrity: sha512-mR9i4BANtAug7gZEuyPkGYtVv2CF0wv8bqbPrt3OVSmpW0ts6bin1+ILM7HVKDpAOC7O1l4iyRrHOPocNPeVKQ==}
     dependencies:
@@ -3251,12 +3237,6 @@ packages:
     resolution: {integrity: sha512-YUNA2UxAuDPnDps41BQ8aEIY5hdyvruSB1Vs3AALhRo07MxMivSq5DjNKfYr/JvRN6593RtfI1NHnP9x5M57xA==}
     dependencies:
       '@unhead/schema': 1.7.4
-    dev: true
-
-  /@unhead/shared@1.8.0:
-    resolution: {integrity: sha512-BoOgy/B4tgFvX3Obw0QzHhlReodenQxRPs5V5E+UJATUmz9/A8cOu4n731u+EM50dCAbJB1xEz8BGF67XCUY+Q==}
-    dependencies:
-      '@unhead/schema': 1.8.0
     dev: true
 
   /@unhead/shared@1.8.1:
@@ -12378,15 +12358,6 @@ packages:
       '@unhead/dom': 1.7.4
       '@unhead/schema': 1.7.4
       '@unhead/shared': 1.7.4
-      hookable: 5.5.3
-    dev: true
-
-  /unhead@1.8.0:
-    resolution: {integrity: sha512-k/o6SonFWrzgyVW1BmFKeYbkCKLrA2z6YKf/+28YoEDoN53pguMgLH9qWBla/GNkNXXWPGAt0Ax8S1/VJaX+3g==}
-    dependencies:
-      '@unhead/dom': 1.8.0
-      '@unhead/schema': 1.8.0
-      '@unhead/shared': 1.8.0
       hookable: 5.5.3
     dev: true
 
