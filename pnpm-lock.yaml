@@ -30,8 +30,8 @@ importers:
         specifier: 4.8.1
         version: 4.8.1(playwright-core@1.39.0)
       '@dargmuesli/nuxt-cookie-control':
-        specifier: 7.0.1
-        version: 7.0.1(webpack@5.89.0)
+        specifier: 7.0.2
+        version: 7.0.2(webpack@5.89.0)
       '@dargmuesli/nuxt-vio':
         specifier: 8.4.1
         version: 8.4.1(@types/node@18.18.7)(@unhead/shared@1.8.1)(graphql@16.8.1)(playwright-core@1.39.0)(postcss-html@1.5.0)(postcss@8.4.31)(typescript@5.2.2)(vite@4.5.0)(webpack@5.89.0)
@@ -710,6 +710,20 @@ packages:
 
   /@dargmuesli/nuxt-cookie-control@7.0.1(webpack@5.89.0):
     resolution: {integrity: sha512-/JTOcpVjZZL0og0TcHvxjIpEaiCnhBKUtGN5pOh9nXvVczKLF687r1XZwZZM+oTUPxJSZpaq7zn1Y4Ug4mazsw==}
+    engines: {node: '>=16'}
+    dependencies:
+      '@nuxt/kit': 3.8.0
+      '@sindresorhus/slugify': 2.2.1
+      css-vars-ponyfill: 2.4.8
+      string-replace-loader: 3.1.0(webpack@5.89.0)
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+      - webpack
+    dev: true
+
+  /@dargmuesli/nuxt-cookie-control@7.0.2(webpack@5.89.0):
+    resolution: {integrity: sha512-me+QtYWKOCCs8sbwUq/Oh4pOdvXbaszZJsWPtZoUDQ4NN+GtZhsYEL5qRBfzfyqpYtS3Mm8mjHXLPRpbrQP5fQ==}
     engines: {node: '>=16'}
     dependencies:
       '@nuxt/kit': 3.8.0
