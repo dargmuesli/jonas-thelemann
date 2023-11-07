@@ -1,14 +1,20 @@
 #############
-# Serve Nuxt in development mode.
+# Create base image.
 
-FROM node:20.9.0-alpine@sha256:8e015de364a2eb2ed7c52a558e9f716dcb615560ffd132234087c10ccc1f2c63 AS development
+FROM node:20.9.0-alpine AS base-image
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
 
+WORKDIR /srv/app/
+
 RUN corepack enable
 
-WORKDIR /srv/app/
+
+#############
+# Serve Nuxt in development mode.
+
+FROM base-image AS development
 
 COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
@@ -16,7 +22,7 @@ VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["pnpm", "run", "--dir", "src", "dev"]
+CMD ["pnpm", "run", "--dir", "src", "dev", "--host"]
 EXPOSE 3000
 
 # TODO: support healthcheck while starting (https://github.com/nuxt/framework/issues/6915)
@@ -26,17 +32,11 @@ EXPOSE 3000
 ########################
 # Prepare Nuxt.
 
-FROM node:20.9.0-alpine@sha256:8e015de364a2eb2ed7c52a558e9f716dcb615560ffd132234087c10ccc1f2c63 AS prepare
-
-# The `CI` environment variable must be set for pnpm to run in headless mode
-ENV CI=true
-
-WORKDIR /srv/app/
+FROM base-image AS prepare
 
 COPY ./pnpm-lock.yaml ./
 
-RUN corepack enable && \
-    pnpm fetch
+RUN pnpm fetch
 
 COPY ./ ./
 
@@ -46,91 +46,44 @@ RUN pnpm install --offline
 # ########################
 # # Build for Node deployment.
 
-# FROM node:20.6.1-alpine@sha256:d75175d449921d06250afd87d51f39a74fc174789fa3c50eba0d3b18369cc749 AS build-node
-
-# # The `CI` environment variable must be set for pnpm to run in headless mode
-# ENV CI=true
-
-# WORKDIR /srv/app/
-
-# COPY --from=prepare /srv/app/ ./
+# FROM prepare AS build-node
 
 # ENV NODE_ENV=production
-# RUN corepack enable && \
-#     pnpm --dir src run build:node
+# RUN pnpm --dir src run build:node
 
 
 ########################
 # Build for static deployment.
 
-FROM node:20.9.0-alpine@sha256:8e015de364a2eb2ed7c52a558e9f716dcb615560ffd132234087c10ccc1f2c63 AS build-static
+FROM prepare AS build-static
 
 ARG SITE_URL=http://localhost:3002
 ENV SITE_URL=${SITE_URL}
 
-# The `CI` environment variable must be set for pnpm to run in headless mode
-ENV CI=true
-
-WORKDIR /srv/app/
-
-COPY --from=prepare /srv/app/ ./
-
 ENV NODE_ENV=production
-RUN corepack enable && \
-    pnpm --dir src run build:static
+RUN pnpm --dir src run build:static
 
 
 ########################
 # Nuxt: lint
 
-FROM node:20.9.0-alpine@sha256:8e015de364a2eb2ed7c52a558e9f716dcb615560ffd132234087c10ccc1f2c63 AS lint
+FROM prepare AS lint
 
-# The `CI` environment variable must be set for pnpm to run in headless mode
-ENV CI=true
-
-WORKDIR /srv/app/
-
-COPY --from=prepare /srv/app/ ./
-
-RUN corepack enable && \
-    pnpm --dir src run lint
+RUN pnpm --dir src run lint
 
 
-########################
-# Nuxt: test (e2e)
+# ########################
+# # Nuxt: test (unit)
 
-FROM mcr.microsoft.com/playwright:v1.39.0@sha256:5ff74f2a052083b60748302e72371055abe52bd6bc17dc2873302f238794ff5e AS test-e2e_base
+# FROM prepare AS test-unit
 
-ARG UNAME=e2e
-ARG UID=1000
-ARG GID=1000
-
-# The `CI` environment variable must be set for pnpm to run in headless mode
-ENV CI=true
-ENV NODE_ENV=development
-ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
-
-WORKDIR /srv/app/
-
-COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-
-RUN corepack enable \
-    # user
-    && groupadd -g $GID -o $UNAME \
-    && useradd -m -l -u $UID -g $GID -o -s /bin/bash $UNAME
-
-USER $UNAME
-
-VOLUME /srv/.pnpm-store
-VOLUME /srv/app
-
-ENTRYPOINT ["docker-entrypoint.sh"]
+# RUN pnpm --dir src run test
 
 
 ########################
-# Nuxt: test (e2e, preparation)
+# Nuxt: test (e2e, base-image)
 
-FROM mcr.microsoft.com/playwright:v1.39.0@sha256:5ff74f2a052083b60748302e72371055abe52bd6bc17dc2873302f238794ff5e AS test-e2e-prepare
+FROM mcr.microsoft.com/playwright:v1.39.0@sha256:dccb9c6518090a100aaa820ff0b1d0c7ec12154f80696e7799b5cd9232daa0b0 AS test-e2e-base-image
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -139,6 +92,34 @@ ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 WORKDIR /srv/app/
 
 RUN corepack enable
+
+
+########################
+# Nuxt: test (e2e)
+
+FROM test-e2e-base-image AS test-e2e_development
+
+ARG UNAME=e2e
+ARG UID=1000
+ARG GID=1000
+
+COPY ./docker/entrypoint.dev.sh /usr/local/bin/docker-entrypoint.dev.sh
+
+RUN groupadd -g $GID -o $UNAME \
+    && useradd -m -l -u $UID -g $GID -o -s /bin/bash $UNAME
+
+USER $UNAME
+
+VOLUME /srv/.pnpm-store
+VOLUME /srv/app
+
+ENTRYPOINT ["docker-entrypoint.dev.sh"]
+
+
+########################
+# Nuxt: test (e2e, preparation)
+
+FROM test-e2e-base-image AS test-e2e-prepare
 
 COPY --from=prepare /srv/app/ ./
 
@@ -148,17 +129,9 @@ RUN pnpm rebuild -r
 # ########################
 # # Nuxt: test (e2e, development)
 
-# FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e-dev
+# FROM test-e2e-prepare AS test-e2e-dev
 
-# # The `CI` environment variable must be set for pnpm to run in headless mode
-# ENV CI=true
 # ENV NODE_ENV=development
-
-# WORKDIR /srv/app/
-
-# RUN corepack enable
-
-# COPY --from=test-e2e-prepare /srv/app/ ./
 
 # RUN pnpm --dir src run test:e2e:server:dev
 
@@ -166,16 +139,8 @@ RUN pnpm rebuild -r
 # ########################
 # # Nuxt: test (e2e, node)
 
-# FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e-node
+# FROM test-e2e-prepare AS test-e2e-node
 
-# # The `CI` environment variable must be set for pnpm to run in headless mode
-# ENV CI=true
-
-# WORKDIR /srv/app/
-
-# RUN corepack enable
-
-# COPY --from=test-e2e-prepare /srv/app/ ./
 # COPY --from=build-node /srv/app/src/.output ./src/.output
 
 # RUN pnpm --dir src run test:e2e:server:node
@@ -184,16 +149,8 @@ RUN pnpm rebuild -r
 ########################
 # Nuxt: test (e2e, static)
 
-FROM mcr.microsoft.com/playwright:v1.39.0@sha256:5ff74f2a052083b60748302e72371055abe52bd6bc17dc2873302f238794ff5e AS test-e2e-static
+FROM test-e2e-prepare AS test-e2e-static
 
-# The `CI` environment variable must be set for pnpm to run in headless mode
-ENV CI=true
-
-WORKDIR /srv/app/
-
-RUN corepack enable
-
-COPY --from=test-e2e-prepare /srv/app/ ./
 COPY --from=build-static /srv/app/src/.output/public ./src/.output/public
 
 RUN pnpm --dir src run test:e2e:server:static
@@ -202,18 +159,14 @@ RUN pnpm --dir src run test:e2e:server:static
 #######################
 # Collect build, lint and test results.
 
-FROM node:20.9.0-alpine@sha256:8e015de364a2eb2ed7c52a558e9f716dcb615560ffd132234087c10ccc1f2c63 AS collect
-
-# The `CI` environment variable must be set for pnpm to run in headless mode
-ENV CI=true
-
-WORKDIR /srv/app/
+FROM base-image AS collect
 
 # COPY --from=build-node /srv/app/src/.output ./.output
 # COPY --from=build-node /srv/app/src/package.json ./package.json
 # COPY --from=build-static /srv/app/src/.output/public ./.output/public
 COPY --from=build-static /srv/app/package.json /tmp/package.json
 COPY --from=lint /srv/app/package.json /tmp/package.json
+# COPY --from=test-unit /srv/app/package.json /tmp/package.json
 # COPY --from=test-e2e-dev /srv/app/package.json /tmp/package.json
 # COPY --from=test-e2e-node /srv/app/package.json /tmp/package.json
 COPY --from=test-e2e-static /srv/app/package.json /tmp/package.json
@@ -236,25 +189,25 @@ COPY --from=test-e2e-static /srv/app/package.json /tmp/package.json
 
 # HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
 # EXPOSE 3000
+# LABEL org.opencontainers.image.source="https://github.com/dargmuesli/jonas-thelemann"
+# LABEL org.opencontainers.image.description="Jonas Thelemann's website."
 
 
 # #######################
 # # Provide a web server.
 # # Requires node (cannot be static) as the server acts as backend too.
 
-# FROM node:20.6.1-alpine@sha256:d75175d449921d06250afd87d51f39a74fc174789fa3c50eba0d3b18369cc749 AS production
+# FROM collect AS production
 
 # ENV NODE_ENV=production
 
-# WORKDIR /srv/app/
-
-# # Update and install dependencies.
-# # - `wget` is required by the healthcheck
+# # Update dependencies.
 # RUN apk update \
-#     && apk add --no-cache \
-#         wget
+#     && apk upgrade --no-cache
 
-# COPY --from=collect /srv/app/ ./
-
-# CMD ["node", ".output/server/index.mjs"]
+# ENTRYPOINT ["pnpm"]
+# CMD ["run", "start:node"]
 # HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
+# EXPOSE 3000
+# LABEL org.opencontainers.image.source="https://github.com/dargmuesli/jonas-thelemann"
+# LABEL org.opencontainers.image.description="Jonas Thelemann's website."
