@@ -42,8 +42,8 @@ importers:
         specifier: 12.1.0
         version: 12.1.0(eslint@8.53.0)(typescript@5.2.2)
       '@nuxtjs/i18n':
-        specifier: npm:@nuxtjs/i18n-edge@8.0.0-rc.5-28319130.4a511e8
-        version: /@nuxtjs/i18n-edge@8.0.0-rc.5-28319130.4a511e8(vue-router@4.2.5)(vue@3.3.8)
+        specifier: npm:@nuxtjs/i18n-edge@8.0.0-rc.5-28321928.898d3c8
+        version: /@nuxtjs/i18n-edge@8.0.0-rc.5-28321928.898d3c8(vue-router@4.2.5)(vue@3.3.8)
       '@playwright/test':
         specifier: 1.39.0
         version: 1.39.0
@@ -1390,7 +1390,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/message-compiler': 9.6.5
-      '@intlify/shared': 9.5.0
+      '@intlify/shared': 9.6.5
       acorn: 8.11.2
       escodegen: 2.1.0
       estree-walker: 2.0.2
@@ -1399,6 +1399,31 @@ packages:
       mlly: 1.4.2
       source-map-js: 1.0.2
       vue-i18n: 9.5.0(vue@3.3.8)
+      yaml-eslint-parser: 1.2.2
+    dev: true
+
+  /@intlify/bundle-utils@7.4.0(vue-i18n@9.6.5):
+    resolution: {integrity: sha512-AQfjBe2HUxzyN8ignIk3WhhSuVcSuirgzOzkd17nb337rCbI4Gv/t1R60UUyIqFoFdviLb/wLcDUzTD/xXjv9w==}
+    engines: {node: '>= 14.16'}
+    peerDependencies:
+      petite-vue-i18n: '*'
+      vue-i18n: '*'
+    peerDependenciesMeta:
+      petite-vue-i18n:
+        optional: true
+      vue-i18n:
+        optional: true
+    dependencies:
+      '@intlify/message-compiler': 9.6.5
+      '@intlify/shared': 9.6.5
+      acorn: 8.11.2
+      escodegen: 2.1.0
+      estree-walker: 2.0.2
+      jsonc-eslint-parser: 2.4.0
+      magic-string: 0.30.5
+      mlly: 1.4.2
+      source-map-js: 1.0.2
+      vue-i18n: 9.6.5(vue@3.3.8)
       yaml-eslint-parser: 1.2.2
     dev: true
 
@@ -1418,6 +1443,14 @@ packages:
     dependencies:
       '@intlify/message-compiler': 9.5.0
       '@intlify/shared': 9.5.0
+    dev: true
+
+  /@intlify/core-base@9.6.5:
+    resolution: {integrity: sha512-LzbGXiZkMWPIHnHI0g6q554S87Cmh2mmCmjytK/3pDQfjI84l+dgGoeQuKj02q7EbULRuUUgYVZVqAwEUawXGg==}
+    engines: {node: '>= 16'}
+    dependencies:
+      '@intlify/message-compiler': 9.6.5
+      '@intlify/shared': 9.6.5
     dev: true
 
   /@intlify/devtools-if@9.3.0-beta.27:
@@ -1509,7 +1542,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/bundle-utils': 7.4.0(vue-i18n@9.5.0)
-      '@intlify/shared': 9.5.0
+      '@intlify/shared': 9.6.5
       '@rollup/pluginutils': 5.0.5(rollup@3.29.4)
       '@vue/compiler-sfc': 3.3.8
       debug: 4.3.4
@@ -1521,6 +1554,39 @@ packages:
       source-map-js: 1.0.2
       unplugin: 1.5.0
       vue-i18n: 9.5.0(vue@3.3.8)
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
+  /@intlify/unplugin-vue-i18n@1.5.0(vue-i18n@9.6.5):
+    resolution: {integrity: sha512-jW0MCCdwxybxcwjEfCunAcKjVoxyO3i+cnLL6v+MNGRLUHqrpELF6zQAJUhgAK2afhY7mCliy8RxTFWKdXm26w==}
+    engines: {node: '>= 14.16'}
+    peerDependencies:
+      petite-vue-i18n: '*'
+      vue-i18n: '*'
+      vue-i18n-bridge: '*'
+    peerDependenciesMeta:
+      petite-vue-i18n:
+        optional: true
+      vue-i18n:
+        optional: true
+      vue-i18n-bridge:
+        optional: true
+    dependencies:
+      '@intlify/bundle-utils': 7.4.0(vue-i18n@9.6.5)
+      '@intlify/shared': 9.6.5
+      '@rollup/pluginutils': 5.0.5(rollup@3.29.4)
+      '@vue/compiler-sfc': 3.3.8
+      debug: 4.3.4
+      fast-glob: 3.3.2
+      js-yaml: 4.1.0
+      json5: 2.2.3
+      pathe: 1.1.1
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
+      unplugin: 1.5.0
+      vue-i18n: 9.6.5(vue@3.3.8)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -1552,6 +1618,26 @@ packages:
         optional: true
     dependencies:
       vue-i18n: 9.5.0(vue@3.3.8)
+    dev: true
+
+  /@intlify/vue-i18n-bridge@1.0.1(vue-i18n@9.6.5):
+    resolution: {integrity: sha512-MJ1uC39/P8sCsvSs8pdXClbBCKYp5g+DbvNyIPvsKdAH/yBXP4r0s4GIsrOgxrvAO6wABZIIZ/glHAZJZfj4nw==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue-i18n: ^8.26.1 || >=9.2.0
+      vue-i18n-bridge: '>=9.2.0'
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      vue-i18n:
+        optional: true
+      vue-i18n-bridge:
+        optional: true
+    dependencies:
+      vue-i18n: 9.6.5(vue@3.3.8)
     dev: true
 
   /@intlify/vue-router-bridge@1.0.1(vue-router@4.2.5)(vue@3.3.8):
@@ -2242,6 +2328,49 @@ packages:
       - vue-router
     dev: true
 
+  /@nuxtjs/i18n-edge@8.0.0-rc.5-28321928.898d3c8(vue-router@4.2.5)(vue@3.3.8):
+    resolution: {integrity: sha512-GahOHee234BecSFDayFqaJNx97o3xNw/oTc9ytj7HO6GxQxRN2TPDxALg7ABtkI/vtCpUMpmpf0itA3xZJ2rGQ==}
+    engines: {node: ^14.16.0 || >=16.11.0}
+    dependencies:
+      '@intlify/shared': 9.5.0
+      '@intlify/unplugin-vue-i18n': 1.5.0(vue-i18n@9.6.5)
+      '@mizchi/sucrase': 4.1.0
+      '@nuxt/kit': 3.8.1
+      '@vue/compiler-sfc': 3.3.8
+      debug: 4.3.4
+      defu: 6.1.3
+      estree-walker: 3.0.3
+      is-https: 4.0.0
+      knitwork: 1.0.0
+      magic-string: 0.30.5
+      mlly: 1.4.2
+      pathe: 1.1.1
+      ufo: 1.3.1
+      unplugin: 1.5.0
+      unstorage: 1.9.0
+      vue-i18n: 9.6.5(vue@3.3.8)
+      vue-i18n-routing: 1.1.4(vue-i18n@9.6.5)(vue-router@4.2.5)(vue@3.3.8)
+    transitivePeerDependencies:
+      - '@azure/app-configuration'
+      - '@azure/cosmos'
+      - '@azure/data-tables'
+      - '@azure/identity'
+      - '@azure/keyvault-secrets'
+      - '@azure/storage-blob'
+      - '@capacitor/preferences'
+      - '@planetscale/database'
+      - '@upstash/redis'
+      - '@vercel/kv'
+      - '@vue/composition-api'
+      - idb-keyval
+      - petite-vue-i18n
+      - rollup
+      - supports-color
+      - vue
+      - vue-i18n-bridge
+      - vue-router
+    dev: true
+
   /@nuxtjs/tailwindcss@6.9.4(webpack@5.89.0):
     resolution: {integrity: sha512-T3B3P7RgJ/WTW3plHziLWqWbMzCWctUHpjqhW1WCXB/U3FOQxGH5dG4uEOmQkA6Gj4cbTNStIU/cRxpZhbBMhg==}
     dependencies:
@@ -2402,9 +2531,11 @@ packages:
   /@parcel/watcher-wasm@2.3.0:
     resolution: {integrity: sha512-ejBAX8H0ZGsD8lSICDNyMbSEtPMWgDL0WFCt/0z7hyf5v8Imz4rAM8xY379mBsECkq/Wdqa5WEDLqtjZ+6NxfA==}
     engines: {node: '>= 10.0.0'}
+    requiresBuild: true
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
+      napi-wasm: 1.1.0
     dev: true
     bundledDependencies:
       - napi-wasm
@@ -2439,6 +2570,7 @@ packages:
   /@parcel/watcher@2.3.0:
     resolution: {integrity: sha512-pW7QaFiL11O0BphO+bq3MgqeX/INAk9jgBldVDYjlQPO4VddoZnF22TcF9onMhnLVHuNqBJeRf+Fj7eezi/+rQ==}
     engines: {node: '>= 10.0.0'}
+    requiresBuild: true
     dependencies:
       detect-libc: 1.0.3
       is-glob: 4.0.3
@@ -4312,6 +4444,7 @@ packages:
 
   /b4a@1.6.4:
     resolution: {integrity: sha512-fpWrvyVHEKyeEvbKZTVOeZF3VSKKWtJxFIxX/jaVPf+cLbGUSitjb49pHLqPV2BUNNZ0LcoeEGfE/YCpyDYHIw==}
+    requiresBuild: true
     dev: true
 
   /balanced-match@1.0.2:
@@ -5332,6 +5465,7 @@ packages:
   /deep-extend@0.6.0:
     resolution: {integrity: sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==}
     engines: {node: '>=4.0.0'}
+    requiresBuild: true
     dev: true
 
   /deep-is@0.1.4:
@@ -5429,6 +5563,7 @@ packages:
     resolution: {integrity: sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg==}
     engines: {node: '>=0.10'}
     hasBin: true
+    requiresBuild: true
     dev: true
 
   /detect-libc@2.0.2:
@@ -6347,6 +6482,7 @@ packages:
 
   /fast-fifo@1.3.2:
     resolution: {integrity: sha512-/d9sfos4yxzpwkDkuN7k2SqFKtYNmCTzgfEpz82x34IM9/zc8KGxQoXg1liNC/izpRM/MBdt44Nmx41ZWqk+FQ==}
+    requiresBuild: true
     dev: true
 
   /fast-glob@3.3.2:
@@ -7058,6 +7194,7 @@ packages:
   /http-shutdown@1.2.2:
     resolution: {integrity: sha512-S9wWkJ/VSY9/k4qcjG318bqJNruzE4HySUhFYknwmu6LBP97KLLfwNf+n4V1BHurvFNkSKLFnK/RsuUnRTf9Vw==}
     engines: {iojs: '>= 1.0.0', node: '>= 0.12.0'}
+    requiresBuild: true
     dev: true
 
   /https-proxy-agent@5.0.1:
@@ -8520,6 +8657,11 @@ packages:
     dev: true
     optional: true
 
+  /napi-wasm@1.1.0:
+    resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
+    requiresBuild: true
+    dev: true
+
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
@@ -8639,6 +8781,7 @@ packages:
 
   /node-addon-api@7.0.0:
     resolution: {integrity: sha512-vgbBJTS4m5/KkE16t5Ly0WW9hz46swAstv0hYYwMtbG7AznRhNyfLRe8HZAiWIpcHzoO7HxhLuBQj9rJ/Ho0ZA==}
+    requiresBuild: true
     dev: true
 
   /node-fetch-native@1.4.1:
@@ -8660,6 +8803,7 @@ packages:
   /node-forge@1.3.1:
     resolution: {integrity: sha512-dPEtOeMvF9VMcYV/1Wb8CPoVAXtp6MKMlcbAt4ddqmGqUJ6fQZFXkNZNkNlfevtNkGtaSoXf/vNNNSvgrdXwtA==}
     engines: {node: '>= 6.13.0'}
+    requiresBuild: true
     dev: true
 
   /node-gyp-build@4.6.1:
@@ -10374,6 +10518,7 @@ packages:
 
   /queue-tick@1.0.1:
     resolution: {integrity: sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag==}
+    requiresBuild: true
     dev: true
 
   /queue@6.0.2:
@@ -11232,6 +11377,7 @@ packages:
 
   /streamx@2.15.2:
     resolution: {integrity: sha512-b62pAV/aeMjUoRN2C/9F0n+G8AfcJjNC0zw/ZmOHeFsIe4m4GzjVW9m6VHXVjk536NbdU9JRwKMJRfkc+zUFTg==}
+    requiresBuild: true
     dependencies:
       fast-fifo: 1.3.2
       queue-tick: 1.0.1
@@ -11361,6 +11507,7 @@ packages:
   /strip-json-comments@2.0.1:
     resolution: {integrity: sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==}
     engines: {node: '>=0.10.0'}
+    requiresBuild: true
     dev: true
 
   /strip-json-comments@3.1.1:
@@ -12324,6 +12471,7 @@ packages:
   /untun@0.1.2:
     resolution: {integrity: sha512-wLAMWvxfqyTiBODA1lg3IXHQtjggYLeTK7RnSfqtOXixWJ3bAa2kK/HHmOOg19upteqO3muLvN6O/icbyQY33Q==}
     hasBin: true
+    requiresBuild: true
     dependencies:
       citty: 0.1.4
       consola: 3.2.3
@@ -12365,6 +12513,7 @@ packages:
 
   /uqr@0.1.2:
     resolution: {integrity: sha512-MJu7ypHq6QasgF5YRTjqscSzQp/W11zoUk6kvmlH+fmWEs63Y0Eib13hYFwAzagRJcVY8WVnlV+eBDUGMJ5IbA==}
+    requiresBuild: true
     dev: true
 
   /uri-js@4.4.1:
@@ -12692,13 +12841,44 @@ packages:
       vue-router:
         optional: true
     dependencies:
-      '@intlify/shared': 9.5.0
+      '@intlify/shared': 9.6.5
       '@intlify/vue-i18n-bridge': 1.0.1(vue-i18n@9.5.0)
       '@intlify/vue-router-bridge': 1.0.1(vue-router@4.2.5)(vue@3.3.8)
       ufo: 1.3.1
       vue: 3.3.8(typescript@5.2.2)
       vue-demi: 0.14.6(vue@3.3.8)
       vue-i18n: 9.5.0(vue@3.3.8)
+      vue-router: 4.2.5(vue@3.3.8)
+    dev: true
+
+  /vue-i18n-routing@1.1.4(vue-i18n@9.6.5)(vue-router@4.2.5)(vue@3.3.8):
+    resolution: {integrity: sha512-RG6t7g9zklNoCOswTq2zy15siilw9rATmJkx5LYm9dqNBP2MR7yzTiwXpGVpfDHKl12SDWSRD0zzy13HekNEQQ==}
+    engines: {node: '>= 14.6'}
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^2.6.14 || ^2.7.0 || ^3.2.0
+      vue-i18n: ^8.26.1 || >=9.2.0
+      vue-i18n-bridge: '>=9.2.0'
+      vue-router: ^3.5.3 || ^3.6.0 || ^4.0.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      vue:
+        optional: true
+      vue-i18n:
+        optional: true
+      vue-i18n-bridge:
+        optional: true
+      vue-router:
+        optional: true
+    dependencies:
+      '@intlify/shared': 9.6.5
+      '@intlify/vue-i18n-bridge': 1.0.1(vue-i18n@9.6.5)
+      '@intlify/vue-router-bridge': 1.0.1(vue-router@4.2.5)(vue@3.3.8)
+      ufo: 1.3.1
+      vue: 3.3.8(typescript@5.2.2)
+      vue-demi: 0.14.6(vue@3.3.8)
+      vue-i18n: 9.6.5(vue@3.3.8)
       vue-router: 4.2.5(vue@3.3.8)
     dev: true
 
@@ -12710,6 +12890,18 @@ packages:
     dependencies:
       '@intlify/core-base': 9.5.0
       '@intlify/shared': 9.5.0
+      '@vue/devtools-api': 6.5.1
+      vue: 3.3.8(typescript@5.2.2)
+    dev: true
+
+  /vue-i18n@9.6.5(vue@3.3.8):
+    resolution: {integrity: sha512-dpUEjKHg7pEsaS7ZPPxp1CflaR7bGmsvZJEhnszHPKl9OTNyno5j/DvMtMSo41kpddq4felLA7GK2prjpnXVlw==}
+    engines: {node: '>= 16'}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      '@intlify/core-base': 9.6.5
+      '@intlify/shared': 9.6.5
       '@vue/devtools-api': 6.5.1
       vue: 3.3.8(typescript@5.2.2)
     dev: true
