@@ -1,3 +1,11 @@
+## [5.20.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.20.1...5.20.2) (2023-11-07)
+
+
+### Performance Improvements
+
+* **ci:** speed up dockerfile ([5128330](https://github.com/dargmuesli/jonas-thelemann/commit/5128330b3ed433975546185e8f9e07ced8dbad3b))
+* **ci:** speed up dockerfile ([3939034](https://github.com/dargmuesli/jonas-thelemann/commit/3939034700e24303824a6ac17711816be9a469df))
+
 ## [5.20.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.20.0...5.20.1) (2023-11-07)
 
 
