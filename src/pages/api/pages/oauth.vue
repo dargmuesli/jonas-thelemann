@@ -11,8 +11,6 @@
 </template>
 
 <script setup lang="ts">
-import clipboard from 'clipboardy'
-
 const route = useRoute()
 const { t } = useI18n()
 
@@ -20,7 +18,7 @@ const { t } = useI18n()
 const copy = async () => {
   if (typeof route.query.code !== 'string') return
 
-  await clipboard.write(route.query.code)
+  await copyText(route.query.code)
   showToast({ title: t('copySuccess') })
 }
 

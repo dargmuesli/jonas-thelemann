@@ -7,6 +7,11 @@ export default defineNuxtConfig(
   defu(
     {
       extends: ['@dargmuesli/nuxt-vio'],
+      vite: {
+        optimizeDeps: {
+          include: ['@dargmuesli/nuxt-vio/utils/constants'],
+        },
+      },
 
       // modules
       linkChecker: {
