@@ -93,8 +93,8 @@ importers:
         specifier: 1.40.1
         version: 1.40.1
       prettier-plugin-tailwindcss:
-        specifier: 0.5.7
-        version: 0.5.7(prettier@3.1.0)
+        specifier: 0.5.8
+        version: 0.5.8(prettier@3.1.0)
       serve:
         specifier: 14.2.1
         version: 14.2.1
@@ -1640,8 +1640,8 @@ packages:
       '@intlify/shared': 9.3.0-beta.27
     dev: true
 
-  /@intlify/vue-i18n-bridge@1.0.1(vue-i18n@9.6.5):
-    resolution: {integrity: sha512-MJ1uC39/P8sCsvSs8pdXClbBCKYp5g+DbvNyIPvsKdAH/yBXP4r0s4GIsrOgxrvAO6wABZIIZ/glHAZJZfj4nw==}
+  /@intlify/vue-i18n-bridge@1.1.0(vue-i18n@9.6.5):
+    resolution: {integrity: sha512-yBwGpr70Rc56pjsPdtvNRi/ju0P9h3670EkCOuxAzKKR5OH61uF9LprLUGmph/Uy2TXBO2DKqpnJBFXyXJQKeg==}
     engines: {node: '>= 12'}
     hasBin: true
     requiresBuild: true
@@ -1678,26 +1678,6 @@ packages:
         optional: true
     dependencies:
       vue-i18n: 9.8.0(vue@3.3.10)
-    dev: true
-
-  /@intlify/vue-router-bridge@1.0.1(vue-router@4.2.5)(vue@3.3.10):
-    resolution: {integrity: sha512-P8XjgUZ7dYXhDpGGXmAA/l9VEG4LHIt0mESd0377tRBupDLIEhmZ1IahG8Al1VzG+5yHmwb568pGIJoFEJZEMA==}
-    engines: {node: '>= 12'}
-    hasBin: true
-    requiresBuild: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue-router: ^4.0.0-0 || ^3.0.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-      vue-router:
-        optional: true
-    dependencies:
-      vue-demi: 0.13.11(vue@3.3.10)
-      vue-router: 4.2.5(vue@3.3.10)
-    transitivePeerDependencies:
-      - vue
     dev: true
 
   /@intlify/vue-router-bridge@1.1.0(vue-router@4.2.5)(vue@3.3.10):
@@ -2445,7 +2425,7 @@ packages:
       ufo: 1.3.2
       unplugin: 1.5.1
       vue-i18n: 9.6.5(vue@3.3.10)
-      vue-i18n-routing: 1.1.4(vue-i18n@9.6.5)(vue-router@4.2.5)(vue@3.3.10)
+      vue-i18n-routing: 1.2.0(vue-i18n@9.6.5)(vue-router@4.2.5)(vue@3.3.10)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - petite-vue-i18n
@@ -10634,14 +10614,13 @@ packages:
       fast-diff: 1.3.0
     dev: true
 
-  /prettier-plugin-tailwindcss@0.5.7(prettier@3.1.0):
-    resolution: {integrity: sha512-4v6uESAgwCni6YF6DwJlRaDjg9Z+al5zM4JfngcazMy4WEf/XkPS5TEQjbD+DZ5iNuG6RrKQLa/HuX2SYzC3kQ==}
+  /prettier-plugin-tailwindcss@0.5.8(prettier@3.1.0):
+    resolution: {integrity: sha512-9XqjDi0zA/6IUYe3cC80+Eb+z0DU4vFF4yARVKddRZaW2ocBVawjpsFU7FtLn/xlBA8Fubp6Pd3HP3415Go4aw==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
       '@prettier/plugin-pug': '*'
       '@shopify/prettier-plugin-liquid': '*'
-      '@shufo/prettier-plugin-blade': '*'
       '@trivago/prettier-plugin-sort-imports': '*'
       prettier: ^3.0
       prettier-plugin-astro: '*'
@@ -10660,8 +10639,6 @@ packages:
       '@prettier/plugin-pug':
         optional: true
       '@shopify/prettier-plugin-liquid':
-        optional: true
-      '@shufo/prettier-plugin-blade':
         optional: true
       '@trivago/prettier-plugin-sort-imports':
         optional: true
@@ -13095,8 +13072,8 @@ packages:
       vue: 3.3.10(typescript@5.3.2)
     dev: true
 
-  /vue-i18n-routing@1.1.4(vue-i18n@9.6.5)(vue-router@4.2.5)(vue@3.3.10):
-    resolution: {integrity: sha512-RG6t7g9zklNoCOswTq2zy15siilw9rATmJkx5LYm9dqNBP2MR7yzTiwXpGVpfDHKl12SDWSRD0zzy13HekNEQQ==}
+  /vue-i18n-routing@1.2.0(vue-i18n@9.6.5)(vue-router@4.2.5)(vue@3.3.10):
+    resolution: {integrity: sha512-pn+bIFRMX5BN1BVQJ5rn05dYVnBhU/QnkxhjEJAe9HnYtJhDubetvoY+yfgDNWwesNWfHbbvsilsgSGL6DJyeA==}
     engines: {node: '>= 14.6'}
     peerDependencies:
       '@vue/composition-api': ^1.0.0-rc.1
@@ -13117,8 +13094,8 @@ packages:
         optional: true
     dependencies:
       '@intlify/shared': 9.8.0
-      '@intlify/vue-i18n-bridge': 1.0.1(vue-i18n@9.6.5)
-      '@intlify/vue-router-bridge': 1.0.1(vue-router@4.2.5)(vue@3.3.10)
+      '@intlify/vue-i18n-bridge': 1.1.0(vue-i18n@9.6.5)
+      '@intlify/vue-router-bridge': 1.1.0(vue-router@4.2.5)(vue@3.3.10)
       ufo: 1.3.2
       vue: 3.3.10(typescript@5.3.2)
       vue-demi: 0.14.6(vue@3.3.10)
