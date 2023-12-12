@@ -103,7 +103,7 @@ ARG UNAME=e2e
 ARG UID=1000
 ARG GID=1000
 
-COPY ./docker/entrypoint.dev.sh /usr/local/bin/docker-entrypoint.dev.sh
+COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 RUN groupadd -g $GID -o $UNAME \
     && useradd -m -l -u $UID -g $GID -o -s /bin/bash $UNAME
@@ -113,7 +113,7 @@ USER $UNAME
 VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 
-ENTRYPOINT ["docker-entrypoint.dev.sh"]
+ENTRYPOINT ["docker-entrypoint.sh"]
 
 
 ########################
