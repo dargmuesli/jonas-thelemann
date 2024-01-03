@@ -1,3 +1,15 @@
+## [5.21.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.20.6...5.21.0) (2024-01-03)
+
+
+### Features
+
+* **index:** optimize nuxt image parameters ([73f9ab6](https://github.com/dargmuesli/jonas-thelemann/commit/73f9ab66ce7443185f4b4a2e16ded4b700802780))
+
+
+### Bug Fixes
+
+* **index:** wait for image to be loaded ([e02fa17](https://github.com/dargmuesli/jonas-thelemann/commit/e02fa17d3218c9764f6930ae6bb2ae62066362e3))
+
 ## [5.20.6](https://github.com/dargmuesli/jonas-thelemann/compare/5.20.5...5.20.6) (2024-01-02)
 
 
