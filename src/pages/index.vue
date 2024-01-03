@@ -8,9 +8,15 @@
         <nuxt-img
           alt="Jonas in Tutzing."
           class="object-position-custom flex-1 object-cover"
+          densities="x1 x2"
           format="webp"
+          height="3009"
+          placeholder
           preload
+          sizes="320px xs:640px sm:768px md:1024px lg:1280px xl:1536px 2xl:2081px"
           src="/assets/static/images/tutzing.jpg"
+          width="2081"
+          @load="indicateLoadingDoneHeroImage"
         />
       </div>
       <div
@@ -510,6 +516,8 @@ definePageMeta({
 const { t } = useI18n()
 const localePath = useLocalePath()
 const { indicateLoadingDone } = useLoadingDoneIndicator()
+const { indicateLoadingDone: indicateLoadingDoneHeroImage } =
+  useLoadingDoneIndicator('hero-image')
 const runtimeConfig = useRuntimeConfig()
 const siteConfig = useSiteConfig()
 
@@ -550,6 +558,7 @@ const init = async () => {
   }
 }
 
+// lifecycle
 onMounted(() => indicateLoadingDone())
 
 // initialization
