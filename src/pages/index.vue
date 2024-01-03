@@ -8,9 +8,14 @@
         <nuxt-img
           alt="Jonas in Tutzing."
           class="object-position-custom flex-1 object-cover"
+          densities="x1 x2"
           format="webp"
+          height="3009"
+          placeholder
           preload
+          sizes="320px xs:640px sm:768px md:1024px lg:1280px xl:1536px 2xl:2081px"
           src="/assets/static/images/tutzing.jpg"
+          width="2081"
         />
       </div>
       <div
