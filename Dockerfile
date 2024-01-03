@@ -83,7 +83,7 @@ RUN pnpm --dir src run lint
 ########################
 # Nuxt: test (e2e, base-image)
 
-FROM mcr.microsoft.com/playwright:v1.40.1@sha256:1aba528f5db4f4c130653ed1de737ddc1d276197cc4503d3bb7903a93b7fb32e AS test-e2e-base-image
+FROM mcr.microsoft.com/playwright:v1.40.1 AS test-e2e-base-image
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -175,7 +175,7 @@ COPY --from=test-e2e-static /srv/app/package.json /tmp/package.json
 # #######################
 # # Provide a web server.
 
-# FROM nginx:1.25.2-alpine@sha256:cac882be2b7305e0c8d3e3cd0575a2fd58f5fde6dd5d6299605aa0f3e67ca385 AS production
+# FROM nginx:1.25.2-alpine AS production
 
 # # The `CI` environment variable must be set for pnpm to run in headless mode
 # ENV CI=true
