@@ -448,19 +448,23 @@
             <ul class="mt-2 flex flex-wrap items-center justify-around">
               <li class="m-4">
                 <a class="inline-block" href="https://maev.si/">
-                  <img
+                  <nuxt-img
                     alt="maevsi's logo"
-                    class="h-12"
+                    class="h-12 w-auto"
+                    height="180"
                     src="/assets/static/logos/maevsi.svg"
+                    width="547"
                   />
                 </a>
               </li>
               <li class="m-4">
                 <a class="inline-block" href="https://nearbuy-food.de/">
-                  <img
+                  <nuxt-img
                     alt="nearbuy's logo"
-                    class="h-12"
+                    class="h-12 w-auto"
+                    height="734"
                     src="/assets/static/logos/nearbuy.svg"
+                    width="1734"
                   />
                 </a>
               </li>
@@ -469,10 +473,12 @@
                   class="inline-block"
                   href="https://creal.jonas-thelemann.de/"
                 >
-                  <img
+                  <nuxt-img
                     alt="cReal's logo"
-                    class="h-12"
+                    class="h-12 w-auto"
+                    height="1330"
                     src="/assets/static/logos/creal.svg"
+                    width="1330"
                   />
                 </a>
               </li>
@@ -481,10 +487,12 @@
                   class="inline-block"
                   href="https://trapparty.jonas-thelemann.de/"
                 >
-                  <img
+                  <nuxt-img
                     alt="TrapParty's logo"
-                    class="h-12"
+                    class="h-12 w-auto"
+                    height="1308"
                     src="/assets/static/logos/trapparty.svg"
+                    width="1308"
                   />
                 </a>
               </li>
