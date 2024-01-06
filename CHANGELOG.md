@@ -1,3 +1,10 @@
+## [5.21.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.21.0...5.21.1) (2024-01-06)
+
+
+### Performance Improvements
+
+* **image:** specify all dimensions ([717f85c](https://github.com/dargmuesli/jonas-thelemann/commit/717f85c5de7951b544330800a1216104f727240c))
+
 ## [5.21.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.20.6...5.21.0) (2024-01-03)
 
 
