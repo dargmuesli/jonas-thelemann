@@ -447,7 +447,12 @@
             <h2 class="text-2xl">{{ t('projects') }}</h2>
             <ul class="mt-2 flex flex-wrap items-center justify-around">
               <li class="m-4">
-                <a class="inline-block" href="https://maev.si/">
+                <VioLink
+                  aria-label="maevsi"
+                  class="inline-block"
+                  is-external-icon-disabled
+                  to="https://maev.si/"
+                >
                   <nuxt-img
                     alt="maevsi's logo"
                     class="h-12 w-auto"
@@ -455,10 +460,15 @@
                     src="/assets/static/logos/maevsi.svg"
                     width="547"
                   />
-                </a>
+                </VioLink>
               </li>
               <li class="m-4">
-                <a class="inline-block" href="https://nearbuy-food.de/">
+                <VioLink
+                  aria-label="nearbuy"
+                  class="inline-block"
+                  is-external-icon-disabled
+                  to="https://nearbuy-food.de/"
+                >
                   <nuxt-img
                     alt="nearbuy's logo"
                     class="h-12 w-auto"
@@ -466,12 +476,14 @@
                     src="/assets/static/logos/nearbuy.svg"
                     width="1734"
                   />
-                </a>
+                </VioLink>
               </li>
               <li class="m-4">
-                <a
+                <VioLink
+                  aria-label="cReal"
                   class="inline-block"
-                  href="https://creal.jonas-thelemann.de/"
+                  is-external-icon-disabled
+                  to="https://creal.jonas-thelemann.de/"
                 >
                   <nuxt-img
                     alt="cReal's logo"
@@ -480,12 +492,14 @@
                     src="/assets/static/logos/creal.svg"
                     width="1330"
                   />
-                </a>
+                </VioLink>
               </li>
               <li class="m-4">
-                <a
+                <VioLink
+                  aria-label="TrapParty"
                   class="inline-block"
-                  href="https://trapparty.jonas-thelemann.de/"
+                  is-external-icon-disabled
+                  to="https://trapparty.jonas-thelemann.de/"
                 >
                   <nuxt-img
                     alt="TrapParty's logo"
@@ -494,7 +508,7 @@
                     src="/assets/static/logos/trapparty.svg"
                     width="1308"
                   />
-                </a>
+                </VioLink>
               </li>
               <li class="m-4">
                 <SocialLink to="https://github.com/dargmuesli?tab=repositories">
