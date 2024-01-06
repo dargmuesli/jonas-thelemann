@@ -544,7 +544,9 @@ const runtimeConfig = useRuntimeConfig()
 const siteConfig = useSiteConfig()
 
 // data
-const repoCount = useState<string | undefined>('repoCount', () => undefined)
+const repoCount = useState<string | undefined>('repoCount', () =>
+  runtimeConfig.public.vio.isTesting ? '1337' : undefined,
+)
 
 // computations
 const age = computed(() =>
