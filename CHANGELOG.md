@@ -1,3 +1,10 @@
+## [5.22.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.22.3...5.22.4) (2024-01-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @dargmuesli/nuxt-vio to v10.2.4 ([ebcbc95](https://github.com/dargmuesli/jonas-thelemann/commit/ebcbc95c649ccf047b5ff9f716830e351f756e96))
+
 ## [5.22.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.22.2...5.22.3) (2024-01-23)
 
 
