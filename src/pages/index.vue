@@ -57,11 +57,11 @@
         </div>
         <div class="pb-2">
           <ul class="-mx-1.5 flex flex-wrap">
-            <li class="m-1.5">
+            <!-- <li class="m-1.5">
               <SocialLink :to="localePath('/contact')">
                 {{ t('contactForm') }}
               </SocialLink>
-            </li>
+            </li> -->
             <li class="m-1.5">
               <SocialLink to="https://giphy.com/channel/dargmuesli">
                 {{ t('giphy') }}
@@ -536,7 +536,7 @@ definePageMeta({
 })
 
 const { t } = useI18n()
-const localePath = useLocalePath()
+// const localePath = useLocalePath()
 const { indicateLoadingDone } = useLoadingDoneIndicator()
 const { indicateLoadingDone: indicateLoadingDoneHeroImage } =
   useLoadingDoneIndicator('hero-image')
@@ -601,7 +601,7 @@ de:
   asideLabel: Titelbild
   ccc: Chaos Computer Club
   cccTimespan: Mai 2018 – {present}
-  contactForm: Kontaktformular
+  # contactForm: Kontaktformular
   descriptionShort: '{ninjaneers}, studiert an der {university}, gründet {maevsi}.'
   education: Bildung
   educationGoal: Master der Software-Entwicklung
@@ -664,7 +664,7 @@ en:
   asideLabel: Title image
   ccc: Chaos Computer Club
   cccTimespan: May 2018 – {present}
-  contactForm: Contact form
+  # contactForm: Contact form
   descriptionShort: '{ninjaneers}, studying at {university}, founding {maevsi}.'
   education: Education
   educationGoal: Master's degree Software Engineering
