@@ -1,3 +1,10 @@
+## [5.22.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.22.1...5.22.2) (2024-01-23)
+
+
+### Performance Improvements
+
+* **nitro:** prerender named page files ([80a82af](https://github.com/dargmuesli/jonas-thelemann/commit/80a82afdb830cba689e2b754126b2a1c58450d6b))
+
 ## [5.22.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.22.0...5.22.1) (2024-01-23)
 
 
