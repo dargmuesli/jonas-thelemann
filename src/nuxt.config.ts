@@ -7,6 +7,11 @@ export default defineNuxtConfig(
   defu(
     {
       extends: ['@dargmuesli/nuxt-vio'],
+      nitro: {
+        prerender: {
+          autoSubfolderIndex: false, // prevents Cloudflare Pages' redirection issue (https://community.cloudflare.com/t/removing-trailing-slash-on-static-websites/583429/4)
+        },
+      },
       vite: {
         optimizeDeps: {
           include: ['@dargmuesli/nuxt-vio/utils/constants'],
