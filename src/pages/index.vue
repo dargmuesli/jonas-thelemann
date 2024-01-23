@@ -531,7 +531,6 @@ import { consola } from 'consola'
 import { getQuery } from 'ufo'
 
 definePageMeta({
-  colorMode: 'light',
   layout: 'root',
 })
 

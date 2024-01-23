@@ -19,6 +19,9 @@ export default defineNuxtConfig(
       },
 
       // modules
+      colorMode: {
+        preference: 'light',
+      },
       linkChecker: {
         fetchRemoteUrls: !process.env.CI,
         excludeLinks: [
