@@ -1,3 +1,10 @@
+## [5.22.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.22.2...5.22.3) (2024-01-23)
+
+
+### Bug Fixes
+
+* **color-mode:** prefer light ([9a1fdba](https://github.com/dargmuesli/jonas-thelemann/commit/9a1fdba37aebe93d4e2536ae2d033448557f32a3))
+
 ## [5.22.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.22.1...5.22.2) (2024-01-23)
 
 
