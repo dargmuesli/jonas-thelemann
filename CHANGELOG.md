@@ -1,3 +1,10 @@
+## [5.22.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.21.2...5.22.0) (2024-01-23)
+
+
+### Features
+
+* **contact:** disable ([9aaa027](https://github.com/dargmuesli/jonas-thelemann/commit/9aaa0270e71db18d214acf7a5fcc3e19f3d09b73))
+
 ## [5.21.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.21.1...5.21.2) (2024-01-16)
 
 
