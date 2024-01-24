@@ -16,10 +16,7 @@ export default defineEventHandler(async function (event) {
 })
 
 const sendMail = async (event: H3Event) => {
-  // if (!event.context.cloudflare)
-  //   return throwError(400, 'No Cloudflare context!')
   const runtimeConfig = useRuntimeConfig()
-  console.log(runtimeConfig.nodemailer.transporter ?? '123')
 
   const transport = runtimeConfig.nodemailer.transporter
     ? runtimeConfig.nodemailer.transporter
@@ -34,16 +31,6 @@ const sendMail = async (event: H3Event) => {
   }
 
   const NODEMAILER_TRANSPORTER = createTransport(transport)
-
-  // const NODEMAILER_TRANSPORTER = createTransport({
-  //   host: event.context.cloudflare?.env.NODEMAILER_TRANSPORTER_HOST,
-  //   port: 465,
-  //   secure: true,
-  //   auth: {
-  //     user: event.context.cloudflare?.env.NODEMAILER_TRANSPORTER_AUTH_USERNAME,
-  //     pass: event.context.cloudflare?.env.NODEMAILER_TRANSPORTER_AUTH_PASSWORD,
-  //   },
-  // })
 
   const body = await readBody(event)
   const mailSentData = await NODEMAILER_TRANSPORTER.sendMail({
