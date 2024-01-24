@@ -18,6 +18,7 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const fireError = useFireError()
+const backendFetch = useBackendFetch()
 
 // data
 const isFormSent = ref(false)
@@ -25,7 +26,7 @@ const isFormSent = ref(false)
 // methods
 const submit = async (body: any) => {
   try {
-    await $fetch('/api/contact', {
+    await backendFetch('/api/contact', {
       method: 'POST',
       body,
     })

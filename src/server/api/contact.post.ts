@@ -1,9 +1,13 @@
+import { existsSync, readFileSync } from 'node:fs'
+
 import { consola } from 'consola'
 import { H3Event } from 'h3'
 import { createTransport } from 'nodemailer'
 
 const MAIL_FROM = '"jonas-thelemann" <noreply+contact@jonas-thelemann.de>'
 const MAIL_TO = 'e-mail+contact@jonas-thelemann.de'
+const SECRET_STOMPER_NODEMAILER_TRANSPORTER_PATH =
+  '/run/secrets/stomper_nodemailer-transporter'
 
 export default defineEventHandler(async function (event) {
   await assertTurnstileValid(event)
@@ -12,18 +16,34 @@ export default defineEventHandler(async function (event) {
 })
 
 const sendMail = async (event: H3Event) => {
-  if (!event.context.cloudflare)
-    return throwError(400, 'No Cloudflare context!')
+  // if (!event.context.cloudflare)
+  //   return throwError(400, 'No Cloudflare context!')
+  const runtimeConfig = useRuntimeConfig(event)
+  console.log(runtimeConfig.nodemailer.transporter ?? '123')
 
-  const NODEMAILER_TRANSPORTER = createTransport({
-    host: event.context.cloudflare?.env.NODEMAILER_TRANSPORTER_HOST,
-    port: 465,
-    secure: true,
-    auth: {
-      user: event.context.cloudflare?.env.NODEMAILER_TRANSPORTER_AUTH_USERNAME,
-      pass: event.context.cloudflare?.env.NODEMAILER_TRANSPORTER_AUTH_PASSWORD,
-    },
-  })
+  const transport = runtimeConfig.nodemailer.transporter
+    ? runtimeConfig.nodemailer.transporter
+    : existsSync(SECRET_STOMPER_NODEMAILER_TRANSPORTER_PATH)
+      ? JSON.parse(
+          readFileSync(SECRET_STOMPER_NODEMAILER_TRANSPORTER_PATH, 'utf-8'),
+        )
+      : undefined
+
+  if (!transport) {
+    throw new Error('The SMTP configuration secret is missing!')
+  }
+
+  const NODEMAILER_TRANSPORTER = createTransport(transport)
+
+  // const NODEMAILER_TRANSPORTER = createTransport({
+  //   host: event.context.cloudflare?.env.NODEMAILER_TRANSPORTER_HOST,
+  //   port: 465,
+  //   secure: true,
+  //   auth: {
+  //     user: event.context.cloudflare?.env.NODEMAILER_TRANSPORTER_AUTH_USERNAME,
+  //     pass: event.context.cloudflare?.env.NODEMAILER_TRANSPORTER_AUTH_PASSWORD,
+  //   },
+  // })
 
   const body = await readBody(event)
   const mailSentData = await NODEMAILER_TRANSPORTER.sendMail({
