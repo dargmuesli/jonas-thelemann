@@ -8,7 +8,7 @@
     "node": "20"
   },
   "scripts": {
-    "build": "pnpm run build:cloudflare_pages",
+    "build": "pnpm run build:static",
     "build:node": "nuxt build",
     "build:cloudflare_pages": "NITRO_PRESET=cloudflare_pages nuxt build",
     "build:static": "nuxt generate",

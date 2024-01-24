@@ -18,7 +18,7 @@ export default defineEventHandler(async function (event) {
 const sendMail = async (event: H3Event) => {
   // if (!event.context.cloudflare)
   //   return throwError(400, 'No Cloudflare context!')
-  const runtimeConfig = useRuntimeConfig(event)
+  const runtimeConfig = useRuntimeConfig()
   console.log(runtimeConfig.nodemailer.transporter ?? '123')
 
   const transport = runtimeConfig.nodemailer.transporter
