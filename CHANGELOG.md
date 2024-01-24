@@ -1,3 +1,18 @@
+## [5.23.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.22.4...5.23.0) (2024-01-24)
+
+
+### Features
+
+* **contact:** fetch from backend ([1403ed2](https://github.com/dargmuesli/jonas-thelemann/commit/1403ed23ae5ba4da80a02d2f1c1fd0f6f5b08bcf))
+* **contact:** use node mailer ([c036b26](https://github.com/dargmuesli/jonas-thelemann/commit/c036b2642d8cfe867ad81a20242f24a6c3a91a46))
+
+
+### Bug Fixes
+
+* **ci:** revert to static target ([a050cf3](https://github.com/dargmuesli/jonas-thelemann/commit/a050cf3c0cac1bed829a9bb5e4ba325b36fd1044))
+* **contact:** decide fetch by staging host ([13e857b](https://github.com/dargmuesli/jonas-thelemann/commit/13e857bb8c81fbcc5fc6c2d4d41dacaf2d738e1c))
+* **docker:** reenable node builder ([b116b5d](https://github.com/dargmuesli/jonas-thelemann/commit/b116b5d9a6063e173ade53e37c9f86fa720abbf2))
+
 ## [5.22.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.22.3...5.22.4) (2024-01-23)
 
 
