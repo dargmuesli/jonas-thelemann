@@ -3,9 +3,9 @@ export const useServiceFetch = ({
   path,
   port,
 }: {
-  name: string
+  name?: string
   path?: string
-  port: number
+  port?: number
 }) => {
   const getServiceHref = useGetServiceHref()
 
@@ -17,10 +17,10 @@ export const useServiceFetch = ({
 export const useBackendFetch = () => {
   const runtimeConfig = useRuntimeConfig()
 
-  return runtimeConfig.public.vio.isInStack
-    ? useServiceFetch({
+  return runtimeConfig.public.vio.stagingHost
+    ? $fetch
+    : useServiceFetch({
         name: 'backend',
         port: 1337,
       })
-    : $fetch
 }

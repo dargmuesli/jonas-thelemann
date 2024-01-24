@@ -18,9 +18,6 @@ export default defineNuxtConfig(
           turnstile: {
             siteKey: '0x4AAAAAAAQiMSbON1vdesv0',
           },
-          vio: {
-            isInStack: !!process.env.NUXT_PUBLIC_SITE_URL,
-          },
         },
         nodemailer: {
           transporter: undefined,
