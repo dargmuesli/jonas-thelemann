@@ -40,7 +40,7 @@ jobs:
     permissions:
       packages: write
     with:
-      ARTIFACT_PATH: /
+      ARTIFACT_PATH: /src/dist/
       BUILD_ARGUMENTS_RELEASE: SITE_URL=https://jonas-thelemann.de
       BUILD_TARGET_RELEASE: build-cloudflare_pages
       TAG: ${{ needs.release_semantic_dry.outputs.new_release_version }}
@@ -64,5 +64,4 @@ jobs:
     with:
       ACCOUNT_ID: f00135e2a8cc575a4bc4817c9521fe71
       BRANCH: ${{ github.head_ref || github.ref_name }}
-      DIRECTORY: src/dist
       PROJECT_NAME: ${{ github.event.repository.name }}
