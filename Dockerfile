@@ -53,6 +53,15 @@ RUN pnpm install --offline
 
 
 ########################
+# Build for cloudflare pages.
+
+FROM prepare AS build-cloudflare_pages
+
+ENV NODE_ENV=production
+RUN pnpm --dir src run build:cloudflare_pages
+
+
+########################
 # Build for static deployment.
 
 FROM prepare AS build-static
@@ -163,6 +172,7 @@ FROM base-image AS collect
 
 # COPY --from=build-node /srv/app/src/.output ./.output
 # COPY --from=build-node /srv/app/src/package.json ./package.json
+COPY --from=build-cloudflare_pages /srv/app/package.json /tmp/package.json
 # COPY --from=build-static /srv/app/src/.output/public ./.output/public
 COPY --from=build-static /srv/app/package.json /tmp/package.json
 COPY --from=lint /srv/app/package.json /tmp/package.json
