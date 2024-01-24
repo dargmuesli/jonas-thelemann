@@ -7,9 +7,20 @@ export default defineNuxtConfig(
   defu(
     {
       extends: ['@dargmuesli/nuxt-vio'],
-      nitro: {
-        prerender: {
-          autoSubfolderIndex: false, // prevents Cloudflare Pages' redirection issue (https://community.cloudflare.com/t/removing-trailing-slash-on-static-websites/583429/4)
+      modules: ['@nuxtjs/turnstile'],
+      // nitro: {
+      //   prerender: {
+      //     autoSubfolderIndex: false, // prevents Cloudflare Pages' redirection issue (https://community.cloudflare.com/t/removing-trailing-slash-on-static-websites/583429/4)
+      //   },
+      // },
+      runtimeConfig: {
+        public: {
+          turnstile: {
+            siteKey: '0x4AAAAAAAQiMSbON1vdesv0',
+          },
+        },
+        nodemailer: {
+          transporter: undefined,
         },
       },
       vite: {
@@ -30,9 +41,20 @@ export default defineNuxtConfig(
       },
       security: {
         headers: {
-          contentSecurityPolicy: {
-            'connect-src': ['https://api.github.com/users/dargmuesli/repos'],
-          },
+          contentSecurityPolicy: defu(
+            {
+              // jonas-thelemann
+              'connect-src': ['https://api.github.com/users/dargmuesli/repos'],
+            },
+            {
+              // Cloudflare Turnstile
+              'frame-src': ['https://challenges.cloudflare.com'],
+              'script-src': [
+                'https://challenges.cloudflare.com',
+                "'sha256-oHL20tRmipXhd3ivYNMpZSHAVebPXJMetWmfG3i5FKY='",
+              ],
+            },
+          ),
         },
       },
       site: {

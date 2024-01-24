@@ -25,7 +25,7 @@ jobs:
   release_semantic_dry:
     needs: prepare_jobs
     name: Release (semantic, dry)
-    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@1.7.2
+    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@2.0.0-beta.5
     if: needs.prepare_jobs.outputs.pr_found == 'false' || github.event_name == 'pull_request'
     permissions:
       contents: write
@@ -35,19 +35,21 @@ jobs:
       DRY_RUN: true
   build:
     name: Build
-    uses: dargmuesli/github-actions/.github/workflows/docker.yml@1.7.2
+    uses: dargmuesli/github-actions/.github/workflows/docker.yml@2.0.0-beta.5
     needs: release_semantic_dry
     permissions:
       packages: write
     with:
-      ARTIFACT_PATH: /
-      BUILD_ARGUMENTS_RELEASE: SITE_URL=https://jonas-thelemann.de
+      ARTIFACT_PATH: src/.output/public/
+      BUILD_ARGUMENTS: SITE_URL=https://jonas-thelemann.de
       BUILD_TARGET_RELEASE: build-static
       TAG: ${{ needs.release_semantic_dry.outputs.new_release_version }}
+    secrets:
+      PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
   release_semantic:
     needs: build
     name: Release (semantic)
-    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@1.7.2
+    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@2.0.0-beta.5
     permissions:
       contents: write
     secrets:
@@ -55,7 +57,7 @@ jobs:
   deploy:
     needs: build
     name: Deploy
-    uses: dargmuesli/github-actions/.github/workflows/deploy-cloudflare-pages.yml@1.7.2
+    uses: dargmuesli/github-actions/.github/workflows/deploy-cloudflare-pages.yml@2.0.0-beta.5
     permissions:
       contents: read
       deployments: write
@@ -64,5 +66,4 @@ jobs:
     with:
       ACCOUNT_ID: f00135e2a8cc575a4bc4817c9521fe71
       BRANCH: ${{ github.head_ref || github.ref_name }}
-      DIRECTORY: src/.output/public
       PROJECT_NAME: ${{ github.event.repository.name }}

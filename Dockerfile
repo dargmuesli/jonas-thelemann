@@ -43,13 +43,22 @@ COPY ./ ./
 RUN pnpm install --offline
 
 
-# ########################
-# # Build for Node deployment.
+########################
+# Build for Node deployment.
 
-# FROM prepare AS build-node
+FROM prepare AS build-node
+
+ENV NODE_ENV=production
+RUN pnpm --dir src run build:node
+
+
+# ########################
+# # Build for cloudflare pages.
+
+# FROM prepare AS build-cloudflare_pages
 
 # ENV NODE_ENV=production
-# RUN pnpm --dir src run build:node
+# RUN pnpm --dir src run build:cloudflare_pages
 
 
 ########################
@@ -161,8 +170,9 @@ RUN pnpm --dir src run test:e2e:server:static
 
 FROM base-image AS collect
 
-# COPY --from=build-node /srv/app/src/.output ./.output
-# COPY --from=build-node /srv/app/src/package.json ./package.json
+COPY --from=build-node /srv/app/src/.output ./.output
+COPY --from=build-node /srv/app/src/package.json ./package.json
+# COPY --from=build-cloudflare_pages /srv/app/package.json /tmp/package.json
 # COPY --from=build-static /srv/app/src/.output/public ./.output/public
 COPY --from=build-static /srv/app/package.json /tmp/package.json
 COPY --from=lint /srv/app/package.json /tmp/package.json
@@ -193,21 +203,21 @@ COPY --from=test-e2e-static /srv/app/package.json /tmp/package.json
 # LABEL org.opencontainers.image.description="Jonas Thelemann's website."
 
 
-# #######################
-# # Provide a web server.
-# # Requires node (cannot be static) as the server acts as backend too.
+#######################
+# Provide a web server.
+# Requires node (cannot be static) as the server acts as backend too.
 
-# FROM collect AS production
+FROM collect AS production
 
-# ENV NODE_ENV=production
+ENV NODE_ENV=production
 
-# # Update dependencies.
-# RUN apk update \
-#     && apk upgrade --no-cache
+# Update dependencies.
+RUN apk update \
+    && apk upgrade --no-cache
 
-# ENTRYPOINT ["pnpm"]
-# CMD ["run", "start:node"]
-# HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
-# EXPOSE 3000
-# LABEL org.opencontainers.image.source="https://github.com/dargmuesli/jonas-thelemann"
-# LABEL org.opencontainers.image.description="Jonas Thelemann's website."
+ENTRYPOINT ["pnpm"]
+CMD ["run", "start:node"]
+HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
+EXPOSE 3000
+LABEL org.opencontainers.image.source="https://github.com/dargmuesli/jonas-thelemann"
+LABEL org.opencontainers.image.description="Jonas Thelemann's website."
