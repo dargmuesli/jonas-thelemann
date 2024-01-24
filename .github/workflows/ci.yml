@@ -40,9 +40,9 @@ jobs:
     permissions:
       packages: write
     with:
-      ARTIFACT_PATH: src/dist/
+      ARTIFACT_PATH: src/.output/public/
       BUILD_ARGUMENTS: SITE_URL=https://jonas-thelemann.de
-      BUILD_TARGET_RELEASE: build-cloudflare_pages
+      BUILD_TARGET_RELEASE: build-static
       TAG: ${{ needs.release_semantic_dry.outputs.new_release_version }}
     secrets:
       PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
