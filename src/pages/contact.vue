@@ -1,9 +1,6 @@
 <template>
   <div>
-    <VioCardStateInfo
-      v-if="'success' in route.query"
-      class="flex flex-col gap-2"
-    >
+    <VioCardStateInfo v-if="isFormSent" class="flex flex-col gap-2">
       <span class="text-xl font-bold">
         {{ t('thankYouTitle') }}
       </span>
@@ -13,18 +10,35 @@
     </VioCardStateInfo>
     <section v-else>
       <h1>{{ t('title') }}</h1>
-      <FormContact />
+      <FormContact @submit="submit" />
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  colorMode: 'light',
-})
-
 const { t } = useI18n()
-const route = useRoute()
+const fireError = useFireError()
+
+// data
+const isFormSent = ref(false)
+
+// methods
+const submit = async (body: any) => {
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body,
+    })
+
+    isFormSent.value = true
+  } catch (error: any) {
+    fireError({
+      // level: 'error',
+      error,
+      // text: t('iCalFetchError'),
+    })
+  }
+}
 
 // initialization
 useHeadDefault({ title: t('title') })

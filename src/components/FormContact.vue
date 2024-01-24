@@ -1,6 +1,5 @@
 <template>
-  <VioForm :form="v$" :is-form-sent="isFormSent" @submit="submit">
-    <input type="hidden" name="static-form-name" value="contact" />
+  <VioForm :form="v$" :is-form-sent="isFormSent" @submit.prevent="submit">
     <VioFormInput
       id-label="input-name"
       :placeholder="t('placeholderName')"
@@ -61,6 +60,7 @@
         </VioFormInputStateError>
       </template>
     </VioFormInput>
+    <FormInputCaptcha :form-input="v$.captcha" @input="form.captcha = $event" />
   </VioForm>
 </template>
 
@@ -68,12 +68,19 @@
 import { useVuelidate } from '@vuelidate/core'
 import { required } from '@vuelidate/validators'
 
+type FormValid = { emailAddress: string; name: string; message: string }
+
+const emit = defineEmits<{
+  submit: [form: FormValid]
+}>()
+
 const { t } = useI18n()
 const runtimeConfig = useRuntimeConfig()
 const siteConfig = useSiteConfig()
 
 // data
 const form = reactive({
+  captcha: ref<string>(),
   emailAddress: ref<string>(),
   name: ref<string>(),
   message: ref<string>(),
@@ -81,11 +88,16 @@ const form = reactive({
 const isFormSent = ref(false)
 
 // methods
-const submit = async (e: Event) =>
-  !(await isFormValid({ v$, isFormSent })) ? e.preventDefault() : undefined
+const submit = async () => {
+  if (!(await isFormValid({ v$, isFormSent }))) return
+  emit('submit', form as FormValid)
+}
 
 // vuelidate
 const rules = {
+  captcha: {
+    required,
+  },
   emailAddress: {
     // maxLength: maxLength(100),
     required,
