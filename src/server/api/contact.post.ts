@@ -51,10 +51,6 @@ const assertTurnstileValid = async (event: H3Event) => {
   const body = await readBody(event)
   const turnstileToken = body.captcha
 
-  if (Array.isArray(turnstileToken)) {
-    return throwError(422, 'Turnstile token cannot be an array.')
-  }
-
   if (!turnstileToken) {
     return throwError(422, 'Turnstile token not provided.')
   }
