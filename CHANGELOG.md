@@ -1,3 +1,10 @@
+## [5.23.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.3...5.23.4) (2024-01-25)
+
+
+### Bug Fixes
+
+* **turnstile:** load secret key from file in production ([c51c1b7](https://github.com/dargmuesli/jonas-thelemann/commit/c51c1b78ff5a66160e18f2498679be1055165d44))
+
 ## [5.23.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.2...5.23.3) (2024-01-25)
 
 
