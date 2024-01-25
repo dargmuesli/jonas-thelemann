@@ -1,3 +1,10 @@
+## [5.23.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.1...5.23.2) (2024-01-25)
+
+
+### Bug Fixes
+
+* add missing secrets ([c026d38](https://github.com/dargmuesli/jonas-thelemann/commit/c026d386ce7725bef10538865c3b8046c2bbc566))
+
 ## [5.23.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.0...5.23.1) (2024-01-25)
 
 
