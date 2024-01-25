@@ -30,6 +30,8 @@ const sendMail = async (event: H3Event) => {
 
   const NODEMAILER_TRANSPORTER = createTransport(transport)
 
+  console.log(JSON.stringify(event.node.req.headers))
+
   const body = await readBody(event)
   const mailSentData = await NODEMAILER_TRANSPORTER.sendMail({
     from: MAIL_FROM,
@@ -38,7 +40,7 @@ const sendMail = async (event: H3Event) => {
       `Email address: ${body.emailAddress}`,
       `Name: ${body.name}`,
       `Message: ${body.message}`,
-      `IP: ${event.node.req.headers['x-real-ip']}`,
+      `IP: ${event.node.req.headers['cf-connecting-ip']}`,
       `Timestamp: ${new Date().toISOString()}`,
     ].join('\n'),
     subject: 'Nachricht per Kontaktformular',
