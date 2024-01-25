@@ -44,7 +44,10 @@ export default defineNuxtConfig(
           contentSecurityPolicy: defu(
             {
               // jonas-thelemann
-              'connect-src': ['https://api.github.com/users/dargmuesli/repos'],
+              'connect-src': [
+                'https://backend.jonas-thelemann.de/api/',
+                'https://api.github.com/users/dargmuesli/repos',
+              ],
             },
             {
               // Cloudflare Turnstile
