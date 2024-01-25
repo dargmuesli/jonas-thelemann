@@ -1,3 +1,10 @@
+## [5.23.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.0...5.23.1) (2024-01-25)
+
+
+### Bug Fixes
+
+* **security:** add backend to csp ([4f9d4bd](https://github.com/dargmuesli/jonas-thelemann/commit/4f9d4bdc54c7073e9f7258b31cdac21f76e668c5))
+
 ## [5.23.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.22.4...5.23.0) (2024-01-24)
 
 
