@@ -38,7 +38,7 @@ const sendMail = async (event: H3Event) => {
       `Email address: ${body.emailAddress}`,
       `Name: ${body.name}`,
       `Message: ${body.message}`,
-      `IP: ${event.node.req.headers['x-forwarded-for']}`,
+      `IP: ${event.node.req.headers['x-real-ip']}`,
       `Timestamp: ${new Date().toISOString()}`,
     ].join('\n'),
     subject: 'Nachricht per Kontaktformular',
