@@ -61,9 +61,11 @@ export default defineNuxtConfig(
         },
       },
       turnstile: {
-        secretKeyPath: process.env.NUXT_PUBLIC_SITE_URL
-          ? '/run/secrets/jonas-thelemann_turnstile-key'
-          : undefined,
+        secretKeyPath:
+          process.env.NUXT_PUBLIC_SITE_URL ||
+          process.env.NODE_ENV === 'production'
+            ? '/run/secrets/jonas-thelemann_turnstile-key'
+            : undefined,
       },
       site: {
         id: 'jonas-thelemann',
