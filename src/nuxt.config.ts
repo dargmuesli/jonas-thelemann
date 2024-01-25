@@ -8,11 +8,11 @@ export default defineNuxtConfig(
     {
       extends: ['@dargmuesli/nuxt-vio'],
       modules: ['@nuxtjs/turnstile'],
-      // nitro: {
-      //   prerender: {
-      //     autoSubfolderIndex: false, // prevents Cloudflare Pages' redirection issue (https://community.cloudflare.com/t/removing-trailing-slash-on-static-websites/583429/4)
-      //   },
-      // },
+      nitro: {
+        prerender: {
+          autoSubfolderIndex: false, // prevents Cloudflare Pages' redirection issue (https://community.cloudflare.com/t/removing-trailing-slash-on-static-websites/583429/4)
+        },
+      },
       runtimeConfig: {
         public: {
           turnstile: {
