@@ -1,3 +1,10 @@
+## [5.23.5](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.4...5.23.5) (2024-01-25)
+
+
+### Bug Fixes
+
+* **contact:** correct ip address header ([c3288c6](https://github.com/dargmuesli/jonas-thelemann/commit/c3288c69530a955cbe2e6054c18143fc41ce9da9))
+
 ## [5.23.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.3...5.23.4) (2024-01-25)
 
 
