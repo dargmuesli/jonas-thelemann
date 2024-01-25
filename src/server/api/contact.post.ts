@@ -6,8 +6,8 @@ import { createTransport } from 'nodemailer'
 
 const MAIL_FROM = '"jonas-thelemann" <noreply+contact@jonas-thelemann.de>'
 const MAIL_TO = 'e-mail+contact@jonas-thelemann.de'
-const SECRET_STOMPER_NODEMAILER_TRANSPORTER_PATH =
-  '/run/secrets/stomper_nodemailer-transporter'
+const SECRET_NODEMAILER_TRANSPORTER_PATH =
+  '/run/secrets/jonas-thelemann_nodemailer-transporter'
 
 export default defineEventHandler(async function (event) {
   await assertTurnstileValid(event)
@@ -20,10 +20,8 @@ const sendMail = async (event: H3Event) => {
 
   const transport = runtimeConfig.nodemailer.transporter
     ? runtimeConfig.nodemailer.transporter
-    : existsSync(SECRET_STOMPER_NODEMAILER_TRANSPORTER_PATH)
-      ? JSON.parse(
-          readFileSync(SECRET_STOMPER_NODEMAILER_TRANSPORTER_PATH, 'utf-8'),
-        )
+    : existsSync(SECRET_NODEMAILER_TRANSPORTER_PATH)
+      ? JSON.parse(readFileSync(SECRET_NODEMAILER_TRANSPORTER_PATH, 'utf-8'))
       : undefined
 
   if (!transport) {
