@@ -1,3 +1,10 @@
+## [5.23.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.2...5.23.3) (2024-01-25)
+
+
+### Bug Fixes
+
+* **nitro:** reenable prerender configuration ([b529222](https://github.com/dargmuesli/jonas-thelemann/commit/b5292223326c5b15c1bdd02eab17c865bee6cb44))
+
 ## [5.23.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.1...5.23.2) (2024-01-25)
 
 
