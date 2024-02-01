@@ -1,3 +1,10 @@
+## [5.23.7](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.6...5.23.7) (2024-02-01)
+
+
+### Bug Fixes
+
+* **og-image:** correct locales ([5e28fc3](https://github.com/dargmuesli/jonas-thelemann/commit/5e28fc3c6b0292d1f48f923c48ebba9807d218c8))
+
 ## [5.23.6](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.5...5.23.6) (2024-01-25)
 
 
