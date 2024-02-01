@@ -18,7 +18,9 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const fireError = useFireError()
-const backendFetch = useBackendFetch()
+const backendFetch = useServiceFetch({
+  name: 'backend',
+})
 
 // data
 const isFormSent = ref(false)
