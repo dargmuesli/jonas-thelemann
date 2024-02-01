@@ -14,13 +14,13 @@ export default defineNuxtConfig(
         },
       },
       runtimeConfig: {
+        nodemailer: {
+          transporter: undefined,
+        },
         public: {
           turnstile: {
             siteKey: '0x4AAAAAAAQiMSbON1vdesv0',
           },
-        },
-        nodemailer: {
-          transporter: undefined,
         },
       },
       vite: {
