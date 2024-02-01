@@ -30,8 +30,8 @@ importers:
         specifier: 7.2.5
         version: 7.2.5(rollup@4.9.6)(webpack@5.90.0)
       '@dargmuesli/nuxt-vio':
-        specifier: 10.2.4
-        version: 10.2.4(@lezer/common@1.2.1)(@unhead/shared@1.8.10)(@vue/compiler-core@3.4.15)(h3@1.10.1)(nuxt@3.9.3)(playwright-core@1.41.1)(postcss@8.4.33)(rollup@4.9.6)(tailwindcss@3.4.1)(typescript@5.3.3)(unhead@1.8.10)(vite@5.0.12)(vue-router@4.2.5)(vue@3.4.15)(webpack@5.90.0)
+        specifier: 10.2.5
+        version: 10.2.5(@lezer/common@1.2.1)(@unhead/shared@1.8.10)(@vue/compiler-core@3.4.15)(h3@1.10.1)(nuxt@3.9.3)(playwright-core@1.41.1)(postcss@8.4.33)(rollup@4.9.6)(tailwindcss@3.4.1)(typescript@5.3.3)(unhead@1.8.10)(vite@5.0.12)(vue-router@4.2.5)(vue@3.4.15)(webpack@5.90.0)
       '@intlify/eslint-plugin-vue-i18n':
         specifier: 3.0.0-next.5
         version: 3.0.0-next.5(eslint@8.56.0)
@@ -949,11 +949,11 @@ packages:
       - webpack
     dev: true
 
-  /@dargmuesli/nuxt-vio@10.2.4(@lezer/common@1.2.1)(@unhead/shared@1.8.10)(@vue/compiler-core@3.4.15)(h3@1.10.1)(nuxt@3.9.3)(playwright-core@1.41.1)(postcss@8.4.33)(rollup@4.9.6)(tailwindcss@3.4.1)(typescript@5.3.3)(unhead@1.8.10)(vite@5.0.12)(vue-router@4.2.5)(vue@3.4.15)(webpack@5.90.0):
-    resolution: {integrity: sha512-MpruiBjp1yjT6kMIvKZ23wtUdNhCyfjqXLbvtLHw00cyzoAswXmWwIwou7F498QQzt2N2scNzI5as39bLFjV7Q==}
+  /@dargmuesli/nuxt-vio@10.2.5(@lezer/common@1.2.1)(@unhead/shared@1.8.10)(@vue/compiler-core@3.4.15)(h3@1.10.1)(nuxt@3.9.3)(playwright-core@1.41.1)(postcss@8.4.33)(rollup@4.9.6)(tailwindcss@3.4.1)(typescript@5.3.3)(unhead@1.8.10)(vite@5.0.12)(vue-router@4.2.5)(vue@3.4.15)(webpack@5.90.0):
+    resolution: {integrity: sha512-nKQNjQj/DNyd1kDxXCVhV/Wjuv2yAPtFS7WmDLHngpbqbCQG628PfWN8bwOsWu7nxJAjMzqByYdJ2VxRYI0NBg==}
     engines: {node: '20'}
     peerDependencies:
-      nuxt: 3.9.3
+      nuxt: 3.10.0
       playwright-core: 1.41.1
       vue: 3.4.15
       vue-router: 4.2.5
@@ -967,7 +967,7 @@ packages:
       '@nuxtjs/html-validator': 1.6.0(rollup@4.9.6)
       '@nuxtjs/i18n': 8.0.0(rollup@4.9.6)(vue-router@4.2.5)(vue@3.4.15)
       '@nuxtjs/seo': 2.0.0-rc.5(@lezer/common@1.2.1)(@nuxt/devtools@1.0.8)(@unhead/shared@1.8.10)(@vue/compiler-core@3.4.15)(h3@1.10.1)(nuxt@3.9.3)(postcss@8.4.33)(rollup@4.9.6)(unhead@1.8.10)(vite@5.0.12)(vue@3.4.15)(webpack@5.90.0)
-      '@nuxtjs/tailwindcss': 6.11.0(rollup@4.9.6)
+      '@nuxtjs/tailwindcss': 6.11.2(rollup@4.9.6)
       '@pinia/nuxt': 0.5.1(rollup@4.9.6)(typescript@5.3.3)(vue@3.4.15)
       '@tailwindcss/forms': 0.5.7(tailwindcss@3.4.1)
       '@tailwindcss/typography': 0.5.10(tailwindcss@3.4.1)
@@ -2621,8 +2621,8 @@ packages:
       - webpack
     dev: true
 
-  /@nuxtjs/tailwindcss@6.11.0(rollup@4.9.6):
-    resolution: {integrity: sha512-uZkhV+O4oiAuOsy7VR1P5FMg1kMFOKPrxA9cYtwqpXSy6T4YAmGP0y4ekfvvuWW9903lVsd9cPvCC39ZJhnldw==}
+  /@nuxtjs/tailwindcss@6.11.2(rollup@4.9.6):
+    resolution: {integrity: sha512-06e8t9ia6Ru/RPMATuhGwi16rMYeZPseXiI4QmRDk/IkvluU60GxhLZOjdUIa+U7DVCECgDsRNEo/rD8/1sMKQ==}
     dependencies:
       '@nuxt/kit': 3.9.3(rollup@4.9.6)
       autoprefixer: 10.4.17(postcss@8.4.33)
@@ -9559,7 +9559,7 @@ packages:
       nuxt-site-config-kit: 2.2.7(rollup@4.9.6)(vue@3.4.15)
       pathe: 1.1.2
       pkg-types: 1.0.3
-      shikiji: 0.10.0-beta.9
+      shikiji: 0.10.2
       sirv: 2.0.4
       site-config-stack: 2.2.7(vue@3.4.15)
       ufo: 1.3.2
