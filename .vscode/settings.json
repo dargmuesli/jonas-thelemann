@@ -1,12 +1,4 @@
 {
-  "css.validate": false,
-  "eslint.workingDirectories": [
-    {
-      "directory": "src" // needed to correctly lint global locale strings like `t('globalStatusLoading')`
-    }
-  ],
-  "shellcheck.customArgs": ["-x"],
-  "stylelint.validate": ["css", "vue"],
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -27,5 +19,13 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "css.validate": false,
+  "eslint.workingDirectories": [
+    {
+      "directory": "src" // needed to correctly lint global locale strings like `t('globalStatusLoading')`
+    }
+  ],
+  "shellcheck.customArgs": ["-x"],
+  "stylelint.validate": ["css", "vue"]
 }
