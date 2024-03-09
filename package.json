@@ -9,6 +9,11 @@
     "node": "20"
   },
   "packageManager": "pnpm@8.15.4",
+  "pnpm": {
+    "overrides": {
+      "nitropack": "2.9.1"
+    }
+  },
   "private": true,
   "scripts": {
     "build": "pnpm --dir src run build",
