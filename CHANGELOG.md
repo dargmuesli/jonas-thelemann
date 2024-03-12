@@ -1,3 +1,10 @@
+## [5.23.11](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.10...5.23.11) (2024-03-12)
+
+
+### Bug Fixes
+
+* schedule release ([268b595](https://github.com/dargmuesli/jonas-thelemann/commit/268b595c02826da5ec229f5aba25c8ea93218c58))
+
 ## [5.23.10](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.9...5.23.10) (2024-02-27)
 
 
