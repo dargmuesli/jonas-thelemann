@@ -30,8 +30,8 @@ importers:
         specifier: 4.8.5
         version: 4.8.5(playwright-core@1.42.1)
       '@dargmuesli/nuxt-cookie-control':
-        specifier: 7.4.1
-        version: 7.4.1(rollup@4.13.0)(webpack@5.90.3)
+        specifier: 7.5.0
+        version: 7.5.0(rollup@4.13.0)(webpack@5.90.3)
       '@dargmuesli/nuxt-vio':
         specifier: 11.0.0
         version: 11.0.0(@lezer/common@1.2.1)(@unhead/shared@1.8.20)(@vue/compiler-core@3.4.21)(h3@1.11.1)(nuxt@3.11.1)(playwright-core@1.42.1)(postcss@8.4.36)(rollup@4.13.0)(tailwindcss@3.4.1)(typescript@5.4.2)(unhead@1.8.20)(vite@5.1.6)(vue-router@4.3.0)(vue@3.4.21)(webpack@5.90.3)
@@ -962,8 +962,8 @@ packages:
       postcss: 8.4.36
     dev: true
 
-  /@dargmuesli/nuxt-cookie-control@7.4.1(rollup@4.13.0)(webpack@5.90.3):
-    resolution: {integrity: sha512-5YxjKiJnsPFN8b83vY4w2QHrDxqUqU7ayiXX/d2kLFpjgncr/vW/8XPIG5DKdcKk1P6XUE/eXv1SvcvFYzYyow==}
+  /@dargmuesli/nuxt-cookie-control@7.5.0(rollup@4.13.0)(webpack@5.90.3):
+    resolution: {integrity: sha512-f047qOoPWFRriWZVB3pf4lY0EoYCeaEbRqk69hoNg4YRKoXKpobmrh6PMydRQQZJjeqCfWj9swDZPzqGKmnItQ==}
     engines: {node: '>=16'}
     dependencies:
       '@nuxt/kit': 3.11.1(rollup@4.13.0)
@@ -5922,6 +5922,7 @@ packages:
   /deep-extend@0.6.0:
     resolution: {integrity: sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==}
     engines: {node: '>=4.0.0'}
+    requiresBuild: true
     dev: true
 
   /deep-is@0.1.4:
@@ -12107,6 +12108,7 @@ packages:
   /strip-json-comments@2.0.1:
     resolution: {integrity: sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==}
     engines: {node: '>=0.10.0'}
+    requiresBuild: true
     dev: true
 
   /strip-json-comments@3.1.1:
