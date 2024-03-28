@@ -30,8 +30,8 @@ importers:
         specifier: 4.8.5
         version: 4.8.5(playwright-core@1.42.1)
       '@dargmuesli/nuxt-cookie-control':
-        specifier: 8.0.0
-        version: 8.0.0(rollup@4.13.0)(webpack@5.91.0)
+        specifier: 8.1.0
+        version: 8.1.0(rollup@4.13.0)(webpack@5.91.0)
       '@dargmuesli/nuxt-vio':
         specifier: 11.0.0
         version: 11.0.0(@lezer/common@1.2.1)(@unhead/shared@1.9.1)(@vue/compiler-core@3.4.21)(h3@1.11.1)(nuxt@3.11.1)(playwright-core@1.42.1)(postcss@8.4.38)(rollup@4.13.0)(tailwindcss@3.4.1)(typescript@5.4.3)(unhead@1.9.2)(vite@5.2.6)(vue-router@4.3.0)(vue@3.4.21)(webpack@5.91.0)
@@ -970,8 +970,8 @@ packages:
       postcss: 8.4.38
     dev: true
 
-  /@dargmuesli/nuxt-cookie-control@8.0.0(rollup@4.13.0)(webpack@5.91.0):
-    resolution: {integrity: sha512-InfnGDJ+kmrhUJB18DnjzXsCUTjQ8Dj7A06KN8xxAuxwPMH45+guAgX96k7sxaIvWw55wiPchpy4D27RM9nkBw==}
+  /@dargmuesli/nuxt-cookie-control@8.0.0-beta.3(rollup@4.13.0)(webpack@5.91.0):
+    resolution: {integrity: sha512-nSPg0uphlxiZlbNnYI5reEREOnjaXw/SE7vBtNBmp7OYLOkSv/0jfa1C6qAF/o0kcxbDLtQ3ojPUyyZEnbyuxw==}
     engines: {node: '>=16'}
     dependencies:
       '@nuxt/kit': 3.11.1(rollup@4.13.0)
@@ -983,8 +983,8 @@ packages:
       - webpack
     dev: true
 
-  /@dargmuesli/nuxt-cookie-control@8.0.0-beta.3(rollup@4.13.0)(webpack@5.91.0):
-    resolution: {integrity: sha512-nSPg0uphlxiZlbNnYI5reEREOnjaXw/SE7vBtNBmp7OYLOkSv/0jfa1C6qAF/o0kcxbDLtQ3ojPUyyZEnbyuxw==}
+  /@dargmuesli/nuxt-cookie-control@8.1.0(rollup@4.13.0)(webpack@5.91.0):
+    resolution: {integrity: sha512-uRVe9WvvUfFWOWvtANS/7gPK0CA+FrZQ35CeMdRgJAICrgvDRVskm9bp9ti3FHvszuQuRgX0VwVzE9doRQQzbw==}
     engines: {node: '>=16'}
     dependencies:
       '@nuxt/kit': 3.11.1(rollup@4.13.0)
@@ -4828,6 +4828,7 @@ packages:
 
   /b4a@1.6.6:
     resolution: {integrity: sha512-5Tk1HLk6b6ctmjIkAcU/Ujv/1WqiDl0F0JdRCR80VsOcUlHcu7pWeWRlOqQLHfDEsVx9YH/aif5AG4ehoCtTmg==}
+    requiresBuild: true
     dev: true
 
   /balanced-match@1.0.2:
@@ -5881,6 +5882,7 @@ packages:
   /deep-extend@0.6.0:
     resolution: {integrity: sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==}
     engines: {node: '>=4.0.0'}
+    requiresBuild: true
     dev: true
 
   /deep-is@0.1.4:
@@ -6915,6 +6917,7 @@ packages:
 
   /fast-fifo@1.3.2:
     resolution: {integrity: sha512-/d9sfos4yxzpwkDkuN7k2SqFKtYNmCTzgfEpz82x34IM9/zc8KGxQoXg1liNC/izpRM/MBdt44Nmx41ZWqk+FQ==}
+    requiresBuild: true
     dev: true
 
   /fast-glob@3.3.2:
@@ -11864,6 +11867,7 @@ packages:
 
   /streamx@2.16.1:
     resolution: {integrity: sha512-m9QYj6WygWyWa3H1YY69amr4nVgy61xfjys7xO7kviL5rfIEc2naf+ewFiOA+aEJD7y0JO3h2GoiUv4TDwEGzQ==}
+    requiresBuild: true
     dependencies:
       fast-fifo: 1.3.2
       queue-tick: 1.0.1
@@ -11999,6 +12003,7 @@ packages:
   /strip-json-comments@2.0.1:
     resolution: {integrity: sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==}
     engines: {node: '>=0.10.0'}
+    requiresBuild: true
     dev: true
 
   /strip-json-comments@3.1.1:
