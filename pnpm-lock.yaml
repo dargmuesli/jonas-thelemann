@@ -36,8 +36,8 @@ importers:
         specifier: 11.0.1
         version: 11.0.1(@lezer/common@1.2.1)(@unhead/shared@1.9.3)(@unocss/reset@0.58.8)(@vue/compiler-core@3.4.21)(floating-vue@5.2.2)(h3@1.11.1)(nuxt@3.11.1)(playwright-core@1.42.1)(postcss@8.4.38)(rollup@4.13.2)(tailwindcss@3.4.3)(typescript@5.4.3)(unhead@1.9.4)(unocss@0.58.8)(vite@5.2.7)(vue-router@4.3.0)(vue@3.4.21)(webpack@5.91.0)
       '@intlify/eslint-plugin-vue-i18n':
-        specifier: 3.0.0-next.7
-        version: 3.0.0-next.7(eslint@8.57.0)
+        specifier: 3.0.0-next.8
+        version: 3.0.0-next.8(eslint@8.57.0)
       '@nuxtjs/eslint-config-typescript':
         specifier: 12.1.0
         version: 12.1.0(eslint@8.57.0)(typescript@5.4.3)
@@ -1548,8 +1548,8 @@ packages:
       '@intlify/shared': 9.3.0-beta.27
     dev: true
 
-  /@intlify/eslint-plugin-vue-i18n@3.0.0-next.7(eslint@8.57.0):
-    resolution: {integrity: sha512-xW1ucTDpn40orTJYu+28B7XGZ1nD3jJLVZshZdT9eDH3IC0FTUqxENOEdq8Ba5nHA1CC2p8GGeaBVAVlUJ/iSw==}
+  /@intlify/eslint-plugin-vue-i18n@3.0.0-next.8(eslint@8.57.0):
+    resolution: {integrity: sha512-J7v7sNAqXUbIuHY0ZrPRpF764hr57txiWcPEWSgG1umojamOTECNEl1mZe5mxquP6uhS3CuTvISXzcAQ6+Vx6Q==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0-0
@@ -1559,8 +1559,9 @@ packages:
       '@intlify/message-compiler': 9.3.0-beta.27
       debug: 4.3.4
       eslint: 8.57.0
-      eslint-compat-utils: 0.4.1(eslint@8.57.0)
+      eslint-compat-utils: 0.5.0(eslint@8.57.0)
       glob: 10.3.12
+      globals: 15.0.0
       ignore: 5.3.1
       import-fresh: 3.3.0
       is-language-code: 3.1.0
@@ -6257,16 +6258,6 @@ packages:
       source-map: 0.6.1
     dev: true
 
-  /eslint-compat-utils@0.4.1(eslint@8.57.0):
-    resolution: {integrity: sha512-5N7ZaJG5pZxUeNNJfUchurLVrunD1xJvyg5kYOIVF8kg1f3ajTikmAu/5fZ9w100omNPOoMjngRszh/Q/uFGMg==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      eslint: '>=6.0.0'
-    dependencies:
-      eslint: 8.57.0
-      semver: 7.6.0
-    dev: true
-
   /eslint-compat-utils@0.5.0(eslint@8.57.0):
     resolution: {integrity: sha512-dc6Y8tzEcSYZMHa+CMPLi/hyo1FzNeonbhJL7Ol0ccuKQkwopJcJBA9YL/xmMTLU1eKigXo9vj9nALElWYSowg==}
     engines: {node: '>=12'}
@@ -7306,6 +7297,11 @@ packages:
 
   /globals@14.0.0:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
+    engines: {node: '>=18'}
+    dev: true
+
+  /globals@15.0.0:
+    resolution: {integrity: sha512-m/C/yR4mjO6pXDTm9/R/SpYTAIyaUB4EOzcaaMEl7mds7Mshct9GfejiJNQGjHHbdMPey13Kpu4TMbYi9ex1pw==}
     engines: {node: '>=18'}
     dev: true
 
