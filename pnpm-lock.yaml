@@ -36,8 +36,8 @@ importers:
         specifier: 11.0.2
         version: 11.0.2(@lezer/common@1.2.1)(@unhead/shared@1.9.4)(@unocss/reset@0.59.0)(@vue/compiler-core@3.4.21)(floating-vue@5.2.2)(h3@1.11.1)(nuxt@3.11.2)(playwright-core@1.43.1)(postcss@8.4.38)(rollup@4.14.1)(tailwindcss@3.4.3)(typescript@5.4.4)(unhead@1.9.5)(unocss@0.59.0)(vite@5.2.8)(vue-router@4.3.0)(vue@3.4.21)(webpack@5.91.0)
       '@intlify/eslint-plugin-vue-i18n':
-        specifier: 3.0.0-next.10
-        version: 3.0.0-next.10(eslint@8.57.0)
+        specifier: 3.0.0-next.11
+        version: 3.0.0-next.11(eslint@8.57.0)
       '@nuxtjs/eslint-config-typescript':
         specifier: 12.1.0
         version: 12.1.0(eslint@8.57.0)(typescript@5.4.4)
@@ -1523,14 +1523,12 @@ packages:
       '@intlify/shared': 9.11.0
     dev: true
 
-  /@intlify/core-base@9.3.0-beta.27:
-    resolution: {integrity: sha512-hWI8dZh9rRLxDt1IqPJQnXgMW5KZrNX2Z4uJCN348gsPVvsN8eB/J71TcNJs+C1mfIjQPwtmzUWPNhTewi8QGg==}
+  /@intlify/core-base@9.12.1:
+    resolution: {integrity: sha512-l7djJEmXLAR44PdtKDEBev/TN9tREQz967/+jvN3WtICqFoy2Cz8kPtjDfvZctqPNzOonp+ESsDCUm+rjHsmdA==}
     engines: {node: '>= 16'}
     dependencies:
-      '@intlify/devtools-if': 9.3.0-beta.27
-      '@intlify/message-compiler': 9.3.0-beta.27
-      '@intlify/shared': 9.3.0-beta.27
-      '@intlify/vue-devtools': 9.3.0-beta.27
+      '@intlify/message-compiler': 9.12.1
+      '@intlify/shared': 9.12.1
     dev: true
 
   /@intlify/core@9.11.0:
@@ -1541,22 +1539,15 @@ packages:
       '@intlify/shared': 9.11.0
     dev: true
 
-  /@intlify/devtools-if@9.3.0-beta.27:
-    resolution: {integrity: sha512-hA0rBQmVy7fN6UGZa+o0DrFTYnUvqD3E2Vqw35XV+huLlMQ2Zui9IpVhWozSy+ov/bdRFIhaxW11DAEG3BHa4w==}
-    engines: {node: '>= 16'}
-    dependencies:
-      '@intlify/shared': 9.3.0-beta.27
-    dev: true
-
-  /@intlify/eslint-plugin-vue-i18n@3.0.0-next.10(eslint@8.57.0):
-    resolution: {integrity: sha512-qJEthtDWQNjbQryF4Gqve/79AwgBXd6aG2hLIsCxL61MAkvqe9o9LWX/ePg2FX3T4kqUz8Sfh/KeIA5i4ed7Wg==}
+  /@intlify/eslint-plugin-vue-i18n@3.0.0-next.11(eslint@8.57.0):
+    resolution: {integrity: sha512-XXzqVcZva8/sPKDXrM4euwENVFkAEGZj2TCrwDR1fVvYr6D+pq/SEJXM31bZR3EHqL22/K6O/sPG0UaZC8tFog==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0-0
     dependencies:
       '@eslint/eslintrc': 3.0.2
-      '@intlify/core-base': 9.3.0-beta.27
-      '@intlify/message-compiler': 9.3.0-beta.27
+      '@intlify/core-base': 9.12.1
+      '@intlify/message-compiler': 9.12.1
       debug: 4.3.4
       eslint: 8.57.0
       eslint-compat-utils: 0.5.0(eslint@8.57.0)
@@ -1594,11 +1585,11 @@ packages:
       source-map-js: 1.2.0
     dev: true
 
-  /@intlify/message-compiler@9.3.0-beta.27:
-    resolution: {integrity: sha512-GC8rSbd7V67Zu+a9Z0bpV4riBek11YCURJU50YaEhV4Ub2JHEPtoYxK5r2eIsq/kp+M2hJyGLiC4NJUrGa2VwQ==}
+  /@intlify/message-compiler@9.12.1:
+    resolution: {integrity: sha512-6QrMGdqKUJSkctyg56nvE+h86tjQZTjYFEfx3ghQAXKPXUd1v5josZXrwnSbIEWWeAentlwtB5qW1FE5r2S8AQ==}
     engines: {node: '>= 16'}
     dependencies:
-      '@intlify/shared': 9.3.0-beta.27
+      '@intlify/shared': 9.12.1
       source-map-js: 1.2.0
     dev: true
 
@@ -1607,8 +1598,8 @@ packages:
     engines: {node: '>= 16'}
     dev: true
 
-  /@intlify/shared@9.3.0-beta.27:
-    resolution: {integrity: sha512-hPMsmVCs+ZUVHHU5VORG6LopzXZT7zmyVNqc9OQG80YpA/N4lT/pkJ4B6DTNIsv2C7mwfGM7RdK+0qPki43YgA==}
+  /@intlify/shared@9.12.1:
+    resolution: {integrity: sha512-xAAAxaMS7yUCkwXwqUVQmGCPbXSm6oHqMzcqr2IrxJQmC0DmuqoaW0yBeWyd/pG03PPXqGtWhJLnefsiVElzAQ==}
     engines: {node: '>= 16'}
     dev: true
 
@@ -1648,14 +1639,6 @@ packages:
   /@intlify/utils@0.12.0:
     resolution: {integrity: sha512-yCBNcuZQ49iInqmWC2xfW0rgEQyNtCM8C8KcWKTXxyscgUE1+48gjLgZZqP75MjhlApxwph7ZMWLqyABkSgxQA==}
     engines: {node: '>= 18'}
-    dev: true
-
-  /@intlify/vue-devtools@9.3.0-beta.27:
-    resolution: {integrity: sha512-XqES1UsntZjyo5sLgmVol42RK7YpAos3bvCh6NbzFMjPZVJf08PYs+KsUvYi2y0D3OSfmXbZSSh4A5s2O9MT0w==}
-    engines: {node: '>= 16'}
-    dependencies:
-      '@intlify/core-base': 9.3.0-beta.27
-      '@intlify/shared': 9.3.0-beta.27
     dev: true
 
   /@isaacs/cliui@8.0.2:
