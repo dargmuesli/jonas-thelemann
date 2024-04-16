@@ -39,8 +39,8 @@
 
 <script setup lang="ts">
 interface Props {
-  description: String
-  title: String
+  description: string
+  title: string
 }
 withDefaults(defineProps<Props>(), {})
 </script>
