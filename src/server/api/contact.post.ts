@@ -1,7 +1,7 @@
 import { existsSync, readFileSync } from 'node:fs'
 
 import { consola } from 'consola'
-import { H3Event } from 'h3'
+import type { H3Event } from 'h3'
 import { createTransport } from 'nodemailer'
 
 const MAIL_FROM = '"jonas-thelemann" <noreply+contact@jonas-thelemann.de>'
