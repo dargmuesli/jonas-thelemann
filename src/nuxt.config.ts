@@ -33,6 +33,9 @@ export default defineNuxtConfig(
       colorMode: {
         preference: 'light',
       },
+      gtag: {
+        id: 'G-K4R41W62BR',
+      },
       linkChecker: {
         fetchRemoteUrls: !process.env.CI,
         excludeLinks: [

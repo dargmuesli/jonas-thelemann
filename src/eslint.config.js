@@ -5,9 +5,6 @@ import withNuxt from './.nuxt/eslint.config.mjs'
 export default withNuxt(
   ...VIO_ESLINT_CONFIG,
   {
-    rules: {
-      '@typescript-eslint/no-explicit-any': 'warn',
-    },
     settings: {
       'vue-i18n': {
         localeDir: [
