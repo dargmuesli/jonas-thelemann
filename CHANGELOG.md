@@ -1,3 +1,10 @@
+## [5.23.15](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.14...5.23.15) (2024-04-27)
+
+
+### Bug Fixes
+
+* **release:** test bot ([b3c66c8](https://github.com/dargmuesli/jonas-thelemann/commit/b3c66c8f066f5a8abafe13ba45238e7513a1afee))
+
 ## [5.23.14](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.13...5.23.14) (2024-04-17)
 
 
