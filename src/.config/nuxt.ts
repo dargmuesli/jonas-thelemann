@@ -1,7 +1,7 @@
 import { VIO_NUXT_BASE_CONFIG } from '@dargmuesli/nuxt-vio/utils/constants'
 import { defu } from 'defu'
 
-import { SITE_NAME } from './utils/constants'
+import { SITE_NAME } from '../utils/constants'
 
 export default defineNuxtConfig(
   defu(
