@@ -4,11 +4,11 @@
       <div
         class="flex aspect-[2081/3009] max-h-[80vh] flex-1 xl:fixed xl:h-[100vh] xl:max-h-[none] xl:max-w-[38.2vw]"
       >
-        <!-- TODO: let preload use fetchpriority="high" -->
         <nuxt-img
           alt="Jonas in Tutzing."
           class="object-position-custom flex-1 object-cover"
           densities="x1 x2"
+          fetchpriority="high"
           format="webp"
           height="3009"
           placeholder
