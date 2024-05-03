@@ -1,3 +1,10 @@
+## [5.23.16](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.15...5.23.16) (2024-05-03)
+
+
+### Performance Improvements
+
+* **image:** specify fetch priority ([e7469ae](https://github.com/dargmuesli/jonas-thelemann/commit/e7469ae2492193d81fcb9a64494434526709540b))
+
 ## [5.23.15](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.14...5.23.15) (2024-04-27)
 
 
