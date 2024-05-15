@@ -104,9 +104,6 @@ importers:
       vue-router:
         specifier: 4.3.2
         version: 4.3.2(vue@3.4.27(typescript@5.4.5))
-      vue-tsc:
-        specifier: 2.0.17
-        version: 2.0.17(typescript@5.4.5)
 
 packages:
 
@@ -9227,15 +9224,18 @@ snapshots:
   '@volar/language-core@2.2.2':
     dependencies:
       '@volar/source-map': 2.2.2
+    optional: true
 
   '@volar/source-map@2.2.2':
     dependencies:
       muggle-string: 0.4.1
+    optional: true
 
   '@volar/typescript@2.2.2':
     dependencies:
       '@volar/language-core': 2.2.2
       path-browserify: 1.0.1
+    optional: true
 
   '@vue-macros/common@1.10.3(rollup@4.17.2)(vue@3.4.27(typescript@5.4.5))':
     dependencies:
@@ -9403,6 +9403,7 @@ snapshots:
       vue-template-compiler: 2.7.16
     optionalDependencies:
       typescript: 5.4.5
+    optional: true
 
   '@vue/reactivity@3.4.27':
     dependencies:
@@ -10152,7 +10153,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  computeds@0.0.1: {}
+  computeds@0.0.1:
+    optional: true
 
   concat-map@0.0.1: {}
 
@@ -10351,7 +10353,8 @@ snapshots:
 
   db0@0.1.4: {}
 
-  de-indent@1.0.2: {}
+  de-indent@1.0.2:
+    optional: true
 
   debug@2.6.9:
     dependencies:
@@ -11165,7 +11168,8 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  he@1.2.0: {}
+  he@1.2.0:
+    optional: true
 
   hex-rgb@4.3.0: {}
 
@@ -11984,7 +11988,8 @@ snapshots:
 
   ms@2.1.3: {}
 
-  muggle-string@0.4.1: {}
+  muggle-string@0.4.1:
+    optional: true
 
   multimatch@5.0.0:
     dependencies:
@@ -12848,7 +12853,8 @@ snapshots:
 
   parseurl@1.3.3: {}
 
-  path-browserify@1.0.1: {}
+  path-browserify@1.0.1:
+    optional: true
 
   path-exists@4.0.0: {}
 
@@ -14586,6 +14592,7 @@ snapshots:
     dependencies:
       de-indent: 1.0.2
       he: 1.2.0
+    optional: true
 
   vue-tsc@2.0.17(typescript@5.4.5):
     dependencies:
@@ -14593,6 +14600,7 @@ snapshots:
       '@vue/language-core': 2.0.17(typescript@5.4.5)
       semver: 7.6.2
       typescript: 5.4.5
+    optional: true
 
   vue-virtual-scroller@2.0.0-beta.8(vue@3.4.27(typescript@5.4.5)):
     dependencies:
