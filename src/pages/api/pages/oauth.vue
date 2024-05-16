@@ -1,11 +1,11 @@
 <template>
-  <div v-if="typeof route.query.code === 'string'" class="flex flex-col">
-    <span class="break-words">
+  <div v-if="typeof route.query.code === 'string'" class="flex flex-col gap-4">
+    <span class="break-words rounded border p-4">
       {{ route.query.code }}
     </span>
-    <VioButton :aria-label="t('copy')" class="border" @click="copy">
+    <VioButtonColored :aria-label="t('copy')" @click="copy">
       {{ t('copy') }}
-    </VioButton>
+    </VioButtonColored>
   </div>
   <VioError v-else :description="t('codeError')" :status-code="400" />
 </template>

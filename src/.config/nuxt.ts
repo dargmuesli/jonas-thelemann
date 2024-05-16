@@ -25,7 +25,12 @@ export default defineNuxtConfig(
       },
       vite: {
         optimizeDeps: {
-          include: ['@dargmuesli/nuxt-vio/utils/constants', 'consola'],
+          include: [
+            '@dargmuesli/nuxt-vio/utils/constants',
+            '@vuelidate/core',
+            'consola',
+            'sweetalert2',
+          ],
         },
       },
 
