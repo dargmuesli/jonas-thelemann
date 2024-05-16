@@ -1,3 +1,11 @@
+## [5.23.19](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.18...5.23.19) (2024-05-16)
+
+
+### Bug Fixes
+
+* **api:** style code page ([0af7536](https://github.com/dargmuesli/jonas-thelemann/commit/0af75360e426f0f72315ce3bc043f41d78b63a7a))
+* **nuxt:** correct alias ([805fa5d](https://github.com/dargmuesli/jonas-thelemann/commit/805fa5d02ce5f8e13e118df5d1923ab3880a8f33))
+
 ## [5.23.18](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.17...5.23.18) (2024-05-15)
 
 
