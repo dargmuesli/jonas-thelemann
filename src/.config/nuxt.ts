@@ -6,9 +6,6 @@ import { SITE_NAME } from '../utils/constants'
 export default defineNuxtConfig(
   defu(
     {
-      alias: {
-        sweetalert2: 'sweetalert2', // use as subdependency from vio
-      },
       extends: ['@dargmuesli/nuxt-vio'],
       modules: ['@nuxtjs/turnstile'],
       nitro: {
