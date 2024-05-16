@@ -6,6 +6,9 @@ import { SITE_NAME } from '../utils/constants'
 export default defineNuxtConfig(
   defu(
     {
+      alias: {
+        sweetalert2: 'sweetalert2', // use as subdependency from vio
+      },
       extends: ['@dargmuesli/nuxt-vio'],
       modules: ['@nuxtjs/turnstile'],
       nitro: {
@@ -25,7 +28,12 @@ export default defineNuxtConfig(
       },
       vite: {
         optimizeDeps: {
-          include: ['@dargmuesli/nuxt-vio/utils/constants', 'consola'],
+          include: [
+            '@dargmuesli/nuxt-vio/utils/constants',
+            '@vuelidate/core',
+            'consola',
+            'sweetalert2',
+          ],
         },
       },
 
