@@ -42,7 +42,9 @@ jobs:
     with:
       ARTIFACT_PATH: src/.output/public/
       BUILD_ADD_HOSTS: jonas-thelemann.de=127.0.0.1
-      BUILD_ARGUMENTS: SITE_URL=https://jonas-thelemann.de
+      BUILD_ARGUMENTS: |
+        PORT=80
+        SITE_URL=https://jonas-thelemann.de
       BUILD_TARGET_RELEASE: build-static
       TAG: ${{ needs.release_semantic_dry.outputs.new_release_version }}
     secrets:
