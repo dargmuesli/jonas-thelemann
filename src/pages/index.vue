@@ -11,6 +11,7 @@
           fetchpriority="high"
           format="webp"
           height="3009"
+          :nonce="nonce"
           placeholder
           preload
           sizes="320px xs:640px sm:768px md:1024px lg:1280px xl:1536px 2xl:2081px"
@@ -457,6 +458,7 @@
                     alt="maevsi's logo"
                     class="h-12 w-auto"
                     height="180"
+                    :nonce="nonce"
                     src="/assets/static/logos/maevsi.svg"
                     width="547"
                   />
@@ -473,6 +475,7 @@
                     alt="nearbuy's logo"
                     class="h-12 w-auto"
                     height="734"
+                    :nonce="nonce"
                     src="/assets/static/logos/nearbuy.svg"
                     width="1734"
                   />
@@ -489,6 +492,7 @@
                     alt="cReal's logo"
                     class="h-12 w-auto"
                     height="1330"
+                    :nonce="nonce"
                     src="/assets/static/logos/creal.svg"
                     width="1330"
                   />
@@ -505,6 +509,7 @@
                     alt="TrapParty's logo"
                     class="h-12 w-auto"
                     height="1308"
+                    :nonce="nonce"
                     src="/assets/static/logos/trapparty.svg"
                     width="1308"
                   />
@@ -541,6 +546,7 @@ const { indicateLoadingDone: indicateLoadingDoneHeroImage } =
   useLoadingDoneIndicator('hero-image')
 const runtimeConfig = useRuntimeConfig()
 const siteConfig = useSiteConfig()
+const nonce = useNonce()
 
 // data
 const repoCount = useState<string | undefined>('repoCount', () =>

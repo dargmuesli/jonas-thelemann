@@ -6,6 +6,12 @@ import { SITE_NAME } from '../utils/constants'
 export default defineNuxtConfig(
   defu(
     {
+      devServer: {
+        https: {
+          key: './.config/certificates/ssl.key',
+          cert: './.config/certificates/ssl.crt',
+        },
+      },
       extends: ['@dargmuesli/nuxt-vio'],
       modules: ['@nuxtjs/turnstile'],
       nitro: {
@@ -42,9 +48,9 @@ export default defineNuxtConfig(
         id: 'G-K4R41W62BR',
       },
       linkChecker: {
-        fetchRemoteUrls: !process.env.CI,
         excludeLinks: [
-          'https://www.linkedin.com/in/jonas-thelemann-148a74205/', // requires login
+          'https://www.studienstiftung.de/', // incorrect 404
+          'https://www.linkedin.com/in/jonas-thelemann-148a74205/', // incorrect 404
         ],
       },
       security: {
@@ -56,13 +62,17 @@ export default defineNuxtConfig(
                 'https://backend.jonas-thelemann.de/api/',
                 'https://api.github.com/users/dargmuesli/repos',
               ],
+              'report-to': 'csp-endpoint',
+              'report-uri':
+                'https://o4507259039973376.ingest.sentry.io/api/4507260561653840/security/?sentry_key=1e53178c1dba9b39147de4a21853a3e3',
+              'script-src-attr': "'unsafe-inline'", // Nuxt image on error
             },
             {
               // Cloudflare Turnstile
               'frame-src': ['https://challenges.cloudflare.com'],
-              'script-src': [
+              'script-src-elem': [
                 'https://challenges.cloudflare.com',
-                "'sha256-oHL20tRmipXhd3ivYNMpZSHAVebPXJMetWmfG3i5FKY='",
+                // "'sha256-oHL20tRmipXhd3ivYNMpZSHAVebPXJMetWmfG3i5FKY='", // TODO: enable once unsafe-inline is removed in Vio
               ],
             },
           ),
