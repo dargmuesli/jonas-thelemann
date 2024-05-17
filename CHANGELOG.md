@@ -1,3 +1,17 @@
+## [5.24.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.19...5.24.0) (2024-05-17)
+
+
+### Features
+
+* **csp:** report to sentry ([9edb793](https://github.com/dargmuesli/jonas-thelemann/commit/9edb79398363dacdc6785cf3c48abb56526f0bb6))
+* **image:** add nonce ([c90edd5](https://github.com/dargmuesli/jonas-thelemann/commit/c90edd5aeea6c9fe0c62059dd9a123dafbb54c05))
+* use https ([87faa11](https://github.com/dargmuesli/jonas-thelemann/commit/87faa1198b3477e68e9dcc425d8b99a3547193a9))
+
+
+### Bug Fixes
+
+* **security:** tweak content security policy ([90cfe50](https://github.com/dargmuesli/jonas-thelemann/commit/90cfe50c0e3f562f11f3e9369d077d1964e972d7))
+
 ## [5.23.19](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.18...5.23.19) (2024-05-16)
 
 
