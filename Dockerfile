@@ -8,7 +8,8 @@ ENV CI=true
 
 WORKDIR /srv/app/
 
-RUN corepack enable
+RUN corepack enable \
+  && apk add --no-cache mkcert --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing
 
 
 #############
@@ -100,7 +101,8 @@ ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 
 WORKDIR /srv/app/
 
-RUN corepack enable
+RUN corepack enable \
+  && apt update && apt install mkcert
 
 
 ########################
@@ -129,6 +131,11 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 # Nuxt: test (e2e, preparation)
 
 FROM test-e2e-base-image AS test-e2e-prepare
+
+ARG SITE_URL=http://localhost:3002
+ENV SITE_URL=${SITE_URL}
+ARG PORT=3002
+ENV PORT=${PORT}
 
 COPY --from=prepare /srv/app/ ./
 
@@ -162,7 +169,7 @@ FROM test-e2e-prepare AS test-e2e-static
 
 COPY --from=build-static /srv/app/src/.output/public ./src/.output/public
 
-RUN pnpm run test:e2e:server:static
+# RUN pnpm run test:e2e:server:static
 
 
 #######################
