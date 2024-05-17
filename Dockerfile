@@ -67,7 +67,7 @@ RUN pnpm run build:node
 
 FROM prepare AS build-static
 
-ARG SITE_URL=http://localhost:3002
+ARG SITE_URL=https://localhost:3002
 ENV SITE_URL=${SITE_URL}
 
 ENV NODE_ENV=production
@@ -132,7 +132,7 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 
 FROM test-e2e-base-image AS test-e2e-prepare
 
-ARG SITE_URL=http://localhost:3002
+ARG SITE_URL=https://localhost:3002
 ENV SITE_URL=${SITE_URL}
 ARG PORT=3002
 ENV PORT=${PORT}
@@ -169,7 +169,7 @@ FROM test-e2e-prepare AS test-e2e-static
 
 COPY --from=build-static /srv/app/src/.output/public ./src/.output/public
 
-# RUN pnpm run test:e2e:server:static
+RUN pnpm run test:e2e:server:static
 
 
 #######################
