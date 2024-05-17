@@ -617,7 +617,7 @@ de:
   experienceFederalVolunteerServiceTimespan: Jan 2017 – Aug 2017
   experienceNinjaneer: Software-Entwickler
   experienceNinjaneerTimespan: Jul 2020 – {present}
-  flipdot: flipdot Hackerspace Kassel
+  flipdot: flipdot Hackspace Kassel
   flipdotTimespan: Dec 2016 – {present}
   foundingScholar: Gründungs-Stipendiant
   foundingScholarTimespan: Jan – Jun 2023
@@ -680,7 +680,7 @@ en:
   experienceFederalVolunteerServiceTimespan: Jan 2017 – Aug 2017
   experienceNinjaneer: Software Engineer
   experienceNinjaneerTimespan: Jul 2020 – today
-  flipdot: flipdot Hackerspace Kassel
+  flipdot: flipdot Hackspace Kassel
   flipdotTimespan: Dez 2016 – {present}
   foundingScholar: Founding Scholar
   foundingScholarTimespan: Jan – Jun 2023
