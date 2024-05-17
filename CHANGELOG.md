@@ -1,3 +1,10 @@
+## [5.25.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.24.0...5.25.0) (2024-05-17)
+
+
+### Features
+
+* rename hackspace ([697f57d](https://github.com/dargmuesli/jonas-thelemann/commit/697f57d722a7ce59e28a2ddfa6cb751a83817b96))
+
 ## [5.24.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.23.19...5.24.0) (2024-05-17)
 
 
