@@ -42,9 +42,9 @@ export default defineNuxtConfig(
         id: 'G-K4R41W62BR',
       },
       linkChecker: {
-        fetchRemoteUrls: !process.env.CI,
         excludeLinks: [
-          'https://www.linkedin.com/in/jonas-thelemann-148a74205/', // requires login
+          'https://www.studienstiftung.de/', // incorrect 404
+          'https://www.linkedin.com/in/jonas-thelemann-148a74205/', // incorrect 404
         ],
       },
       security: {
