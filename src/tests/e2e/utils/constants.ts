@@ -35,3 +35,7 @@ export const PAGE_READY = async ({
     )
   }
 }
+export const SITE_URL =
+  process.env.SITE_URL ||
+  process.env.NUXT_PUBLIC_SITE_URL ||
+  `https://${process.env.HOST || 'localhost'}:${process.env.PORT || '3000'}`

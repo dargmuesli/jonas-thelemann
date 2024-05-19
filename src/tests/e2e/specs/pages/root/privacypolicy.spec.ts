@@ -1,14 +1,13 @@
 import { test, expect } from '@playwright/test'
 
-import { COOKIE_CONTROL_DEFAULT, PAGE_READY } from '../../../utils/constants'
+import { COOKIE_CONTROL_DEFAULT, PAGE_READY, SITE_URL } from '../../../utils/constants'
 
 test.beforeEach(async ({ context }) => {
   await context.addCookies([
     {
       name: 'ncc_c',
       value: COOKIE_CONTROL_DEFAULT,
-      domain: 'localhost',
-      path: '/',
+      url: SITE_URL,
     },
   ])
 })
