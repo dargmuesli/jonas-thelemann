@@ -1,3 +1,9 @@
+## [5.26.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.25.2...5.26.0) (2024-06-13)
+
+### Features
+
+* **seo:** update description ([bfbd792](https://github.com/dargmuesli/jonas-thelemann/commit/bfbd7923831fcd33f82cfc100e4903100a7263ce))
+
 ## [5.25.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.25.1...5.25.2) (2024-06-11)
 
 ### Bug Fixes
