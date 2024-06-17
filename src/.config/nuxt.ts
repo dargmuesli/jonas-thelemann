@@ -6,12 +6,6 @@ import { SITE_NAME } from '../utils/constants'
 export default defineNuxtConfig(
   defu(
     {
-      devServer: {
-        https: {
-          key: './.config/certificates/ssl.key',
-          cert: './.config/certificates/ssl.crt',
-        },
-      },
       extends: ['@dargmuesli/nuxt-vio'],
       modules: ['@nuxtjs/turnstile'],
       nitro: {
