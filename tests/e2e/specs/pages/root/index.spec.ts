@@ -2,7 +2,11 @@ import AxeBuilder from '@axe-core/playwright'
 import { test, expect } from '@playwright/test'
 
 import fixture from '../../../fixtures/githubApi.json' assert { type: 'json' }
-import { COOKIE_CONTROL_DEFAULT, PAGE_READY, SITE_URL } from '../../../utils/constants'
+import {
+  COOKIE_CONTROL_DEFAULT,
+  PAGE_READY,
+  SITE_URL,
+} from '../../../utils/constants'
 
 test.beforeEach(async ({ context }) => {
   await context.addCookies([
