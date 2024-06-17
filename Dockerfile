@@ -23,7 +23,7 @@ VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["pnpm", "run", "dev", "--host"]
+CMD ["pnpm", "run", "--dir", "src", "dev", "--host"]
 EXPOSE 3000
 
 # TODO: support healthcheck while starting (https://github.com/nuxt/framework/issues/6915)
@@ -44,13 +44,13 @@ COPY ./ ./
 RUN pnpm install --offline
 
 
-########################
-# Build for Node deployment.
+# ########################
+# # Build for Node deployment.
 
-FROM prepare AS build-node
+# FROM prepare AS build-node
 
-ENV NODE_ENV=production
-RUN pnpm run build:node
+# ENV NODE_ENV=production
+# RUN pnpm --dir src run build:node
 
 
 # ########################
@@ -59,7 +59,7 @@ RUN pnpm run build:node
 # FROM prepare AS build-cloudflare_pages
 
 # ENV NODE_ENV=production
-# RUN pnpm run build:cloudflare_pages
+# RUN pnpm --dir src run build:cloudflare_pages
 
 
 ########################
@@ -71,7 +71,7 @@ ARG SITE_URL=https://localhost:3002
 ENV SITE_URL=${SITE_URL}
 
 ENV NODE_ENV=production
-RUN pnpm run build:static
+RUN pnpm --dir src run build:static
 
 
 ########################
@@ -139,7 +139,7 @@ ENV PORT=${PORT}
 
 COPY --from=prepare /srv/app/ ./
 
-RUN pnpm rebuild -r
+RUN pnpm -r rebuild
 
 
 # ########################
@@ -149,7 +149,7 @@ RUN pnpm rebuild -r
 
 # ENV NODE_ENV=development
 
-# RUN pnpm run test:e2e:server:dev
+# RUN pnpm --dir tests run test:e2e:server:dev
 
 
 # ########################
@@ -159,7 +159,7 @@ RUN pnpm rebuild -r
 
 # COPY --from=build-node /srv/app/src/.output ./src/.output
 
-# RUN pnpm run test:e2e:server:node
+# RUN pnpm --dir tests run test:e2e:server:node
 
 
 ########################
@@ -169,7 +169,7 @@ FROM test-e2e-prepare AS test-e2e-static
 
 COPY --from=build-static /srv/app/src/.output/public ./src/.output/public
 
-RUN pnpm run test:e2e:server:static
+RUN pnpm --dir tests run test:e2e:server:static
 
 
 #######################
@@ -177,8 +177,8 @@ RUN pnpm run test:e2e:server:static
 
 FROM base-image AS collect
 
-COPY --from=build-node /srv/app/src/.output ./.output
-COPY --from=build-node /srv/app/src/package.json ./package.json
+# COPY --from=build-node /srv/app/src/.output ./.output
+# COPY --from=build-node /srv/app/src/package.json ./package.json
 # COPY --from=build-cloudflare_pages /srv/app/package.json /tmp/package.json
 # COPY --from=build-static /srv/app/src/.output/public ./.output/public
 COPY --from=build-static /srv/app/package.json /tmp/package.json

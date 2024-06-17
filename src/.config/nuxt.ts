@@ -1,4 +1,4 @@
-import { VIO_NUXT_BASE_CONFIG } from '@dargmuesli/nuxt-vio/utils/constants'
+import { VIO_NUXT_BASE_CONFIG } from '@dargmuesli/nuxt-vio/utils/nuxt'
 import { defu } from 'defu'
 
 import { SITE_NAME } from '../utils/constants'
