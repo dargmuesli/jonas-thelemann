@@ -7,7 +7,7 @@ export default defineNuxtConfig(
   defu(
     {
       extends: ['@dargmuesli/nuxt-vio'],
-      modules: ['@nuxtjs/turnstile'],
+      modules: ['@nuxt/scripts', '@nuxtjs/turnstile'],
       nitro: {
         prerender: {
           autoSubfolderIndex: false, // prevents Cloudflare Pages' redirection issue (https://community.cloudflare.com/t/removing-trailing-slash-on-static-websites/583429/4)
