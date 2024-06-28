@@ -1,3 +1,9 @@
+## [5.26.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.26.2...5.26.3) (2024-06-28)
+
+### Bug Fixes
+
+* **docker:** readd `package.json` ([7919ef6](https://github.com/dargmuesli/jonas-thelemann/commit/7919ef6171ac9e1397e67be6c1bef086f3efc686))
+
 ## [5.26.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.26.1...5.26.2) (2024-06-28)
 
 ### Bug Fixes
