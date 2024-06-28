@@ -44,13 +44,13 @@ COPY ./ ./
 RUN pnpm install --offline
 
 
-# ########################
-# # Build for Node deployment.
+########################
+# Build for Node deployment.
 
-# FROM prepare AS build-node
+FROM prepare AS build-node
 
-# ENV NODE_ENV=production
-# RUN pnpm --dir src run build:node
+ENV NODE_ENV=production
+RUN pnpm --dir src run build:node
 
 
 # ########################
@@ -177,8 +177,8 @@ RUN pnpm --dir tests run test:e2e:server:static
 
 FROM base-image AS collect
 
-# COPY --from=build-node /srv/app/src/.output ./.output
-# COPY --from=build-node /srv/app/src/package.json ./package.json
+COPY --from=build-node /srv/app/src/.output ./.output
+COPY --from=build-node /srv/app/src/package.json ./package.json
 # COPY --from=build-cloudflare_pages /srv/app/package.json /tmp/package.json
 # COPY --from=build-static /srv/app/src/.output/public ./.output/public
 COPY --from=build-static /srv/app/package.json /tmp/package.json
