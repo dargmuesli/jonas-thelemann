@@ -1,3 +1,10 @@
+## [5.26.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.26.3...5.26.4) (2024-06-28)
+
+### Bug Fixes
+
+* **docker:** readd node build ([a27918f](https://github.com/dargmuesli/jonas-thelemann/commit/a27918fca6f4190911e9fe7c1c8ebd335007b8f1))
+* revert "fix(docker): readd `package.json`" ([49df303](https://github.com/dargmuesli/jonas-thelemann/commit/49df30328f2527f8bdfd0c3ca49836284f068486))
+
 ## [5.26.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.26.2...5.26.3) (2024-06-28)
 
 ### Bug Fixes
