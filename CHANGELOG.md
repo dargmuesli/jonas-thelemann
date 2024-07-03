@@ -1,3 +1,9 @@
+## [5.26.5](https://github.com/dargmuesli/jonas-thelemann/compare/5.26.4...5.26.5) (2024-07-03)
+
+### Bug Fixes
+
+* **sentry:** correct url ([c9f84e6](https://github.com/dargmuesli/jonas-thelemann/commit/c9f84e6667b2a51f8a9465d7b860acaaffd8ffe1))
+
 ## [5.26.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.26.3...5.26.4) (2024-06-28)
 
 ### Bug Fixes
