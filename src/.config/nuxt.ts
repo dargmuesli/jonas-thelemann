@@ -58,7 +58,7 @@ export default defineNuxtConfig(
               ],
               'report-to': 'csp-endpoint',
               'report-uri':
-                'https://o4507259039973376.ingest.sentry.io/api/4507260561653840/security/?sentry_key=1e53178c1dba9b39147de4a21853a3e3',
+                'https://o4507259039973376.ingest.de.sentry.io/api/4507260561653840/security/?sentry_key=1e53178c1dba9b39147de4a21853a3e3',
               'script-src-attr': "'unsafe-inline'", // Nuxt image on error
             },
             {

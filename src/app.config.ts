@@ -43,7 +43,7 @@ export default defineAppConfig({
         headers: {
           NEL: '\'{"report_to":"csp-endpoint","max_age":31536000,"include_subdomains":true}\'',
           'Report-To':
-            '{"group":"csp-endpoint","max_age":10886400,"endpoints":[{"url":"https://o4507259039973376.ingest.sentry.io/api/4507260561653840/security/?sentry_key=1e53178c1dba9b39147de4a21853a3e3"}],"include_subdomains":true}}',
+            '{"group":"csp-endpoint","max_age":10886400,"endpoints":[{"url":"https://o4507259039973376.ingest.de.sentry.io/api/4507260561653840/security/?sentry_key=1e53178c1dba9b39147de4a21853a3e3"}],"include_subdomains":true}}',
         },
       },
     },
