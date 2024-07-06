@@ -1,3 +1,9 @@
+## [5.26.7](https://github.com/dargmuesli/jonas-thelemann/compare/5.26.6...5.26.7) (2024-07-06)
+
+### Bug Fixes
+
+* revert "feat(seo): update description" ([6baccd6](https://github.com/dargmuesli/jonas-thelemann/commit/6baccd697c671c16d6d3404179d22fdd6f305335))
+
 ## [5.26.6](https://github.com/dargmuesli/jonas-thelemann/compare/5.26.5...5.26.6) (2024-07-05)
 
 ### Bug Fixes
