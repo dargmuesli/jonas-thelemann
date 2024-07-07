@@ -1,3 +1,9 @@
+## [5.26.8](https://github.com/dargmuesli/jonas-thelemann/compare/5.26.7...5.26.8) (2024-07-07)
+
+### Bug Fixes
+
+* **deps:** update vio ([a144fa3](https://github.com/dargmuesli/jonas-thelemann/commit/a144fa34b8029d30b3649d23475f017fe3de003f))
+
 ## [5.26.7](https://github.com/dargmuesli/jonas-thelemann/compare/5.26.6...5.26.7) (2024-07-06)
 
 ### Bug Fixes
