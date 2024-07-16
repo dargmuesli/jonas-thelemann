@@ -121,21 +121,21 @@ importers:
   tests:
     dependencies:
       playwright-core:
-        specifier: 1.45.1
-        version: 1.45.1
+        specifier: 1.45.2
+        version: 1.45.2
     devDependencies:
       '@axe-core/playwright':
         specifier: 4.9.1
-        version: 4.9.1(playwright-core@1.45.1)
+        version: 4.9.1(playwright-core@1.45.2)
       '@dargmuesli/nuxt-vio-testing':
         specifier: 13.2.1
-        version: 13.2.1(playwright-core@1.45.1)
+        version: 13.2.1(playwright-core@1.45.2)
       '@eslint/js':
         specifier: 9.7.0
         version: 9.7.0
       '@playwright/test':
-        specifier: 1.45.1
-        version: 1.45.1
+        specifier: 1.45.2
+        version: 1.45.2
       '@types/node':
         specifier: 20.14.10
         version: 20.14.10
@@ -1328,8 +1328,8 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@playwright/test@1.45.1':
-    resolution: {integrity: sha512-Wo1bWTzQvGA7LyKGIZc8nFSTFf2TkthGIFBR+QVNilvwouGzFd4PYukZe3rvf5PSqjHi1+1NyKSDZKcQWETzaA==}
+  '@playwright/test@1.45.2':
+    resolution: {integrity: sha512-JxG9eq92ET75EbVi3s+4sYbcG7q72ECeZNbdBlaMkGcNbiDQ4cAi8U2QP5oKkOx+1gpaiL1LDStmzCaEM1Z6fQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -4874,6 +4874,7 @@ packages:
 
   nuxt-simple-robots@4.0.0-rc.19:
     resolution: {integrity: sha512-Q9ExiIPvvircFY8oDi/+7WZjTvVMu6acXberEQQwfIx6e+wXat7ZRR9POd2cucJxlxeFgPNqceHad+WGQ8YneA==}
+    deprecated: module has been migrated to @nuxtjs/robots, see the migration guide https://nuxtseo.com/robots/releases/v4
 
   nuxt-site-config-kit@2.2.12:
     resolution: {integrity: sha512-8amzGtBzHZervHgRkKXNI3lq0E1kP73vX+373uiBI9qGBFClFayuUSTDXAJreI7Yx0vB78iAjAA3a+YKM5iIdw==}
@@ -5203,8 +5204,13 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright@1.45.1:
-    resolution: {integrity: sha512-Hjrgae4kpSQBr98nhCj3IScxVeVUixqj+5oyif8TdIn2opTCPEzqAqNMeK42i3cWDCVu9MI+ZsGWw+gVR4ISBg==}
+  playwright-core@1.45.2:
+    resolution: {integrity: sha512-ha175tAWb0dTK0X4orvBIqi3jGEt701SMxMhyujxNrgd8K0Uy5wMSwwcQHtyB4om7INUkfndx02XnQ2p6dvLDw==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+  playwright@1.45.2:
+    resolution: {integrity: sha512-ReywF2t/0teRvNBpfIgh5e4wnrI/8Su8ssdo5XsQKpjxJj+jspm00jSoz9BTg91TT0c9HRjXO7LBNVrgYj9X0g==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -6940,10 +6946,10 @@ snapshots:
       '@types/json-schema': 7.0.15
       js-yaml: 4.1.0
 
-  '@axe-core/playwright@4.9.1(playwright-core@1.45.1)':
+  '@axe-core/playwright@4.9.1(playwright-core@1.45.2)':
     dependencies:
       axe-core: 4.9.1
-      playwright-core: 1.45.1
+      playwright-core: 1.45.2
 
   '@babel/code-frame@7.24.7':
     dependencies:
@@ -7411,9 +7417,9 @@ snapshots:
       - supports-color
       - webpack
 
-  '@dargmuesli/nuxt-vio-testing@13.2.1(playwright-core@1.45.1)':
+  '@dargmuesli/nuxt-vio-testing@13.2.1(playwright-core@1.45.2)':
     dependencies:
-      playwright-core: 1.45.1
+      playwright-core: 1.45.2
 
   '@dargmuesli/nuxt-vio@13.2.1(@lezer/common@1.2.1)(@types/eslint@8.56.10)(@unocss/webpack@0.61.3(rollup@4.18.1)(webpack@5.93.0(esbuild@0.21.5)))(@vue/compiler-core@3.4.31)(h3@1.12.0)(ioredis@5.4.1)(magicast@0.3.4)(nuxt@3.12.2(@parcel/watcher@2.4.1)(@types/node@20.14.10)(eslint@9.6.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.1)(sass@1.77.8)(stylelint@16.7.0(typescript@5.4.5))(terser@5.31.2)(typescript@5.4.5)(vite@5.3.3(@types/node@20.14.10)(sass@1.77.8)(terser@5.31.2))(vue-tsc@2.0.26(typescript@5.4.5)))(postcss@8.4.39)(prettier@3.3.3)(rollup@4.18.1)(tailwindcss@3.4.5)(typescript@5.4.5)(vite@5.3.3(@types/node@20.14.10)(sass@1.77.8)(terser@5.31.2))(vue-router@4.4.0(vue@3.4.31(typescript@5.4.5)))(vue@3.4.31(typescript@5.4.5))(webpack@5.93.0(esbuild@0.21.5))':
     dependencies:
@@ -8761,9 +8767,9 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@playwright/test@1.45.1':
+  '@playwright/test@1.45.2':
     dependencies:
-      playwright: 1.45.1
+      playwright: 1.45.2
 
   '@pnpm/config.env-replace@1.1.0': {}
 
@@ -13490,9 +13496,11 @@ snapshots:
 
   playwright-core@1.45.1: {}
 
-  playwright@1.45.1:
+  playwright-core@1.45.2: {}
+
+  playwright@1.45.2:
     dependencies:
-      playwright-core: 1.45.1
+      playwright-core: 1.45.2
     optionalDependencies:
       fsevents: 2.3.2
 
