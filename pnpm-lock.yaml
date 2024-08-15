@@ -27,8 +27,8 @@ importers:
         specifier: 10.0.1
         version: 10.0.1(semantic-release@24.0.0(typescript@5.4.5))
       '@semantic-release/github':
-        specifier: 10.1.4
-        version: 10.1.4(semantic-release@24.0.0(typescript@5.4.5))
+        specifier: 10.1.5
+        version: 10.1.5(semantic-release@24.0.0(typescript@5.4.5))
       '@semantic-release/npm':
         specifier: 12.0.1
         version: 12.0.1(semantic-release@24.0.0(typescript@5.4.5))
@@ -48,8 +48,8 @@ importers:
   src:
     devDependencies:
       '@dargmuesli/nuxt-cookie-control':
-        specifier: 8.4.7
-        version: 8.4.7(magicast@0.3.4)(rollup@4.20.0)(webpack@5.93.0(esbuild@0.23.0))
+        specifier: 8.4.8
+        version: 8.4.8(magicast@0.3.4)(rollup@4.20.0)(webpack@5.93.0(esbuild@0.23.0))
       '@dargmuesli/nuxt-vio':
         specifier: 13.2.4
         version: 13.2.4(@types/eslint@9.6.0)(h3@1.12.0)(ioredis@5.4.1)(magicast@0.3.4)(nuxt@3.12.4(@parcel/watcher@2.4.1)(@types/node@20.14.15)(eslint@9.8.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.20.0)(stylelint@16.8.1(typescript@5.4.5))(terser@5.31.5)(typescript@5.4.5)(vite@5.4.0(@types/node@20.14.15)(terser@5.31.5))(vue-tsc@2.0.29(typescript@5.4.5)))(prettier@3.3.3)(rollup@4.20.0)(tailwindcss@3.4.9)(typescript@5.4.5)(vite@5.4.0(@types/node@20.14.15)(terser@5.31.5))(vue-router@4.4.3(vue@3.4.37(typescript@5.4.5)))(vue@3.4.37(typescript@5.4.5))(webpack@5.93.0(esbuild@0.23.0))
@@ -469,6 +469,10 @@ packages:
 
   '@dargmuesli/nuxt-cookie-control@8.4.7':
     resolution: {integrity: sha512-iekeuyhrsC+CIHVv9VvsyZAdhwQqh5yEfIbBDNuJLTWkx8FwP/rlvZfEC9HxratnxXaiN/Keike0CVImU3ZkJw==}
+    engines: {node: '>=16'}
+
+  '@dargmuesli/nuxt-cookie-control@8.4.8':
+    resolution: {integrity: sha512-bRBKHV9xoyiPkrm1opdId5GT4RjlKLQkb2+FvV24fUaL5jsphRbr47kr2arCpd9dFprPzwqGIKJELS6KMAZAkQ==}
     engines: {node: '>=16'}
 
   '@dargmuesli/nuxt-vio-testing@13.2.4':
@@ -1681,8 +1685,8 @@ packages:
     peerDependencies:
       semantic-release: '>=18.0.0'
 
-  '@semantic-release/github@10.1.4':
-    resolution: {integrity: sha512-dg+JTNp1XHazwAx9HgIuVewStfpv5g7QqwBF09aZVqwVkdTXw4agR/nhWSD0yxDbsx0YCeJTcjUOj92gf8/0Jw==}
+  '@semantic-release/github@10.1.5':
+    resolution: {integrity: sha512-S68D1r3gxWxk8jh2nINjEX/HYFb/i6X7ooxyvrv5CWLFuyEJQpN/zFw4zr8ti0YFXtKaccfpVQuVOgF0w+VacA==}
     engines: {node: '>=20.8.1'}
     peerDependencies:
       semantic-release: '>=20.1.0'
@@ -7386,6 +7390,18 @@ snapshots:
       - supports-color
       - webpack
 
+  '@dargmuesli/nuxt-cookie-control@8.4.8(magicast@0.3.4)(rollup@4.20.0)(webpack@5.93.0(esbuild@0.23.0))':
+    dependencies:
+      '@nuxt/kit': 3.12.4(magicast@0.3.4)(rollup@4.20.0)
+      css-vars-ponyfill: 2.4.9
+      defu: 6.1.4
+      string-replace-loader: 3.1.0(webpack@5.93.0(esbuild@0.23.0))
+    transitivePeerDependencies:
+      - magicast
+      - rollup
+      - supports-color
+      - webpack
+
   '@dargmuesli/nuxt-vio-testing@13.2.4(playwright-core@1.46.0)':
     dependencies:
       playwright-core: 1.46.0
@@ -8943,7 +8959,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/github@10.1.4(semantic-release@24.0.0(typescript@5.4.5))':
+  '@semantic-release/github@10.1.5(semantic-release@24.0.0(typescript@5.4.5))':
     dependencies:
       '@octokit/core': 6.1.2
       '@octokit/plugin-paginate-rest': 11.3.3(@octokit/core@6.1.2)
@@ -13834,7 +13850,7 @@ snapshots:
     dependencies:
       '@semantic-release/commit-analyzer': 13.0.0(semantic-release@24.0.0(typescript@5.4.5))
       '@semantic-release/error': 4.0.0
-      '@semantic-release/github': 10.1.4(semantic-release@24.0.0(typescript@5.4.5))
+      '@semantic-release/github': 10.1.5(semantic-release@24.0.0(typescript@5.4.5))
       '@semantic-release/npm': 12.0.1(semantic-release@24.0.0(typescript@5.4.5))
       '@semantic-release/release-notes-generator': 14.0.1(semantic-release@24.0.0(typescript@5.4.5))
       aggregate-error: 5.0.0
