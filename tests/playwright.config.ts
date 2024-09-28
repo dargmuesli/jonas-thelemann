@@ -1,10 +1,9 @@
 // TODO: remove jiti (https://github.com/microsoft/playwright/issues/14303)
-import jiti from 'jiti'
+import { createJiti } from 'jiti'
 
-const moduleFileUrl = new URL(import.meta.url)
-const JITI = jiti(moduleFileUrl.pathname)
-const vioConfiguration = JITI(
+const jiti = createJiti(import.meta.url, { interopDefault: true })
+const vioConfiguration = await jiti.import(
   './node_modules/@dargmuesli/nuxt-vio-testing/playwright.config',
-).default
+)
 
 export default vioConfiguration
