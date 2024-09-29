@@ -14,7 +14,9 @@ test.beforeEach(async ({ context }) => {
 
 test.describe('seo', () => {
   test('generates the open graph image', async ({ page }) => {
-    await page.goto('/__og-image__/image/og.png')
+    await page.goto(
+      `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}/og.png`,
+    )
     await expect(page).toHaveScreenshot({ fullPage: true })
   })
 })
