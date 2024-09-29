@@ -1,3 +1,9 @@
+## [5.26.15](https://github.com/dargmuesli/jonas-thelemann/compare/5.26.14...5.26.15) (2024-09-29)
+
+### Bug Fixes
+
+* **open-graph:** correct image tags ([fd60fb0](https://github.com/dargmuesli/jonas-thelemann/commit/fd60fb004c09aeb04148c283607e412fc6953949))
+
 ## [5.26.14](https://github.com/dargmuesli/jonas-thelemann/compare/5.26.13...5.26.14) (2024-09-24)
 
 ### Bug Fixes
