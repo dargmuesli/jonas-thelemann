@@ -14,7 +14,7 @@
       width="436"
       height="630"
     />
-    <div
+    <span
       style="
         display: flex;
         flex-direction: column;
@@ -33,7 +33,7 @@
       >
         {{ description }}
       </div>
-    </div>
+    </span>
   </div>
 </template>
 
