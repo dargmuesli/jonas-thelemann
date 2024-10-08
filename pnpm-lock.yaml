@@ -114,21 +114,21 @@ importers:
   tests:
     dependencies:
       playwright-core:
-        specifier: 1.47.2
-        version: 1.47.2
+        specifier: 1.48.0
+        version: 1.48.0
     devDependencies:
       '@axe-core/playwright':
         specifier: 4.10.0
-        version: 4.10.0(playwright-core@1.47.2)
+        version: 4.10.0(playwright-core@1.48.0)
       '@dargmuesli/nuxt-vio-testing':
         specifier: 14.0.5
-        version: 14.0.5(playwright-core@1.47.2)
+        version: 14.0.5(playwright-core@1.48.0)
       '@eslint/js':
         specifier: 9.12.0
         version: 9.12.0
       '@playwright/test':
-        specifier: 1.47.2
-        version: 1.47.2
+        specifier: 1.48.0
+        version: 1.48.0
       '@types/node':
         specifier: 22.7.5
         version: 22.7.5
@@ -1403,8 +1403,8 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@playwright/test@1.47.2':
-    resolution: {integrity: sha512-jTXRsoSPONAs8Za9QEQdyjFn+0ZQFjCiIztAIF6bi1HqhBzG9Ma7g1WotyiGqFSBRZjIEqMdT8RUlbk1QVhzCQ==}
+  '@playwright/test@1.48.0':
+    resolution: {integrity: sha512-W5lhqPUVPqhtc/ySvZI5Q8X2ztBOUgZ8LbAFy0JQgrXZs2xaILrUcNO3rQjwbLPfGK13+rZsDa1FpG+tqYkT5w==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -5385,8 +5385,13 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright@1.47.2:
-    resolution: {integrity: sha512-nx1cLMmQWqmA3UsnjaaokyoUpdVaaDhJhMoxX2qj3McpjnsqFHs516QAKYhqHAgOP+oCFTEOCOAaD1RgD/RQfA==}
+  playwright-core@1.48.0:
+    resolution: {integrity: sha512-RBvzjM9rdpP7UUFrQzRwR8L/xR4HyC1QXMzGYTbf1vjw25/ya9NRAVnXi/0fvFopjebvyPzsmoK58xxeEOaVvA==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+  playwright@1.48.0:
+    resolution: {integrity: sha512-qPqFaMEHuY/ug8o0uteYJSRfMGFikhUysk8ZvAtfKmUK3kc/6oNl/y3EczF8OFGYIi/Ex2HspMfzYArk6+XQSA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -7171,10 +7176,10 @@ snapshots:
       '@types/json-schema': 7.0.15
       js-yaml: 4.1.0
 
-  '@axe-core/playwright@4.10.0(playwright-core@1.47.2)':
+  '@axe-core/playwright@4.10.0(playwright-core@1.48.0)':
     dependencies:
       axe-core: 4.10.0
-      playwright-core: 1.47.2
+      playwright-core: 1.48.0
 
   '@babel/code-frame@7.25.7':
     dependencies:
@@ -7538,9 +7543,9 @@ snapshots:
       - webpack
       - webpack-sources
 
-  '@dargmuesli/nuxt-vio-testing@14.0.5(playwright-core@1.47.2)':
+  '@dargmuesli/nuxt-vio-testing@14.0.5(playwright-core@1.48.0)':
     dependencies:
-      playwright-core: 1.47.2
+      playwright-core: 1.48.0
 
   '@dargmuesli/nuxt-vio@14.0.5(h3@1.13.0)(ioredis@5.4.1)(magicast@0.3.5)(nuxt@3.13.2(@parcel/watcher@2.4.1)(@types/node@22.7.5)(eslint@9.11.1(jiti@2.0.0))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.0)(stylelint@16.9.0(typescript@5.6.2))(terser@5.34.1)(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.5)(terser@5.34.1))(vue-tsc@2.1.6(typescript@5.6.2))(webpack-sources@3.2.3))(prettier@3.3.3)(rollup@4.24.0)(tailwindcss@3.4.13)(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.5)(terser@5.34.1))(vue-router@4.4.5(vue@3.5.11(typescript@5.6.2)))(vue@3.5.11(typescript@5.6.2))(webpack-sources@3.2.3)(webpack@5.95.0(esbuild@0.23.1))':
     dependencies:
@@ -8969,9 +8974,9 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@playwright/test@1.47.2':
+  '@playwright/test@1.48.0':
     dependencies:
-      playwright: 1.47.2
+      playwright: 1.48.0
 
   '@pnpm/config.env-replace@1.1.0': {}
 
@@ -13681,9 +13686,11 @@ snapshots:
 
   playwright-core@1.47.2: {}
 
-  playwright@1.47.2:
+  playwright-core@1.48.0: {}
+
+  playwright@1.48.0:
     dependencies:
-      playwright-core: 1.47.2
+      playwright-core: 1.48.0
     optionalDependencies:
       fsevents: 2.3.2
 
