@@ -1,3 +1,9 @@
+## [5.26.17](https://github.com/dargmuesli/jonas-thelemann/compare/5.26.16...5.26.17) (2024-10-13)
+
+### Bug Fixes
+
+* **deps:** update @dargmuesli/nuxt-vio to v14.0.7 ([44e5696](https://github.com/dargmuesli/jonas-thelemann/commit/44e5696b26d5024b458262d1f90d2230f7649182))
+
 ## [5.26.16](https://github.com/dargmuesli/jonas-thelemann/compare/5.26.15...5.26.16) (2024-10-08)
 
 ### Bug Fixes
