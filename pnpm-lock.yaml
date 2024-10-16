@@ -102,8 +102,8 @@ importers:
         specifier: 11.14.3
         version: 11.14.3
       unhead:
-        specifier: 1.11.9
-        version: 1.11.9
+        specifier: 1.11.10
+        version: 1.11.10
       vue:
         specifier: 3.5.12
         version: 3.5.12(typescript@5.6.3)
@@ -1961,6 +1961,9 @@ packages:
   '@unhead/addons@1.11.7':
     resolution: {integrity: sha512-h2EfW4NHgUSr/MZTHnr+nWm2eiX6yVFdxAdYuVOI8VgTUdyYGD7RsY5Gm0gMcJ9h/KPrSh7EyF0tKlS5jyVVrQ==}
 
+  '@unhead/dom@1.11.10':
+    resolution: {integrity: sha512-nL1mdRzYVATZIYauK15zOI2YyM3YxCLfhbTqljEjDFJeiJUzTTi+a//5FHiUk84ewSucFnrwHNey/pEXFlyY1A==}
+
   '@unhead/dom@1.11.7':
     resolution: {integrity: sha512-Nj2ulnbY5lvIcxqXwdO5YfdvLm8EYLjcaOje2b2aQnfyPAyOIVeR8iB79DDKk/uZZAPEwkdhSnUdEh9Ny0b3lw==}
 
@@ -1970,11 +1973,17 @@ packages:
   '@unhead/schema-org@1.11.7':
     resolution: {integrity: sha512-yo3SL1G7+CWeyoSbP8cMYqtWoPpatoMEL5zs2bBvoWJtKmT22eDNQ3HH9hqBhIx8DOLvZw7S0Y/o2AA5q/IZeg==}
 
+  '@unhead/schema@1.11.10':
+    resolution: {integrity: sha512-lXh7cm5XtFaw3gc+ZVXTSfIHXiBpAywbjtEiOsz5TR4GxOjj2rtfOAl4C3Difk1yupP6L2otYmOZdn/i8EXSJg==}
+
   '@unhead/schema@1.11.7':
     resolution: {integrity: sha512-j9uN7T63aUXrZ6yx2CfjVT7xZHjn0PZO7TPMaWqMFjneIH/NONKvDVCMEqDlXeqdSIERIYtk/xTHgCUMer5eyw==}
 
   '@unhead/schema@1.11.9':
     resolution: {integrity: sha512-0V37bxG4sQuiLw3M5DMD+b99ndOOngecMlekQ122TDvBb24W8rWwkHhXvAu5eFg6bQXPdQF1A0U0PuRMcCj/ZA==}
+
+  '@unhead/shared@1.11.10':
+    resolution: {integrity: sha512-YQgZcOyo1id7drUeDPGn0R83pirvIcV+Car3/m7ZfCLL1Syab6uXmRckVRd69yVbUL4eirIm9IzzmvzM/OuGuw==}
 
   '@unhead/shared@1.11.7':
     resolution: {integrity: sha512-5v3PmV1LMyikGyQi/URYS5ilH8dg1Iomtja7iFWke990O8RBDEzAdagJqcsUE/fw+o7cXRSOamyx5wCf5Q1TrA==}
@@ -6596,6 +6605,9 @@ packages:
   unenv@1.10.0:
     resolution: {integrity: sha512-wY5bskBQFL9n3Eca5XnhH6KbUo/tfvkwm9OpcdCvLaeA7piBNbavbOKJySEwQ1V0RH6HvNlSAFRTpvTqgKRQXQ==}
 
+  unhead@1.11.10:
+    resolution: {integrity: sha512-hypXrAI47wE3wIhkze0RMPGAWcoo45Q1+XzdqLD/OnTCzjFXQrpuE4zBy8JRexyrqp+Ud2+nFTUNf/mjfFSymw==}
+
   unhead@1.11.7:
     resolution: {integrity: sha512-aA0+JBRryLhDKUq6L2JhMDLZEG/ElyyDASyC9wiwDl6nvvsj9hD26LgPWgmAsSd+9HtMGM2N1gU27CWEMo16CQ==}
 
@@ -9549,6 +9561,11 @@ snapshots:
       - rollup
       - webpack-sources
 
+  '@unhead/dom@1.11.10':
+    dependencies:
+      '@unhead/schema': 1.11.10
+      '@unhead/shared': 1.11.10
+
   '@unhead/dom@1.11.7':
     dependencies:
       '@unhead/schema': 1.11.7
@@ -9563,6 +9580,11 @@ snapshots:
     dependencies:
       ufo: 1.5.4
 
+  '@unhead/schema@1.11.10':
+    dependencies:
+      hookable: 5.5.3
+      zhead: 2.2.4
+
   '@unhead/schema@1.11.7':
     dependencies:
       hookable: 5.5.3
@@ -9572,6 +9594,10 @@ snapshots:
     dependencies:
       hookable: 5.5.3
       zhead: 2.2.4
+
+  '@unhead/shared@1.11.10':
+    dependencies:
+      '@unhead/schema': 1.11.10
 
   '@unhead/shared@1.11.7':
     dependencies:
@@ -13266,7 +13292,7 @@ snapshots:
       uncrypto: 0.1.3
       unctx: 2.3.1(webpack-sources@3.2.3)
       unenv: 1.10.0
-      unhead: 1.11.9
+      unhead: 1.11.10
       unimport: 3.13.1(rollup@4.24.0)(webpack-sources@3.2.3)
       unplugin: 1.14.1(webpack-sources@3.2.3)
       unplugin-vue-router: 0.10.8(rollup@4.24.0)(vue-router@4.4.5(vue@3.5.12(typescript@5.6.3)))(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
@@ -14936,6 +14962,13 @@ snapshots:
       mime: 3.0.0
       node-fetch-native: 1.6.4
       pathe: 1.1.2
+
+  unhead@1.11.10:
+    dependencies:
+      '@unhead/dom': 1.11.10
+      '@unhead/schema': 1.11.10
+      '@unhead/shared': 1.11.10
+      hookable: 5.5.3
 
   unhead@1.11.7:
     dependencies:
