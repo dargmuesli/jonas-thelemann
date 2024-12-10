@@ -9,10 +9,10 @@ export default withNuxt(
       'vue-i18n': {
         localeDir: [
           {
-            pattern: './locales/*.json',
+            pattern: './i18n/locales/*.json',
           },
           {
-            pattern: './node_modules/@dargmuesli/nuxt-vio/locales/*.json',
+            pattern: './node_modules/@dargmuesli/nuxt-vio/i18n/locales/*.json',
           },
         ],
       },
@@ -22,7 +22,7 @@ export default withNuxt(
     ignores: ['gql/generated/**/*'],
   },
   {
-    files: ['locales/**/*'],
+    files: ['i18n/locales/**/*'],
     rules: {
       '@intlify/vue-i18n/no-duplicate-keys-in-locale': 'off',
     },
