@@ -1,3 +1,9 @@
+## [5.27.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.26.21...5.27.0) (2024-12-12)
+
+### Features
+
+* update maevsi and EXIST ([926d385](https://github.com/dargmuesli/jonas-thelemann/commit/926d3856550d96e57f82cfdd82f0ee1858c4d038))
+
 ## [5.26.21](https://github.com/dargmuesli/jonas-thelemann/compare/5.26.20...5.26.21) (2024-12-10)
 
 ### Bug Fixes
