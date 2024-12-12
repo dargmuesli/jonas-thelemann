@@ -1,3 +1,9 @@
+## [5.27.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.27.0...5.27.1) (2024-12-12)
+
+### Bug Fixes
+
+* add end date ([560a37a](https://github.com/dargmuesli/jonas-thelemann/commit/560a37aaa5311e77ce78c0e3c1f49b140f7a4013))
+
 ## [5.27.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.26.21...5.27.0) (2024-12-12)
 
 ### Features
