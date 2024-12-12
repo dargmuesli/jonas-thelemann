@@ -60,9 +60,9 @@ test.describe('page load', () => {
 
 test.describe('internationalization', () => {
   const textEnglish =
-    'Ninjaneer, studying at University of Kassel, founding maevsi.'
+    'CEO/CTO and founder of maevsi · Ninjaneer · Master of Science in Computer Science'
   const textGerman =
-    'Ninjaneer, studiert an der Universität Kassel, gründet maevsi.'
+    'CEO/CTO und Gründer von maevsi · Ninjaneer · Master of Science der Informatik'
 
   test('displays English translations', async ({ page }) => {
     await page.goto('/')
