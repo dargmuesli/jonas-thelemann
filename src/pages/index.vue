@@ -167,7 +167,11 @@
                         </a>
                       </template>
                       <template #time>
-                        {{ t('experienceMaevsiTimespan') }}
+                        {{
+                          t('experienceMaevsiTimespan', {
+                            present: t('present'),
+                          })
+                        }}
                       </template>
                     </i18n-t>
                   </template>
