@@ -156,18 +156,18 @@
                 >
                   <template #title>
                     <span class="text-text-dark dark:text-text-bright">
-                      {{ t('foundingScholar') }}
+                      {{ t('experienceMaevsi') }}
                     </span>
                   </template>
                   <template #subtitle>
                     <i18n-t keypath="placeTime">
                       <template #place>
-                        <a href="https://hessen-ideen.de/">
-                          {{ t('hessenIdeen') }}
+                        <a href="https://maev.si/">
+                          {{ t('maevsi') }}
                         </a>
                       </template>
                       <template #time>
-                        {{ t('foundingScholarTimespan') }}
+                        {{ t('experienceMaevsiTimespan') }}
                       </template>
                     </i18n-t>
                   </template>
@@ -393,6 +393,31 @@
                   tag="span"
                 >
                   <template #title>
+                    <span class="text-text-dark dark:text-text-bright">
+                      {{ t('foundingScholar') }}
+                    </span>
+                  </template>
+                  <template #subtitle>
+                    <i18n-t keypath="placeTime">
+                      <template #place>
+                        <a href="https://www.exist.de/">
+                          {{ t('exist') }}
+                        </a>
+                      </template>
+                      <template #time>
+                        {{ t('foundingScholarTimespan') }}
+                      </template>
+                    </i18n-t>
+                  </template>
+                </i18n-t>
+              </li>
+              <!-- <li>
+                <i18n-t
+                  keypath="titleSubtitle"
+                  class="text-gray-500 dark:text-gray-400"
+                  tag="span"
+                >
+                  <template #title>
                     <a
                       class="text-text-dark dark:text-text-bright"
                       href="https://www.uni-kassel.de/einrichtung/index.php?eID=dumpFile&t=f&f=1988&token=e881e12fc8112d90e46d21d4fbef05530929c5c0"
@@ -415,7 +440,7 @@
                     </i18n-t>
                   </template>
                 </i18n-t>
-              </li>
+              </li> -->
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
@@ -607,30 +632,33 @@ de:
   ccc: Chaos Computer Club
   cccTimespan: Mai 2018 – {present}
   contactForm: Kontaktformular
-  descriptionShort: '{ninjaneers}, studiert an der {university}, gründet {maevsi}.'
+  descriptionShort: CEO/CTO und Gründer von {maevsi} · {ninjaneers} · Master of Science der Informatik
   education: Bildung
   educationGoal: Master der Software-Entwicklung
   educationTime: 2021 – 2024
   english: Englisch
+  exist: EXIST
   experience: Erfahrung
   experienceFederalVolunteerService: 'Freiwilligendienstler: Flüchlingshilfe'
   experienceFederalVolunteerServiceTimespan: Jan 2017 – Aug 2017
+  experienceMaevsi: Geschäftsführer und technischer Leiter
+  experienceMaevsiTimespan: Nov 2024 – {present}
   experienceNinjaneer: Software-Entwickler
   experienceNinjaneerTimespan: Jul 2020 – {present}
   flipdot: flipdot Hackspace Kassel
   flipdotTimespan: Dec 2016 – {present}
   foundingScholar: Gründungs-Stipendiant
-  foundingScholarTimespan: Jan – Jun 2023
+  foundingScholarTimespan: Sep 2024 – Aug 2025
   german: Deutsch
   gi: Gesellschaft für Informatik
   giphy: Giphy
   gitHub: GitHub
   giTimespan: Jan 2019 – today
-  hessenIdeen: Hessen Ideen
+  # hessenIdeen: Hessen Ideen
   honorsAwards: Ehrungen und Auszeichnungen
   honorsAwardsElectoralOfficer: Wahlvorsteher
-  honorsAwardsIdeasCompetition: Ideenwettbewerb Top 10 Projekt
-  honorsAwardsIdeasCompetitionTime: Okt 2020
+  # honorsAwardsIdeasCompetition: Ideenwettbewerb Top 10 Projekt
+  # honorsAwardsIdeasCompetitionTime: Okt 2020
   instagram: Instagram
   jonasThelemann: Jonas Thelemann
   kasselAddress: Kassel, Hessen, Deutschland
@@ -656,7 +684,7 @@ de:
   stackOverflow: Stack Overflow
   studyFoundation: Studienstiftung des deutschen Volkes
   titleSubtitle: '{title} · {subtitle}'
-  unikat: UNIKAT
+  # unikat: UNIKAT
   universityKassel: Universität Kassel
   youTube: YouTube
 en:
@@ -670,30 +698,33 @@ en:
   ccc: Chaos Computer Club
   cccTimespan: May 2018 – {present}
   contactForm: Contact form
-  descriptionShort: '{ninjaneers}, studying at {university}, founding {maevsi}.'
+  descriptionShort: CEO/CTO and founder of {maevsi} · {ninjaneers} · Master of Science in Computer Science
   education: Education
   educationGoal: Master's degree Software Engineering
   educationTime: 2021 – 2024
   english: English
+  exist: EXIST
   experience: Experience
   experienceFederalVolunteerService: 'Volunteer Service Worker: refugee aid'
   experienceFederalVolunteerServiceTimespan: Jan 2017 – Aug 2017
+  experienceMaevsi: Chief Executive and Technology Officer
+  experienceMaevsiTimespan: Nov 2024 – {present}
   experienceNinjaneer: Software Engineer
   experienceNinjaneerTimespan: Jul 2020 – today
   flipdot: flipdot Hackspace Kassel
   flipdotTimespan: Dez 2016 – {present}
   foundingScholar: Founding Scholar
-  foundingScholarTimespan: Jan – Jun 2023
+  foundingScholarTimespan: Sep 2024 – Aug 2025
   german: German
   gi: German Informatics Society
   giphy: Giphy
   gitHub: GitHub
   giTimespan: Jan 2019 – today
-  hessenIdeen: Hesse Ideas
+  # hessenIdeen: Hesse Ideas
   honorsAwards: Honors & Awards
   honorsAwardsElectoralOfficer: Electoral Officer
-  honorsAwardsIdeasCompetition: Ideas Competition Top 10 Project
-  honorsAwardsIdeasCompetitionTime: Oct 2020
+  # honorsAwardsIdeasCompetition: Ideas Competition Top 10 Project
+  # honorsAwardsIdeasCompetitionTime: Oct 2020
   instagram: Instagram
   jonasThelemann: Jonas Thelemann
   kasselAddress: Kassel, Hesse, Germany
@@ -719,7 +750,7 @@ en:
   stackOverflow: Stack Overflow
   studyFoundation: Study Foundation of the German People
   titleSubtitle: '{title} · {subtitle}'
-  unikat: UNIKAT
+  # unikat: UNIKAT
   universityKassel: University of Kassel
   youTube: YouTube
 </i18n>
