@@ -23,6 +23,7 @@
     "build:static": "pnpm --dir src run build:static",
     "dev": "pnpm --dir src run dev",
     "generate": "pnpm --dir src run generate",
+    "lint": "pnpm -r lint",
     "prepare": "husky",
     "start:dev": "pnpm --dir src run start:dev",
     "start:node": "pnpm --dir src run start:node",
