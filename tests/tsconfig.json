@@ -2,6 +2,10 @@
   "compilerOptions": {
     "module": "ESNext",
     "moduleResolution": "Bundler",
+    "paths": {
+      "#src/*": ["../src/*"],
+      "#tests/*": ["./*"]
+    },
     "target": "ESNext"
   }
 }
