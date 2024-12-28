@@ -21,6 +21,8 @@
     "build": "pnpm --dir src run build",
     "build:node": "pnpm --dir src run build:node",
     "build:static": "pnpm --dir src run build:static",
+    "build:static:test": "pnpm --dir src run build:static:test",
+    "build:test": "pnpm --dir src run build:test",
     "dev": "pnpm --dir src run dev",
     "generate": "pnpm --dir src run generate",
     "lint": "pnpm -r lint",
