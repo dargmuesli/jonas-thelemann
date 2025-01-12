@@ -1,32 +1,5 @@
 {
-  "name": "jonas-thelemann",
-  "version": "5.27.3",
-  "private": true,
   "description": "The source code of `jonas-thelemann.de`.",
-  "type": "module",
-  "engines": {
-    "node": "22"
-  },
-  "scripts": {
-    "build": "pnpm run build:static",
-    "build:node": "nuxt build",
-    "build:cloudflare_pages": "NITRO_PRESET=cloudflare_pages nuxt build",
-    "build:static": "nuxt generate",
-    "dev": "pnpm run start:dev",
-    "generate": "pnpm run build:static",
-    "lint:fix": "pnpm run lint:js --fix && pnpm run lint:ts --fix && pnpm run lint:style --fix",
-    "lint:js": "eslint --cache",
-    "lint:staged": "lint-staged",
-    "lint:style": "stylelint --cache \"**/*.{vue,css}\" --ignore-path .gitignore",
-    "lint:ts": "nuxt typecheck",
-    "lint": "pnpm run lint:js && pnpm run lint:ts && pnpm run lint:style",
-    "prepare": "nuxt prepare && ./.config/certificates/mkcert.sh",
-    "preview": "nuxt preview",
-    "start": "pnpm run start:static",
-    "start:dev": "nuxt dev",
-    "start:node": "node .output/server/index.mjs",
-    "start:static": "serve .output/public --ssl-cert ./.config/certificates/ssl.crt --ssl-key ./.config/certificates/ssl.key"
-  },
   "devDependencies": {
     "@dargmuesli/nuxt-cookie-control": "8.4.20",
     "@dargmuesli/nuxt-vio": "15.1.1",
@@ -51,5 +24,32 @@
     "unhead": "1.11.15",
     "vue": "3.5.13",
     "vue-router": "4.5.0"
-  }
+  },
+  "engines": {
+    "node": "22"
+  },
+  "name": "jonas-thelemann",
+  "private": true,
+  "scripts": {
+    "build": "pnpm run build:static",
+    "build:cloudflare_pages": "NITRO_PRESET=cloudflare_pages nuxt build",
+    "build:node": "nuxt build",
+    "build:static": "nuxt generate",
+    "dev": "pnpm run start:dev",
+    "generate": "pnpm run build:static",
+    "lint": "pnpm run lint:js && pnpm run lint:ts && pnpm run lint:style",
+    "lint:fix": "pnpm run lint:js --fix && pnpm run lint:ts --fix && pnpm run lint:style --fix",
+    "lint:js": "eslint --cache",
+    "lint:staged": "lint-staged",
+    "lint:style": "stylelint --cache \"**/*.{vue,css}\" --ignore-path .gitignore",
+    "lint:ts": "nuxt typecheck",
+    "prepare": "nuxt prepare && ./.config/certificates/mkcert.sh",
+    "preview": "nuxt preview",
+    "start": "pnpm run start:static",
+    "start:dev": "nuxt dev",
+    "start:node": "node .output/server/index.mjs",
+    "start:static": "serve .output/public --ssl-cert ./.config/certificates/ssl.crt --ssl-key ./.config/certificates/ssl.key"
+  },
+  "type": "module",
+  "version": "5.27.3"
 }
