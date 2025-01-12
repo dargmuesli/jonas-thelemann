@@ -110,16 +110,16 @@ RUN corepack enable \
 
 FROM test-e2e-base-image AS test-e2e_development
 
-ARG UNAME=e2e
-ARG UID=1000
-ARG GID=1000
+ARG USER_NAME=e2e
+ARG USER_ID=1000
+ARG GROUP_ID=1000
 
 COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
-RUN groupadd -g $GID -o $UNAME \
-    && useradd -m -l -u $UID -g $GID -o -s /bin/bash $UNAME
+RUN groupadd -g $GROUP_ID -o $USER_NAME \
+    && useradd -m -l -u $USER_ID -g $GROUP_ID -o -s /bin/bash $USER_NAME
 
-USER $UNAME
+USER $USER_NAME
 
 VOLUME /srv/.pnpm-store
 VOLUME /srv/app
