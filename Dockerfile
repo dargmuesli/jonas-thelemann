@@ -79,9 +79,6 @@ RUN pnpm --dir src run build:static
 
 FROM prepare AS build-static-test
 
-ARG SITE_URL=https://localhost:3002
-ENV SITE_URL=${SITE_URL}
-
 RUN pnpm --dir src run build:static:test
 
 
@@ -142,11 +139,6 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 # Nuxt: test (e2e, preparation)
 
 FROM test-e2e-base-image AS test-e2e-prepare
-
-ARG SITE_URL=https://localhost:3002
-ENV SITE_URL=${SITE_URL}
-ARG PORT=3002
-ENV PORT=${PORT}
 
 COPY --from=prepare /srv/app/ ./
 

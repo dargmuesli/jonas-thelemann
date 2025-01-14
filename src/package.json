@@ -52,7 +52,10 @@
     "start": "pnpm run start:static",
     "start:dev": "nuxt dev",
     "start:node": "node .output/server/index.mjs",
-    "start:static": "serve .output/public --ssl-cert ./.config/certificates/ssl.crt --ssl-key ./.config/certificates/ssl.key"
+    "start:node:test": "PORT=3001 pnpm run start:node",
+    "start:static": "serve .output/public --ssl-cert ./.config/certificates/ssl.crt --ssl-key ./.config/certificates/ssl.key",
+    "start:static:test": "PORT=3002 pnpm run start:static",
+    "start:test": "pnpm run start:static:test"
   },
   "type": "module",
   "version": "5.27.3"

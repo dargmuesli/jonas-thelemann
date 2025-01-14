@@ -29,7 +29,7 @@ export const testOgImage = (url: string) =>
     vioTest('generates the open graph image', async ({ page }) => {
       await page.goto(
         joinURL(
-          `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}`,
+          `/__og-image__/${process.env.VIO_SERVER === 'static:test' ? 'static' : 'image'}`,
           url,
           '/og.png',
         ),
@@ -38,7 +38,7 @@ export const testOgImage = (url: string) =>
 
       await page.goto(
         joinURL(
-          `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}/de`,
+          `/__og-image__/${process.env.VIO_SERVER === 'static:test' ? 'static' : 'image'}/de`,
           url,
           '/og.png',
         ),
