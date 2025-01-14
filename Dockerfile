@@ -75,6 +75,17 @@ RUN pnpm --dir src run build:static
 
 
 ########################
+# Build for static deployment.
+
+FROM prepare AS build-static-test
+
+ARG SITE_URL=https://localhost:3002
+ENV SITE_URL=${SITE_URL}
+
+RUN pnpm --dir src run build:static:test
+
+
+########################
 # Nuxt: lint
 
 FROM prepare AS lint
@@ -167,7 +178,7 @@ RUN pnpm -r rebuild
 
 FROM test-e2e-prepare AS test-e2e-static
 
-COPY --from=build-static /srv/app/src/.output/public ./src/.output/public
+COPY --from=build-static-test /srv/app/src/.output/public ./src/.output/public
 
 RUN pnpm --dir tests run test:e2e:server:static
 
@@ -179,14 +190,14 @@ FROM base-image AS collect
 
 COPY --from=build-node /srv/app/src/.output ./.output
 COPY --from=build-node /srv/app/src/package.json ./package.json
-# COPY --from=build-cloudflare_pages /srv/app/package.json /tmp/package.json
+# COPY --from=build-cloudflare_pages /srv/app/package.json /dev/null
 # COPY --from=build-static /srv/app/src/.output/public ./.output/public
-COPY --from=build-static /srv/app/package.json /tmp/package.json
-COPY --from=lint /srv/app/package.json /tmp/package.json
-# COPY --from=test-unit /srv/app/package.json /tmp/package.json
-# COPY --from=test-e2e-dev /srv/app/package.json /tmp/package.json
-# COPY --from=test-e2e-node /srv/app/package.json /tmp/package.json
-COPY --from=test-e2e-static /srv/app/package.json /tmp/package.json
+COPY --from=build-static /srv/app/package.json /dev/null
+COPY --from=lint /srv/app/package.json /dev/null
+# COPY --from=test-unit /srv/app/package.json /dev/null
+# COPY --from=test-e2e-dev /srv/app/package.json /dev/null
+# COPY --from=test-e2e-node /srv/app/package.json /dev/null
+COPY --from=test-e2e-static /srv/app/package.json /dev/null
 
 
 # #######################
