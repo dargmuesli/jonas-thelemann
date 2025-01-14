@@ -1,17 +1,20 @@
 {
   "devDependencies": {
     "@axe-core/playwright": "4.10.1",
+    "@dargmuesli/nuxt-vio": "16.0.2",
     "@dargmuesli/nuxt-vio-testing": "16.0.2",
     "@eslint/js": "9.18.0",
     "@playwright/test": "1.49.1",
     "@types/node": "22.10.6",
-    "cross-env": "7.0.3",
     "eslint": "9.18.0",
     "eslint-config-prettier": "10.0.1",
     "eslint-plugin-prettier": "5.2.1",
+    "h3": "1.13.1",
     "jiti": "2.4.2",
+    "tailwindcss": "3.4.17",
     "typescript": "5.7.3",
-    "typescript-eslint": "8.20.0"
+    "typescript-eslint": "8.20.0",
+    "ufo": "1.5.4"
   },
   "engines": {
     "node": "22"
@@ -35,8 +38,8 @@
     "test:e2e:docker:server:static": "pnpm run test:e2e:docker:br pnpm --dir tests run test:e2e:server:static",
     "test:e2e:docker:server:static:update": "pnpm run test:e2e:docker:server:static --update-snapshots",
     "test:e2e:server:dev": "cross-env PORT=3000 SITE_URL=http://localhost:3000 VIO_SERVER=dev pnpm run test:e2e",
-    "test:e2e:server:node": "cross-env NODE_ENV=production NUXT_PUBLIC_I18N_BASE_URL=http://localhost:3001 NUXT_PUBLIC_SITE_URL=http://localhost:3001 PORT=3001 VIO_SERVER=node pnpm run test:e2e",
-    "test:e2e:server:static": "cross-env NODE_ENV=production PORT=\"${PORT:-3002}\" SITE_URL=\"${SITE_URL:-https://localhost:3002}\" VIO_SERVER=static pnpm run test:e2e",
+    "test:e2e:server:node": "cross-env NODE_ENV=production NUXT_PUBLIC_I18N_BASE_URL=http://localhost:3001 NUXT_PUBLIC_SITE_URL=http://localhost:3001 PORT=3001 VIO_SERVER=node:test pnpm run test:e2e",
+    "test:e2e:server:static": "cross-env NODE_ENV=production PORT=\"${PORT:-3002}\" SITE_URL=\"${SITE_URL:-https://localhost:3002}\" VIO_SERVER=static:test pnpm run test:e2e",
     "test:e2e:ui": "pnpm run test:e2e --ui"
   },
   "type": "module"

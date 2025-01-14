@@ -21,7 +21,9 @@
     "stylelint-config-standard": "37.0.0",
     "stylelint-no-unsupported-browser-features": "8.0.2",
     "sweetalert2": "11.15.10",
+    "tailwindcss": "3.4.17",
     "unhead": "1.11.18",
+    "vite": "6.0.7",
     "vue": "3.5.13",
     "vue-router": "4.5.0"
   },
@@ -35,6 +37,8 @@
     "build:cloudflare_pages": "NITRO_PRESET=cloudflare_pages nuxt build",
     "build:node": "nuxt build",
     "build:static": "nuxt generate",
+    "build:static:test": "cross-env NUXT_PUBLIC_VIO_IS_TESTING=true SITE_URL=https://localhost:3002 pnpm run build:static",
+    "build:test": "pnpm run build:static:test",
     "dev": "pnpm run start:dev",
     "generate": "pnpm run build:static",
     "lint": "pnpm run lint:js && pnpm run lint:ts && pnpm run lint:style",
@@ -48,7 +52,10 @@
     "start": "pnpm run start:static",
     "start:dev": "nuxt dev",
     "start:node": "node .output/server/index.mjs",
-    "start:static": "serve .output/public --ssl-cert ./.config/certificates/ssl.crt --ssl-key ./.config/certificates/ssl.key"
+    "start:node:test": "PORT=3001 pnpm run start:node",
+    "start:static": "serve .output/public --ssl-cert ./.config/certificates/ssl.crt --ssl-key ./.config/certificates/ssl.key",
+    "start:static:test": "PORT=3002 pnpm run start:static",
+    "start:test": "pnpm run start:static:test"
   },
   "type": "module",
   "version": "5.27.3"

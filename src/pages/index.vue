@@ -28,11 +28,13 @@
       <main class="min-w-0 space-y-6 pb-32 xl:min-h-screen">
         <div class="flex items-center justify-between">
           <h1 class="text-left">{{ t('jonasThelemann') }}</h1>
-          <p
-            class="text-right text-2xl font-normal text-gray-500 dark:text-gray-400"
-          >
-            {{ t('metaInfo', { age }) }}
-          </p>
+          <ClientOnly>
+            <p
+              class="text-right text-2xl font-normal text-gray-500 dark:text-gray-400"
+            >
+              {{ t('metaInfo', { age }) }}
+            </p>
+          </ClientOnly>
         </div>
         <div>
           <i18n-t keypath="descriptionShort">
