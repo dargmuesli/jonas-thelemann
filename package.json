@@ -17,6 +17,9 @@
     "node": "22"
   },
   "packageManager": "pnpm@10.2.0",
+  "pnpm": {
+    "onlyBuiltDependencies": ["sharp"]
+  },
   "private": true,
   "scripts": {
     "build": "pnpm --dir src run build",
