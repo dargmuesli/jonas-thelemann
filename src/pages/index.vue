@@ -6,7 +6,7 @@
       >
         <nuxt-img
           alt="Jonas in Tutzing."
-          class="object-position-custom flex-1 object-cover"
+          class="flex-1 object-cover object-[50%_30%]"
           densities="x1 x2"
           fetchpriority="high"
           format="webp"
@@ -118,14 +118,14 @@
           <i18n-t class="mt-[-0.5rem]" keypath="about" tag="p">
             <template #aboutMarkSoftwareTemplate>
               <mark
-                class="dark:text-text-bright bg-[#ffff00] bg-opacity-50 dark:bg-gray-700"
+                class="dark:text-text-bright bg-[#ffff00]/50 dark:bg-gray-700"
               >
                 {{ t('aboutMarkSoftware') }}
               </mark>
             </template>
             <template #aboutMarkDjTemplate>
               <mark
-                class="dark:text-text-bright bg-[#ffff00] bg-opacity-50 dark:bg-gray-700"
+                class="dark:text-text-bright bg-[#ffff00]/50 dark:bg-gray-700"
               >
                 {{ t('aboutMarkDj') }}
               </mark>
@@ -474,7 +474,9 @@
               </li>
             </ul>
           </section>
-          <hr class="md:col-span-2 xl:col-span-1 2xl:col-span-2" />
+          <hr
+            class="border-gray-200 md:col-span-2 xl:col-span-1 2xl:col-span-2"
+          />
           <section class="md:col-span-2 xl:col-span-1 2xl:col-span-2">
             <h2 class="text-2xl">{{ t('projects') }}</h2>
             <ul class="mt-2 flex flex-wrap items-center justify-around">
