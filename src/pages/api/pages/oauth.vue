@@ -1,6 +1,6 @@
 <template>
   <div v-if="typeof route.query.code === 'string'" class="flex flex-col gap-4">
-    <span class="break-words rounded border p-4">
+    <span class="rounded-sm border p-4 break-words">
       {{ route.query.code }}
     </span>
     <VioButtonColored :aria-label="t('copy')" @click="copy">
