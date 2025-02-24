@@ -18,7 +18,14 @@
   },
   "packageManager": "pnpm@10.4.1",
   "pnpm": {
-    "onlyBuiltDependencies": ["sharp"]
+    "ignoredBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "vue-demi"
+    ],
+    "onlyBuiltDependencies": [
+      "sharp"
+    ]
   },
   "private": true,
   "scripts": {
