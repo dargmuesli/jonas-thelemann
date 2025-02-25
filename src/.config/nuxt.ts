@@ -6,6 +6,7 @@ import { SITE_NAME } from '../shared/utils/constants'
 export default defineNuxtConfig(
   defu(
     {
+      css: ['~/assets/css/jonas-thelemann.css'],
       extends: ['@dargmuesli/nuxt-vio'],
       modules: ['@nuxt/scripts', '@nuxtjs/turnstile'],
       nitro: {
