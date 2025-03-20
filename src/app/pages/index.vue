@@ -607,14 +607,18 @@ const init = async () => {
     if (!res.ok) throw createError('Response is not ok!')
 
     const headerLink = res.headers.get('link')
-    repoCount.value = headerLink
-      ? (getQuery(
-          headerLink
-            .split(', ')[1]
-            .split('; ')[0]
-            .replace(/(^<|>$)/g, ''),
-        ).page as string)
-      : undefined
+    if (!headerLink) {
+      repoCount.value = undefined
+      return
+    }
+    const headerLinkSplitComma = headerLink.split(', ')[1]
+    if (!headerLinkSplitComma) return
+    const headerLinkSplitSemicolon = headerLinkSplitComma.split('; ')[0]
+    if (!headerLinkSplitSemicolon) return
+    const headerLinkQueryPage = getQuery<{ page: string }>(
+      headerLinkSplitSemicolon.replace(/(^<|>$)/g, ''),
+    ).page
+    repoCount.value = headerLinkQueryPage
   } catch (e) {
     consola.error(JSON.stringify(e))
   }
