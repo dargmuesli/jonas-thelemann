@@ -139,8 +139,8 @@ importers:
         specifier: 17.0.2
         version: 17.0.2(@types/eslint@9.6.1)(@unhead/vue@1.11.20(vue@3.5.13(typescript@5.8.2)))(@vue/compiler-dom@3.5.13)(@vue/compiler-sfc@3.5.13)(db0@0.3.1)(h3@1.15.1)(ioredis@5.6.0)(magicast@0.3.5)(nuxt@3.15.4(@parcel/watcher@2.5.1)(@types/node@22.13.9)(db0@0.3.1)(eslint@9.21.0(jiti@2.4.2))(ioredis@5.6.0)(lightningcss@1.29.3)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.35.0)(terser@5.39.0)(typescript@5.8.2)(vite@6.2.0(@types/node@22.13.9)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.0))(yaml@2.7.0))(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(prettier@3.5.3)(rollup@4.35.0)(tailwindcss@4.0.11)(typescript@5.8.2)(unstorage@1.15.0(db0@0.3.1)(ioredis@5.6.0))(vite@6.2.0(@types/node@22.13.9)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.0))(vue-router@4.5.0(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2))(webpack@5.98.0)
       '@dargmuesli/nuxt-vio-testing':
-        specifier: 17.0.2
-        version: 17.0.2(playwright-core@1.51.1)
+        specifier: 18.0.1
+        version: 18.0.1(playwright-core@1.51.1)
       '@eslint/js':
         specifier: 9.21.0
         version: 9.21.0
@@ -468,11 +468,11 @@ packages:
     resolution: {integrity: sha512-yZ1UeuB1mJVpOlGUTthMynsOpiD4Qq5Q0USZNx6yx2Jk80vKH2DN7F3QOO6U4CgYZFRMf0nPvBilX9pjvS1gqQ==}
     engines: {node: '>=16'}
 
-  '@dargmuesli/nuxt-vio-testing@17.0.2':
-    resolution: {integrity: sha512-ICRbuZHaJFJN7Cf4My6Sk0ryKq7unO2JfNTfDWSSjUCqCCNngGeA9RmBbDKm8pTFhFV6YqCN+CFYFnigvtiD5Q==}
+  '@dargmuesli/nuxt-vio-testing@18.0.1':
+    resolution: {integrity: sha512-fxovd83z6Kv4fTR8MzSEYAKiEJ9rJjoF8jtCqUDtIPykJThzJ4R7g+DosifZI5RN3sdYV6X5MzA5v3fsXtxPWg==}
     engines: {node: '22'}
     peerDependencies:
-      playwright-core: 1.50.1
+      playwright-core: 1.51.1
 
   '@dargmuesli/nuxt-vio@17.0.2':
     resolution: {integrity: sha512-0al2e3yWUpOYQUwmvtqoEQ2PTaDoTYLdgd3OnV4mba4FUycTW30bFg3FY7PWUOnldYHHCWfmSFQ0ByCADR0cEg==}
@@ -7272,7 +7272,7 @@ snapshots:
       - magicast
       - webpack
 
-  '@dargmuesli/nuxt-vio-testing@17.0.2(playwright-core@1.51.1)':
+  '@dargmuesli/nuxt-vio-testing@18.0.1(playwright-core@1.51.1)':
     dependencies:
       playwright-core: 1.51.1
 
