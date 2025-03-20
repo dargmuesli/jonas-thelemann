@@ -51,8 +51,8 @@ importers:
         specifier: 8.5.4
         version: 8.5.4(magicast@0.3.5)(webpack@5.98.0(esbuild@0.25.1))
       '@dargmuesli/nuxt-vio':
-        specifier: 18.0.1
-        version: 18.0.1(172c2fcd5191dae6e7414e273e3146ba)
+        specifier: 18.1.0
+        version: 18.1.0(172c2fcd5191dae6e7414e273e3146ba)
       '@nuxt/scripts':
         specifier: 0.11.2
         version: 0.11.2(@unhead/vue@2.0.0-rc.13(vue@3.5.13(typescript@5.8.2)))(db0@0.3.1)(ioredis@5.6.0)(magicast@0.3.5)(nuxt@3.16.1(@parcel/watcher@2.5.1)(@types/node@22.13.10)(db0@0.3.1)(eslint@9.22.0(jiti@2.4.2))(ioredis@5.6.0)(lightningcss@1.29.3)(magicast@0.3.5)(meow@13.2.0)(optionator@0.9.4)(rollup@4.36.0)(stylelint@16.16.0(typescript@5.8.2))(terser@5.39.0)(typescript@5.8.2)(vite@6.2.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.2))(yaml@2.7.0))(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2))
@@ -133,11 +133,11 @@ importers:
         specifier: 4.10.1
         version: 4.10.1(playwright-core@1.51.1)
       '@dargmuesli/nuxt-vio':
-        specifier: 18.0.1
-        version: 18.0.1(172c2fcd5191dae6e7414e273e3146ba)
+        specifier: 18.1.0
+        version: 18.1.0(172c2fcd5191dae6e7414e273e3146ba)
       '@dargmuesli/nuxt-vio-testing':
-        specifier: 18.0.1
-        version: 18.0.1(playwright-core@1.51.1)
+        specifier: 18.1.0
+        version: 18.1.0(playwright-core@1.51.1)
       '@eslint/js':
         specifier: 9.22.0
         version: 9.22.0
@@ -428,14 +428,14 @@ packages:
     resolution: {integrity: sha512-fZ/SK7z7rydFxMYhxe+2LaYqeMOTsVXay4PgKrJwGRVbKKxmJ8ZG9BpULmKJRiiBeifklEZ7ibNxTtqZUYH2rA==}
     engines: {node: '>=16'}
 
-  '@dargmuesli/nuxt-vio-testing@18.0.1':
-    resolution: {integrity: sha512-fxovd83z6Kv4fTR8MzSEYAKiEJ9rJjoF8jtCqUDtIPykJThzJ4R7g+DosifZI5RN3sdYV6X5MzA5v3fsXtxPWg==}
+  '@dargmuesli/nuxt-vio-testing@18.1.0':
+    resolution: {integrity: sha512-ZsMnP2IEbV+2YMuPIMiVaXzzkL4nZL5CtisJ2o+eqaDg5zIhzYMp1SAcqU4fnZrEAhSzSu4072mhR+lAPHlnTw==}
     engines: {node: '22'}
     peerDependencies:
       playwright-core: 1.51.1
 
-  '@dargmuesli/nuxt-vio@18.0.1':
-    resolution: {integrity: sha512-FrHYf2dFA9+1UTIHVnp4zg3VCaLpWYATTx8+xbrnaCAWXMsD1UpTxztoiCYvcP57qxspOysjjDt9tu63DOVF9g==}
+  '@dargmuesli/nuxt-vio@18.1.0':
+    resolution: {integrity: sha512-8zBe5Jm0Znx1i9dtiYyc5vVznv42KGaeQK1QhlFhQpvpx9tZIXCxBSfG4jxGZTXT1GxYlgFhMsB6gTBNlHgtsQ==}
     engines: {node: '22'}
     peerDependencies:
       nuxt: 3.16.0
@@ -5419,9 +5419,6 @@ packages:
   quansync@0.2.10:
     resolution: {integrity: sha512-t41VRkMYbkHyCYmOvx/6URnN80H7k4X0lLdBMGsz+maAwrJQYB1djpV6vHrQIBE0WBSGqhtEHrK9U3DWWH8v7A==}
 
-  quansync@0.2.8:
-    resolution: {integrity: sha512-4+saucphJMazjt7iOM27mbFCk+D9dd/zmgMDCzRZ8MEoBfYp7lAvoN38et/phRQF6wOPMy/OROBGgoWeSKyluA==}
-
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
@@ -7026,11 +7023,11 @@ snapshots:
       - magicast
       - webpack
 
-  '@dargmuesli/nuxt-vio-testing@18.0.1(playwright-core@1.51.1)':
+  '@dargmuesli/nuxt-vio-testing@18.1.0(playwright-core@1.51.1)':
     dependencies:
       playwright-core: 1.51.1
 
-  '@dargmuesli/nuxt-vio@18.0.1(172c2fcd5191dae6e7414e273e3146ba)':
+  '@dargmuesli/nuxt-vio@18.1.0(172c2fcd5191dae6e7414e273e3146ba)':
     dependencies:
       '@dargmuesli/nuxt-cookie-control': 8.5.4(magicast@0.3.5)(webpack@5.98.0(esbuild@0.25.1))
       '@eslint/compat': 1.2.7(eslint@9.22.0(jiti@2.4.2))
@@ -9589,7 +9586,7 @@ snapshots:
 
   browserslist@4.24.4:
     dependencies:
-      caniuse-lite: 1.0.30001705
+      caniuse-lite: 1.0.30001706
       electron-to-chromium: 1.5.119
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.24.4)
@@ -11464,7 +11461,7 @@ snapshots:
     dependencies:
       mlly: 1.7.4
       pkg-types: 2.1.0
-      quansync: 0.2.8
+      quansync: 0.2.10
 
   locate-path@2.0.0:
     dependencies:
@@ -12666,8 +12663,6 @@ snapshots:
   punycode@2.3.1: {}
 
   quansync@0.2.10: {}
-
-  quansync@0.2.8: {}
 
   queue-microtask@1.2.3: {}
 
