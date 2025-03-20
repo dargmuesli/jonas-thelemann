@@ -1,4 +1,4 @@
-import { VIO_NUXT_BASE_CONFIG } from '@dargmuesli/nuxt-vio/utils/nuxt'
+import { VIO_NUXT_BASE_CONFIG } from '@dargmuesli/nuxt-vio/shared/utils/nuxt'
 import { defu } from 'defu'
 
 import { SITE_NAME } from '../shared/utils/constants'
@@ -8,6 +8,9 @@ export default defineNuxtConfig(
     {
       css: ['~/assets/css/jonas-thelemann.css'],
       extends: ['@dargmuesli/nuxt-vio'],
+      future: {
+        compatibilityVersion: 4,
+      },
       modules: ['@nuxt/scripts', '@nuxtjs/turnstile'],
       nitro: {
         prerender: {
@@ -27,7 +30,7 @@ export default defineNuxtConfig(
       vite: {
         optimizeDeps: {
           include: [
-            '@dargmuesli/nuxt-vio/utils/constants',
+            '@dargmuesli/nuxt-vio/shared/utils/constants',
             '@vuelidate/core',
             'consola',
             'sweetalert2',
@@ -41,6 +44,9 @@ export default defineNuxtConfig(
       },
       gtag: {
         id: 'G-K4R41W62BR',
+      },
+      htmlValidator: {
+        enabled: false, //TODO: enable once Nuxt image links are properly escaped (https://github.com/nuxt/image/issues/1378)
       },
       linkChecker: {
         excludeLinks: [
