@@ -1,3 +1,9 @@
+## [5.27.12](https://github.com/dargmuesli/jonas-thelemann/compare/5.27.11...5.27.12) (2025-05-06)
+
+### Bug Fixes
+
+* schedule release ([c55232f](https://github.com/dargmuesli/jonas-thelemann/commit/c55232f826cda18892de621b01b03d278fe6c168))
+
 ## [5.27.11](https://github.com/dargmuesli/jonas-thelemann/compare/5.27.10...5.27.11) (2025-04-29)
 
 ### Bug Fixes
