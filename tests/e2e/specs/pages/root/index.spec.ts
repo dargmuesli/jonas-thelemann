@@ -33,9 +33,9 @@ vioTest.beforeEach(async ({ context }) => {
 
 vioTest.describe('internationalization', () => {
   const textEnglish =
-    'CEO/CTO and founder of maevsi · Ninjaneer · Master of Science in Computer Science'
+    'Director and founder @maevsi · Ninjaneer · M.Sc. Computer Science'
   const textGerman =
-    'CEO/CTO und Gründer von maevsi · Ninjaneer · Master of Science der Informatik'
+    'Geschäftsführer und Gründer @maevsi · Ninjaneer · M.Sc. Informatik'
 
   vioTest('displays English translations', async ({ defaultPage }) => {
     await defaultPage.goto('/')
