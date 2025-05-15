@@ -1,3 +1,10 @@
+## [5.28.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.27.12...5.28.0) (2025-05-15)
+
+### Features
+
+* update translations ([3f6a356](https://github.com/dargmuesli/jonas-thelemann/commit/3f6a35676f10a08cdeb60f0450221e77f9c6612a))
+* use vibetype logo ([9462e1d](https://github.com/dargmuesli/jonas-thelemann/commit/9462e1d21d7803f7b2fe90eaaac96b03530ec0f9))
+
 ## [5.27.12](https://github.com/dargmuesli/jonas-thelemann/compare/5.27.11...5.27.12) (2025-05-06)
 
 ### Bug Fixes
