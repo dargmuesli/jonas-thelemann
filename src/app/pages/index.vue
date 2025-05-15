@@ -482,17 +482,17 @@
             <ul class="mt-2 flex flex-wrap items-center justify-around">
               <li class="m-4">
                 <VioLink
-                  aria-label="maevsi"
+                  aria-label="Vibetype"
                   class="inline-block"
                   is-external-icon-disabled
                   to="https://maev.si/"
                 >
                   <nuxt-img
-                    alt="maevsi's logo"
+                    alt="Vibetype's logo"
                     class="h-12 w-auto"
                     height="180"
                     :nonce="nonce"
-                    src="/assets/static/logos/maevsi.svg"
+                    src="/assets/static/logos/vibetype.svg"
                     width="547"
                   />
                 </VioLink>
