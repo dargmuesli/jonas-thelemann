@@ -482,17 +482,17 @@
             <ul class="mt-2 flex flex-wrap items-center justify-around">
               <li class="m-4">
                 <VioLink
-                  aria-label="maevsi"
+                  aria-label="Vibetype"
                   class="inline-block"
                   is-external-icon-disabled
                   to="https://maev.si/"
                 >
                   <nuxt-img
-                    alt="maevsi's logo"
+                    alt="Vibetype's logo"
                     class="h-12 w-auto"
                     height="180"
                     :nonce="nonce"
-                    src="/assets/static/logos/maevsi.svg"
+                    src="/assets/static/logos/vibetype.svg"
                     width="547"
                   />
                 </VioLink>
@@ -644,7 +644,7 @@ de:
   ccc: Chaos Computer Club
   cccTimespan: Mai 2018 – {present}
   contactForm: Kontaktformular
-  descriptionShort: CEO/CTO und Gründer von {maevsi} · {ninjaneers} · Master of Science der Informatik
+  descriptionShort: Geschäftsführer und Gründer {'@'}{maevsi} · {ninjaneers} · M.Sc. Informatik
   education: Bildung
   educationGoal: Master der Software-Entwicklung
   educationTime: 2021 – 2024
@@ -682,7 +682,7 @@ de:
   metaInfo: '{age}, er/ihn'
   mixcloud: Mixcloud
   ninjaneer: Ninjaneer
-  ninjaneers: Ninjaneers GmbH
+  ninjaneers: Ninjaneers
   nominationScholarship: Nominierung für ein Stipendium
   nominationScholarshipTime: Jul 2019
   organizations: Organisationen
@@ -710,7 +710,7 @@ en:
   ccc: Chaos Computer Club
   cccTimespan: May 2018 – {present}
   contactForm: Contact form
-  descriptionShort: CEO/CTO and founder of {maevsi} · {ninjaneers} · Master of Science in Computer Science
+  descriptionShort: Director and founder {'@'}{maevsi} · {ninjaneers} · M.Sc. Computer Science
   education: Education
   educationGoal: Master's degree Software Engineering
   educationTime: 2021 – 2024
@@ -719,7 +719,7 @@ en:
   experience: Experience
   experienceFederalVolunteerService: 'Volunteer Service Worker: refugee aid'
   experienceFederalVolunteerServiceTimespan: Jan 2017 – Aug 2017
-  experienceMaevsi: Chief Executive and Technology Officer
+  experienceMaevsi: Executive Director and Head of Technology
   experienceMaevsiTimespan: Nov 2024 – {present}
   experienceNinjaneer: Software Engineer
   experienceNinjaneerTimespan: Jul 2020 – today
@@ -748,7 +748,7 @@ en:
   metaInfo: '{age}, he/him'
   mixcloud: Mixcloud
   ninjaneer: Ninjaneer
-  ninjaneers: Ninjaneers GmbH
+  ninjaneers: Ninjaneers
   nominationScholarship: Nomination for a scholarship
   nominationScholarshipTime: Jul 2019
   organizations: Organizations
