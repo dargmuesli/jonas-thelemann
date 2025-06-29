@@ -1,3 +1,9 @@
+## [5.28.4](https://github.com/dargmuesli/jonas-thelemann/compare/5.28.3...5.28.4) (2025-06-29)
+
+### Performance Improvements
+
+* **deps:** use rolldown ([96fa48b](https://github.com/dargmuesli/jonas-thelemann/commit/96fa48bf66433a533f94c700e56ddd2f834d5fcf))
+
 ## [5.28.3](https://github.com/dargmuesli/jonas-thelemann/compare/5.28.2...5.28.3) (2025-06-24)
 
 ### Bug Fixes
