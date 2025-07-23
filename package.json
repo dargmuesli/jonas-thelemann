@@ -14,50 +14,40 @@
     "semantic-release": "24.2.7"
   },
   "engines": {
-    "node": "22"
+    "bun": "1.2.19"
   },
-  "packageManager": "pnpm@10.13.1",
-  "pnpm": {
-    "ignoredBuiltDependencies": [
-      "@parcel/watcher",
-      "@tailwindcss/oxide",
-      "esbuild",
-      "unrs-resolver",
-      "vue-demi"
-    ],
-    "onlyBuiltDependencies": [
-      "sharp"
-    ],
-    "overrides": {
-      "@intlify/unplugin-vue-i18n": "11.0.0-beta.5",
-      "vite": "npm:rolldown-vite@7.0.10"
-    }
+  "overrides": {
+    "@intlify/unplugin-vue-i18n": "11.0.0-beta.5",
+    "vite": "npm:rolldown-vite@7.0.10"
   },
+  "packageManager": "bun@1.2.19",
   "private": true,
   "scripts": {
-    "build": "pnpm --dir src run build",
-    "build:node": "pnpm --dir src run build:node",
-    "build:static": "pnpm --dir src run build:static",
-    "build:static:test": "pnpm --dir src run build:static:test",
-    "build:test": "pnpm --dir src run build:test",
-    "dev": "pnpm --dir src run dev",
-    "generate": "pnpm --dir src run generate",
-    "lint": "pnpm -r run lint",
+    "build": "bun run --cwd src build",
+    "build:node": "bun run --cwd src build:node",
+    "build:static": "bun run --cwd src build:static",
+    "build:static:test": "bun run --cwd src build:static:test",
+    "build:test": "bun run --cwd src build:test",
+    "dev": "bun run --cwd src dev",
+    "generate": "bun run --cwd src generate",
+    "lint": "bun -r run lint",
     "prepare": "husky",
-    "start": "pnpm --dir src run start",
-    "start:dev": "pnpm --dir src run start:dev",
-    "start:node": "pnpm --dir src run start:node",
-    "start:node:test": "pnpm --dir src run start:node:test",
-    "start:static": "pnpm --dir src run start:static",
-    "start:static:test": "pnpm --dir src run start:static:test",
-    "start:test": "pnpm --dir src run start:test",
-    "test:e2e:docker:server:dev": "pnpm --dir tests run test:e2e:docker:server:dev",
-    "test:e2e:docker:server:dev:update": "pnpm --dir tests run test:e2e:docker:server:dev:update",
-    "test:e2e:docker:server:node": "pnpm --dir tests run test:e2e:docker:server:node",
-    "test:e2e:docker:server:node:update": "pnpm --dir tests run test:e2e:docker:server:node:update",
-    "test:e2e:docker:server:static": "pnpm --dir tests run test:e2e:docker:server:static",
-    "test:e2e:docker:server:static:update": "pnpm --dir tests run test:e2e:docker:server:static:update",
-    "test:e2e:ui": "pnpm --dir tests run test:e2e:ui"
+    "start": "bun run --cwd src start",
+    "start:dev": "bun run --cwd src start:dev",
+    "start:node": "bun run --cwd src start:node",
+    "start:node:test": "bun run --cwd src start:node:test",
+    "start:static": "bun run --cwd src start:static",
+    "start:static:test": "bun run --cwd src start:static:test",
+    "start:test": "bun run --cwd src start:test",
+    "test:e2e:docker:server:dev": "bun run --cwd tests test:e2e:docker:server:dev",
+    "test:e2e:docker:server:dev:update": "bun run --cwd tests test:e2e:docker:server:dev:update",
+    "test:e2e:docker:server:node": "bun run --cwd tests test:e2e:docker:server:node",
+    "test:e2e:docker:server:node:update": "bun run --cwd tests test:e2e:docker:server:node:update",
+    "test:e2e:docker:server:static": "bun run --cwd tests test:e2e:docker:server:static",
+    "test:e2e:docker:server:static:update": "bun run --cwd tests test:e2e:docker:server:static:update",
+    "test:e2e:ui": "bun run --cwd tests test:e2e:ui"
   },
-  "type": "module"
+  "trustedDependencies": ["sharp", "src"],
+  "type": "module",
+  "workspaces": ["src", "tests"]
 }

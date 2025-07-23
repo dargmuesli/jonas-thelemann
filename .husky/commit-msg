@@ -1,7 +1,7 @@
 #!/bin/sh
 
-export NVM_DIR="$HOME/.nvm"
-# shellcheck source=/dev/null
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# export NVM_DIR="$HOME/.nvm"
+# # shellcheck source=/dev/null
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-pnpm exec commitlint --edit "$1"
+bun exec commitlint --edit "$1"
