@@ -1,15 +1,16 @@
 #############
 # Create base image.
 
-FROM node:24.12.0-alpine AS base-image
+FROM oven/bun:1.3.5-alpine AS base-image
 
-# The `CI` environment variable must be set for pnpm to run in headless mode
-ENV CI=true
+# # The `CI` environment variable must be set for pnpm to run in headless mode
+# ENV CI=true
 
 WORKDIR /srv/app/
 
-RUN corepack enable \
-  && apk add --no-cache mkcert --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing
+# RUN corepack enable \
+#   &&
+RUN apk add --no-cache mkcert --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing
 
 COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
@@ -28,12 +29,12 @@ RUN mkdir \
         /srv/app/node_modules \
         /srv/.pnpm-store
 
-VOLUME /srv/.pnpm-store
+VOLUME /srv/.bun/install/cache
 VOLUME /srv/app
 VOLUME /srv/app/node_modules
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["pnpm", "--dir", "src", "run", "dev", "--host", "0.0.0.0"]
+CMD ["bun", "--dir", "src", "run", "dev", "--host", "0.0.0.0"]
 EXPOSE 3000
 
 # TODO: support healthcheck while starting (https://github.com/nuxt/framework/issues/6915)
@@ -45,13 +46,11 @@ EXPOSE 3000
 
 FROM base-image AS prepare
 
-COPY ./pnpm-lock.yaml package.json ./
-
-RUN pnpm fetch
+COPY ./bun.lock package.json ./
 
 COPY ./ ./
 
-RUN pnpm install --offline
+RUN bun ci
 
 
 ########################
@@ -60,7 +59,7 @@ RUN pnpm install --offline
 FROM prepare AS build-node
 
 ENV NODE_ENV=production
-RUN pnpm --dir src run build:node
+RUN bun run --cwd src build:node
 
 
 # ########################
@@ -69,7 +68,7 @@ RUN pnpm --dir src run build:node
 # FROM prepare AS build-cloudflare_pages
 
 # ENV NODE_ENV=production
-# RUN pnpm --dir src run build:cloudflare_pages
+# RUN bun run --cwd src build:cloudflare_pages
 
 
 ########################
@@ -81,7 +80,7 @@ ARG SITE_URL=https://localhost:3002
 ENV SITE_URL=${SITE_URL}
 
 ENV NODE_ENV=production
-RUN pnpm --dir src run build:static
+RUN bun run --cwd src build:static
 
 
 ########################
@@ -89,7 +88,7 @@ RUN pnpm --dir src run build:static
 
 FROM prepare AS build-static-test
 
-RUN pnpm --dir src run build:static:test
+RUN bun run --cwd src build:static:test
 
 
 ########################
@@ -97,7 +96,7 @@ RUN pnpm --dir src run build:static:test
 
 FROM prepare AS lint
 
-RUN pnpm -r run lint
+RUN bun -r run lint
 
 
 # ########################
@@ -105,7 +104,7 @@ RUN pnpm -r run lint
 
 # FROM prepare AS test-unit
 
-# RUN pnpm -r run test
+# RUN bun -r run test
 
 
 ########################
@@ -113,8 +112,8 @@ RUN pnpm -r run lint
 
 FROM mcr.microsoft.com/playwright:v1.57.0 AS test-e2e-base-image
 
-# The `CI` environment variable must be set for pnpm to run in headless mode
-ENV CI=true
+# # The `CI` environment variable must be set for pnpm to run in headless mode
+# ENV CI=true
 ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 
 WORKDIR /srv/app/
@@ -141,7 +140,7 @@ RUN groupadd -g $GROUP_ID -o $USER_NAME \
 
 USER $USER_NAME
 
-VOLUME /srv/.pnpm-store
+VOLUME /srv/.bun/install/cache
 VOLUME /srv/app
 VOLUME /srv/app/node_modules
 
@@ -155,7 +154,7 @@ FROM test-e2e-base-image AS test-e2e-prepare
 
 COPY --from=prepare /srv/app/ ./
 
-RUN pnpm -r rebuild
+RUN bun -r rebuild
 
 
 # ########################
@@ -165,7 +164,7 @@ RUN pnpm -r rebuild
 
 # ENV NODE_ENV=development
 
-# RUN pnpm --dir tests run test:e2e:server:dev
+# RUN bun run --cwd tests test:e2e:server:dev
 
 
 # ########################
@@ -175,7 +174,7 @@ RUN pnpm -r rebuild
 
 # COPY --from=build-node /srv/app/src/.output ./src/.output
 
-# RUN pnpm --dir tests run test:e2e:server:node
+# RUN bun run --cwd tests test:e2e:server:node
 
 
 ########################
@@ -185,7 +184,7 @@ FROM test-e2e-prepare AS test-e2e-static
 
 COPY --from=build-static-test /srv/app/src/.output/public ./src/.output/public
 
-RUN pnpm --dir tests run test:e2e:server:static
+RUN bun run --cwd tests test:e2e:server:static
 
 
 #######################
@@ -239,7 +238,7 @@ RUN apk update \
     && apk upgrade --no-cache
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["pnpm", "run", "start:node"]
+CMD ["bun", "run", "start:node"]
 HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
 EXPOSE 3000
 LABEL org.opencontainers.image.source="https://github.com/dargmuesli/jonas-thelemann"

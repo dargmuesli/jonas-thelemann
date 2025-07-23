@@ -14,8 +14,8 @@ The source code of [jonas-thelemann.de](https://jonas-thelemann.de/).
 ## Development
 This project builds upon the [Nuxt.js](https://nuxtjs.org/) framework.
 Install [Node.js](https://nodejs.org/) and [mkcert](https://github.com/FiloSottile/mkcert).
-Then run `pnpm i` to install the project's dependencies.
-After that, use `pnpm dev` for development or `pnpm build` to generate the [static page](https://nuxtjs.org/blog/going-full-static).
+Then run `bun install` to install the project's dependencies.
+After that, use `bun run dev` for development or `bun run build` to generate the [static page](https://nuxtjs.org/blog/going-full-static).
 
 Alternatively, build the provided [Dockerfile](https://www.docker.com/) using `docker build -t dargmuesli/jonas-thelemann .` and run the resulting image using `docker run dargmuesli/jonas-thelemann`.
 

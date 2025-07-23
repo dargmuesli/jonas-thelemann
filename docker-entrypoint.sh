@@ -31,8 +31,7 @@ load_environment_variables() {
 load_environment_variables
 
 if [ "${NODE_ENV:-}" != "production" ]; then
-  pnpm config set store-dir "/srv/.pnpm-store"
-  pnpm install
+  bun install --cache-dir "/srv/.bun/install/cache"
 fi
 
 exec "$@"
