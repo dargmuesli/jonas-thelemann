@@ -20,11 +20,10 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+const { description, title } = defineProps<{
   description: string
   title: string
-}
-withDefaults(defineProps<Props>(), {})
+}>()
 </script>
 
 <script lang="ts">
