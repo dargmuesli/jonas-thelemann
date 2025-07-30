@@ -8,9 +8,6 @@ export default defineNuxtConfig(
     {
       css: ['~/assets/css/jonas-thelemann.css'],
       extends: ['@dargmuesli/nuxt-vio'],
-      future: {
-        compatibilityVersion: 4,
-      },
       modules: ['@nuxt/scripts', '@nuxtjs/turnstile'],
       nitro: {
         prerender: {
