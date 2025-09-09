@@ -2,5 +2,11 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>dargmuesli/renovate-config"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["vite", "rolldown-vite"],
+      "allowedVersions": "7.1.5"
+    }
   ]
 }
