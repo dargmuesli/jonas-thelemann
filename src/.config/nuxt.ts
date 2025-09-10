@@ -29,6 +29,7 @@ export default defineNuxtConfig(
           include: [
             '@dargmuesli/nuxt-vio/shared/utils/constants',
             '@vuelidate/core',
+            '@vuelidate/validators',
             'consola',
             'sweetalert2',
           ],
