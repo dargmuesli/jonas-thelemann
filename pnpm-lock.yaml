@@ -48,8 +48,8 @@ importers:
   src:
     devDependencies:
       '@dargmuesli/nuxt-cookie-control':
-        specifier: 9.1.5
-        version: 9.1.5(magicast@0.3.5)(webpack@5.102.1(esbuild@0.25.10))
+        specifier: 9.1.6
+        version: 9.1.6(magicast@0.3.5)(webpack@5.102.1(esbuild@0.25.10))
       '@dargmuesli/nuxt-vio':
         specifier: 18.3.15
         version: 18.3.15(ecce2de9e2c882060a44779021346f08)
@@ -134,7 +134,7 @@ importers:
         version: 4.10.2(playwright-core@1.56.0)
       '@dargmuesli/nuxt-vio':
         specifier: 18.3.15
-        version: 18.3.15(4b969161fb232ef2324b27b3a8a605ab)
+        version: 18.3.15(55007e142c527c3dee8e5692c3323387)
       '@dargmuesli/nuxt-vio-testing':
         specifier: 18.3.15
         version: 18.3.15(playwright-core@1.56.0)
@@ -562,6 +562,10 @@ packages:
 
   '@dargmuesli/nuxt-cookie-control@9.1.5':
     resolution: {integrity: sha512-8jmvg6ZEv9vkXMdzfB8kEqnrrQv3zDYVWnX0W9BdO+xvueEwualKgYV7/+GSW1u/LfP6tvYV29xkTq0O9g9zvQ==}
+    engines: {node: '>=16'}
+
+  '@dargmuesli/nuxt-cookie-control@9.1.6':
+    resolution: {integrity: sha512-5yRLzWgXB822i2q8SjKZ5Bkiqg30f836FshsM4U2IKaS5zYFCrg0MdfKWOsrXWHdJjvpl9C82F1WKZwfwS0frQ==}
     engines: {node: '>=16'}
 
   '@dargmuesli/nuxt-vio-testing@18.3.15':
@@ -8177,13 +8181,33 @@ snapshots:
       - magicast
       - webpack
 
+  '@dargmuesli/nuxt-cookie-control@9.1.5(magicast@0.3.5)(webpack@5.102.1)':
+    dependencies:
+      '@nuxt/kit': 4.1.3(magicast@0.3.5)
+      css-vars-ponyfill: 2.4.9
+      defu: 6.1.4
+      string-replace-loader: 3.2.0(webpack@5.102.1)
+    transitivePeerDependencies:
+      - magicast
+      - webpack
+
+  '@dargmuesli/nuxt-cookie-control@9.1.6(magicast@0.3.5)(webpack@5.102.1(esbuild@0.25.10))':
+    dependencies:
+      '@nuxt/kit': 4.1.3(magicast@0.3.5)
+      css-vars-ponyfill: 2.4.9
+      defu: 6.1.4
+      string-replace-loader: 3.2.0(webpack@5.102.1(esbuild@0.25.10))
+    transitivePeerDependencies:
+      - magicast
+      - webpack
+
   '@dargmuesli/nuxt-vio-testing@18.3.15(playwright-core@1.56.0)':
     dependencies:
       playwright-core: 1.56.0
 
-  '@dargmuesli/nuxt-vio@18.3.15(4b969161fb232ef2324b27b3a8a605ab)':
+  '@dargmuesli/nuxt-vio@18.3.15(55007e142c527c3dee8e5692c3323387)':
     dependencies:
-      '@dargmuesli/nuxt-cookie-control': 9.1.5(magicast@0.3.5)(webpack@5.102.1(esbuild@0.25.10))
+      '@dargmuesli/nuxt-cookie-control': 9.1.5(magicast@0.3.5)(webpack@5.102.1)
       '@eslint/compat': 1.4.0(eslint@9.36.0(jiti@2.6.1))
       '@heroicons/vue': 2.2.0(vue@3.5.22(typescript@5.9.3))
       '@http-util/status-i18n': 0.9.0
@@ -15100,6 +15124,11 @@ snapshots:
       schema-utils: 4.3.3
       webpack: 5.102.1(esbuild@0.25.10)
 
+  string-replace-loader@3.2.0(webpack@5.102.1):
+    dependencies:
+      schema-utils: 4.3.3
+      webpack: 5.102.1
+
   string-width@4.2.3:
     dependencies:
       emoji-regex: 8.0.0
@@ -15396,6 +15425,15 @@ snapshots:
       webpack: 5.102.1(esbuild@0.25.10)
     optionalDependencies:
       esbuild: 0.25.10
+
+  terser-webpack-plugin@5.3.14(webpack@5.102.1):
+    dependencies:
+      '@jridgewell/trace-mapping': 0.3.31
+      jest-worker: 27.5.1
+      schema-utils: 4.3.3
+      serialize-javascript: 6.0.2
+      terser: 5.44.0
+      webpack: 5.102.1
 
   terser@5.44.0:
     dependencies:
@@ -15921,6 +15959,38 @@ snapshots:
   webpack-sources@3.3.3: {}
 
   webpack-virtual-modules@0.6.2: {}
+
+  webpack@5.102.1:
+    dependencies:
+      '@types/eslint-scope': 3.7.7
+      '@types/estree': 1.0.8
+      '@types/json-schema': 7.0.15
+      '@webassemblyjs/ast': 1.14.1
+      '@webassemblyjs/wasm-edit': 1.14.1
+      '@webassemblyjs/wasm-parser': 1.14.1
+      acorn: 8.15.0
+      acorn-import-phases: 1.0.4(acorn@8.15.0)
+      browserslist: 4.26.3
+      chrome-trace-event: 1.0.4
+      enhanced-resolve: 5.18.3
+      es-module-lexer: 1.7.0
+      eslint-scope: 5.1.1
+      events: 3.3.0
+      glob-to-regexp: 0.4.1
+      graceful-fs: 4.2.11
+      json-parse-even-better-errors: 2.3.1
+      loader-runner: 4.3.1
+      mime-types: 2.1.35
+      neo-async: 2.6.2
+      schema-utils: 4.3.3
+      tapable: 2.3.0
+      terser-webpack-plugin: 5.3.14(webpack@5.102.1)
+      watchpack: 2.4.4
+      webpack-sources: 3.3.3
+    transitivePeerDependencies:
+      - '@swc/core'
+      - esbuild
+      - uglify-js
 
   webpack@5.102.1(esbuild@0.25.10):
     dependencies:
