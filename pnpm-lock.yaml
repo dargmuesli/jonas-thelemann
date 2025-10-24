@@ -60,8 +60,8 @@ importers:
         specifier: 1.1.1
         version: 1.1.1(@nuxt/scripts@0.13.0(@unhead/vue@2.0.19(vue@3.5.22(typescript@5.9.3)))(db0@0.3.4)(ioredis@5.8.1)(magicast@0.3.5)(typescript@5.9.3)(vue@3.5.22(typescript@5.9.3)))(magicast@0.3.5)
       '@types/nodemailer':
-        specifier: 7.0.2
-        version: 7.0.2
+        specifier: 7.0.3
+        version: 7.0.3
       '@vuelidate/core':
         specifier: 2.0.3
         version: 2.0.3(vue@3.5.22(typescript@5.9.3))
@@ -2462,14 +2462,11 @@ packages:
   '@types/minimatch@3.0.5':
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
 
-  '@types/node@22.18.11':
-    resolution: {integrity: sha512-Gd33J2XIrXurb+eT2ktze3rJAfAp9ZNjlBdh4SVgyrKEOADwCbdUDaK7QgJno8Ue4kcajscsKqu6n8OBG3hhCQ==}
-
   '@types/node@22.18.12':
     resolution: {integrity: sha512-BICHQ67iqxQGFSzfCFTT7MRQ5XcBjG5aeKh5Ok38UBbPe5fxTyE+aHFxwVrGyr8GNlqFMLKD1D3P2K/1ks8tog==}
 
-  '@types/nodemailer@7.0.2':
-    resolution: {integrity: sha512-Zo6uOA9157WRgBk/ZhMpTQ/iCWLMk7OIs/Q9jvHarMvrzUUP/MDdPHL2U1zpf57HrrWGv4nYQn5uIxna0xY3xw==}
+  '@types/nodemailer@7.0.3':
+    resolution: {integrity: sha512-fC8w49YQ868IuPWRXqPfLf+MuTRex5Z1qxMoG8rr70riqqbOp2F5xgOKE9fODEBPzpnvjkJXFgK6IL2xgMSTnA==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -10485,18 +10482,14 @@ snapshots:
 
   '@types/minimatch@3.0.5': {}
 
-  '@types/node@22.18.11':
-    dependencies:
-      undici-types: 6.21.0
-
   '@types/node@22.18.12':
     dependencies:
       undici-types: 6.21.0
 
-  '@types/nodemailer@7.0.2':
+  '@types/nodemailer@7.0.3':
     dependencies:
       '@aws-sdk/client-sesv2': 3.913.0
-      '@types/node': 22.18.11
+      '@types/node': 22.18.12
     transitivePeerDependencies:
       - aws-crt
 
