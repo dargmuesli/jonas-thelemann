@@ -4,7 +4,7 @@
       <div
         class="flex aspect-[2081/3009] max-h-[80vh] flex-1 xl:fixed xl:h-[100vh] xl:max-h-[none] xl:max-w-[38.2vw]"
       >
-        <nuxt-img
+        <NuxtImg
           alt="Jonas in Tutzing."
           class="flex-1 object-cover object-[50%_30%]"
           densities="x1 x2"
@@ -487,7 +487,7 @@
                   is-external-icon-disabled
                   to="https://maev.si/"
                 >
-                  <nuxt-img
+                  <NuxtImg
                     alt="Vibetype's logo"
                     class="h-12 w-auto"
                     height="180"
@@ -504,7 +504,7 @@
                   is-external-icon-disabled
                   to="https://nearbuy-food.de/"
                 >
-                  <nuxt-img
+                  <NuxtImg
                     alt="nearbuy's logo"
                     class="h-12 w-auto"
                     height="734"
@@ -521,7 +521,7 @@
                   is-external-icon-disabled
                   to="https://creal.jonas-thelemann.de/"
                 >
-                  <nuxt-img
+                  <NuxtImg
                     alt="cReal's logo"
                     class="h-12 w-auto"
                     height="1330"
@@ -538,7 +538,7 @@
                   is-external-icon-disabled
                   to="https://trapparty.jonas-thelemann.de/"
                 >
-                  <nuxt-img
+                  <NuxtImg
                     alt="TrapParty's logo"
                     class="h-12 w-auto"
                     height="1308"
