@@ -274,27 +274,6 @@
                   <template #title>
                     <a
                       class="text-text-dark dark:text-text-bright"
-                      href="https://gi.de/"
-                    >
-                      {{ t('gi') }}
-                    </a>
-                  </template>
-                  <template #subtitle>
-                    <span>
-                      {{ t('giTimespan', { present: t('present') }) }}
-                    </span>
-                  </template>
-                </i18n-t>
-              </li>
-              <li>
-                <i18n-t
-                  keypath="titleSubtitle"
-                  class="text-gray-500 dark:text-gray-400"
-                  tag="span"
-                >
-                  <template #title>
-                    <a
-                      class="text-text-dark dark:text-text-bright"
                       href="https://www.ccc.de/"
                     >
                       {{ t('ccc') }}
@@ -324,6 +303,27 @@
                   <template #subtitle>
                     <span>
                       {{ t('flipdotTimespan', { present: t('present') }) }}
+                    </span>
+                  </template>
+                </i18n-t>
+              </li>
+              <li>
+                <i18n-t
+                  keypath="titleSubtitle"
+                  class="text-gray-500 dark:text-gray-400"
+                  tag="span"
+                >
+                  <template #title>
+                    <a
+                      class="text-text-dark dark:text-text-bright"
+                      href="https://gi.de/"
+                    >
+                      {{ t('gi') }}
+                    </a>
+                  </template>
+                  <template #subtitle>
+                    <span>
+                      {{ t('giTimespan', { present: t('present') }) }}
                     </span>
                   </template>
                 </i18n-t>
@@ -665,7 +665,7 @@ de:
   gi: Gesellschaft für Informatik
   giphy: Giphy
   gitHub: GitHub
-  giTimespan: Jan 2019 – today
+  giTimespan: Jan 2019 – Dez 2025
   # hessenIdeen: Hessen Ideen
   honorsAwards: Ehrungen und Auszeichnungen
   honorsAwardsElectoralOfficer: Wahlvorsteher
@@ -731,7 +731,7 @@ en:
   gi: German Informatics Society
   giphy: Giphy
   gitHub: GitHub
-  giTimespan: Jan 2019 – today
+  giTimespan: Jan 2019 – Dec 2025
   # hessenIdeen: Hesse Ideas
   honorsAwards: Honors & Awards
   honorsAwardsElectoralOfficer: Electoral Officer
