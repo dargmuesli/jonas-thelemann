@@ -1,3 +1,9 @@
+## [5.29.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.28.14...5.29.0) (2025-11-05)
+
+### Features
+
+* **pages:** end german informatics society membership ([455a730](https://github.com/dargmuesli/jonas-thelemann/commit/455a73019ec848622f4fb96af321885cb496a95a))
+
 ## [5.28.14](https://github.com/dargmuesli/jonas-thelemann/compare/5.28.13...5.28.14) (2025-11-04)
 
 ### Bug Fixes
