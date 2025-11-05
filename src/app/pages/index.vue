@@ -2,7 +2,7 @@
   <div class="flex flex-col xl:flex-row">
     <aside :aria-label="t('asideLabel')" class="relative flex">
       <div
-        class="flex aspect-[2081/3009] max-h-[80vh] flex-1 xl:fixed xl:h-[100vh] xl:max-h-[none] xl:max-w-[38.2vw]"
+        class="flex aspect-2081/3009 max-h-[80vh] flex-1 xl:fixed xl:h-screen xl:max-h-none xl:max-w-[38.2vw]"
       >
         <NuxtImg
           alt="Jonas in Tutzing."
@@ -20,9 +20,7 @@
           @load="indicateLoadingDoneHeroImage"
         />
       </div>
-      <div
-        class="hidden aspect-[2081/3009] h-[100vh] max-w-[38.2vw] xl:block"
-      />
+      <div class="hidden aspect-2081/3009 h-screen max-w-[38.2vw] xl:block" />
     </aside>
     <div class="p-4 sm:p-8">
       <main class="min-w-0 space-y-6 pb-32 xl:min-h-screen">
@@ -115,7 +113,7 @@
         </div>
         <div>
           <!-- Wrapping div required for paragraph's negative margin to work. -->
-          <i18n-t class="mt-[-0.5rem]" keypath="about" tag="p">
+          <i18n-t class="-mt-2" keypath="about" tag="p">
             <template #aboutMarkSoftwareTemplate>
               <mark
                 class="dark:text-text-bright bg-[#ffff00]/50 dark:bg-gray-700"
