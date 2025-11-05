@@ -28,6 +28,8 @@ export default defineNuxtConfig(
         optimizeDeps: {
           include: [
             '@dargmuesli/nuxt-vio/shared/utils/constants',
+            '@intlify/core-base',
+            '@intlify/shared',
             '@vuelidate/core',
             '@vuelidate/validators',
             'consola',
