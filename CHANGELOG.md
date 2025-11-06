@@ -1,3 +1,9 @@
+## [5.29.1](https://github.com/dargmuesli/jonas-thelemann/compare/5.29.0...5.29.1) (2025-11-06)
+
+### Performance Improvements
+
+* **build:** optimize intlify dependencies ([5aa2f19](https://github.com/dargmuesli/jonas-thelemann/commit/5aa2f19f229cf84747aa47d9ee5c465c364f4976))
+
 ## [5.29.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.28.14...5.29.0) (2025-11-05)
 
 ### Features
