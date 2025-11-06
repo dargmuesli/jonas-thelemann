@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex h-full w-full flex-nowrap bg-[linear-gradient(to_bottom,_#dbf4ff,_#fff1f1)]"
+    class="flex h-full w-full flex-nowrap bg-[linear-gradient(to_bottom,#dbf4ff,#fff1f1)]"
   >
     <img
       alt="Jonas in Tutzing."
