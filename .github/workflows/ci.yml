@@ -8,6 +8,7 @@ on:
     branches:
       - alpha
       - beta
+      - main
       - master
       - renovate/**
 
@@ -57,7 +58,7 @@ jobs:
   deploy:
     needs: build
     name: Deploy
-    uses: dargmuesli/github-actions/.github/workflows/deploy-cloudflare-pages.yml@a8900fcf9e9d1e7f4c1138484cb7bf8d7bd3f3cb # 3.0.0
+    uses: dargmuesli/github-actions/.github/workflows/deploy-cloudflare-pages.yml@3.1.0-beta.1
     permissions:
       contents: read
       deployments: write
