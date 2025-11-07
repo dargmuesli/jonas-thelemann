@@ -1,7 +1,6 @@
 name: CI
 
-permissions:
-  contents: read
+permissions: {}
 
 on:
   pull_request:
@@ -13,32 +12,26 @@ on:
       - renovate/**
 
 jobs:
-  prepare_jobs:
-    name: "Prepare: job optimization"
-    runs-on: ubuntu-latest
-    outputs:
-      pr_found: ${{ steps.pr.outputs.pr_found }}
-    steps:
-      - name: Get current PR
-        id: pr
-        uses: 8BitJonny/gh-get-current-pr@4056877062a1f3b624d5d4c2bedefa9cf51435c9 # 4.0.0
-        with:
-          filterOutClosed: true
-          filterOutDraft: true
+  ci-optimization:
+    name: CI optimization
+    uses: dargmuesli/github-actions/.github/workflows/ci-optimization.yml@3.0.0-beta.6
+    permissions:
+      pull-requests: read
   release_semantic_dry:
-    needs: prepare_jobs
+    needs: ci-optimization
     name: Release (semantic, dry)
-    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@2b47b35b82df04152c34ae042bd011dd83f28ffd # 2.8.0
-    if: needs.prepare_jobs.outputs.pr_found == 'false' || github.event_name == 'pull_request'
+    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@3.0.0-beta.6
+    if: needs.ci-optimization.outputs.continue == 'true'
     permissions:
       contents: write
+      id-token: write
     secrets:
       PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
     with:
       DRY_RUN: true
   build:
     name: Build
-    uses: dargmuesli/github-actions/.github/workflows/docker.yml@2b47b35b82df04152c34ae042bd011dd83f28ffd # 2.8.0
+    uses: dargmuesli/github-actions/.github/workflows/docker.yml@3.0.0-beta.6
     needs: release_semantic_dry
     permissions:
       packages: write
@@ -55,15 +48,16 @@ jobs:
   release_semantic:
     needs: build
     name: Release (semantic)
-    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@2b47b35b82df04152c34ae042bd011dd83f28ffd # 2.8.0
+    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@3.0.0-beta.6
     permissions:
       contents: write
+      id-token: write
     secrets:
       PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
   deploy:
     needs: build
     name: Deploy
-    uses: dargmuesli/github-actions/.github/workflows/deploy-cloudflare-pages.yml@2b47b35b82df04152c34ae042bd011dd83f28ffd # 2.8.0
+    uses: dargmuesli/github-actions/.github/workflows/deploy-cloudflare-pages.yml@3.0.0-beta.6
     permissions:
       contents: read
       deployments: write
