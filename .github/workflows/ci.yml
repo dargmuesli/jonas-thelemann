@@ -14,14 +14,14 @@ on:
 jobs:
   ci-optimization:
     name: CI optimization
-    uses: dargmuesli/github-actions/.github/workflows/ci-optimization.yml@3.0.0-beta.6
+    uses: dargmuesli/github-actions/.github/workflows/ci-optimization.yml@3.0.0
     permissions:
       pull-requests: read
   release_semantic_dry:
     needs: ci-optimization
-    name: Release (semantic, dry)
-    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@3.0.0-beta.6
     if: needs.ci-optimization.outputs.continue == 'true'
+    name: Release (semantic, dry)
+    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@3.0.0
     permissions:
       contents: write
       id-token: write
@@ -31,7 +31,7 @@ jobs:
       DRY_RUN: true
   build:
     name: Build
-    uses: dargmuesli/github-actions/.github/workflows/docker.yml@3.0.0-beta.6
+    uses: dargmuesli/github-actions/.github/workflows/docker.yml@3.0.0
     needs: release_semantic_dry
     permissions:
       packages: write
@@ -48,7 +48,7 @@ jobs:
   release_semantic:
     needs: build
     name: Release (semantic)
-    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@3.0.0-beta.6
+    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@3.0.0
     permissions:
       contents: write
       id-token: write
@@ -57,7 +57,7 @@ jobs:
   deploy:
     needs: build
     name: Deploy
-    uses: dargmuesli/github-actions/.github/workflows/deploy-cloudflare-pages.yml@3.0.0-beta.6
+    uses: dargmuesli/github-actions/.github/workflows/deploy-cloudflare-pages.yml@3.0.0
     permissions:
       contents: read
       deployments: write
