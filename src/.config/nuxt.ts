@@ -73,7 +73,7 @@ export default defineNuxtConfig(
               'frame-src': ['https://challenges.cloudflare.com'],
               'script-src-elem': [
                 'https://challenges.cloudflare.com',
-                // "'sha256-oHL20tRmipXhd3ivYNMpZSHAVebPXJMetWmfG3i5FKY='", // TODO: enable once unsafe-inline is removed in Vio
+                // "'sha256-oHL20tRmipXhd3ivYNMpZSHAVebPXJMetWmfG3i5FKY='", // TODO: enable once unsafe-inline is removed in Vio (https://github.com/Baroshem/nuxt-security/pull/659)
               ],
             },
           ),
