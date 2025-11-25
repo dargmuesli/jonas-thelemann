@@ -5,8 +5,8 @@ ENVIRONMENT_VARIABLES_PATH="/run/environment-variables"
 
 is_valid_var_name() {
   case "$1" in
-    *[!a-zA-Z0-9_]*|'') return 1 ;;
-    *) return 0 ;;
+  *[!a-zA-Z0-9_]* | '') return 1 ;;
+  *) return 0 ;;
   esac
 }
 
@@ -31,8 +31,8 @@ load_environment_variables() {
 load_environment_variables
 
 if [ "${NODE_ENV:-}" != "production" ]; then
-    pnpm config set store-dir "/srv/.pnpm-store"
-    pnpm install
+  pnpm config set store-dir "/srv/.pnpm-store"
+  pnpm install
 fi
 
 exec "$@"
