@@ -1,3 +1,9 @@
+## [6.1.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.0.0...6.1.0) (2025-11-25)
+
+### Features
+
+* **security:** require `corp` embedder policy for production ([dd2ef04](https://github.com/dargmuesli/jonas-thelemann/commit/dd2ef04178a46c49ebfc94789aeca575a84f3874))
+
 ## [6.0.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.30.0...6.0.0) (2025-11-25)
 
 ### ⚠ BREAKING CHANGES
