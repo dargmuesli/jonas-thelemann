@@ -36,7 +36,6 @@ export default defineNuxtConfig(
             '@vuelidate/core',
             '@vuelidate/validators',
             'consola',
-            'sweetalert2',
           ],
         },
       },
@@ -63,6 +62,14 @@ export default defineNuxtConfig(
           type: 'Person',
         },
         twitter: '@dargmuesli',
+      },
+
+      $production: {
+        security: {
+          headers: {
+            crossOriginEmbedderPolicy: 'require-corp', // breaks nuxt devtools // TODO: remove when vio sets this
+          },
+        },
       },
     },
     VIO_NUXT_BASE_CONFIG({

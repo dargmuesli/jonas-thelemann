@@ -19,7 +19,7 @@ const copy = async () => {
   if (typeof route.query.code !== 'string') return
 
   await copyText(route.query.code)
-  showToast({ title: t('copySuccess') })
+  toast.success(t('copySuccess'))
 }
 
 // initialization
