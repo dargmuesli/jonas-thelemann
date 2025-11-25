@@ -64,6 +64,14 @@ export default defineNuxtConfig(
         },
         twitter: '@dargmuesli',
       },
+
+      $production: {
+        security: {
+          headers: {
+            crossOriginEmbedderPolicy: 'require-corp', // breaks nuxt devtools // TODO: remove when vio sets this
+          },
+        },
+      },
     },
     VIO_NUXT_BASE_CONFIG({
       siteName: SITE_NAME,
