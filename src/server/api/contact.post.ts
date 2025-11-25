@@ -1,12 +1,8 @@
-import { existsSync, readFileSync } from 'node:fs'
-
 import { consola } from 'consola'
 import { createTransport } from 'nodemailer'
 
 const MAIL_FROM = '"jonas-thelemann" <noreply+contact@jonas-thelemann.de>'
 const MAIL_TO = 'e-mail+contact@jonas-thelemann.de'
-const SECRET_NODEMAILER_TRANSPORTER_PATH =
-  '/run/secrets/jonas-thelemann_nodemailer-transporter'
 
 export default defineEventHandler(async () => {
   await assertTurnstileValid()
@@ -18,10 +14,6 @@ const sendMail = async () => {
   const runtimeConfig = useRuntimeConfig()
 
   const transport = runtimeConfig.nodemailer.transporter
-    ? runtimeConfig.nodemailer.transporter
-    : existsSync(SECRET_NODEMAILER_TRANSPORTER_PATH)
-      ? JSON.parse(readFileSync(SECRET_NODEMAILER_TRANSPORTER_PATH, 'utf-8'))
-      : undefined
 
   if (!transport) {
     throw new Error('The SMTP configuration secret is missing!')
