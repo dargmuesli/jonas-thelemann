@@ -1,28 +1,19 @@
-import { existsSync, readFileSync } from 'node:fs'
-
 import { consola } from 'consola'
-import type { H3Event } from 'h3'
 import { createTransport } from 'nodemailer'
 
 const MAIL_FROM = '"jonas-thelemann" <noreply+contact@jonas-thelemann.de>'
 const MAIL_TO = 'e-mail+contact@jonas-thelemann.de'
-const SECRET_NODEMAILER_TRANSPORTER_PATH =
-  '/run/secrets/jonas-thelemann_nodemailer-transporter'
 
-export default defineEventHandler(async function (event) {
-  await assertTurnstileValid(event)
-  await sendMail(event)
-  event.node.res.end()
+export default defineEventHandler(async () => {
+  await assertTurnstileValid()
+  await sendMail()
 })
 
-const sendMail = async (event: H3Event) => {
+const sendMail = async () => {
+  const event = useEvent()
   const runtimeConfig = useRuntimeConfig()
 
   const transport = runtimeConfig.nodemailer.transporter
-    ? runtimeConfig.nodemailer.transporter
-    : existsSync(SECRET_NODEMAILER_TRANSPORTER_PATH)
-      ? JSON.parse(readFileSync(SECRET_NODEMAILER_TRANSPORTER_PATH, 'utf-8'))
-      : undefined
 
   if (!transport) {
     throw new Error('The SMTP configuration secret is missing!')
@@ -47,7 +38,8 @@ const sendMail = async (event: H3Event) => {
   consola.log('Message sent: %s', mailSentData.messageId)
 }
 
-const assertTurnstileValid = async (event: H3Event) => {
+const assertTurnstileValid = async () => {
+  const event = useEvent()
   const body = await readBody(event)
   const turnstileToken = body.captcha
 
@@ -55,7 +47,7 @@ const assertTurnstileValid = async (event: H3Event) => {
     return throwError(422, 'Turnstile token not provided.')
   }
 
-  const result = await verifyTurnstileToken(turnstileToken, event)
+  const result = await verifyTurnstileToken(turnstileToken)
 
   if (!result.success) {
     return throwError(
