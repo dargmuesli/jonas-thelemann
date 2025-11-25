@@ -11,13 +11,13 @@ WORKDIR /srv/app/
 RUN corepack enable \
   && apk add --no-cache mkcert --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing
 
+COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
 
 #############
 # Serve Nuxt in development mode.
 
 FROM base-image AS development
-
-COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 VOLUME /srv/.pnpm-store
 VOLUME /srv/app
@@ -112,6 +112,8 @@ WORKDIR /srv/app/
 RUN corepack enable \
   && apt update && apt install mkcert
 
+COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
 
 ########################
 # Nuxt: test (e2e)
@@ -121,8 +123,6 @@ FROM test-e2e-base-image AS test-e2e_development
 ARG USER_NAME=e2e
 ARG USER_ID=1000
 ARG GROUP_ID=1000
-
-COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 RUN groupadd -g $GROUP_ID -o $USER_NAME \
     && useradd -m -l -u $USER_ID -g $GROUP_ID -o -s /bin/bash $USER_NAME
@@ -225,8 +225,8 @@ ENV NODE_ENV=production
 RUN apk update \
     && apk upgrade --no-cache
 
-ENTRYPOINT ["pnpm"]
-CMD ["run", "start:node"]
+ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["pnpm", "run", "start:node"]
 HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
 EXPOSE 3000
 LABEL org.opencontainers.image.source="https://github.com/dargmuesli/jonas-thelemann"
