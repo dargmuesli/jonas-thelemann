@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
-const fireError = useFireError()
+const alertError = useAlertError()
 const backendFetch = useServiceFetch({
   name: 'backend',
 })
@@ -35,15 +35,10 @@ const submit = async (body: object) => {
 
     isFormSent.value = true
   } catch (error) {
-    if (error instanceof Error) {
-      fireError({
-        // level: 'error',
-        error,
-        // text: t('iCalFetchError'),
-      })
-    } else {
-      alert(`Unexpected error: ${error}`)
-    }
+    alertError({
+      ...(error instanceof Error ? { error } : {}),
+      messageI18n: t('fetchError'),
+    })
   }
 }
 
@@ -53,10 +48,12 @@ useHeadDefault({ title: t('title') })
 
 <i18n lang="yaml">
 de:
+  fetchError: Es gab einen Fehler beim Versenden der Nachricht
   thankYouBody: Deine Nachricht wurde versendet. Ich werde mich in Kürze bei dir melden.
   thankYouTitle: Danke!
   title: Kontakt
 en:
+  fetchError: There was an error sending the message
   thankYouBody: Your message has been sent. I'll get back to you shortly.
   thankYouTitle: Thank you!
   title: Contact

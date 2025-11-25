@@ -36,7 +36,6 @@ export default defineNuxtConfig(
             '@vuelidate/core',
             '@vuelidate/validators',
             'consola',
-            'sweetalert2',
           ],
         },
       },
