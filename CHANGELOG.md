@@ -1,3 +1,17 @@
+## [6.0.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.30.0...6.0.0) (2025-11-25)
+
+### ⚠ BREAKING CHANGES
+
+* **turnstile:** read secret key from environment variable
+
+### Features
+
+* **turnstile:** read secret key from environment variable ([ab1fdd1](https://github.com/dargmuesli/jonas-thelemann/commit/ab1fdd1c6c529c71c59362e84fc1cd7f48f75a84))
+
+### Bug Fixes
+
+* **security:** enable dynamic content security policy ([f85bf84](https://github.com/dargmuesli/jonas-thelemann/commit/f85bf84f8036910d48f0f3a18b829182f28052b6))
+
 ## [5.30.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.29.2...5.30.0) (2025-11-25)
 
 ### Features
