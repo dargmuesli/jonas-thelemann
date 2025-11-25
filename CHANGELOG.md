@@ -1,3 +1,9 @@
+## [5.30.0](https://github.com/dargmuesli/jonas-thelemann/compare/5.29.2...5.30.0) (2025-11-25)
+
+### Features
+
+* **docker:** allow to load secrets from environment variables ([76760e9](https://github.com/dargmuesli/jonas-thelemann/commit/76760e92a7d0fe7267e4836787d06eab8f2c3925))
+
 ## [5.29.2](https://github.com/dargmuesli/jonas-thelemann/compare/5.29.1...5.29.2) (2025-11-18)
 
 ### Bug Fixes
