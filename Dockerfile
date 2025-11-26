@@ -19,8 +19,18 @@ COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 FROM base-image AS development
 
+ENV CI=false
+
+RUN mkdir \
+        /srv/app/node_modules \
+        /srv/.pnpm-store \
+    && chown node:node \
+        /srv/app/node_modules \
+        /srv/.pnpm-store
+
 VOLUME /srv/.pnpm-store
 VOLUME /srv/app
+VOLUME /srv/app/node_modules
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["pnpm", "run", "--dir", "src", "dev", "--host", "0.0.0.0"]
