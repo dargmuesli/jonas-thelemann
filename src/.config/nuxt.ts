@@ -10,9 +10,6 @@ export default defineNuxtConfig(
       extends: ['@dargmuesli/nuxt-vio'],
       modules: ['@nuxt/scripts', '@nuxtjs/turnstile'],
       nitro: {
-        experimental: {
-          asyncContext: true, // TODO: remove when enabled in vio
-        },
         prerender: {
           autoSubfolderIndex: false, // prevents Cloudflare Pages' redirection issue (https://community.cloudflare.com/t/removing-trailing-slash-on-static-websites/583429/4)
         },
