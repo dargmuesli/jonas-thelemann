@@ -48,8 +48,8 @@ importers:
   src:
     devDependencies:
       '@dargmuesli/nuxt-cookie-control':
-        specifier: 9.1.10
-        version: 9.1.10(magicast@0.5.1)(webpack@5.103.0(esbuild@0.27.1))
+        specifier: 9.1.11
+        version: 9.1.11(magicast@0.5.1)(webpack@5.103.0(esbuild@0.27.1))
       '@dargmuesli/nuxt-vio':
         specifier: 20.1.1
         version: 20.1.1(d43db8ab3bc42b5c1c2ffb205ab3841c)
@@ -598,8 +598,8 @@ packages:
     peerDependencies:
       postcss-selector-parser: ^7.0.0
 
-  '@dargmuesli/nuxt-cookie-control@9.1.10':
-    resolution: {integrity: sha512-Sd5F7HCme9PtokWJPCcMDzLomitm7xrKzLeR3fB3EZIhIUNDZKIWZBE3vKunMiWYG8Xhvm0bbmnpFCJxeXjPGw==}
+  '@dargmuesli/nuxt-cookie-control@9.1.11':
+    resolution: {integrity: sha512-6kwvqXTZfJ38Df/XVbiZKuOkGRZ9j5UH4/8IbJCKeqcvpE6pKdZOqC1s0DH8Qz6i0utqKhEHzkPcPpKaT7VOrQ==}
     engines: {node: '>=16'}
 
   '@dargmuesli/nuxt-cookie-control@9.1.9':
@@ -1449,10 +1449,6 @@ packages:
 
   '@nuxt/kit@3.20.1':
     resolution: {integrity: sha512-TIslaylfI5kd3AxX5qts0qyrIQ9Uq3HAA1bgIIJ+c+zpDfK338YS+YrCWxBBzDMECRCbAS58mqAd2MtJfG1ENA==}
-    engines: {node: '>=18.12.0'}
-
-  '@nuxt/kit@4.2.1':
-    resolution: {integrity: sha512-lLt8KLHyl7IClc3RqRpRikz15eCfTRlAWL9leVzPyg5N87FfKE/7EWgWvpiL/z4Tf3dQCIqQb88TmHE0JTIDvA==}
     engines: {node: '>=18.12.0'}
 
   '@nuxt/kit@4.2.2':
@@ -8743,9 +8739,9 @@ snapshots:
     dependencies:
       postcss-selector-parser: 7.1.1
 
-  '@dargmuesli/nuxt-cookie-control@9.1.10(magicast@0.5.1)(webpack@5.103.0(esbuild@0.27.1))':
+  '@dargmuesli/nuxt-cookie-control@9.1.11(magicast@0.5.1)(webpack@5.103.0(esbuild@0.27.1))':
     dependencies:
-      '@nuxt/kit': 4.2.1(magicast@0.5.1)
+      '@nuxt/kit': 4.2.2(magicast@0.5.1)
       css-vars-ponyfill: 2.4.9
       defu: 6.1.4
       string-replace-loader: 3.2.0(webpack@5.103.0(esbuild@0.27.1))
@@ -9853,31 +9849,6 @@ snapshots:
       jiti: 2.6.1
       klona: 2.0.6
       knitwork: 1.3.0
-      mlly: 1.8.0
-      ohash: 2.0.11
-      pathe: 2.0.3
-      pkg-types: 2.3.0
-      rc9: 2.1.2
-      scule: 1.3.0
-      semver: 7.7.3
-      tinyglobby: 0.2.15
-      ufo: 1.6.1
-      unctx: 2.4.1
-      untyped: 2.0.0
-    transitivePeerDependencies:
-      - magicast
-
-  '@nuxt/kit@4.2.1(magicast@0.5.1)':
-    dependencies:
-      c12: 3.3.2(magicast@0.5.1)
-      consola: 3.4.2
-      defu: 6.1.4
-      destr: 2.0.5
-      errx: 0.1.0
-      exsolve: 1.0.8
-      ignore: 7.0.5
-      jiti: 2.6.1
-      klona: 2.0.6
       mlly: 1.8.0
       ohash: 2.0.11
       pathe: 2.0.3
