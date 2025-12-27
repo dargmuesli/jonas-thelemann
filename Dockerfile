@@ -33,7 +33,7 @@ VOLUME /srv/app
 VOLUME /srv/app/node_modules
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["pnpm", "run", "--dir", "src", "dev", "--host", "0.0.0.0"]
+CMD ["pnpm", "--dir", "src", "run", "dev", "--host", "0.0.0.0"]
 EXPOSE 3000
 
 # TODO: support healthcheck while starting (https://github.com/nuxt/framework/issues/6915)
@@ -135,12 +135,15 @@ ARG USER_ID=1000
 ARG GROUP_ID=1000
 
 RUN groupadd -g $GROUP_ID -o $USER_NAME \
-    && useradd -m -l -u $USER_ID -g $GROUP_ID -o -s /bin/bash $USER_NAME
+    && useradd -m -l -u $USER_ID -g $GROUP_ID -o -s /bin/bash $USER_NAME \
+    && mkdir /srv/app/node_modules \
+    && chown $USER_ID:$GROUP_ID /srv/app/node_modules
 
 USER $USER_NAME
 
 VOLUME /srv/.pnpm-store
 VOLUME /srv/app
+VOLUME /srv/app/node_modules
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
