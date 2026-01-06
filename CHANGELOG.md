@@ -1,3 +1,9 @@
+## [6.1.3](https://github.com/dargmuesli/jonas-thelemann/compare/6.1.2...6.1.3) (2026-01-06)
+
+### Bug Fixes
+
+* schedule release ([eac2c2f](https://github.com/dargmuesli/jonas-thelemann/commit/eac2c2f06b251b198327a56eae7361392347a744))
+
 ## [6.1.2](https://github.com/dargmuesli/jonas-thelemann/compare/6.1.1...6.1.2) (2025-12-23)
 
 ### Bug Fixes
