@@ -1,3 +1,10 @@
+## [6.3.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.2.0...6.3.0) (2026-01-08)
+
+### Features
+
+* **experience:** add sales ([497ae13](https://github.com/dargmuesli/jonas-thelemann/commit/497ae136c6e758de1545d481b12e68d78dfe4a75))
+* **style:** reindent lists ([5c68971](https://github.com/dargmuesli/jonas-thelemann/commit/5c689711121a658821d2958a2b0c8d7db348d919))
+
 ## [6.2.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.1.3...6.2.0) (2026-01-08)
 
 ### Features
