@@ -147,7 +147,7 @@
         >
           <section>
             <h2 class="text-2xl">{{ t('experience') }}</h2>
-            <ul class="mt-2 flex list-inside list-disc flex-col gap-1">
+            <ul class="mt-2 ml-4.5 flex list-disc flex-col gap-1">
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
@@ -262,7 +262,7 @@
           </section>
           <section>
             <h2 class="text-2xl">{{ t('organizations') }}</h2>
-            <ul class="mt-2 flex list-inside list-disc flex-col gap-1">
+            <ul class="mt-2 ml-4.5 flex list-disc flex-col gap-1">
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
@@ -330,7 +330,7 @@
           </section>
           <section>
             <h2 class="text-2xl">{{ t('languages') }}</h2>
-            <ul class="mt-2 flex list-inside list-disc flex-col gap-1">
+            <ul class="mt-2 ml-4.5 flex list-disc flex-col gap-1">
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
@@ -371,7 +371,7 @@
           </section>
           <section>
             <h2 class="text-2xl">{{ t('honorsAwards') }}</h2>
-            <ul class="mt-2 flex list-inside list-disc flex-col gap-1">
+            <ul class="mt-2 ml-4.5 flex list-disc flex-col gap-1">
               <li>
                 <i18n-t
                   keypath="titleSubtitle"
