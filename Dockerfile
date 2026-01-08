@@ -122,8 +122,6 @@ WORKDIR /srv/app/
 RUN corepack enable \
   && apt update && apt install mkcert
 
-COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-
 
 ########################
 # Nuxt: test (e2e)
@@ -138,6 +136,8 @@ RUN groupadd -g $GROUP_ID -o $USER_NAME \
     && useradd -m -l -u $USER_ID -g $GROUP_ID -o -s /bin/bash $USER_NAME \
     && mkdir /srv/app/node_modules \
     && chown $USER_ID:$GROUP_ID /srv/app/node_modules
+
+COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 USER $USER_NAME
 
