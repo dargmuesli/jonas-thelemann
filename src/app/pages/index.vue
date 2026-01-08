@@ -659,7 +659,7 @@ de:
   experienceFederalVolunteerServiceTimespan: Jan 2017 – Aug 2017
   experienceMaevsi: Geschäftsführer und technischer Leiter
   experienceMaevsiTimespan: Nov 2024 – {present}
-  experienceNinjaneer: Software-Entwickler
+  experienceNinjaneer: Software-Entwickler und Vertrieb
   experienceNinjaneerTimespan: Jul 2020 – {present}
   flipdot: flipdot Hackspace Kassel
   flipdotTimespan: Dec 2016 – {present}
@@ -725,7 +725,7 @@ en:
   experienceFederalVolunteerServiceTimespan: Jan 2017 – Aug 2017
   experienceMaevsi: Executive Director and Head of Technology
   experienceMaevsiTimespan: Nov 2024 – {present}
-  experienceNinjaneer: Software Engineer
+  experienceNinjaneer: Software Engineer and Sales
   experienceNinjaneerTimespan: Jul 2020 – today
   flipdot: flipdot Hackspace Kassel
   flipdotTimespan: Dez 2016 – {present}
