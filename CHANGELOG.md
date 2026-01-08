@@ -1,3 +1,9 @@
+## [6.2.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.1.3...6.2.0) (2026-01-08)
+
+### Features
+
+* **pages:** update picture ([cdda372](https://github.com/dargmuesli/jonas-thelemann/commit/cdda3721b4fa973a18e0720bbe91f6d3035f13df))
+
 ## [6.1.3](https://github.com/dargmuesli/jonas-thelemann/compare/6.1.2...6.1.3) (2026-01-06)
 
 ### Bug Fixes
