@@ -2,25 +2,25 @@
   <div class="flex flex-col xl:flex-row">
     <aside :aria-label="t('asideLabel')" class="relative flex">
       <div
-        class="flex aspect-2081/3009 max-h-[80vh] flex-1 xl:fixed xl:h-screen xl:max-h-none xl:max-w-[38.2vw]"
+        class="flex aspect-3543/2364 max-h-[80vh] flex-1 xl:fixed xl:h-screen xl:max-h-none xl:max-w-[38.2vw]"
       >
         <NuxtImg
-          alt="Jonas in Tutzing."
-          class="flex-1 object-cover object-[50%_30%]"
+          alt="Jonas in Wiesbaden."
+          class="flex-1 object-cover object-[50%_50%]"
           densities="x1 x2"
           fetchpriority="high"
           format="webp"
-          height="3009"
+          height="2364"
           :nonce="nonce"
           :placeholder="!runtimeConfig.public.vio.isTesting"
           preload
-          sizes="320px xs:640px sm:768px md:1024px lg:1280px xl:1536px 2xl:2081px"
-          src="/assets/static/images/tutzing.jpg"
-          width="2081"
+          sizes="320px xs:640px sm:768px md:1024px lg:1280px xl:1536px 2xl:3543px"
+          src="/assets/static/images/wiesbaden.jpg"
+          width="3543"
           @load="indicateLoadingDoneHeroImage"
         />
       </div>
-      <div class="hidden aspect-2081/3009 h-screen max-w-[38.2vw] xl:block" />
+      <div class="hidden aspect-3543/2364 h-screen max-w-[38.2vw] xl:block" />
     </aside>
     <div class="p-4 sm:p-8">
       <main class="min-w-0 space-y-6 pb-32 xl:min-h-screen">
@@ -627,7 +627,13 @@ onMounted(() => indicateLoadingDone())
 
 // initialization
 await init()
-useHeadDefault({ title: siteConfig.name })
+useHeadDefault({
+  description: t('descriptionShort', {
+    maevsi: t('maevsi'),
+    ninjaneers: t('ninjaneers'),
+  }),
+  title: siteConfig.name,
+})
 </script>
 
 <i18n lang="yaml">
