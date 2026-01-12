@@ -59,55 +59,55 @@
         <div class="pb-2">
           <ul class="-mx-1.5 flex flex-wrap">
             <li class="m-1.5">
-              <SocialLink :to="localePath('/contact')">
+              <JtSocialLink :to="localePath('/contact')">
                 {{ t('contactForm') }}
-              </SocialLink>
+              </JtSocialLink>
             </li>
             <li class="m-1.5">
-              <SocialLink to="https://giphy.com/channel/dargmuesli">
+              <JtSocialLink to="https://giphy.com/channel/dargmuesli">
                 {{ t('giphy') }}
-              </SocialLink>
+              </JtSocialLink>
             </li>
             <li class="m-1.5">
-              <SocialLink to="https://github.com/dargmuesli">
+              <JtSocialLink to="https://github.com/dargmuesli">
                 {{ t('gitHub') }}
-              </SocialLink>
+              </JtSocialLink>
             </li>
             <li class="m-1.5">
-              <SocialLink to="https://www.instagram.com/dargmuesli/">
+              <JtSocialLink to="https://www.instagram.com/dargmuesli/">
                 {{ t('instagram') }}
-              </SocialLink>
+              </JtSocialLink>
             </li>
             <li class="m-1.5">
-              <SocialLink
+              <JtSocialLink
                 to="https://www.linkedin.com/in/jonas-thelemann-148a74205/"
               >
                 {{ t('linkedIn') }}
-              </SocialLink>
+              </JtSocialLink>
             </li>
             <li class="m-1.5">
-              <SocialLink to="https://www.mixcloud.com/creal/">
+              <JtSocialLink to="https://www.mixcloud.com/creal/">
                 {{ t('mixcloud') }}
-              </SocialLink>
+              </JtSocialLink>
             </li>
             <li class="m-1.5">
-              <SocialLink to="https://open.spotify.com/user/1153065250">
+              <JtSocialLink to="https://open.spotify.com/user/1153065250">
                 {{ t('spotify') }}
-              </SocialLink>
+              </JtSocialLink>
             </li>
             <li class="m-1.5">
-              <SocialLink
+              <JtSocialLink
                 to="https://stackoverflow.com/users/4682621/dargmuesli"
               >
                 {{ t('stackOverflow') }}
-              </SocialLink>
+              </JtSocialLink>
             </li>
             <li class="m-1.5">
-              <SocialLink
+              <JtSocialLink
                 to="https://www.youtube.com/channel/UCmIrzQsJeEM5eW6KOAk9nSg"
               >
                 {{ t('youTube') }}
-              </SocialLink>
+              </JtSocialLink>
             </li>
           </ul>
         </div>
@@ -547,16 +547,18 @@
                 </VioLink>
               </li>
               <li class="m-4">
-                <SocialLink to="https://github.com/dargmuesli?tab=repositories">
+                <JtSocialLink
+                  to="https://github.com/dargmuesli?tab=repositories"
+                >
                   {{ t('projectsMore', { repoCount }) }}
-                </SocialLink>
+                </JtSocialLink>
               </li>
             </ul>
           </section>
         </div>
       </main>
       <footer class="text-sm leading-6">
-        <Footer />
+        <JtFooter />
       </footer>
     </div>
   </div>

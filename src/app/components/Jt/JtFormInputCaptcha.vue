@@ -8,7 +8,7 @@
   >
     <NuxtTurnstile
       ref="turnstileRef"
-      :class="{ 'h-[65px]': isVisible }"
+      :class="{ 'h-16.25': isVisible }"
       :options="{
         'error-callback': () => (isLoading = false),
         'expired-callback': () => emit('input', undefined),

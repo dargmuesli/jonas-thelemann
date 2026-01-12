@@ -10,7 +10,7 @@
     </VioCardStateInfo>
     <section v-else>
       <h1>{{ t('title') }}</h1>
-      <FormContact @submit="submit" />
+      <JtFormContact @submit="submit" />
     </section>
   </div>
 </template>

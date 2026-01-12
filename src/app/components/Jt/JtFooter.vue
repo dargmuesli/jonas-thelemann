@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center gap-2 text-sm leading-6">
     <div class="mx-auto mt-8 flex w-9/12 items-center">
       <VioLayoutHr />
-      <IconLogo
+      <JtIconLogo
         background-fill="rgba(0,0,0,0)"
         class="mx-12 h-12 w-12 opacity-50 brightness-0 dark:opacity-60 dark:invert"
       />

@@ -60,7 +60,10 @@
         </VioFormInputStateError>
       </template>
     </VioFormInput>
-    <FormInputCaptcha :form-input="v$.captcha" @input="form.captcha = $event" />
+    <JtFormInputCaptcha
+      :form-input="v$.captcha"
+      @input="form.captcha = $event"
+    />
   </VioForm>
 </template>
 
