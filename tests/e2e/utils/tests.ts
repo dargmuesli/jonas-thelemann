@@ -1,5 +1,6 @@
 import { expect } from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
+import { consola } from 'consola'
 import { joinURL } from 'ufo'
 
 import { vioTest } from '../fixtures/vioTest'
@@ -15,10 +16,12 @@ export const testA11y = (url: string) =>
           page: defaultPage.page,
         }).analyze()
 
-        // console.log(
-        //   accessibilityScanResults.violations,
-        //   accessibilityScanResults.violations[0].nodes,
-        // )
+        if (accessibilityScanResults.violations.length) {
+          consola.log(
+            accessibilityScanResults.violations,
+            accessibilityScanResults.violations[0].nodes,
+          )
+        }
         expect(accessibilityScanResults.violations.length).toEqual(0)
       },
     )
