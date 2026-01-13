@@ -10,13 +10,13 @@
           densities="x1 x2"
           fetchpriority="high"
           format="webp"
-          height="2364"
+          height="1182"
           :nonce="nonce"
           :placeholder="!runtimeConfig.public.vio.isTesting"
           preload
-          sizes="320px xs:640px sm:768px md:1024px lg:1280px xl:1536px 2xl:3543px"
+          sizes="320px xs:640px sm:768px md:1024px lg:1280px xl:1536px 2xl:1772px"
           src="/assets/static/images/wiesbaden.jpg"
-          width="3543"
+          width="1772"
           @load="indicateLoadingDoneHeroImage"
         />
       </div>
@@ -41,73 +41,27 @@
             </template>
             <template #university>
               <a href="https://www.uni-kassel.de/">
-                <span>{{ t('universityKassel') }}</span>
+                <span>{{ t('organizationUniversityKassel') }}</span>
               </a>
             </template>
             <template #maevsi>
               <a href="https://maev.si/">
-                <span>{{ t('maevsi') }}</span>
+                <span>{{ t('organizationMaevsi') }}</span>
               </a>
             </template>
           </i18n-t>
           <p class="text-gray-500 dark:text-gray-400">
             <a href="https://www.google.com/maps/place/Kassel">
-              {{ t('kasselAddress') }}
+              {{ t('addressKassel') }}
             </a>
           </p>
         </div>
         <div class="pb-2">
           <ul class="-mx-1.5 flex flex-wrap">
-            <li class="m-1.5">
-              <SocialLink :to="localePath('/contact')">
-                {{ t('contactForm') }}
-              </SocialLink>
-            </li>
-            <li class="m-1.5">
-              <SocialLink to="https://giphy.com/channel/dargmuesli">
-                {{ t('giphy') }}
-              </SocialLink>
-            </li>
-            <li class="m-1.5">
-              <SocialLink to="https://github.com/dargmuesli">
-                {{ t('gitHub') }}
-              </SocialLink>
-            </li>
-            <li class="m-1.5">
-              <SocialLink to="https://www.instagram.com/dargmuesli/">
-                {{ t('instagram') }}
-              </SocialLink>
-            </li>
-            <li class="m-1.5">
-              <SocialLink
-                to="https://www.linkedin.com/in/jonas-thelemann-148a74205/"
-              >
-                {{ t('linkedIn') }}
-              </SocialLink>
-            </li>
-            <li class="m-1.5">
-              <SocialLink to="https://www.mixcloud.com/creal/">
-                {{ t('mixcloud') }}
-              </SocialLink>
-            </li>
-            <li class="m-1.5">
-              <SocialLink to="https://open.spotify.com/user/1153065250">
-                {{ t('spotify') }}
-              </SocialLink>
-            </li>
-            <li class="m-1.5">
-              <SocialLink
-                to="https://stackoverflow.com/users/4682621/dargmuesli"
-              >
-                {{ t('stackOverflow') }}
-              </SocialLink>
-            </li>
-            <li class="m-1.5">
-              <SocialLink
-                to="https://www.youtube.com/channel/UCmIrzQsJeEM5eW6KOAk9nSg"
-              >
-                {{ t('youTube') }}
-              </SocialLink>
+            <li v-for="link in socialLinks" :key="link.to" class="m-1.5">
+              <JtPortfolioLink :to="link.to">
+                {{ link.label }}
+              </JtPortfolioLink>
             </li>
           </ul>
         </div>
@@ -115,18 +69,14 @@
           <!-- Wrapping div required for paragraph's negative margin to work. -->
           <i18n-t class="-mt-2" keypath="about" tag="p">
             <template #aboutMarkSoftwareTemplate>
-              <mark
-                class="dark:text-text-bright bg-[#ffff00]/50 dark:bg-gray-700"
-              >
+              <JtPortfolioHighlight>
                 {{ t('aboutMarkSoftware') }}
-              </mark>
+              </JtPortfolioHighlight>
             </template>
             <template #aboutMarkDjTemplate>
-              <mark
-                class="dark:text-text-bright bg-[#ffff00]/50 dark:bg-gray-700"
-              >
+              <JtPortfolioHighlight>
                 {{ t('aboutMarkDj') }}
-              </mark>
+              </JtPortfolioHighlight>
             </template>
             <template #aboutAttraction>
               {{ t('aboutAttraction') }}
@@ -145,98 +95,17 @@
         <div
           class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-2"
         >
-          <section>
-            <h2 class="text-2xl">{{ t('experience') }}</h2>
-            <ul class="mt-2 ml-4.5 flex list-disc flex-col gap-1">
-              <li>
-                <i18n-t
-                  keypath="titleSubtitle"
-                  class="text-gray-500 dark:text-gray-400"
-                  tag="span"
-                >
-                  <template #title>
-                    <span class="text-text-dark dark:text-text-bright">
-                      {{ t('experienceMaevsi') }}
-                    </span>
-                  </template>
-                  <template #subtitle>
-                    <i18n-t keypath="placeTime">
-                      <template #place>
-                        <a href="https://maev.si/">
-                          {{ t('maevsi') }}
-                        </a>
-                      </template>
-                      <template #time>
-                        {{
-                          t('experienceMaevsiTimespan', {
-                            present: t('present'),
-                          })
-                        }}
-                      </template>
-                    </i18n-t>
-                  </template>
-                </i18n-t>
-              </li>
-              <li>
-                <i18n-t
-                  keypath="titleSubtitle"
-                  class="text-gray-500 dark:text-gray-400"
-                  tag="span"
-                >
-                  <template #title>
-                    <span class="text-text-dark dark:text-text-bright">
-                      {{ t('experienceNinjaneer') }}
-                    </span>
-                  </template>
-                  <template #subtitle>
-                    <i18n-t keypath="placeTime">
-                      <template #place>
-                        <a href="https://www.ninjaneers.de/">
-                          {{ t('ninjaneers') }}
-                        </a>
-                      </template>
-                      <template #time>
-                        {{
-                          t('experienceNinjaneerTimespan', {
-                            present: t('present'),
-                          })
-                        }}
-                      </template>
-                    </i18n-t>
-                  </template>
-                </i18n-t>
-              </li>
-              <li>
-                <i18n-t
-                  keypath="titleSubtitle"
-                  class="text-gray-500 dark:text-gray-400"
-                  tag="span"
-                >
-                  <template #title>
-                    <span class="text-text-dark dark:text-text-bright">
-                      {{ t('experienceFederalVolunteerService') }}
-                    </span>
-                  </template>
-                  <template #subtitle>
-                    <i18n-t keypath="placeTime">
-                      <template #place>
-                        <a href="https://www.landkreiskassel.de/">
-                          {{ t('kasselCounty') }}
-                        </a>
-                      </template>
-                      <template #time>
-                        {{
-                          t('experienceFederalVolunteerServiceTimespan', {
-                            present: t('present'),
-                          })
-                        }}
-                      </template>
-                    </i18n-t>
-                  </template>
-                </i18n-t>
-              </li>
-            </ul>
-          </section>
+          <JtPortfolioSection :title="t('experience')">
+            <JtPortfolioItem
+              v-for="(item, idx) in experienceItems"
+              :key="idx"
+              :is-visible="item.isVisible"
+              :subtitle-place="item.organization"
+              :subtitle-place-url="item.organizationUrl"
+              :subtitle-time="item.timespan"
+              :title="item.role"
+            />
+          </JtPortfolioSection>
           <section>
             <h2 class="text-2xl">{{ t('education') }}</h2>
             <div class="mt-2">
@@ -251,7 +120,7 @@
                     class="text-text-dark dark:text-text-bright"
                     href="https://www.uni-kassel.de/"
                   >
-                    {{ t('universityKassel') }}
+                    {{ t('organizationUniversityKassel') }}
                   </a>
                 </template>
                 <template #subtitle>
@@ -260,311 +129,92 @@
               </i18n-t>
             </div>
           </section>
-          <section>
-            <h2 class="text-2xl">{{ t('organizations') }}</h2>
-            <ul class="mt-2 ml-4.5 flex list-disc flex-col gap-1">
-              <li>
-                <i18n-t
-                  keypath="titleSubtitle"
-                  class="text-gray-500 dark:text-gray-400"
-                  tag="span"
-                >
-                  <template #title>
-                    <a
-                      class="text-text-dark dark:text-text-bright"
-                      href="https://www.ccc.de/"
-                    >
-                      {{ t('ccc') }}
-                    </a>
-                  </template>
-                  <template #subtitle>
-                    <span>
-                      {{ t('cccTimespan', { present: t('present') }) }}
-                    </span>
-                  </template>
-                </i18n-t>
-              </li>
-              <li>
-                <i18n-t
-                  keypath="titleSubtitle"
-                  class="text-gray-500 dark:text-gray-400"
-                  tag="span"
-                >
-                  <template #title>
-                    <a
-                      class="text-text-dark dark:text-text-bright"
-                      href="https://flipdot.org/"
-                    >
-                      {{ t('flipdot') }}
-                    </a>
-                  </template>
-                  <template #subtitle>
-                    <span>
-                      {{ t('flipdotTimespan', { present: t('present') }) }}
-                    </span>
-                  </template>
-                </i18n-t>
-              </li>
-              <li>
-                <i18n-t
-                  keypath="titleSubtitle"
-                  class="text-gray-500 dark:text-gray-400"
-                  tag="span"
-                >
-                  <template #title>
-                    <a
-                      class="text-text-dark dark:text-text-bright"
-                      href="https://gi.de/"
-                    >
-                      {{ t('gi') }}
-                    </a>
-                  </template>
-                  <template #subtitle>
-                    <span>
-                      {{ t('giTimespan', { present: t('present') }) }}
-                    </span>
-                  </template>
-                </i18n-t>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h2 class="text-2xl">{{ t('languages') }}</h2>
-            <ul class="mt-2 ml-4.5 flex list-disc flex-col gap-1">
-              <li>
-                <i18n-t
-                  keypath="titleSubtitle"
-                  class="text-gray-500 dark:text-gray-400"
-                  tag="span"
-                >
-                  <template #title>
-                    <span class="text-text-dark dark:text-text-bright">
-                      {{ t('german') }}
-                    </span>
-                  </template>
-                  <template #subtitle>
-                    <span>
-                      {{ t('proficiencyNative') }}
-                    </span>
-                  </template>
-                </i18n-t>
-              </li>
-              <li>
-                <i18n-t
-                  keypath="titleSubtitle"
-                  class="text-gray-500 dark:text-gray-400"
-                  tag="span"
-                >
-                  <template #title>
-                    <span class="text-text-dark dark:text-text-bright">
-                      {{ t('english') }}
-                    </span>
-                  </template>
-                  <template #subtitle>
-                    <span>
-                      {{ t('proficiencyProfessional') }}
-                    </span>
-                  </template>
-                </i18n-t>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h2 class="text-2xl">{{ t('honorsAwards') }}</h2>
-            <ul class="mt-2 ml-4.5 flex list-disc flex-col gap-1">
-              <li>
-                <i18n-t
-                  keypath="titleSubtitle"
-                  class="text-gray-500 dark:text-gray-400"
-                  tag="span"
-                >
-                  <template #title>
-                    <span class="text-text-dark dark:text-text-bright">
-                      {{ t('honorsAwardsElectoralOfficer') }}
-                    </span>
-                  </template>
-                  <template #subtitle>
-                    <a href="https://www.kassel.de/">
-                      {{ t('kasselCity') }}
-                    </a>
-                  </template>
-                </i18n-t>
-              </li>
-              <li>
-                <i18n-t
-                  keypath="titleSubtitle"
-                  class="text-gray-500 dark:text-gray-400"
-                  tag="span"
-                >
-                  <template #title>
-                    <span class="text-text-dark dark:text-text-bright">
-                      {{ t('foundingScholar') }}
-                    </span>
-                  </template>
-                  <template #subtitle>
-                    <i18n-t keypath="placeTime">
-                      <template #place>
-                        <a href="https://www.exist.de/">
-                          {{ t('exist') }}
-                        </a>
-                      </template>
-                      <template #time>
-                        {{ t('foundingScholarTimespan') }}
-                      </template>
-                    </i18n-t>
-                  </template>
-                </i18n-t>
-              </li>
-              <!-- <li>
-                <i18n-t
-                  keypath="titleSubtitle"
-                  class="text-gray-500 dark:text-gray-400"
-                  tag="span"
-                >
-                  <template #title>
-                    <a
-                      class="text-text-dark dark:text-text-bright"
-                      href="https://www.uni-kassel.de/einrichtung/index.php?eID=dumpFile&t=f&f=1988&token=e881e12fc8112d90e46d21d4fbef05530929c5c0"
-                    >
-                      {{ t('honorsAwardsIdeasCompetition') }}
-                    </a>
-                  </template>
-                  <template #subtitle>
-                    <i18n-t keypath="placeTime">
-                      <template #place>
-                        <a
-                          href="https://www.uni-kassel.de/einrichtung/ukt/unikat-von-der-idee-zur-gruendung/unikat-ideenwettbewerb"
-                        >
-                          {{ t('unikat') }}
-                        </a>
-                      </template>
-                      <template #time>
-                        {{ t('honorsAwardsIdeasCompetitionTime') }}
-                      </template>
-                    </i18n-t>
-                  </template>
-                </i18n-t>
-              </li> -->
-              <li>
-                <i18n-t
-                  keypath="titleSubtitle"
-                  class="text-gray-500 dark:text-gray-400"
-                  tag="span"
-                >
-                  <template #title>
-                    <span class="text-text-dark dark:text-text-bright">
-                      {{ t('nominationScholarship') }}
-                    </span>
-                  </template>
-                  <template #subtitle>
-                    <i18n-t keypath="placeTime">
-                      <template #place>
-                        <a href="https://www.studienstiftung.de/">
-                          {{ t('studyFoundation') }}
-                        </a>
-                      </template>
-                      <template #time>
-                        {{ t('nominationScholarshipTime') }}
-                      </template>
-                    </i18n-t>
-                  </template>
-                </i18n-t>
-              </li>
-            </ul>
-          </section>
+          <JtPortfolioSection :title="t('engagement')">
+            <JtPortfolioItem
+              v-for="(item, idx) in engagementItems"
+              :key="idx"
+              :is-visible="item.isVisible"
+              :subtitle-place="item.organization"
+              :subtitle-place-url="item.organizationUrl"
+              :subtitle-time="item.timespan"
+              :title="item.role"
+            />
+          </JtPortfolioSection>
+          <JtPortfolioSection :title="t('languages')">
+            <JtPortfolioItem
+              v-for="(item, idx) in languageItems"
+              :key="idx"
+              :title="item.title"
+              :subtitle-text="item.proficiency"
+            />
+          </JtPortfolioSection>
+          <JtPortfolioSection :title="t('honorsAwards')">
+            <JtPortfolioItem
+              v-for="(item, idx) in honorsAwardsItems"
+              :key="idx"
+              :title="item.title"
+              :title-url="item.titleUrl"
+              :subtitle-place="item.subtitlePlace"
+              :subtitle-place-url="item.subtitlePlaceUrl"
+              :subtitle-time="item.subtitleTime"
+            />
+          </JtPortfolioSection>
+          <JtPortfolioSection :title="t('organizations')">
+            <JtPortfolioItem
+              v-for="(item, idx) in organizationItems"
+              :key="idx"
+              :title="item.title"
+              :title-url="item.url"
+              :subtitle-text="item.timespan"
+            />
+          </JtPortfolioSection>
           <hr
             class="border-gray-200 md:col-span-2 xl:col-span-1 2xl:col-span-2"
           />
           <section class="md:col-span-2 xl:col-span-1 2xl:col-span-2">
             <h2 class="text-2xl">{{ t('projects') }}</h2>
             <ul class="mt-2 flex flex-wrap items-center justify-around">
-              <li class="m-4">
+              <li
+                v-for="project in projectItems"
+                :key="project.name"
+                class="m-4"
+              >
                 <VioLink
-                  aria-label="Vibetype"
+                  :aria-label="project.name"
                   class="inline-block"
                   is-external-icon-disabled
-                  to="https://maev.si/"
+                  :to="project.url"
                 >
                   <NuxtImg
-                    alt="Vibetype's logo"
+                    :alt="project.altText"
                     class="h-12 w-auto"
-                    height="180"
+                    :height="project.height"
                     :nonce="nonce"
-                    src="/assets/static/logos/vibetype.svg"
-                    width="547"
+                    :src="project.logoSrc"
+                    :width="project.width"
                   />
                 </VioLink>
               </li>
               <li class="m-4">
-                <VioLink
-                  aria-label="nearbuy"
-                  class="inline-block"
-                  is-external-icon-disabled
-                  to="https://nearbuy-food.de/"
-                >
-                  <NuxtImg
-                    alt="nearbuy's logo"
-                    class="h-12 w-auto"
-                    height="734"
-                    :nonce="nonce"
-                    src="/assets/static/logos/nearbuy.svg"
-                    width="1734"
-                  />
-                </VioLink>
-              </li>
-              <li class="m-4">
-                <VioLink
-                  aria-label="cReal"
-                  class="inline-block"
-                  is-external-icon-disabled
-                  to="https://creal.jonas-thelemann.de/"
-                >
-                  <NuxtImg
-                    alt="cReal's logo"
-                    class="h-12 w-auto"
-                    height="1330"
-                    :nonce="nonce"
-                    src="/assets/static/logos/creal.svg"
-                    width="1330"
-                  />
-                </VioLink>
-              </li>
-              <li class="m-4">
-                <VioLink
-                  aria-label="TrapParty"
-                  class="inline-block"
-                  is-external-icon-disabled
-                  to="https://trapparty.jonas-thelemann.de/"
-                >
-                  <NuxtImg
-                    alt="TrapParty's logo"
-                    class="h-12 w-auto"
-                    height="1308"
-                    :nonce="nonce"
-                    src="/assets/static/logos/trapparty.svg"
-                    width="1308"
-                  />
-                </VioLink>
-              </li>
-              <li class="m-4">
-                <SocialLink to="https://github.com/dargmuesli?tab=repositories">
+                <JtPortfolioLink :to="localePath('projects-contributions')">
                   {{ t('projectsMore', { repoCount }) }}
-                </SocialLink>
+                </JtPortfolioLink>
               </li>
             </ul>
           </section>
         </div>
       </main>
       <footer class="text-sm leading-6">
-        <Footer />
+        <JtLayoutFooter />
       </footer>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { consola } from 'consola'
-import { getQuery } from 'ufo'
+// import { consola } from 'consola'
+// import { getQuery } from 'ufo'
+import repos from '~/assets/data/contributions.json'
 
 definePageMeta({
   layout: 'root',
@@ -578,59 +228,235 @@ const { indicateLoadingDone: indicateLoadingDoneHeroImage } =
 const runtimeConfig = useRuntimeConfig()
 const siteConfig = useSiteConfig()
 const nonce = useNonce()
+const isTesting = useIsTesting()
 
 // data
-const repoCount = useState<string | undefined>('repoCount', () =>
-  runtimeConfig.public.vio.isTesting ? '1337' : undefined,
-)
-
-// computations
-const age = computed(() =>
-  runtimeConfig.public.vio.isTesting
-    ? 1337
-    : Math.abs(
-        new Date(Date.now() - Date.parse('1998-12-17')).getUTCFullYear() - 1970,
-      ),
-)
-
-// methods
-const init = async () => {
-  if (repoCount.value) return
-
-  try {
-    const res = await $fetch.raw(
-      'https://api.github.com/users/dargmuesli/repos?per_page=1',
+const age = isTesting
+  ? 1337
+  : Math.abs(
+      new Date(Date.now() - Date.parse('1998-12-17')).getUTCFullYear() - 1970,
     )
-
-    if (!res.ok) throw createError('Response is not ok!')
-
-    const headerLink = res.headers.get('link')
-    if (!headerLink) {
-      repoCount.value = undefined
-      return
-    }
-    const headerLinkSplitComma = headerLink.split(', ')[1]
-    if (!headerLinkSplitComma) return
-    const headerLinkSplitSemicolon = headerLinkSplitComma.split('; ')[0]
-    if (!headerLinkSplitSemicolon) return
-    const headerLinkQueryPage = getQuery<{ page: string }>(
-      headerLinkSplitSemicolon.replace(/(^<|>$)/g, ''),
-    ).page
-    repoCount.value = headerLinkQueryPage
-  } catch (e) {
-    consola.error(JSON.stringify(e))
-  }
-}
+const repoCount = isTesting ? '1337' : (repos.length - 3).toString() // 3 already displayed project subtracted
+const socialLinks = [
+  { to: localePath('/contact'), label: t('contactForm') },
+  { to: 'https://giphy.com/channel/dargmuesli', label: t('brandGiphy') },
+  { to: 'https://github.com/dargmuesli', label: t('brandGitHub') },
+  { to: 'https://www.instagram.com/dargmuesli/', label: t('brandInstagram') },
+  {
+    to: 'https://www.linkedin.com/in/jonas-thelemann-148a74205/',
+    label: t('brandLinkedIn'),
+  },
+  { to: 'https://www.mixcloud.com/creal/', label: t('brandMixcloud') },
+  { to: 'https://open.spotify.com/user/1153065250', label: t('brandSpotify') },
+  {
+    to: 'https://stackoverflow.com/users/4682621/dargmuesli',
+    label: t('brandStackOverflow'),
+  },
+  {
+    to: 'https://www.youtube.com/channel/UCmIrzQsJeEM5eW6KOAk9nSg',
+    label: t('brandYouTube'),
+  },
+]
+const experienceItems = [
+  {
+    role: t('roleExecutiveDirectorAndHeadOfTechnology'),
+    organization: t('organizationMaevsi'),
+    organizationUrl: 'https://maev.si/',
+    timespan: t('timeSpan', {
+      from: t('time', { month: t('timeMonthNov'), year: 2024 }),
+      to: t('present'),
+    }),
+  },
+  {
+    role: t('roleBusinessPartnershipsRepresentative'),
+    organization: t('organizationNinjaneers'),
+    organizationUrl: 'https://www.ninjaneers.de/',
+    timespan: t('timeSpan', {
+      from: t('time', { month: t('timeMonthOct'), year: 2025 }),
+      to: t('present'),
+    }),
+  },
+  {
+    role: t('roleEcosystemTeamMember'),
+    organization: t('organizationNuxt'),
+    organizationUrl: 'https://nuxt.com/team',
+    timespan: t('timeSpan', {
+      from: t('time', { month: t('timeMonthJul'), year: 2022 }),
+      to: t('present'),
+    }),
+  },
+  {
+    isVisible: false,
+    role: t('roleFullStackSoftwareEngineer'),
+    organization: t('organizationNinjaneers'),
+    organizationUrl: 'https://www.ninjaneers.de/',
+    timespan: t('timeSpan', {
+      from: t('time', { month: t('timeMonthJul'), year: 2020 }),
+      to: t('time', { month: t('timeMonthSep'), year: 2025 }),
+    }),
+  },
+  {
+    isVisible: false,
+    role: t('foundingScholar'),
+    organization: t('organizationExist'),
+    organizationUrl: 'https://www.exist.de/',
+    timespan: t('timeSpan', {
+      from: t('time', { month: t('timeMonthSep'), year: 2024 }),
+      to: t('time', { month: t('timeMonthAug'), year: 2025 }),
+    }),
+  },
+  {
+    isVisible: false,
+    role: t('foundingScholar'),
+    organization: t('organizationHesseIdeas'),
+    organizationUrl: 'https://www.exist.de/',
+    timespan: t('timeSpan', {
+      from: t('time', { month: t('timeMonthJan'), year: 2023 }),
+      to: t('time', { month: t('timeMonthJun'), year: 2023 }),
+    }),
+  },
+  {
+    isVisible: false,
+    role: t('roleFederalVolunteerService'),
+    organization: t('organizationKasselCounty'),
+    organizationUrl: 'https://www.landkreiskassel.de/',
+    timespan: t('timeSpan', {
+      from: t('time', { month: t('timeMonthJan'), year: 2017 }),
+      to: t('time', { month: t('timeMonthAug'), year: 2017 }),
+    }),
+  },
+]
+const engagementItems = [
+  {
+    organization: t('organizationFlipdot'),
+    organizationUrl: 'https://flipdot.org/',
+    role: t('roleBoardMember'),
+    timespan: t('timeSpan', {
+      from: t('time', { month: t('timeMonthJun'), year: 2025 }),
+      to: t('present'),
+    }),
+  },
+  {
+    organization: t('organizationCommonGroundsForum'),
+    organizationUrl: 'https://common-grounds-forum.org/',
+    role: t('rolePoliticalAdvocate'),
+    timespan: t('timeSpan', {
+      from: t('time', { month: t('timeMonthAug'), year: 2024 }),
+      to: t('present'),
+    }),
+  },
+  {
+    organization: t('organizationKasselCity'),
+    organizationUrl: 'https://www.kassel.de/',
+    role: t('roleElectoralSupervisor'),
+    timespan: t('timeSpan', {
+      from: t('time', { month: t('timeMonthJun'), year: 2025 }),
+      to: t('present'),
+    }),
+  },
+  {
+    isVisible: false,
+    organization: t('organizationGermanyInformaticsSociety'),
+    organizationUrl: 'https://gi.de/',
+    role: t('roleUniversityGroupSpokesperson'),
+    timespan: t('timeSpan', {
+      from: t('time', { month: t('timeMonthJan'), year: 2019 }),
+      to: t('time', { month: t('timeMonthDec'), year: 2025 }),
+    }),
+  },
+  {
+    isVisible: false,
+    organization: t('organizationKasselCity'),
+    organizationUrl: 'https://www.kassel.de/',
+    role: t('roleElectoralAssistant'),
+    timespan: t('timeSpan', {
+      from: t('time', { month: t('timeMonthSep'), year: 2021 }),
+      to: t('time', { month: t('timeMonthJan'), year: 2025 }),
+    }),
+  },
+]
+const organizationItems = [
+  {
+    title: t('organizationChaosComputerClub'),
+    url: 'https://www.ccc.de/',
+    timespan: t('timeSpan', {
+      from: t('time', { month: t('timeMonthMay'), year: 2018 }),
+      to: t('present'),
+    }),
+  },
+  {
+    title: t('organizationFlipdot'),
+    url: 'https://flipdot.org/',
+    timespan: t('timeSpan', {
+      from: t('time', { month: t('timeMonthDec'), year: 2016 }),
+      to: t('present'),
+    }),
+  },
+]
+const languageItems = [
+  { title: t('languageGerman'), proficiency: t('proficiencyNative') },
+  { title: t('languageEnglish'), proficiency: t('proficiencyProfessional') },
+]
+const honorsAwardsItems = [
+  {
+    title: t('honorsAwardsIdeasCompetitionTop10Project'),
+    titleUrl: undefined,
+    subtitlePlace: t('organizationUnikat'),
+    subtitlePlaceUrl:
+      'https://www.uni-kassel.de/einrichtung/ukt/unikat-von-der-idee-zur-gruendung.html',
+    subtitleTime: t('time', { month: t('timeMonthOct'), year: 2020 }),
+  },
+  {
+    title: t('nominationScholarship'),
+    titleUrl: undefined,
+    subtitlePlace: t('studyFoundation'),
+    subtitlePlaceUrl: 'https://www.studienstiftung.de/',
+    subtitleTime: t('time', { month: t('timeMonthJul'), year: 2019 }),
+  },
+]
+const projectItems = [
+  {
+    name: 'Vibetype',
+    url: 'https://maev.si/',
+    logoSrc: '/assets/static/logos/vibetype.svg',
+    altText: "Vibetype's logo",
+    width: 547,
+    height: 180,
+  },
+  {
+    name: 'nearbuy',
+    url: 'https://nearbuy-food.de/',
+    logoSrc: '/assets/static/logos/nearbuy.svg',
+    altText: "nearbuy's logo",
+    width: 1734,
+    height: 734,
+  },
+  {
+    name: 'cReal',
+    url: 'https://creal.jonas-thelemann.de/',
+    logoSrc: '/assets/static/logos/creal.svg',
+    altText: "cReal's logo",
+    width: 1330,
+    height: 1330,
+  },
+  {
+    name: 'TrapParty',
+    url: 'https://trapparty.jonas-thelemann.de/',
+    logoSrc: '/assets/static/logos/trapparty.svg',
+    altText: "TrapParty's logo",
+    width: 1308,
+    height: 1308,
+  },
+]
 
 // lifecycle
 onMounted(() => indicateLoadingDone())
 
 // initialization
-await init()
 useHeadDefault({
   description: t('descriptionShort', {
-    maevsi: t('maevsi'),
-    ninjaneers: t('ninjaneers'),
+    maevsi: t('organizationMaevsi'),
+    ninjaneers: t('organizationNinjaneers'),
   }),
   title: siteConfig.name,
 })
@@ -644,65 +470,75 @@ de:
   aboutMarkDj: DJ und Event-Organisator
   aboutMarkSoftware: Leidenschaftlicher Software-Entwickler
   aboutSidefact: Freundet sich mit der Mitte von Schwarz und Weiß an, hodlt nebenbei.
+  addressKassel: Kassel, Hessen, Deutschland
   asideLabel: Titelbild
-  ccc: Chaos Computer Club
-  cccTimespan: Mai 2018 – {present}
+  brandGiphy: Giphy
+  brandGitHub: GitHub
+  brandInstagram: Instagram
+  brandLinkedIn: LinkedIn
+  brandMixcloud: Mixcloud
+  brandSpotify: Spotify
+  brandStackOverflow: Stack Overflow
+  brandYouTube: YouTube
   contactForm: Kontaktformular
   descriptionShort: Geschäftsführer und Gründer {'@'}{maevsi} · {ninjaneers} · M.Sc. Informatik
-  education: Bildung
+  education: Ausbildung
   educationGoal: Master der Software-Entwicklung
   educationTime: 2021 – 2024
-  english: Englisch
-  exist: EXIST
-  experience: Erfahrung
-  experienceFederalVolunteerService: 'Freiwilligendienstler: Flüchlingshilfe'
-  experienceFederalVolunteerServiceTimespan: Jan 2017 – Aug 2017
-  experienceMaevsi: Geschäftsführer und technischer Leiter
-  experienceMaevsiTimespan: Nov 2024 – {present}
-  experienceNinjaneer: Software-Entwickler und Vertrieb
-  experienceNinjaneerTimespan: Jul 2020 – {present}
-  flipdot: flipdot Hackspace Kassel
-  flipdotTimespan: Dec 2016 – {present}
+  engagement: Ehrenamt
+  experience: Berufserfahrung
   foundingScholar: Gründungs-Stipendiant
-  foundingScholarTimespan: Sep 2024 – Aug 2025
-  german: Deutsch
-  gi: Gesellschaft für Informatik
-  giphy: Giphy
-  gitHub: GitHub
-  giTimespan: Jan 2019 – Dez 2025
-  # hessenIdeen: Hessen Ideen
-  honorsAwards: Ehrungen und Auszeichnungen
-  honorsAwardsElectoralOfficer: Wahlvorsteher
-  # honorsAwardsIdeasCompetition: Ideenwettbewerb Top 10 Projekt
-  # honorsAwardsIdeasCompetitionTime: Okt 2020
-  instagram: Instagram
+  honorsAwards: Auszeichnungen
+  honorsAwardsIdeasCompetitionTop10Project: Ideenwettbewerb Top 10 Projekt
   jonasThelemann: Jonas Thelemann
-  kasselAddress: Kassel, Hessen, Deutschland
-  kasselCity: Stadt Kassel
-  kasselCounty: Landkreis Kassel
+  languageEnglish: Englisch
+  languageGerman: Deutsch
   languages: Sprachen
-  linkedIn: LinkedIn
-  maevsi: maevsi
-  metaInfo: '{age}, er/ihn'
-  mixcloud: Mixcloud
+  metaInfo: '{age}, er/ihm'
   ninjaneer: Ninjaneer
-  ninjaneers: Ninjaneers
   nominationScholarship: Nominierung für ein Stipendium
-  nominationScholarshipTime: Jul 2019
-  organizations: Organisationen
-  placeTime: '{place}, {time}'
+  organizationChaosComputerClub: Chaos Computer Club
+  organizationCommonGroundsForum: Common Grounds Forum
+  organizationExist: EXIST
+  organizationFlipdot: flipdot
+  organizationGermanyInformaticsSociety: Gesellschaft für Informatik
+  organizationHesseIdeas: Hessen Ideen
+  organizationKasselCity: Stadt Kassel
+  organizationKasselCounty: Landkreis Kassel
+  organizationMaevsi: maevsi
+  organizationNinjaneers: Ninjaneers
+  organizationNuxt: Nuxt
+  organizations: Mitgliedschaften
+  organizationUnikat: UNIKAT
+  organizationUniversityKassel: Universität Kassel
   present: heute
   proficiencyNative: muttersprachliches Niveau
   proficiencyProfessional: professionelles Arbeitsniveau
   projects: Projekte
-  projectsMore: und {repoCount} weitere…
-  spotify: Spotify
-  stackOverflow: Stack Overflow
+  projectsMore: und {repoCount} Beiträge…
+  roleBoardMember: Vorstandsmitglied
+  roleBusinessPartnershipsRepresentative: Repräsentant für Geschäftspartnerschaften
+  roleEcosystemTeamMember: Mitglied des Ökosystem-Teams
+  roleElectoralAssistant: Beisitzer
+  roleElectoralSupervisor: Wahlvorsteher
+  roleExecutiveDirectorAndHeadOfTechnology: Geschäftsführer und technischer Leiter
+  roleFederalVolunteerService: 'Freiwilligendienstler: Flüchlingshilfe'
+  roleFullStackSoftwareEngineer: Full-Stack Software-Entwickler
+  rolePoliticalAdvocate: Interessenvertreter der politischen Jugend
+  roleUniversityGroupSpokesperson: Sprecher der Universitätsgruppe
   studyFoundation: Studienstiftung des deutschen Volkes
+  time: '{month} {year}'
+  timeMonthAug: Aug
+  timeMonthDec: Dez
+  timeMonthJan: Jan
+  timeMonthJul: Jul
+  timeMonthJun: Jun
+  timeMonthMay: Mai
+  timeMonthNov: Nov
+  timeMonthOct: Okt
+  timeMonthSep: Sep
+  timeSpan: '{from} – {to}'
   titleSubtitle: '{title} · {subtitle}'
-  # unikat: UNIKAT
-  universityKassel: Universität Kassel
-  youTube: YouTube
 en:
   about: '{aboutMarkSoftwareTemplate} somewhere between frontend, backend and devops.{br}{aboutMarkDjTemplate}, occasionally rapping double times.{br}{aboutAttraction}{br}{aboutSidefact}{br}{aboutCreating}'
   aboutAttraction: Attracted to things he doesn't understand. Bored when videos play at speeds of less than 2x.
@@ -710,63 +546,73 @@ en:
   aboutMarkDj: DJ and event organizer
   aboutMarkSoftware: Passionate software developer
   aboutSidefact: Getting used to the middle of black and white, hodling in the meantime.
+  addressKassel: Kassel, Hesse, Germany
   asideLabel: Title image
-  ccc: Chaos Computer Club
-  cccTimespan: May 2018 – {present}
+  brandGiphy: Giphy
+  brandGitHub: GitHub
+  brandInstagram: Instagram
+  brandLinkedIn: LinkedIn
+  brandMixcloud: Mixcloud
+  brandSpotify: Spotify
+  brandStackOverflow: Stack Overflow
+  brandYouTube: YouTube
   contactForm: Contact form
   descriptionShort: Director and founder {'@'}{maevsi} · {ninjaneers} · M.Sc. Computer Science
   education: Education
   educationGoal: Master's degree Software Engineering
   educationTime: 2021 – 2024
-  english: English
-  exist: EXIST
-  experience: Experience
-  experienceFederalVolunteerService: 'Volunteer Service Worker: refugee aid'
-  experienceFederalVolunteerServiceTimespan: Jan 2017 – Aug 2017
-  experienceMaevsi: Executive Director and Head of Technology
-  experienceMaevsiTimespan: Nov 2024 – {present}
-  experienceNinjaneer: Software Engineer and Sales
-  experienceNinjaneerTimespan: Jul 2020 – today
-  flipdot: flipdot Hackspace Kassel
-  flipdotTimespan: Dez 2016 – {present}
+  engagement: Civic Engagement
+  experience: Professional Experience
   foundingScholar: Founding Scholar
-  foundingScholarTimespan: Sep 2024 – Aug 2025
-  german: German
-  gi: German Informatics Society
-  giphy: Giphy
-  gitHub: GitHub
-  giTimespan: Jan 2019 – Dec 2025
-  # hessenIdeen: Hesse Ideas
-  honorsAwards: Honors & Awards
-  honorsAwardsElectoralOfficer: Electoral Officer
-  # honorsAwardsIdeasCompetition: Ideas Competition Top 10 Project
-  # honorsAwardsIdeasCompetitionTime: Oct 2020
-  instagram: Instagram
+  honorsAwards: Awards
+  honorsAwardsIdeasCompetitionTop10Project: Ideas Competition Top 10 Project
   jonasThelemann: Jonas Thelemann
-  kasselAddress: Kassel, Hesse, Germany
-  kasselCity: City of Kassel
-  kasselCounty: Kassel County
+  languageEnglish: English
+  languageGerman: German
   languages: Languages
-  linkedIn: LinkedIn
-  maevsi: maevsi
   metaInfo: '{age}, he/him'
-  mixcloud: Mixcloud
   ninjaneer: Ninjaneer
-  ninjaneers: Ninjaneers
   nominationScholarship: Nomination for a scholarship
-  nominationScholarshipTime: Jul 2019
-  organizations: Organizations
-  placeTime: '{place}, {time}'
-  present: today
+  organizationChaosComputerClub: Chaos Computer Club
+  organizationCommonGroundsForum: Common Grounds Forum
+  organizationExist: EXIST
+  organizationFlipdot: flipdot
+  organizationGermanyInformaticsSociety: German Informatics Society
+  organizationHesseIdeas: Hesse Ideas
+  organizationKasselCity: City of Kassel
+  organizationKasselCounty: Kassel County
+  organizationMaevsi: maevsi
+  organizationNinjaneers: Ninjaneers
+  organizationNuxt: Nuxt
+  organizations: Memberships
+  organizationUnikat: UNIKAT
+  organizationUniversityKassel: University of Kassel
+  present: present
   proficiencyNative: native proficiency
   proficiencyProfessional: professional working proficiency
   projects: Projects
-  projectsMore: and {repoCount} others…
-  spotify: Spotify
-  stackOverflow: Stack Overflow
+  projectsMore: and {repoCount} contributions…
+  roleBoardMember: Board Member
+  roleBusinessPartnershipsRepresentative: Business Partnerships Representative
+  roleEcosystemTeamMember: Ecosystem Team Member
+  roleElectoralAssistant: Electoral Assistant
+  roleElectoralSupervisor: Electoral Supervisor
+  roleExecutiveDirectorAndHeadOfTechnology: Executive Director and Head of Technology
+  roleFederalVolunteerService: 'Volunteer Service Worker: refugee aid'
+  roleFullStackSoftwareEngineer: Full-Stack Software Engineer
+  rolePoliticalAdvocate: Political Youth Advocate
+  roleUniversityGroupSpokesperson: University Group Spokesperson
   studyFoundation: Study Foundation of the German People
+  time: '{month} {year}'
+  timeMonthAug: Aug
+  timeMonthDec: Dec
+  timeMonthJan: Jan
+  timeMonthJul: Jul
+  timeMonthJun: Jun
+  timeMonthMay: May
+  timeMonthNov: Nov
+  timeMonthOct: Oct
+  timeMonthSep: Sep
+  timeSpan: '{from} – {to}'
   titleSubtitle: '{title} · {subtitle}'
-  # unikat: UNIKAT
-  universityKassel: University of Kassel
-  youTube: YouTube
 </i18n>
