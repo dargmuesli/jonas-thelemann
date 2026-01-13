@@ -14,7 +14,7 @@
       </div>
     </template>
     <template #footer>
-      <JtFooter />
+      <JtLayoutFooter />
     </template>
   </VioLayout>
 </template>

@@ -1,6 +1,5 @@
 import { expect } from '@playwright/test'
 
-import fixture from '../../../fixtures/githubApi.json' assert { type: 'json' }
 import { PAGE_READY } from '../../../utils/constants'
 import {
   testA11y,
@@ -16,20 +15,6 @@ testA11y(PAGE_PATH)
 testOgImage(PAGE_PATH)
 testPageLoad(PAGE_PATH)
 testVisualRegression(PAGE_PATH)
-
-vioTest.beforeEach(async ({ context }) => {
-  await context.route(
-    'https://api.github.com/users/dargmuesli/repos?per_page=1',
-    (route) =>
-      route.fulfill({
-        status: 200,
-        body: fixture.toString(),
-        headers: {
-          link: '<https://api.github.com/user/4778485/repos?per_page=1&page=2>; rel="next", <https://api.github.com/user/4778485/repos?per_page=1&page=1337>; rel="last"',
-        },
-      }),
-  )
-})
 
 vioTest.describe('internationalization', () => {
   const textEnglish =

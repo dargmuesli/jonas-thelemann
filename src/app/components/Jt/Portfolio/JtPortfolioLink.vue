@@ -9,8 +9,10 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
-  to: string
-}
-withDefaults(defineProps<Props>(), {})
+withDefaults(
+  defineProps<{
+    to: string
+  }>(),
+  {},
+)
 </script>
