@@ -1,3 +1,9 @@
+## [6.4.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.3.0...6.4.0) (2026-01-13)
+
+### Features
+
+* rework portfolio items ([932d489](https://github.com/dargmuesli/jonas-thelemann/commit/932d489f429fc570533703669480c3d43de080fe))
+
 ## [6.3.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.2.0...6.3.0) (2026-01-08)
 
 ### Features
