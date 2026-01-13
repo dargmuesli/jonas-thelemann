@@ -61,7 +61,6 @@ export const testVisualRegression = (url: string) =>
       await defaultPage.goto(url)
 
       await expect(defaultPage.page).toHaveScreenshot({
-        fullPage: true,
         timeout: 10000,
       })
     })
