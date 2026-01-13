@@ -1,3 +1,9 @@
+## [6.5.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.4.0...6.5.0) (2026-01-13)
+
+### Features
+
+* **projects:** link contributions ([be458c2](https://github.com/dargmuesli/jonas-thelemann/commit/be458c2d7abc629a6a3358ff1ebd697a29255f45))
+
 ## [6.4.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.3.0...6.4.0) (2026-01-13)
 
 ### Features
