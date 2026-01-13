@@ -3,7 +3,7 @@
     <div class="flex flex-col items-center gap-4">
       <img
         alt="dargmuesli"
-        class="size-16 shrink-0 rounded-full sm:size-24"
+        class="size-20 shrink-0 rounded-full sm:size-24"
         src="https://avatars.githubusercontent.com/u/4778485?v=4"
       />
       <h1 class="flex flex-col">
@@ -37,34 +37,30 @@
       </select>
     </div>
 
-    <div class="space-y-6">
+    <div class="flex flex-col gap-6">
       <div
         v-for="(group, owner) in groupedRepos"
         :key="owner"
-        class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900"
+        class="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900"
       >
-        <div
-          class="flex items-center gap-3 border-b border-gray-200 bg-gray-50 px-4 py-3 sm:px-6 dark:border-gray-700 dark:bg-gray-800"
+        <VioLink
+          :aria-label="t('viewGitHubProfile', { owner })"
+          class="flex items-center gap-3 border-b border-gray-200 bg-gray-50 px-4 py-3 transition-colors hover:bg-gray-100 sm:px-6 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+          is-external-icon-disabled
+          :to="`https://github.com/${owner}`"
         >
           <img
-            v-if="group.length > 0"
+            v-if="group.length"
             :src="group[0]?.repository.owner.avatar_url"
-            :alt="owner"
+            :alt="t('profilePicture')"
             class="h-8 w-8 shrink-0 rounded-full sm:h-10 sm:w-10"
           />
-          <div class="min-w-0 flex-1">
-            <h2
-              class="truncate text-base font-semibold text-gray-900 sm:text-lg dark:text-gray-100"
-            >
-              {{ owner }}
-            </h2>
-          </div>
-          <span
-            class="shrink-0 rounded-full bg-gray-200 px-2.5 py-0.5 text-xs font-medium text-gray-700 sm:px-3 sm:py-1 sm:text-sm dark:bg-gray-700 dark:text-gray-300"
+          <h2
+            class="truncate text-base font-semibold text-blue-600 hover:underline sm:text-lg dark:text-blue-400"
           >
-            {{ group.length }}
-          </span>
-        </div>
+            {{ owner }}
+          </h2>
+        </VioLink>
 
         <ul class="divide-y divide-gray-200 dark:divide-gray-700">
           <li
@@ -72,42 +68,45 @@
               ? group
               : group.slice(0, REPO_PREVIEW_LIMIT)"
             :key="repo.repository.url"
+            class="transition-colors hover:bg-gray-50 dark:hover:bg-gray-800"
           >
-            <VioLink
-              class="group block px-4 py-3 transition-colors hover:bg-gray-50 sm:px-6 sm:py-4 dark:hover:bg-gray-800"
-              is-external-icon-disabled
-              :to="repo.repository.url"
+            <div
+              class="flex items-start justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4"
             >
-              <div class="flex items-start justify-between gap-3">
-                <div class="min-w-0 flex-1 space-y-1">
-                  <div class="flex flex-wrap items-center gap-2">
-                    <h3
-                      class="truncate text-sm font-semibold text-blue-600 group-hover:underline sm:text-base dark:text-blue-400"
-                    >
-                      {{ repo.repository.name }}
-                    </h3>
-                    <span
-                      v-if="repo.repository.fork"
-                      class="shrink-0 rounded border border-yellow-300 bg-yellow-50 px-1.5 py-0.5 text-xs font-medium text-yellow-700 dark:border-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400"
-                    >
-                      {{ t('fork') }}
-                    </span>
-                  </div>
-                  <p
-                    v-if="repo.repository.description"
-                    class="line-clamp-2 text-xs text-gray-600 sm:text-sm dark:text-gray-400"
+              <VioLink
+                class="group flex min-w-0 flex-1 flex-col gap-2"
+                is-external-icon-disabled
+                :to="repo.repository.url"
+              >
+                <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+                  <h3
+                    class="truncate text-sm font-semibold text-blue-600 group-hover:underline sm:text-base dark:text-blue-400"
                   >
-                    {{ repo.repository.description }}
-                  </p>
-                  <p
-                    v-else
-                    class="text-xs text-gray-600 italic sm:text-sm dark:text-gray-400"
+                    {{ repo.repository.name }}
+                  </h3>
+                  <span
+                    v-if="repo.repository.fork"
+                    class="shrink-0 rounded border border-yellow-300 bg-yellow-50 px-1.5 py-0.5 text-xs font-medium text-yellow-700 dark:border-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400"
                   >
-                    {{ t('noDescription') }}
-                  </p>
+                    {{ t('fork') }}
+                  </span>
                 </div>
+                <p
+                  v-if="repo.repository.description"
+                  class="line-clamp-2 text-xs text-gray-600 sm:text-sm dark:text-gray-400"
+                >
+                  {{ repo.repository.description }}
+                </p>
+                <p
+                  v-else
+                  class="text-xs text-gray-600 italic sm:text-sm dark:text-gray-400"
+                >
+                  {{ t('noDescription') }}
+                </p>
+              </VioLink>
+              <div class="flex shrink-0 flex-col items-end gap-2">
                 <div
-                  class="flex shrink-0 items-center gap-1 text-xs text-gray-600 sm:text-sm dark:text-gray-400"
+                  class="flex items-center gap-1 text-xs text-gray-600 sm:text-sm dark:text-gray-400"
                 >
                   <svg
                     class="h-3.5 w-3.5 fill-current sm:h-4 sm:w-4"
@@ -121,8 +120,18 @@
                     repo.repository.stars.toLocaleString()
                   }}</span>
                 </div>
+                <VioLink
+                  :aria-label="
+                    t('viewMyCommits', { repo: repo.repository.name })
+                  "
+                  class="text-xs text-gray-600 underline-offset-2 hover:underline sm:text-sm dark:text-gray-400"
+                  is-external-icon-disabled
+                  :to="`https://github.com/${owner}/${repo.repository.name}/commits?author=dargmuesli`"
+                >
+                  {{ t('myCommits') }}
+                </VioLink>
               </div>
-            </VioLink>
+            </div>
           </li>
         </ul>
 
@@ -254,10 +263,12 @@ useHeadDefault({
 de:
   description: Beiträge zu {total} öffentlichen Softwareprojekten.
   fork: Fork
+  myCommits: Beiträge ansehen
   noDescription: Keine Beschreibung verfügbar
   noRepositoriesFound: Keine Repositories gefunden.
   openSourceContributions: Öffentlichen Softwareprojekten
   openSourceContributionsName: 'Jonas Thelemann wirkte mit an {total}'
+  profilePicture: Profilbild
   search: Repositories durchsuchen...
   showingRepositories: 'Zeige {count} von {total} Repositories'
   showLess: Weniger anzeigen
@@ -265,13 +276,17 @@ de:
   sortBy: Sortieren nach
   sortByName: Nach Name sortieren
   sortByStars: Nach Sternen sortieren
+  viewGitHubProfile: 'GitHub-Profil von {owner} anzeigen'
+  viewMyCommits: 'Beiträge in {repo} anzeigen'
 en:
   description: Contributions to {total} public software projects.
   fork: Fork
+  myCommits: View contributions
   noDescription: No description available
   noRepositoriesFound: No repositories found.
   openSourceContributions: Public Software Projects
   openSourceContributionsName: Jonas Thelemann contributed to {total}
+  profilePicture: Profile picture
   search: Search repositories...
   showingRepositories: 'Showing {count} of {total} repositories'
   showLess: Show less
@@ -279,4 +294,6 @@ en:
   sortBy: Sort by
   sortByName: Sort by name
   sortByStars: Sort by stars
+  viewGitHubProfile: 'View {owner} GitHub profile'
+  viewMyCommits: 'View contributions in {repo}'
 </i18n>
