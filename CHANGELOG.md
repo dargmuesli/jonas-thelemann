@@ -1,3 +1,17 @@
+## [6.7.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.6.0...6.7.0) (2026-01-27)
+
+### Features
+
+* **scripts:** add cloudflare ([3c55626](https://github.com/dargmuesli/jonas-thelemann/commit/3c556260278be56783001e9751e322c9baf67f6a))
+
+### Bug Fixes
+
+* **security:** ease content security policy for preview deployments ([66e8012](https://github.com/dargmuesli/jonas-thelemann/commit/66e8012f53908bb72abddf0420ac939285b86a13))
+
+### Performance Improvements
+
+* **deps:** upgrade @nuxt/scripts to v1.0.0-beta.1 ([faaa3e2](https://github.com/dargmuesli/jonas-thelemann/commit/faaa3e287a76dd1a432969c03bf4fad92a5a4fb7))
+
 ## [6.6.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.5.1...6.6.0) (2026-01-27)
 
 ### Features
