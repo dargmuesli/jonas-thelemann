@@ -8,7 +8,7 @@ export default defineNuxtConfig(
     {
       css: ['~/assets/css/jonas-thelemann.css'],
       extends: ['@dargmuesli/nuxt-vio'],
-      modules: ['@nuxt/scripts', '@nuxtjs/turnstile'],
+      modules: ['@nuxt/scripts', '@nuxtjs/partytown', '@nuxtjs/turnstile'],
       nitro: {
         prerender: {
           autoSubfolderIndex: false, // prevents Cloudflare Pages' redirection issue (https://community.cloudflare.com/t/removing-trailing-slash-on-static-websites/583429/4)
@@ -19,6 +19,11 @@ export default defineNuxtConfig(
           transporter: undefined,
         },
         public: {
+          scripts: {
+            cloudflareWebAnalytics: {
+              token: '90b5d82844c34a298218edef4ec9b163',
+            },
+          },
           turnstile: {
             siteKey: '0x4AAAAAAAQiMSbON1vdesv0',
           },
@@ -62,6 +67,16 @@ export default defineNuxtConfig(
       },
 
       $production: {
+        scripts: {
+          assets: {
+            integrity: true,
+          },
+          firstParty: true,
+          partytown: ['cloudflareWebAnalytics'],
+          registry: {
+            cloudflareWebAnalytics: true,
+          },
+        },
         security: {
           headers: {
             crossOriginEmbedderPolicy: 'require-corp', // breaks nuxt devtools // TODO: remove when vio sets this

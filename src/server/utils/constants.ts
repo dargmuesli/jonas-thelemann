@@ -16,16 +16,22 @@ export const GET_CSP = ({ siteUrl }: { siteUrl: URL }) => {
         `https://backend.${domainTldPort}/api/`,
         'https://api.github.com/users/dargmuesli/repos',
       ],
+      'frame-src': [`${siteUrl}~partytown/`],
       'img-src': ['https://avatars.githubusercontent.com/u/'],
       'report-to': 'csp-endpoint',
       'report-uri':
         'https://o4507259039973376.ingest.de.sentry.io/api/4507260561653840/security/?sentry_key=1e53178c1dba9b39147de4a21853a3e3',
       'script-src-attr': "'unsafe-inline'", // TODO: remove when nuxt image `onError` attribute script is removed (https://github.com/nuxt/image/issues/1011)
+      'worker-src': [`${siteUrl}~partytown/`],
     },
     {
       // Cloudflare Turnstile
       'frame-src': ['https://challenges.cloudflare.com'],
       'script-src-elem': ['https://challenges.cloudflare.com'],
+    },
+    {
+      // Nuxt (static)
+      'script-src-elem': ["'self'"],
     },
   )
 }

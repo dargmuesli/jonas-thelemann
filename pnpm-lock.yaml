@@ -36,11 +36,14 @@ importers:
         specifier: 20.1.6
         version: 20.1.6(83e83138f18a83976c8900a9bc27124b)
       '@nuxt/scripts':
-        specifier: 0.13.2
-        version: 0.13.2(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.1)(typescript@5.9.3)(vue@3.5.27(typescript@5.9.3))
+        specifier: 1.0.0-beta.1
+        version: 1.0.0-beta.1(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.1)(typescript@5.9.3)(vue@3.5.27(typescript@5.9.3))
+      '@nuxtjs/partytown':
+        specifier: 2.0.0
+        version: 2.0.0(magicast@0.5.1)
       '@nuxtjs/turnstile':
         specifier: 1.1.1
-        version: 1.1.1(@nuxt/scripts@0.13.2(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.1)(typescript@5.9.3)(vue@3.5.27(typescript@5.9.3)))(magicast@0.5.1)
+        version: 1.1.1(@nuxt/scripts@1.0.0-beta.1(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.1)(typescript@5.9.3)(vue@3.5.27(typescript@5.9.3)))(magicast@0.5.1)
       '@types/nodemailer':
         specifier: 7.0.5
         version: 7.0.5
@@ -1437,8 +1440,8 @@ packages:
     resolution: {integrity: sha512-lW/1MNpO01r5eR/VoeanQio8Lg4QpDklMOHa4mBHhhPNlBO1qiRtVYzjcnNdun3hujGauRaO9khGjv93Z5TZZA==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
-  '@nuxt/scripts@0.13.2':
-    resolution: {integrity: sha512-aZYm60B08RoRnFVu+RiyN8UQ/xB3IWs05sh1pQ35CJ+zbWT725SZTgMI12kEXzqxAAHpiuv1ctBpLlFg+4jiew==}
+  '@nuxt/scripts@1.0.0-beta.1':
+    resolution: {integrity: sha512-SwVwEWZ9CWpkdMiMdT28iDrv0gUAjiMtAe1sZ1BYlt9c+J9dnXZrYmmXmTilimBrhlqyYWGwTYvIzDAkz4HVmg==}
     peerDependencies:
       '@googlemaps/markerclusterer': ^2.6.2
       '@paypal/paypal-js': ^8.1.2 || ^9.0.0
@@ -1447,6 +1450,7 @@ packages:
       '@types/vimeo__player': ^2.18.3
       '@types/youtube': ^0.1.0
       '@unhead/vue': ^2.0.3
+      posthog-js: ^1.0.0
     peerDependenciesMeta:
       '@googlemaps/markerclusterer':
         optional: true
@@ -1459,6 +1463,8 @@ packages:
       '@types/vimeo__player':
         optional: true
       '@types/youtube':
+        optional: true
+      posthog-js:
         optional: true
 
   '@nuxt/telemetry@2.6.6':
@@ -1486,6 +1492,9 @@ packages:
   '@nuxtjs/i18n@10.2.1':
     resolution: {integrity: sha512-/CHAIpYbFgobxeMsnKcD8xBUHxBpqipRMjaI3ol9MVZKscJM+IetYdNL9lGNFdEtlxzkV8COxnoa60rE4sPjuQ==}
     engines: {node: '>=20.11.1'}
+
+  '@nuxtjs/partytown@2.0.0':
+    resolution: {integrity: sha512-G/TTHTpj60LCXX9gbp3RpMRsSBL9BquPZl12zBoCAzT/XQdwKu74k5L+DFD83nkbrIjUBygW0UnGDwVlD17fmA==}
 
   '@nuxtjs/robots@5.6.7':
     resolution: {integrity: sha512-0Ex0Y38z9s5I5w3AkdlrpLPACE+cd38KH9dYjZE+flP5RSGMvKzbTc8/jyNeY7numIuFt9BQGXEzkEAmxe04Cg==}
@@ -2080,6 +2089,11 @@ packages:
 
   '@poppinss/exception@1.2.3':
     resolution: {integrity: sha512-dCED+QRChTVatE9ibtoaxc+WkdzOSjYTKi/+uacHWIsfodVfpsueo3+DKpgU5Px8qXjgmXkSvhXvSCz3fnP9lw==}
+
+  '@qwik.dev/partytown@0.11.2':
+    resolution: {integrity: sha512-795y49CqBiKiwKAD+QBZlzlqEK275hVcazZ7wBPSfgC23L+vWuA7PJmMpgxojOucZHzYi5rAAQ+IP1I3BKVZxw==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
 
   '@resvg/resvg-js-android-arm-eabi@2.6.2':
     resolution: {integrity: sha512-FrJibrAk6v29eabIPgcTUMPXiEz8ssrAk7TXxsiZzww9UTQ1Z5KAbFJs+Z0Ez+VZTYgnE5IQJqBcoSiMebtPHA==}
@@ -9098,13 +9112,14 @@ snapshots:
       pkg-types: 2.3.0
       std-env: 3.10.0
 
-  '@nuxt/scripts@0.13.2(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.1)(typescript@5.9.3)(vue@3.5.27(typescript@5.9.3))':
+  '@nuxt/scripts@1.0.0-beta.1(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.1)(typescript@5.9.3)(vue@3.5.27(typescript@5.9.3))':
     dependencies:
       '@nuxt/kit': 4.3.0(magicast@0.5.1)
       '@unhead/vue': 2.1.2(vue@3.5.27(typescript@5.9.3))
       '@vueuse/core': 14.1.0(vue@3.5.27(typescript@5.9.3))
       consola: 3.4.2
       defu: 6.1.4
+      estree-walker: 3.0.3
       h3: 1.15.5
       magic-string: 0.30.21
       ofetch: 1.5.1
@@ -9360,6 +9375,17 @@ snapshots:
       - uploadthing
       - vue
 
+  '@nuxtjs/partytown@2.0.0(magicast@0.5.1)':
+    dependencies:
+      '@nuxt/kit': 4.3.0(magicast@0.5.1)
+      '@qwik.dev/partytown': 0.11.2
+      knitwork: 1.3.0
+      serve-static: 2.2.1
+      ufo: 1.6.3
+    transitivePeerDependencies:
+      - magicast
+      - supports-color
+
   '@nuxtjs/robots@5.6.7(magicast@0.5.1)(vue@3.5.27(typescript@5.9.3))':
     dependencies:
       '@fingerprintjs/botd': 2.0.0
@@ -9441,10 +9467,10 @@ snapshots:
       - vite
       - vue
 
-  '@nuxtjs/turnstile@1.1.1(@nuxt/scripts@0.13.2(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.1)(typescript@5.9.3)(vue@3.5.27(typescript@5.9.3)))(magicast@0.5.1)':
+  '@nuxtjs/turnstile@1.1.1(@nuxt/scripts@1.0.0-beta.1(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.1)(typescript@5.9.3)(vue@3.5.27(typescript@5.9.3)))(magicast@0.5.1)':
     dependencies:
       '@nuxt/kit': 3.21.0(magicast@0.5.1)
-      '@nuxt/scripts': 0.13.2(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.1)(typescript@5.9.3)(vue@3.5.27(typescript@5.9.3))
+      '@nuxt/scripts': 1.0.0-beta.1(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.1)(typescript@5.9.3)(vue@3.5.27(typescript@5.9.3))
       '@types/cloudflare-turnstile': 0.2.2
       defu: 6.1.4
       pathe: 2.0.3
@@ -9784,6 +9810,10 @@ snapshots:
       supports-color: 10.2.2
 
   '@poppinss/exception@1.2.3': {}
+
+  '@qwik.dev/partytown@0.11.2':
+    dependencies:
+      dotenv: 16.6.1
 
   '@resvg/resvg-js-android-arm-eabi@2.6.2':
     optional: true
