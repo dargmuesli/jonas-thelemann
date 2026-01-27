@@ -8,7 +8,7 @@ export default defineNuxtConfig(
     {
       css: ['~/assets/css/jonas-thelemann.css'],
       extends: ['@dargmuesli/nuxt-vio'],
-      modules: ['@nuxt/scripts', '@nuxtjs/turnstile'],
+      modules: ['@nuxt/scripts', '@nuxtjs/partytown', '@nuxtjs/turnstile'],
       nitro: {
         prerender: {
           autoSubfolderIndex: false, // prevents Cloudflare Pages' redirection issue (https://community.cloudflare.com/t/removing-trailing-slash-on-static-websites/583429/4)
@@ -68,6 +68,11 @@ export default defineNuxtConfig(
 
       $production: {
         scripts: {
+          assets: {
+            integrity: true,
+          },
+          firstParty: true,
+          partytown: ['cloudflareWebAnalytics'],
           registry: {
             cloudflareWebAnalytics: true,
           },
