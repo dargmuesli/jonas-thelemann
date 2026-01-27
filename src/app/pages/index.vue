@@ -81,12 +81,6 @@
             <template #aboutAttraction>
               {{ t('aboutAttraction') }}
             </template>
-            <template #aboutSidefact>
-              {{ t('aboutSidefact') }}
-            </template>
-            <template #aboutCreating>
-              {{ t('aboutCreating') }}
-            </template>
             <template #br>
               <br />
             </template>
@@ -243,7 +237,7 @@ const socialLinks = [
   { to: 'https://github.com/dargmuesli', label: t('brandGitHub') },
   { to: 'https://www.instagram.com/dargmuesli/', label: t('brandInstagram') },
   {
-    to: 'https://www.linkedin.com/in/jonas-thelemann-148a74205/',
+    to: 'https://www.linkedin.com/in/jonas-thelemann/',
     label: t('brandLinkedIn'),
   },
   { to: 'https://www.mixcloud.com/creal/', label: t('brandMixcloud') },
@@ -465,12 +459,10 @@ useHeadDefault({
 
 <i18n lang="yaml">
 de:
-  about: '{aboutMarkSoftwareTemplate} irgendwo zwischen Frontend, Backend und DevOps.{br}{aboutMarkDjTemplate}, manchmal am Doubletime rappen.{br}{aboutAttraction}{br}{aboutSidefact}{br}{aboutCreating}'
+  about: '{aboutMarkSoftwareTemplate} irgendwo zwischen Frontend, Backend und DevOps.{br}{aboutMarkDjTemplate}, manchmal am Doubletime rappen.{br}{aboutAttraction}'
   aboutAttraction: Angezogen von Dingen, die er nicht versteht. Gelangweilt, wenn Videos langsamer als mit 2x-Geschwindigkeit abspielen.
-  aboutCreating: Ist verliebt darin, Dinge zu erschaffen.
   aboutMarkDj: DJ und Event-Organisator
-  aboutMarkSoftware: Leidenschaftlicher Software-Entwickler
-  aboutSidefact: Freundet sich mit der Mitte von Schwarz und Weiß an, hodlt nebenbei.
+  aboutMarkSoftware: Leidenschaftlicher Software-Architekt
   addressKassel: Kassel, Hessen, Deutschland
   asideLabel: Titelbild
   brandGiphy: Giphy
@@ -542,12 +534,10 @@ de:
   timeSpan: '{from} – {to}'
   titleSubtitle: '{title} · {subtitle}'
 en:
-  about: '{aboutMarkSoftwareTemplate} somewhere between frontend, backend and devops.{br}{aboutMarkDjTemplate}, occasionally rapping double times.{br}{aboutAttraction}{br}{aboutSidefact}{br}{aboutCreating}'
+  about: '{aboutMarkSoftwareTemplate} somewhere between frontend, backend and devops.{br}{aboutMarkDjTemplate}, occasionally rapping double times.{br}{aboutAttraction}'
   aboutAttraction: Attracted to things he doesn't understand. Bored when videos play at speeds of less than 2x.
-  aboutCreating: Loves to create.
   aboutMarkDj: DJ and event organizer
-  aboutMarkSoftware: Passionate software developer
-  aboutSidefact: Getting used to the middle of black and white, hodling in the meantime.
+  aboutMarkSoftware: Passionate software architect
   addressKassel: Kassel, Hesse, Germany
   asideLabel: Title image
   brandGiphy: Giphy
