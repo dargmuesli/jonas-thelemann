@@ -247,6 +247,7 @@ const socialLinks = [
     label: t('brandLinkedIn'),
   },
   { to: 'https://www.mixcloud.com/creal/', label: t('brandMixcloud') },
+  { to: 'https://orcid.org/0009-0002-4374-9866', label: t('brandOrcid') },
   { to: 'https://open.spotify.com/user/1153065250', label: t('brandSpotify') },
   {
     to: 'https://stackoverflow.com/users/4682621/dargmuesli',
@@ -477,6 +478,7 @@ de:
   brandInstagram: Instagram
   brandLinkedIn: LinkedIn
   brandMixcloud: Mixcloud
+  brandOrcid: ORCID
   brandSpotify: Spotify
   brandStackOverflow: Stack Overflow
   brandYouTube: YouTube
@@ -553,6 +555,7 @@ en:
   brandInstagram: Instagram
   brandLinkedIn: LinkedIn
   brandMixcloud: Mixcloud
+  brandOrcid: ORCID
   brandSpotify: Spotify
   brandStackOverflow: Stack Overflow
   brandYouTube: YouTube
