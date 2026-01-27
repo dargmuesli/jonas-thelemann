@@ -1,3 +1,9 @@
+## [6.6.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.5.1...6.6.0) (2026-01-27)
+
+### Features
+
+* **social:** add orcid link ([32fd3b4](https://github.com/dargmuesli/jonas-thelemann/commit/32fd3b4fcff7f02f0e2c1e9a276aa7ec0cb59287))
+
 ## [6.5.1](https://github.com/dargmuesli/jonas-thelemann/compare/6.5.0...6.5.1) (2026-01-27)
 
 ### Bug Fixes
