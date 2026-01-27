@@ -19,6 +19,11 @@ export default defineNuxtConfig(
           transporter: undefined,
         },
         public: {
+          scripts: {
+            cloudflareWebAnalytics: {
+              token: '90b5d82844c34a298218edef4ec9b163',
+            },
+          },
           turnstile: {
             siteKey: '0x4AAAAAAAQiMSbON1vdesv0',
           },
@@ -62,6 +67,11 @@ export default defineNuxtConfig(
       },
 
       $production: {
+        scripts: {
+          registry: {
+            cloudflareWebAnalytics: true,
+          },
+        },
         security: {
           headers: {
             crossOriginEmbedderPolicy: 'require-corp', // breaks nuxt devtools // TODO: remove when vio sets this
