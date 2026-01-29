@@ -49,10 +49,12 @@
 <script setup lang="ts">
 import type { BaseValidation } from '@vuelidate/core'
 
-export interface Props {
-  formInput: BaseValidation
-}
-withDefaults(defineProps<Props>(), {})
+withDefaults(
+  defineProps<{
+    formInput: BaseValidation
+  }>(),
+  {},
+)
 
 const emit = defineEmits<{
   input: [event?: string]
