@@ -1,3 +1,9 @@
+## [6.8.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.7.0...6.8.0) (2026-01-29)
+
+### Features
+
+* **about:** shorten ([b6f8f14](https://github.com/dargmuesli/jonas-thelemann/commit/b6f8f149e00fef1c5c1ad7cf48912c8d1b98f8af))
+
 ## [6.7.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.6.0...6.7.0) (2026-01-27)
 
 ### Features
