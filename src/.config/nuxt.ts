@@ -55,7 +55,7 @@ export default defineNuxtConfig(
       linkChecker: {
         excludeLinks: [
           'https://www.studienstiftung.de/', // incorrect 404
-          'https://www.linkedin.com/in/jonas-thelemann-148a74205/', // incorrect 404
+          'https://www.linkedin.com/in/jonas-thelemann/', // incorrect 404
         ],
       },
       site: {
