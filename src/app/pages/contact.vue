@@ -10,7 +10,7 @@
     </VioCardStateInfo>
     <section v-else>
       <h1>{{ t('title') }}</h1>
-      <JtFormContact @submit="submit" />
+      <JtFormContact :is-loading="isFormSubmitting" @submit="submit" />
     </section>
   </div>
 </template>
@@ -22,12 +22,12 @@ const backendFetch = useServiceFetch({
   name: 'backend',
 })
 
-// data
-const isFormSent = ref(false)
-
-// methods
+// form
+const isFormSent = ref<boolean>()
+const isFormSubmitting = ref<boolean>()
 const submit = async (body: object) => {
   try {
+    isFormSubmitting.value = true
     await backendFetch('/api/contact', {
       method: 'POST',
       body,
@@ -40,6 +40,8 @@ const submit = async (body: object) => {
       messageI18n: t('fetchError'),
     })
   }
+
+  isFormSubmitting.value = false
 }
 
 // initialization
