@@ -1,5 +1,10 @@
 <template>
-  <VioForm :form="v$" :is-form-sent="isFormSent" @submit.prevent="submit">
+  <VioForm
+    :form="v$"
+    :is-loading="isLoading"
+    :is-form-sent="isFormSent"
+    @submit.prevent="submit"
+  >
     <VioFormInput
       id-label="input-name"
       :placeholder="t('placeholderName')"
@@ -72,6 +77,15 @@ import { useVuelidate } from '@vuelidate/core'
 import { required } from '@vuelidate/validators'
 
 type FormValid = { emailAddress: string; name: string; message: string }
+
+withDefaults(
+  defineProps<{
+    isLoading?: boolean
+  }>(),
+  {
+    isLoading: undefined,
+  },
+)
 
 const emit = defineEmits<{
   submit: [form: FormValid]
