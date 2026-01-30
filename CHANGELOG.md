@@ -1,3 +1,10 @@
+## [6.10.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.9.0...6.10.0) (2026-01-30)
+
+### Features
+
+* **nodemailer:** migrate to vio ([ba9432c](https://github.com/dargmuesli/jonas-thelemann/commit/ba9432c93b957b65f34adf6c3f06502566cd743c))
+* **turnstile:** migrate to vio ([681ce2e](https://github.com/dargmuesli/jonas-thelemann/commit/681ce2e73c59b526833fbe93e27f8b9cdd008b45))
+
 ## [6.9.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.8.0...6.9.0) (2026-01-30)
 
 ### Features
