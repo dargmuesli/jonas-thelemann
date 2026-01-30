@@ -4,8 +4,10 @@ import { createTransport } from 'nodemailer'
 const MAIL_FROM = '"jonas-thelemann" <noreply+contact@jonas-thelemann.de>'
 const MAIL_TO = 'e-mail+contact@jonas-thelemann.de'
 
-export default defineEventHandler(async () => {
-  await assertTurnstileValid()
+export default defineEventHandler(async (event) => {
+  const body = await readBody(event)
+  await assertTurnstileValid({ token: body.captcha })
+
   await sendMail()
 })
 
@@ -36,33 +38,4 @@ const sendMail = async () => {
   })
 
   consola.log('Message sent: %s', mailSentData.messageId)
-}
-
-const assertTurnstileValid = async () => {
-  const event = useEvent()
-  const body = await readBody(event)
-  const turnstileToken = body.captcha
-
-  if (!turnstileToken) {
-    return throwError(422, 'Turnstile token not provided.')
-  }
-
-  const result = await verifyTurnstileToken(turnstileToken)
-
-  if (!result.success) {
-    return throwError(
-      403,
-      `Turnstile verification unsuccessful: ${result['error-codes'].join(', ')}`,
-    )
-  }
-
-  consola.debug('Turnstile verification succeeded')
-}
-
-const throwError = (code: number, message: string) => {
-  consola.error(message)
-  throw createError({
-    statusCode: code,
-    statusMessage: message,
-  })
 }
