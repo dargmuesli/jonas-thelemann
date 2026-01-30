@@ -1,23 +1,20 @@
 import { VIO_NUXT_BASE_CONFIG } from '@dargmuesli/nuxt-vio/shared/utils/nuxt'
 import { defu } from 'defu'
 
-import { SITE_NAME } from '../shared/utils/constants'
+import { PRODUCTION_HOST, SITE_NAME } from './shared/utils/constants'
 
 export default defineNuxtConfig(
   defu(
     {
       css: ['~/assets/css/jonas-thelemann.css'],
       extends: ['@dargmuesli/nuxt-vio'],
-      modules: ['@nuxt/scripts', '@nuxtjs/partytown', '@nuxtjs/turnstile'],
+      modules: ['@nuxt/scripts', '@nuxtjs/partytown'],
       nitro: {
         prerender: {
           autoSubfolderIndex: false, // prevents Cloudflare Pages' redirection issue (https://community.cloudflare.com/t/removing-trailing-slash-on-static-websites/583429/4)
         },
       },
       runtimeConfig: {
-        nodemailer: {
-          transporter: undefined,
-        },
         public: {
           scripts: {
             cloudflareWebAnalytics: {
@@ -86,6 +83,7 @@ export default defineNuxtConfig(
     },
     VIO_NUXT_BASE_CONFIG({
       siteName: SITE_NAME,
+      stagingHost: PRODUCTION_HOST,
     }),
   ),
 )

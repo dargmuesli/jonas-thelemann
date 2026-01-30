@@ -25,11 +25,6 @@ export const GET_CSP = ({ siteUrl }: { siteUrl: URL }) => {
       'worker-src': [`${siteUrl}~partytown/`],
     },
     {
-      // Cloudflare Turnstile
-      'frame-src': ['https://challenges.cloudflare.com'],
-      'script-src-elem': ['https://challenges.cloudflare.com'],
-    },
-    {
       // Nuxt (static)
       'script-src-elem': ["'self'"],
     },
