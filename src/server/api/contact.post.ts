@@ -1,6 +1,3 @@
-import { consola } from 'consola'
-import { createTransport } from 'nodemailer'
-
 const MAIL_FROM = '"jonas-thelemann" <noreply+contact@jonas-thelemann.de>'
 const MAIL_TO = 'e-mail+contact@jonas-thelemann.de'
 
@@ -8,23 +5,7 @@ export default defineEventHandler(async (event) => {
   const body = await readBody(event)
   await assertTurnstileValid({ token: body.captcha })
 
-  await sendMail()
-})
-
-const sendMail = async () => {
-  const event = useEvent()
-  const runtimeConfig = useRuntimeConfig()
-
-  const transport = runtimeConfig.nodemailer.transporter
-
-  if (!transport) {
-    throw new Error('The SMTP configuration secret is missing!')
-  }
-
-  const NODEMAILER_TRANSPORTER = createTransport(transport)
-
-  const body = await readBody(event)
-  const mailSentData = await NODEMAILER_TRANSPORTER.sendMail({
+  await event.context.$email?.nodemailer.transporter.sendMail({
     from: MAIL_FROM,
     to: MAIL_TO,
     text: [
@@ -36,6 +17,4 @@ const sendMail = async () => {
     ].join('\n'),
     subject: 'Nachricht per Kontaktformular',
   })
-
-  consola.log('Message sent: %s', mailSentData.messageId)
-}
+})

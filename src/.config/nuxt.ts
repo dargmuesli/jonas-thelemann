@@ -15,9 +15,6 @@ export default defineNuxtConfig(
         },
       },
       runtimeConfig: {
-        nodemailer: {
-          transporter: undefined,
-        },
         public: {
           scripts: {
             cloudflareWebAnalytics: {
