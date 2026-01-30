@@ -1,3 +1,9 @@
+## [6.9.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.8.0...6.9.0) (2026-01-30)
+
+### Features
+
+* **contact:** add form button loading indicator ([8126ffb](https://github.com/dargmuesli/jonas-thelemann/commit/8126ffb03ee1053c5dc8db5dd70ee454c836472b))
+
 ## [6.8.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.7.0...6.8.0) (2026-01-29)
 
 ### Features
