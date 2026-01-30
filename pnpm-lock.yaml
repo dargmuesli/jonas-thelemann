@@ -99,24 +99,24 @@ importers:
   tests:
     dependencies:
       playwright-core:
-        specifier: 1.58.0
-        version: 1.58.0
+        specifier: 1.58.1
+        version: 1.58.1
     devDependencies:
       '@axe-core/playwright':
         specifier: 4.11.0
-        version: 4.11.0(playwright-core@1.58.0)
+        version: 4.11.0(playwright-core@1.58.1)
       '@dargmuesli/nuxt-vio':
         specifier: 20.5.1
         version: 20.5.1(93d5a577aabfba9e12d735b8acf5a0a9)
       '@dargmuesli/nuxt-vio-testing':
         specifier: 20.5.1
-        version: 20.5.1(playwright-core@1.58.0)
+        version: 20.5.1(playwright-core@1.58.1)
       '@eslint/js':
         specifier: 9.39.2
         version: 9.39.2
       '@playwright/test':
-        specifier: 1.58.0
-        version: 1.58.0
+        specifier: 1.58.1
+        version: 1.58.1
       '@types/node':
         specifier: 24.10.9
         version: 24.10.9
@@ -1927,8 +1927,8 @@ packages:
     resolution: {integrity: sha512-QNqXyfVS2wm9hweSYD2O7F0G06uurj9kZ96TRQE5Y9hU7+tgdZwIkbAKc5Ocy1HxEY2kuDQa6cQ1WRs/O5LFKA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@playwright/test@1.58.0':
-    resolution: {integrity: sha512-fWza+Lpbj6SkQKCrU6si4iu+fD2dD3gxNHFhUPxsfXBPhnv3rRSQVd0NtBUT9Z/RhF/boCBcuUaMUSTRTopjZg==}
+  '@playwright/test@1.58.1':
+    resolution: {integrity: sha512-6LdVIUERWxQMmUSSQi0I53GgCBYgM2RpGngCPY7hSeju+VrKjq3lvs7HpJoPbDiY5QM5EYRtRX5fvrinnMAz3w==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -5330,8 +5330,13 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright@1.58.0:
-    resolution: {integrity: sha512-2SVA0sbPktiIY/MCOPX8e86ehA/e+tDNq+e5Y8qjKYti2Z/JG7xnronT/TXTIkKbYGWlCbuucZ6dziEgkoEjQQ==}
+  playwright-core@1.58.1:
+    resolution: {integrity: sha512-bcWzOaTxcW+VOOGBCQgnaKToLJ65d6AqfLVKEWvexyS3AS6rbXl+xdpYRMGSRBClPvyj44njOWoxjNdL/H9UNg==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+  playwright@1.58.1:
+    resolution: {integrity: sha512-+2uTZHxSCcxjvGc5C891LrS1/NlxglGxzrC4seZiVjcYVQfUa87wBL6rTDqzGjuoWNjnBzRqKmF6zRYGMvQUaQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -6808,10 +6813,10 @@ snapshots:
       '@types/json-schema': 7.0.15
       js-yaml: 4.1.1
 
-  '@axe-core/playwright@4.11.0(playwright-core@1.58.0)':
+  '@axe-core/playwright@4.11.0(playwright-core@1.58.1)':
     dependencies:
       axe-core: 4.11.1
-      playwright-core: 1.58.0
+      playwright-core: 1.58.1
 
   '@babel/code-frame@7.28.6':
     dependencies:
@@ -7164,9 +7169,9 @@ snapshots:
       - magicast
       - webpack
 
-  '@dargmuesli/nuxt-vio-testing@20.5.1(playwright-core@1.58.0)':
+  '@dargmuesli/nuxt-vio-testing@20.5.1(playwright-core@1.58.1)':
     dependencies:
-      playwright-core: 1.58.0
+      playwright-core: 1.58.1
 
   '@dargmuesli/nuxt-vio@20.5.1(93d5a577aabfba9e12d735b8acf5a0a9)':
     dependencies:
@@ -9128,9 +9133,9 @@ snapshots:
 
   '@pkgr/core@0.2.9': {}
 
-  '@playwright/test@1.58.0':
+  '@playwright/test@1.58.1':
     dependencies:
-      playwright: 1.58.0
+      playwright: 1.58.1
 
   '@polka/url@1.0.0-next.29': {}
 
@@ -13066,9 +13071,11 @@ snapshots:
 
   playwright-core@1.58.0: {}
 
-  playwright@1.58.0:
+  playwright-core@1.58.1: {}
+
+  playwright@1.58.1:
     dependencies:
-      playwright-core: 1.58.0
+      playwright-core: 1.58.1
     optionalDependencies:
       fsevents: 2.3.2
 
