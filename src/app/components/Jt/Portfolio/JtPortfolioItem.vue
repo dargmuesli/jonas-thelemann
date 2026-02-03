@@ -36,30 +36,28 @@
 </template>
 
 <script setup lang="ts">
-const props = withDefaults(
-  defineProps<{
-    isVisible?: boolean
-    subtitlePlace?: string
-    subtitlePlaceUrl?: string
-    subtitleText?: string
-    subtitleTextUrl?: string
-    subtitleTime?: string
-    title: string
-    titleUrl?: string
-  }>(),
-  {
-    isVisible: true,
-    subtitlePlace: undefined,
-    subtitlePlaceUrl: undefined,
-    subtitleText: undefined,
-    subtitleTextUrl: undefined,
-    subtitleTime: undefined,
-    titleUrl: undefined,
-  },
-)
+const {
+  isVisible = true,
+  subtitlePlace = undefined,
+  subtitlePlaceUrl = undefined,
+  subtitleText = undefined,
+  subtitleTextUrl = undefined,
+  subtitleTime = undefined,
+  title,
+  titleUrl = undefined,
+} = defineProps<{
+  isVisible?: boolean
+  subtitlePlace?: string
+  subtitlePlaceUrl?: string
+  subtitleText?: string
+  subtitleTextUrl?: string
+  subtitleTime?: string
+  title: string
+  titleUrl?: string
+}>()
 
 const hasPlaceTime = computed(
-  () => props.subtitlePlace !== undefined || props.subtitleTime !== undefined,
+  () => subtitlePlace !== undefined || subtitleTime !== undefined,
 )
 
 // needs to be specified for i18n-t usage
