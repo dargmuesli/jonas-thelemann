@@ -34,7 +34,7 @@
     "build:cloudflare_pages": "NITRO_PRESET=cloudflare_pages nuxt build",
     "build:node": "nuxt build",
     "build:static": "nuxt generate",
-    "build:static:test": "cross-env NUXT_PUBLIC_VIO_IS_TESTING=true SITE_URL=https://localhost:3002 pnpm run build:static",
+    "build:static:test": "cross-env NUXT_PUBLIC_VIO_IS_TESTING=true NUXT_PUBLIC_SITE_URL=https://localhost:3002 pnpm run build:static",
     "build:test": "pnpm run build:static:test",
     "dev": "pnpm run start:dev",
     "generate": "pnpm run build:static",
