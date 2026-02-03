@@ -40,7 +40,7 @@ jobs:
       BUILD_ADD_HOSTS: jonas-thelemann.de=127.0.0.1
       BUILD_ARGUMENTS: |
         PORT=443
-        SITE_URL=https://jonas-thelemann.de
+        NUXT_PUBLIC_SITE_URL=https://jonas-thelemann.de
       BUILD_TARGET_RELEASE: build-static
       TAG: ${{ needs.release_semantic_dry.outputs.new_release_version }}
     secrets:
