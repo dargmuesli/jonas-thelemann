@@ -8,10 +8,7 @@
 </template>
 
 <script setup lang="ts">
-withDefaults(
-  defineProps<{
-    title: string
-  }>(),
-  {},
-)
+const { title } = defineProps<{
+  title: string
+}>()
 </script>

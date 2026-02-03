@@ -9,10 +9,7 @@
 </template>
 
 <script setup lang="ts">
-withDefaults(
-  defineProps<{
-    to: string
-  }>(),
-  {},
-)
+const { to } = defineProps<{
+  to: string
+}>()
 </script>
