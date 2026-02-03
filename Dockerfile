@@ -47,7 +47,8 @@ FROM base-image AS prepare
 
 COPY ./pnpm-lock.yaml package.json ./
 
-RUN pnpm fetch
+# TODO: evaluate dropping libc arguments by running e2e tests separately
+RUN pnpm fetch --libc=musl --libc=glibc
 
 COPY ./ ./
 
@@ -155,13 +156,13 @@ FROM test-e2e-base-image AS test-e2e-prepare
 
 COPY --from=prepare /srv/app/ ./
 
-RUN pnpm -r rebuild
-
 
 # ########################
 # # Nuxt: test (e2e, development)
 
 # FROM test-e2e-prepare AS test-e2e-dev
+
+# RUN pnpm -r rebuild
 
 # ENV NODE_ENV=development
 

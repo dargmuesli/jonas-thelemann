@@ -50,11 +50,11 @@ export const testOgImage = (url: string) =>
     })
   })
 
-export const testPageLoad = (url: string, statusCode = 200) =>
+export const testPageLoad = (url: string, status = 200) =>
   vioTest.describe('page load', () => {
     vioTest('loads the page successfully', async ({ request }) => {
       const resp = await request.get(url)
-      expect(resp.status()).toBe(statusCode)
+      expect(resp.status()).toBe(status)
     })
   })
 
