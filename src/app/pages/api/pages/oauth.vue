@@ -7,7 +7,7 @@
       {{ t('copy') }}
     </VioButtonColored>
   </div>
-  <VioError v-else :description="t('codeError')" :status-code="400" />
+  <VioError v-else :description="t('codeError')" :status="400" />
 </template>
 
 <script setup lang="ts">
