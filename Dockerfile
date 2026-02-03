@@ -155,13 +155,13 @@ FROM test-e2e-base-image AS test-e2e-prepare
 
 COPY --from=prepare /srv/app/ ./
 
-RUN pnpm -r rebuild
-
 
 # ########################
 # # Nuxt: test (e2e, development)
 
 # FROM test-e2e-prepare AS test-e2e-dev
+
+# RUN pnpm -r rebuild
 
 # ENV NODE_ENV=development
 
