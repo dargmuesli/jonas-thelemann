@@ -1,3 +1,9 @@
+## [6.10.2](https://github.com/dargmuesli/jonas-thelemann/compare/6.10.1...6.10.2) (2026-02-09)
+
+### Bug Fixes
+
+* **docker:** correct production environment ([09eb2c1](https://github.com/dargmuesli/jonas-thelemann/commit/09eb2c14a1ac1627859d40d75058ff734fd9593f))
+
 ## [6.10.1](https://github.com/dargmuesli/jonas-thelemann/compare/6.10.0...6.10.1) (2026-02-09)
 
 ### Bug Fixes
