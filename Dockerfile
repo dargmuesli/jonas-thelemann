@@ -203,6 +203,7 @@ RUN pnpm run --dir tests test:e2e:server:static
 FROM base-image AS collect
 
 COPY --from=build-node --chown=node /srv/app/src/.output ./.output
+COPY --from=build-node --chown=node /srv/app/src/node/server/node.mjs ./node/server/node.mjs
 COPY --from=build-node --chown=node /srv/app/src/package.json ./package.json
 # COPY --from=build-cloudflare_pages /srv/app/package.json /dev/null
 # COPY --from=build-static /srv/app/src/.output/public ./.output/public
