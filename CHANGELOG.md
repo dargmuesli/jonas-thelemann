@@ -1,3 +1,9 @@
+## [6.10.1](https://github.com/dargmuesli/jonas-thelemann/compare/6.10.0...6.10.1) (2026-02-09)
+
+### Bug Fixes
+
+* **docker:** include node server script ([d1e3aec](https://github.com/dargmuesli/jonas-thelemann/commit/d1e3aec37f1d77727ba932bab5f89b8307dbcd16))
+
 ## [6.10.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.9.0...6.10.0) (2026-01-30)
 
 ### Features
