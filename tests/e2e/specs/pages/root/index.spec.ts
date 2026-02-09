@@ -1,13 +1,12 @@
-import { expect } from '@playwright/test'
-
-import { PAGE_READY } from '../../../utils/constants'
+import { vioTest } from '@dargmuesli/nuxt-vio-testing/e2e/fixtures/vioTest'
 import {
   testA11y,
   testOgImage,
   testPageLoad,
   testVisualRegression,
-} from '#tests/e2e/utils/tests'
-import { vioTest } from '#tests/e2e/fixtures/vioTest'
+} from '@dargmuesli/nuxt-vio-testing/e2e/utils/tests'
+import { PAGE_READY } from '@dargmuesli/nuxt-vio-testing/e2e/utils/constants'
+import { expect } from '@playwright/test'
 
 const PAGE_PATH = '/'
 
