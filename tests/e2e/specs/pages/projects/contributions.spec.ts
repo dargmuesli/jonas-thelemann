@@ -3,7 +3,7 @@ import {
   testOgImage,
   testPageLoad,
   testVisualRegression,
-} from '#tests/e2e/utils/tests'
+} from '@dargmuesli/nuxt-vio-testing/e2e/utils/tests'
 
 const PAGE_PATH = '/projects/contributions'
 

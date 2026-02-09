@@ -43,7 +43,7 @@ CMD ["pnpm", "run", "--dir", "src", "dev", "--host", "0.0.0.0"]
 EXPOSE 3000
 
 # TODO: support healthcheck while starting (https://github.com/nuxt/framework/issues/6915)
-# HEALTHCHECK --interval=10s --start-period=60s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
+# HEALTHCHECK --interval=10s --start-period=60s CMD wget -O /dev/null https://localhost:3000/api/healthcheck || exit 1
 
 
 ########################
@@ -203,6 +203,7 @@ RUN pnpm run --dir tests test:e2e:server:static
 FROM base-image AS collect
 
 COPY --from=build-node --chown=node /srv/app/src/.output ./.output
+COPY --from=build-node --chown=node /srv/app/src/node/server/node.mjs ./node/server/node.mjs
 COPY --from=build-node --chown=node /srv/app/src/package.json ./package.json
 # COPY --from=build-cloudflare_pages /srv/app/package.json /dev/null
 # COPY --from=build-static /srv/app/src/.output/public ./.output/public
@@ -225,7 +226,7 @@ COPY --from=test-e2e-static /srv/app/package.json /dev/null
 
 # COPY --from=collect /srv/app/.output/public/ ./
 
-# HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
+# HEALTHCHECK --interval=10s CMD wget -O /dev/null https://localhost:3000/api/healthcheck || exit 1
 # EXPOSE 3000
 # LABEL org.opencontainers.image.source="https://github.com/dargmuesli/jonas-thelemann"
 # LABEL org.opencontainers.image.description="Jonas Thelemann's website."
@@ -247,7 +248,7 @@ USER node
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["pnpm", "run", "start:node"]
-HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
+HEALTHCHECK --interval=10s CMD wget -O /dev/null https://localhost:3000/api/healthcheck || exit 1
 EXPOSE 3000
 LABEL org.opencontainers.image.source="https://github.com/dargmuesli/jonas-thelemann"
 LABEL org.opencontainers.image.description="Jonas Thelemann's website."
