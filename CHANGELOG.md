@@ -1,3 +1,9 @@
+## [6.10.4](https://github.com/dargmuesli/jonas-thelemann/compare/6.10.3...6.10.4) (2026-02-22)
+
+### Bug Fixes
+
+* **ci:** upgrade to dargmuesli/github-actions v5.0.0-beta.1 ([7023996](https://github.com/dargmuesli/jonas-thelemann/commit/70239966faefaf5d8e2f0363aa63c4bf9fade5c1))
+
 ## [6.10.3](https://github.com/dargmuesli/jonas-thelemann/compare/6.10.2...6.10.3) (2026-02-17)
 
 ### Bug Fixes
