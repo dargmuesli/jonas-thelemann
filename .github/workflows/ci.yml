@@ -14,24 +14,25 @@ on:
 jobs:
   ci-optimization:
     name: CI optimization
-    uses: dargmuesli/github-actions/.github/workflows/ci-optimization.yml@e98193e91e9be2af3af784b7a0f25d35bf4eadc5 # 4.0.7
+    uses: dargmuesli/github-actions/.github/workflows/ci-optimization.yml@59b73f336e9966ee1654310effd53cef6d6f1d70 # 5.0.0-beta.1
     permissions:
       pull-requests: read
   release_semantic_dry:
     needs: ci-optimization
     if: needs.ci-optimization.outputs.continue == 'true'
     name: Release (semantic, dry)
-    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@e98193e91e9be2af3af784b7a0f25d35bf4eadc5 # 4.0.7
+    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@59b73f336e9966ee1654310effd53cef6d6f1d70 # 5.0.0-beta.1
     permissions:
       contents: write
       id-token: write
     secrets:
-      PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      GH_APP_PRIVATE_KEY: ${{ secrets.GH_APP_PRIVATE_KEY }}
     with:
       DRY_RUN: true
+      GH_APP_ID: ${{ vars.GH_APP_ID }}
   build:
     name: Build
-    uses: dargmuesli/github-actions/.github/workflows/docker.yml@e98193e91e9be2af3af784b7a0f25d35bf4eadc5 # 4.0.7
+    uses: dargmuesli/github-actions/.github/workflows/docker.yml@59b73f336e9966ee1654310effd53cef6d6f1d70 # 5.0.0-beta.1
     needs: release_semantic_dry
     permissions:
       packages: write
@@ -43,21 +44,21 @@ jobs:
         NUXT_PUBLIC_SITE_URL=https://jonas-thelemann.de
       BUILD_TARGET_RELEASE: build-static
       TAG: ${{ needs.release_semantic_dry.outputs.new_release_version }}
-    secrets:
-      PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
   release_semantic:
     needs: build
     name: Release (semantic)
-    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@e98193e91e9be2af3af784b7a0f25d35bf4eadc5 # 4.0.7
+    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@59b73f336e9966ee1654310effd53cef6d6f1d70 # 5.0.0-beta.1
     permissions:
       contents: write
       id-token: write
     secrets:
-      PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      GH_APP_PRIVATE_KEY: ${{ secrets.GH_APP_PRIVATE_KEY }}
+    with:
+      GH_APP_ID: ${{ vars.GH_APP_ID }}
   deploy:
     needs: build
     name: Deploy
-    uses: dargmuesli/github-actions/.github/workflows/deploy-cloudflare-pages.yml@e98193e91e9be2af3af784b7a0f25d35bf4eadc5 # 4.0.7
+    uses: dargmuesli/github-actions/.github/workflows/deploy-cloudflare-pages.yml@59b73f336e9966ee1654310effd53cef6d6f1d70 # 5.0.0-beta.1
     permissions:
       contents: read
       deployments: write
