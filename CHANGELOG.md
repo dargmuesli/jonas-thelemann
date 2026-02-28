@@ -1,3 +1,9 @@
+## [6.11.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.10.4...6.11.0) (2026-02-28)
+
+### Features
+
+* **contributions:** update data ([218feca](https://github.com/dargmuesli/jonas-thelemann/commit/218fecafd0c469e865199293c20f19da9718d1e3))
+
 ## [6.10.4](https://github.com/dargmuesli/jonas-thelemann/compare/6.10.3...6.10.4) (2026-02-22)
 
 ### Bug Fixes
