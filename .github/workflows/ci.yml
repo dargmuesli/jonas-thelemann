@@ -38,10 +38,12 @@ jobs:
       packages: write
     with:
       ARTIFACT_PATH: src/.output/public/
-      BUILD_ADD_HOSTS: jonas-thelemann.de=127.0.0.1
+      BUILD_ADD_HOSTS: |
+        app.localhost=127.0.0.1
+        jonas-thelemann.de=127.0.0.1
       BUILD_ARGUMENTS: |
         PORT=443
-        NUXT_PUBLIC_SITE_URL=https://jonas-thelemann.de
+        NUXT_PUBLIC_I18N_BASE_URL=https://jonas-thelemann.de
       BUILD_TARGET_RELEASE: build-static
       TAG: ${{ needs.release_semantic_dry.outputs.new_release_version }}
   release_semantic:

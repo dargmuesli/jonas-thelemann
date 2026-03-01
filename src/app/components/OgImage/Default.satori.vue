@@ -1,17 +1,17 @@
 <template>
-  <div
-    class="flex h-full w-full flex-nowrap bg-[linear-gradient(to_bottom,#dbf4ff,#fff1f1)]"
-  >
+  <div class="flex h-full w-full flex-nowrap bg-white">
+    <!-- bg-[linear-gradient(to_bottom,#dbf4ff,#fff1f1)] -->
     <img
       alt="Jonas in Wiesbaden."
-      class="object-cover"
       src="/assets/static/images/wiesbaden.jpg"
       width="436"
       height="630"
+      style="object-fit: cover"
     />
+    <!-- class="object-cover" -->
     <span class="mx-16 flex flex-1 flex-col justify-center gap-16">
       <!-- eslint-disable-next-line prettier/prettier -->
-      <h1 class="truncate leading-[1.1875] text-7xl">
+      <h1 class="truncate text-7xl leading-[1.1875]">
         {{ title }}
       </h1>
       <div class="text-3xl text-gray-600">

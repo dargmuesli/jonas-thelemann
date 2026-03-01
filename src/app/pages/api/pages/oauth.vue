@@ -13,6 +13,7 @@
 <script setup lang="ts">
 const route = useRoute()
 const { t } = useI18n()
+const { copy: copyText } = useCopy()
 
 // methods
 const copy = async () => {
