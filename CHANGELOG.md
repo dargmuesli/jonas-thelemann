@@ -1,3 +1,9 @@
+## [6.13.1](https://github.com/dargmuesli/jonas-thelemann/compare/6.13.0...6.13.1) (2026-03-05)
+
+### Bug Fixes
+
+* **docker:** correct production url ([e18ac03](https://github.com/dargmuesli/jonas-thelemann/commit/e18ac03cd71f9bf5e4eee8f9e61191d95ae3edd5))
+
 ## [6.13.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.12.0...6.13.0) (2026-03-05)
 
 ### Features
