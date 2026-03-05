@@ -128,11 +128,21 @@
                   :aria-label="
                     t('viewMyCommits', { repo: repo.repository.name })
                   "
-                  class="text-xs text-gray-600 underline-offset-2 hover:underline sm:text-sm dark:text-gray-400"
+                  class="text-xs underline-offset-2 hover:underline sm:text-sm"
                   is-external-icon-disabled
                   :to="`https://github.com/${owner}/${repo.repository.name}/commits?author=dargmuesli`"
                 >
                   {{ t('myCommits') }}
+                </VioLink>
+                <VioLink
+                  :aria-label="
+                    t('viewMyReviews', { repo: repo.repository.name })
+                  "
+                  class="text-xs underline-offset-2 hover:underline sm:text-sm"
+                  is-external-icon-disabled
+                  :to="`https://github.com/${owner}/${repo.repository.name}/pulls?q=reviewed-by%3Adargmuesli`"
+                >
+                  {{ t('myReviews') }}
                 </VioLink>
               </div>
             </div>
@@ -272,7 +282,8 @@ useHeadDefault({
 de:
   description: Beiträge zu {total} öffentlichen Softwareprojekten.
   fork: Fork
-  myCommits: Beiträge ansehen
+  myCommits: Commits anzeigen
+  myReviews: Reviews anzeigen
   noDescription: Keine Beschreibung verfügbar
   noRepositoriesFound: Keine Repositories gefunden.
   openSourceContributions: Öffentlichen Softwareprojekten
@@ -287,10 +298,12 @@ de:
   sortByStars: Nach Sternen sortieren
   viewGitHubProfile: 'GitHub-Profil von {owner} anzeigen'
   viewMyCommits: 'Beiträge in {repo} anzeigen'
+  viewMyReviews: 'Reviews in {repo} anzeigen'
 en:
   description: Contributions to {total} public software projects.
   fork: Fork
-  myCommits: View contributions
+  myCommits: View commits
+  myReviews: View reviews
   noDescription: No description available
   noRepositoriesFound: No repositories found.
   openSourceContributions: Public Software Projects
@@ -305,4 +318,5 @@ en:
   sortByStars: Sort by stars
   viewGitHubProfile: 'View {owner} GitHub profile'
   viewMyCommits: 'View contributions in {repo}'
+  viewMyReviews: 'View reviews in {repo}'
 </i18n>
