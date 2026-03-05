@@ -1,3 +1,9 @@
+## [6.13.2](https://github.com/dargmuesli/jonas-thelemann/compare/6.13.1...6.13.2) (2026-03-05)
+
+### Bug Fixes
+
+* **site:** correct url environment ([86b81d7](https://github.com/dargmuesli/jonas-thelemann/commit/86b81d7819a3de656757947bd04c3e793f9be344))
+
 ## [6.13.1](https://github.com/dargmuesli/jonas-thelemann/compare/6.13.0...6.13.1) (2026-03-05)
 
 ### Bug Fixes
