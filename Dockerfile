@@ -85,7 +85,7 @@ RUN pnpm run --dir src build:node
 
 FROM prepare AS build-static
 
-ARG NUXT_PUBLIC_I18N_BASE_URL=https://app.localhost:3002
+ARG NUXT_PUBLIC_I18N_BASE_URL=https://jonas-thelemann.de
 ENV NUXT_PUBLIC_I18N_BASE_URL=${NUXT_PUBLIC_I18N_BASE_URL}
 
 ENV NODE_ENV=production
