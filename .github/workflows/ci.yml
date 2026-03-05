@@ -60,7 +60,7 @@ jobs:
   deploy:
     needs: build
     name: Deploy
-    uses: dargmuesli/github-actions/.github/workflows/deploy-cloudflare-pages.yml@1ac26b11d72f2e35baa22df06c9fb65e81f5b103 # 5.1.0-beta.3
+    uses: dargmuesli/github-actions/.github/workflows/deploy-cloudflare-pages.yml@661e39fe1c9e484d94c6a5a9d4c9946d57c41771 # 5.1.0-beta.3
     permissions:
       contents: read
       deployments: write
