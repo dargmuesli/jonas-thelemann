@@ -1,3 +1,9 @@
+## [6.13.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.12.0...6.13.0) (2026-03-05)
+
+### Features
+
+* **contributions:** add reviews link ([01ffffc](https://github.com/dargmuesli/jonas-thelemann/commit/01ffffc7cbf3574ccd938f52a72066f1edf9705a))
+
 ## [6.12.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.11.0...6.12.0) (2026-03-05)
 
 ### Features
