@@ -36,17 +36,17 @@
         </div>
         <div>
           <i18n-t keypath="descriptionShort">
-            <template #ninjaneers>
-              <a href="https://www.ninjaneers.de/">{{ t('ninjaneer') }}</a>
+            <template #maevsi>
+              <a href="https://maev.si/">
+                <span>{{ t('organizationMaevsi') }}</span>
+              </a>
+            </template>
+            <template #nuxt>
+              <a href="https://nuxt.com/">{{ t('organizationNuxt') }}</a>
             </template>
             <template #university>
               <a href="https://www.uni-kassel.de/">
                 <span>{{ t('organizationUniversityKassel') }}</span>
-              </a>
-            </template>
-            <template #maevsi>
-              <a href="https://maev.si/">
-                <span>{{ t('organizationMaevsi') }}</span>
               </a>
             </template>
           </i18n-t>
@@ -206,10 +206,6 @@
 </template>
 
 <script setup lang="ts">
-// import { consola } from 'consola'
-// import { getQuery } from 'ufo'
-import repos from '~/assets/data/contributions.json'
-
 definePageMeta({
   layout: 'root',
 })
@@ -225,12 +221,17 @@ const nonce = useNonce()
 const isTesting = useIsTesting()
 
 // data
+const repos = (
+  await (isTesting
+    ? import('~/assets/data/contributions-test.json')
+    : import('~/assets/data/contributions.json'))
+).default
 const age = isTesting
   ? 1337
   : Math.abs(
       new Date(Date.now() - Date.parse('1998-12-17')).getUTCFullYear() - 1970,
     )
-const repoCount = isTesting ? '1337' : (repos.length - 3).toString() // 3 already displayed project subtracted
+const repoCount = (repos.length - 4).toString() // 4 already displayed project subtracted
 const socialLinks = [
   { to: localePath('/contact'), label: t('contactForm') },
   { to: 'https://giphy.com/channel/dargmuesli', label: t('brandGiphy') },
@@ -451,7 +452,7 @@ onMounted(() => indicateLoadingDone())
 useHeadDefault({
   description: t('descriptionShort', {
     maevsi: t('organizationMaevsi'),
-    ninjaneers: t('organizationNinjaneers'),
+    nuxt: t('organizationNuxt'),
   }),
   title: siteConfig.name,
 })
@@ -475,7 +476,7 @@ de:
   brandStackOverflow: Stack Overflow
   brandYouTube: YouTube
   contactForm: Kontaktformular
-  descriptionShort: Geschäftsführer und Gründer {'@'}{maevsi} · {ninjaneers} · M.Sc. Informatik
+  descriptionShort: Geschäftsführer {'@'}{maevsi} · Ökosystem {'@'}{nuxt} · M.Sc. Informatik
   education: Ausbildung
   educationGoal: Master der Software-Entwicklung
   educationTime: 2021 – 2024
@@ -489,7 +490,6 @@ de:
   languageGerman: Deutsch
   languages: Sprachen
   metaInfo: '{age}, er/ihm'
-  ninjaneer: Ninjaneer
   nominationScholarship: Nominierung für ein Stipendium
   organizationChaosComputerClub: Chaos Computer Club
   organizationCommonGroundsForum: Common Grounds Forum
@@ -550,7 +550,7 @@ en:
   brandStackOverflow: Stack Overflow
   brandYouTube: YouTube
   contactForm: Contact form
-  descriptionShort: Director and founder {'@'}{maevsi} · {ninjaneers} · M.Sc. Computer Science
+  descriptionShort: Director {'@'}{maevsi} · Ecosystem {'@'}{nuxt} · M.Sc. Computer Science
   education: Education
   educationGoal: Master's degree Software Engineering
   educationTime: 2021 – 2024
@@ -564,7 +564,6 @@ en:
   languageGerman: German
   languages: Languages
   metaInfo: '{age}, he/him'
-  ninjaneer: Ninjaneer
   nominationScholarship: Nomination for a scholarship
   organizationChaosComputerClub: Chaos Computer Club
   organizationCommonGroundsForum: Common Grounds Forum

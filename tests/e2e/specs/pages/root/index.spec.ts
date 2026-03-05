@@ -11,15 +11,18 @@ import { expect } from '@playwright/test'
 const PAGE_PATH = '/'
 
 testA11y(PAGE_PATH)
-testOgImage(PAGE_PATH)
+testOgImage({
+  de: 'o_2u7mnw.png',
+  en: 'o_rj1ywm.png',
+})
 testPageLoad(PAGE_PATH)
 testVisualRegression(PAGE_PATH)
 
 vioTest.describe('internationalization', () => {
   const textEnglish =
-    'Director and founder @maevsi · Ninjaneer · M.Sc. Computer Science'
+    'Director @maevsi · Ecosystem @Nuxt · M.Sc. Computer Science'
   const textGerman =
-    'Geschäftsführer und Gründer @maevsi · Ninjaneer · M.Sc. Informatik'
+    'Geschäftsführer @maevsi · Ökosystem @Nuxt · M.Sc. Informatik'
 
   vioTest('displays English translations', async ({ defaultPage }) => {
     await defaultPage.goto('/')

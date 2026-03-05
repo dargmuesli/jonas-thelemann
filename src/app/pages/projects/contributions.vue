@@ -4,7 +4,11 @@
       <img
         alt="dargmuesli"
         class="size-20 shrink-0 rounded-full sm:size-24"
-        src="https://avatars.githubusercontent.com/u/4778485?v=4"
+        :src="
+          isTesting
+            ? 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxIDEiPjxwYXRoIGQ9Ik0wLDBoMXYxSDB6IiBmaWxsPSIjRkZGIi8+PC9zdmc+'
+            : 'https://avatars.githubusercontent.com/u/4778485?v=4'
+        "
       />
       <h1 class="flex flex-col">
         <span
@@ -188,13 +192,18 @@
 </template>
 
 <script setup lang="ts">
-import repos from '~/assets/data/contributions.json'
-
 const { t } = useI18n()
 const searchQuery = ref('')
 const sortBy = ref('stars')
 const expandedGroups = ref<Record<string, boolean>>({})
 const REPO_PREVIEW_LIMIT = 3
+const isTesting = useIsTesting()
+
+const repos = (
+  await (isTesting
+    ? import('~/assets/data/contributions-test.json')
+    : import('~/assets/data/contributions.json'))
+).default
 
 const toggleExpandedGroup = (owner: string) => {
   expandedGroups.value[owner] = !expandedGroups.value[owner]
