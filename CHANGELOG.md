@@ -1,3 +1,14 @@
+## [6.12.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.11.0...6.12.0) (2026-03-05)
+
+### Features
+
+* **deps:** upgrade to @dargmuesli/nuxt-vio v21.0.0-beta.10 ([23d6a9a](https://github.com/dargmuesli/jonas-thelemann/commit/23d6a9ad3b055cced2f1df788e4ff5e7597d9bdb))
+* **og-image:** upgrade to v6 ([3c90b85](https://github.com/dargmuesli/jonas-thelemann/commit/3c90b857ed7f106662a334f883ae582b0946e99d))
+
+### Bug Fixes
+
+* **scripts:** whitelist worker source ([2feb87f](https://github.com/dargmuesli/jonas-thelemann/commit/2feb87fa9fed0f5e4a84f90a506d4763a903307c))
+
 ## [6.11.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.10.4...6.11.0) (2026-02-28)
 
 ### Features
