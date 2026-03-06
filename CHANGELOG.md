@@ -1,3 +1,9 @@
+## [6.14.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.13.2...6.14.0) (2026-03-06)
+
+### Features
+
+* **seo:** switch from satori to takumi ([76a8bdf](https://github.com/dargmuesli/jonas-thelemann/commit/76a8bdfa5963276b0a99c2e167bd7ea257d19c86))
+
 ## [6.13.2](https://github.com/dargmuesli/jonas-thelemann/compare/6.13.1...6.13.2) (2026-03-05)
 
 ### Bug Fixes
