@@ -12,8 +12,14 @@ const PAGE_PATH = '/'
 
 testA11y(PAGE_PATH)
 testOgImage({
-  de: 'o_2u7mnw.png',
-  en: 'o_rj1ywm.png',
+  dynamic: {
+    de: 'a_Ein+Bild+von+Jonas+Thelemann+und+der+Titel+der+Seite.,c_Default.takumi,description_Gesch%C3%A4ftsf%C3%BChrer+%40maevsi+%C2%B7+%C3%96kosystem+%40Nuxt+%C2%B7+M.Sc.+Informatik,title_Jonas+Thelemann,p_Ii9kZSI.png',
+    en: 'a_A+picture+of+Jonas+Thelemann+and+the+title+of+the+page.,c_Default.takumi,description_Director+%40maevsi+%C2%B7+Ecosystem+%40Nuxt+%C2%B7+M.Sc.+Computer+Science,title_Jonas+Thelemann.png',
+  },
+  static: {
+    de: 'o_d33hz.png',
+    en: 'o_7pu0sx.png',
+  },
 })
 testPageLoad(PAGE_PATH)
 testVisualRegression(PAGE_PATH)

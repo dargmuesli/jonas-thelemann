@@ -8,7 +8,7 @@ export default defineAppConfig({
   vio: {
     seo: {
       ogImage: {
-        defaultComponent: 'Default.satori',
+        defaultComponent: 'Default.takumi',
       },
     },
     pages: {
