@@ -15,7 +15,7 @@ testOgImage({
     en: `a_A+picture+of+Jonas+Thelemann+and+the+title+of+the+page.,c_Default.takumi,description_Jonas+Thelemann's+portfolio.,title_Privacy+Policy,p_Ii9wcml2YWN5LXBvbGljeSI.png`,
   },
   static: {
-    de: 'o_dghnsj.png',
+    de: 'a_Ein+Bild+von+Jonas+Thelemann+und+der+Titel+der+Seite.,c_Default.takumi,description_Portfolio+von+Jonas+Thelemann.,title_~RGF0ZW5zY2h1dHplcmtsw6RydW5n,p_Ii9kZS9wcml2YWN5LXBvbGljeSI.png',
     en: `a_A+picture+of+Jonas+Thelemann+and+the+title+of+the+page.,c_Default.takumi,description_Jonas+Thelemann's+portfolio.,title_Privacy+Policy,p_Ii9wcml2YWN5LXBvbGljeSI.png`,
   },
 })
