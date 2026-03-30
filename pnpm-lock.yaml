@@ -31,10 +31,10 @@ importers:
     devDependencies:
       '@dargmuesli/nuxt-cookie-control':
         specifier: 9.1.19
-        version: 9.1.19(magicast@0.5.2)(webpack@5.105.4)
+        version: 9.1.19(magicast@0.5.2)(webpack@5.105.4(esbuild@0.27.4))
       '@dargmuesli/nuxt-vio':
         specifier: 21.0.0-beta.11
-        version: 21.0.0-beta.11(51234cb771e96571116e4b7d90482d26)
+        version: 21.0.0-beta.11(0ddd0a133f5b16920b74be998ec852aa)
       '@nuxt/scripts':
         specifier: 1.0.0-beta.32
         version: 1.0.0-beta.32(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@unhead/vue@2.1.12(vue@3.5.31(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.31(typescript@6.0.2))
@@ -110,7 +110,7 @@ importers:
         version: 4.11.1(playwright-core@1.58.2)
       '@dargmuesli/nuxt-vio':
         specifier: 21.0.0-beta.11
-        version: 21.0.0-beta.11(7b8b251aede0963500e5570857e2fc03)
+        version: 21.0.0-beta.11(1d3227fb8e5d5dc003a4f54fb2518d0a)
       '@dargmuesli/nuxt-vio-testing':
         specifier: 21.0.0-beta.11
         version: 21.0.0-beta.11(@axe-core/playwright@4.11.1(playwright-core@1.58.2))(@playwright/test@1.58.2)(lodash-es@4.17.23)(playwright-core@1.58.2)(ufo@1.6.3)
@@ -8692,12 +8692,12 @@ snapshots:
       - magicast
       - webpack
 
-  '@dargmuesli/nuxt-cookie-control@9.1.19(magicast@0.5.2)(webpack@5.105.4)':
+  '@dargmuesli/nuxt-cookie-control@9.1.19(magicast@0.5.2)(webpack@5.105.4(esbuild@0.27.4))':
     dependencies:
       '@nuxt/kit': 4.4.2(magicast@0.5.2)
       css-vars-ponyfill: 2.4.9
       defu: 6.1.4
-      string-replace-loader: 3.3.0(webpack@5.105.4)
+      string-replace-loader: 3.3.0(webpack@5.105.4(esbuild@0.27.4))
     transitivePeerDependencies:
       - magicast
       - webpack
@@ -8710,9 +8710,9 @@ snapshots:
       playwright-core: 1.58.2
       ufo: 1.6.3
 
-  '@dargmuesli/nuxt-vio@21.0.0-beta.11(51234cb771e96571116e4b7d90482d26)':
+  '@dargmuesli/nuxt-vio@21.0.0-beta.11(0ddd0a133f5b16920b74be998ec852aa)':
     dependencies:
-      '@dargmuesli/nuxt-cookie-control': 9.1.17(magicast@0.5.2)(webpack@5.105.4)
+      '@dargmuesli/nuxt-cookie-control': 9.1.17(magicast@0.5.2)(webpack@5.105.4(esbuild@0.27.4))
       '@eslint/compat': 2.0.2(eslint@10.0.2(jiti@2.6.1))
       '@heroicons/vue': 2.2.0(vue@3.5.31(typescript@6.0.2))
       '@http-util/status-i18n': 0.9.0
@@ -8723,7 +8723,7 @@ snapshots:
       '@nuxtjs/color-mode': 4.0.0(magicast@0.5.2)
       '@nuxtjs/html-validator': 2.1.0(magicast@0.5.2)
       '@nuxtjs/i18n': 10.2.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@vue/compiler-dom@3.5.31)(db0@0.3.4)(eslint@10.0.2(jiti@2.6.1))(ioredis@5.10.1)(magicast@0.5.2)(rollup@4.60.1)(vue@3.5.31(typescript@6.0.2))
-      '@nuxtjs/seo': 3.4.0(8244d0bf94fe973004ae6323603965cf)
+      '@nuxtjs/seo': 3.4.0(05bee70610c029ad08c22c2353b135d2)
       '@nuxtjs/turnstile': 1.1.1(@nuxt/scripts@1.0.0-beta.32(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@unhead/vue@2.1.12(vue@3.5.31(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.31(typescript@6.0.2)))(magicast@0.5.2)
       '@pinia/nuxt': 0.11.3(magicast@0.5.2)(pinia@3.0.4(typescript@6.0.2)(vue@3.5.31(typescript@6.0.2)))
       '@tailwindcss/forms': 0.5.11(tailwindcss@4.2.2)
@@ -8854,9 +8854,9 @@ snapshots:
       - yup
       - zod
 
-  '@dargmuesli/nuxt-vio@21.0.0-beta.11(7b8b251aede0963500e5570857e2fc03)':
+  '@dargmuesli/nuxt-vio@21.0.0-beta.11(1d3227fb8e5d5dc003a4f54fb2518d0a)':
     dependencies:
-      '@dargmuesli/nuxt-cookie-control': 9.1.17(magicast@0.5.2)(webpack@5.105.4(esbuild@0.27.4))
+      '@dargmuesli/nuxt-cookie-control': 9.1.17(magicast@0.5.2)(webpack@5.105.4)
       '@eslint/compat': 2.0.2(eslint@10.0.2(jiti@2.6.1))
       '@heroicons/vue': 2.2.0(vue@3.5.31(typescript@6.0.2))
       '@http-util/status-i18n': 0.9.0
@@ -10598,13 +10598,13 @@ snapshots:
       - vite
       - vue
 
-  '@nuxtjs/seo@3.4.0(69a1012cd82b1a04c089d2371db790f4)':
+  '@nuxtjs/seo@3.4.0(05bee70610c029ad08c22c2353b135d2)':
     dependencies:
       '@nuxt/kit': 4.4.2(magicast@0.5.2)
       '@nuxtjs/robots': 5.7.1(magicast@0.5.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.31(typescript@6.0.2))
       '@nuxtjs/sitemap': 7.6.0(magicast@0.5.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.31(typescript@6.0.2))
       nuxt-link-checker: 4.3.9(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.31(typescript@6.0.2))
-      nuxt-og-image: 6.2.6(7c04949180c5f1b76066fde45928875b)
+      nuxt-og-image: 6.2.6(42f87436a8a2fa9cc21fb1dcbe909656)
       nuxt-schema-org: 5.0.10(@unhead/vue@2.1.12(vue@3.5.31(typescript@6.0.2)))(magicast@0.5.2)(unhead@2.1.12)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.31(typescript@6.0.2))
       nuxt-seo-utils: 7.0.19(magicast@0.5.2)(rollup@4.60.1)(unhead@2.1.12)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.31(typescript@6.0.2))
       nuxt-site-config: 3.2.21(magicast@0.5.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.31(typescript@6.0.2))
@@ -10681,13 +10681,13 @@ snapshots:
       - yup
       - zod
 
-  '@nuxtjs/seo@3.4.0(8244d0bf94fe973004ae6323603965cf)':
+  '@nuxtjs/seo@3.4.0(69a1012cd82b1a04c089d2371db790f4)':
     dependencies:
       '@nuxt/kit': 4.4.2(magicast@0.5.2)
       '@nuxtjs/robots': 5.7.1(magicast@0.5.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.31(typescript@6.0.2))
       '@nuxtjs/sitemap': 7.6.0(magicast@0.5.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.31(typescript@6.0.2))
       nuxt-link-checker: 4.3.9(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.31(typescript@6.0.2))
-      nuxt-og-image: 6.2.6(5eff281a1fd05719ee3dd08555df88a7)
+      nuxt-og-image: 6.2.6(7c04949180c5f1b76066fde45928875b)
       nuxt-schema-org: 5.0.10(@unhead/vue@2.1.12(vue@3.5.31(typescript@6.0.2)))(magicast@0.5.2)(unhead@2.1.12)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.31(typescript@6.0.2))
       nuxt-seo-utils: 7.0.19(magicast@0.5.2)(rollup@4.60.1)(unhead@2.1.12)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.31(typescript@6.0.2))
       nuxt-site-config: 3.2.21(magicast@0.5.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.31(typescript@6.0.2))
@@ -12140,8 +12140,8 @@ snapshots:
 
   '@typescript-eslint/project-service@8.57.2(typescript@6.0.2)':
     dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.58.0(typescript@6.0.2)
-      '@typescript-eslint/types': 8.58.0
+      '@typescript-eslint/tsconfig-utils': 8.57.2(typescript@6.0.2)
+      '@typescript-eslint/types': 8.57.2
       debug: 4.4.3
       typescript: 6.0.2
     transitivePeerDependencies:
@@ -15263,7 +15263,7 @@ snapshots:
       - vite
       - vue
 
-  nuxt-og-image@6.2.6(5eff281a1fd05719ee3dd08555df88a7):
+  nuxt-og-image@6.2.6(42f87436a8a2fa9cc21fb1dcbe909656):
     dependencies:
       '@clack/prompts': 1.1.0
       '@nuxt/devtools-kit': 3.2.4(magicast@0.5.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))
@@ -15303,6 +15303,7 @@ snapshots:
     optionalDependencies:
       '@takumi-rs/core': 0.70.4
       fontless: 0.2.1(db0@0.3.4)(ioredis@5.10.1)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))
+      playwright-core: 1.58.2
       sharp: 0.34.5
       tailwindcss: 4.2.2
       unifont: 0.7.4
