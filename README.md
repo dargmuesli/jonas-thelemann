@@ -5,7 +5,7 @@
 
 The source code of [jonas-thelemann.de](https://jonas-thelemann.de/).
 
-![Welcome](https://jonas-thelemann.de/_og/s/o_2u7mnw.png "Jonas Thelemann")
+![Welcome](https://jonas-thelemann.de/_og/s/a_A+picture+of+Jonas+Thelemann+and+the+title+of+the+page.,c_Default.takumi,description_~RGlyZWN0b3IgQG1hZXZzaSDCtyBFY29zeXN0ZW0gQE51eHQgwrcgTS5TYy4gQ29tcHV0ZXIgU2NpZW5jZQ,title_Jonas+Thelemann.png "Jonas Thelemann")
 
 ## Table of Contents
 1. **[Development](#development)**
