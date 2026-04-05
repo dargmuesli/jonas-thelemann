@@ -33,8 +33,8 @@ importers:
         specifier: 9.1.20
         version: 9.1.20(magicast@0.5.2)(webpack@5.105.4(esbuild@0.27.7))
       '@dargmuesli/nuxt-vio':
-        specifier: 21.0.1
-        version: 21.0.1(e5915ab8f4a93e7128a0c9d3c39cfd2c)
+        specifier: 21.0.2
+        version: 21.0.2(e5915ab8f4a93e7128a0c9d3c39cfd2c)
       '@nuxt/scripts':
         specifier: 1.0.0-rc.4
         version: 1.0.0-rc.4(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@unhead/vue@2.1.12(vue@3.5.31(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.31(typescript@6.0.2))
@@ -109,11 +109,11 @@ importers:
         specifier: 4.11.1
         version: 4.11.1(playwright-core@1.59.1)
       '@dargmuesli/nuxt-vio':
-        specifier: 21.0.1
-        version: 21.0.1(73f286b7380e8cc6bf3e70ac4ee681d5)
+        specifier: 21.0.2
+        version: 21.0.2(73f286b7380e8cc6bf3e70ac4ee681d5)
       '@dargmuesli/nuxt-vio-testing':
-        specifier: 21.0.1
-        version: 21.0.1(@axe-core/playwright@4.11.1(playwright-core@1.59.1))(@playwright/test@1.59.1)(lodash-es@4.18.1)(playwright-core@1.59.1)(ufo@1.6.3)
+        specifier: 21.0.2
+        version: 21.0.2(@axe-core/playwright@4.11.1(playwright-core@1.59.1))(@playwright/test@1.59.1)(lodash-es@4.18.1)(playwright-core@1.59.1)(ufo@1.6.3)
       '@eslint/js':
         specifier: 10.0.1
         version: 10.0.1(eslint@10.1.0(jiti@2.6.1))
@@ -492,8 +492,8 @@ packages:
     resolution: {integrity: sha512-H6YkdLSHKgEu8GbEIIIitkUJINhEkh2DVSgpBbPPt5Uz97MaC3+jIR4rq1ElgCP4ueA1IaZ7S5E5+aNES03nag==}
     engines: {node: '>=16'}
 
-  '@dargmuesli/nuxt-vio-testing@21.0.1':
-    resolution: {integrity: sha512-0SotkYWA/nrthmMIE1KqA0ni/io+Ml1HlKjfYqQkC5oF635y3s5X6sNV8DJwClqbC7VXR6pSSe0AIJcSCLnzSw==}
+  '@dargmuesli/nuxt-vio-testing@21.0.2':
+    resolution: {integrity: sha512-cJCj/wGmm+8PmP02eaxV+QrMQeVc1UdwNEWMse5etOFlWrIOa9PAYpuliLZpX3Qbcsg7LC0eFVmL0Ygt4T0WuQ==}
     engines: {node: '24'}
     peerDependencies:
       '@axe-core/playwright': ^4.11.1
@@ -502,8 +502,8 @@ packages:
       playwright-core: ^1.58.2
       ufo: ^1.6.3
 
-  '@dargmuesli/nuxt-vio@21.0.1':
-    resolution: {integrity: sha512-sO3OKL77AlVHzI8ELLKTC58pkEncXoN84Wu76xMlCVrG4HlKnqrsIhrPopq040SW6jfnrw4Dg3au2vP3b1Hl1Q==}
+  '@dargmuesli/nuxt-vio@21.0.2':
+    resolution: {integrity: sha512-fLUDAEDLOU6bYQ3kP6TZ2XAtz5+jE0/3CyVIhKM2bpOpz0r3IjrpyP1J3QHvC6dRx4/UITi0fOJg0EtyEOXWuQ==}
     engines: {node: '24'}
     peerDependencies:
       nuxt: ^4.1.0
@@ -8402,7 +8402,7 @@ snapshots:
       - magicast
       - webpack
 
-  '@dargmuesli/nuxt-vio-testing@21.0.1(@axe-core/playwright@4.11.1(playwright-core@1.59.1))(@playwright/test@1.59.1)(lodash-es@4.18.1)(playwright-core@1.59.1)(ufo@1.6.3)':
+  '@dargmuesli/nuxt-vio-testing@21.0.2(@axe-core/playwright@4.11.1(playwright-core@1.59.1))(@playwright/test@1.59.1)(lodash-es@4.18.1)(playwright-core@1.59.1)(ufo@1.6.3)':
     dependencies:
       '@axe-core/playwright': 4.11.1(playwright-core@1.59.1)
       '@playwright/test': 1.59.1
@@ -8410,7 +8410,7 @@ snapshots:
       playwright-core: 1.59.1
       ufo: 1.6.3
 
-  '@dargmuesli/nuxt-vio@21.0.1(73f286b7380e8cc6bf3e70ac4ee681d5)':
+  '@dargmuesli/nuxt-vio@21.0.2(73f286b7380e8cc6bf3e70ac4ee681d5)':
     dependencies:
       '@dargmuesli/nuxt-cookie-control': 9.1.19(magicast@0.5.2)(webpack@5.105.4(esbuild@0.27.7))
       '@eslint/compat': 2.0.3(eslint@10.1.0(jiti@2.6.1))
@@ -8559,7 +8559,7 @@ snapshots:
       - yup
       - zod
 
-  '@dargmuesli/nuxt-vio@21.0.1(e5915ab8f4a93e7128a0c9d3c39cfd2c)':
+  '@dargmuesli/nuxt-vio@21.0.2(e5915ab8f4a93e7128a0c9d3c39cfd2c)':
     dependencies:
       '@dargmuesli/nuxt-cookie-control': 9.1.19(magicast@0.5.2)(webpack@5.105.4(esbuild@0.27.7))
       '@eslint/compat': 2.0.3(eslint@10.1.0(jiti@2.6.1))
