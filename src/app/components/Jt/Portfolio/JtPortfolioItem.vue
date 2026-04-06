@@ -1,5 +1,5 @@
 <template>
-  <li v-if="isVisible">
+  <li v-if="isVisible || isExpanded">
     <i18n-t
       keypath="titleSubtitle"
       class="text-gray-500 dark:text-gray-400"
@@ -37,6 +37,7 @@
 
 <script setup lang="ts">
 const {
+  isExpanded = undefined,
   isVisible = true,
   subtitlePlace = undefined,
   subtitlePlaceUrl = undefined,
@@ -46,6 +47,7 @@ const {
   title,
   titleUrl = undefined,
 } = defineProps<{
+  isExpanded?: boolean
   isVisible?: boolean
   subtitlePlace?: string
   subtitlePlaceUrl?: string
