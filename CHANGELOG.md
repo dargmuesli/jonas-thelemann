@@ -1,3 +1,9 @@
+## [6.15.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.14.2...6.15.0) (2026-04-06)
+
+### Features
+
+* **portfolio:** expand roles ([7fa6348](https://github.com/dargmuesli/jonas-thelemann/commit/7fa6348db99f500494ed8df73baff0788fe4105c))
+
 ## [6.14.2](https://github.com/dargmuesli/jonas-thelemann/compare/6.14.1...6.14.2) (2026-03-31)
 
 ### Bug Fixes
