@@ -89,17 +89,22 @@
         <div
           class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-2"
         >
-          <JtPortfolioSection :title="t('experience')">
+          <JtPortfolioCollapsibleSection
+            v-slot="{ isExpanded }"
+            :title="t('experience')"
+            :items="experienceItems"
+          >
             <JtPortfolioItem
               v-for="(item, idx) in experienceItems"
               :key="idx"
+              :is-expanded="isExpanded"
               :is-visible="item.isVisible"
               :subtitle-place="item.organization"
               :subtitle-place-url="item.organizationUrl"
               :subtitle-time="item.timespan"
               :title="item.role"
             />
-          </JtPortfolioSection>
+          </JtPortfolioCollapsibleSection>
           <section>
             <h2 class="text-2xl">{{ t('education') }}</h2>
             <div class="mt-2">
@@ -123,17 +128,22 @@
               </i18n-t>
             </div>
           </section>
-          <JtPortfolioSection :title="t('engagement')">
+          <JtPortfolioCollapsibleSection
+            v-slot="{ isExpanded }"
+            :title="t('engagement')"
+            :items="engagementItems"
+          >
             <JtPortfolioItem
               v-for="(item, idx) in engagementItems"
               :key="idx"
+              :is-expanded="isExpanded"
               :is-visible="item.isVisible"
               :subtitle-place="item.organization"
               :subtitle-place-url="item.organizationUrl"
               :subtitle-time="item.timespan"
               :title="item.role"
             />
-          </JtPortfolioSection>
+          </JtPortfolioCollapsibleSection>
           <JtPortfolioSection :title="t('languages')">
             <JtPortfolioItem
               v-for="(item, idx) in languageItems"
@@ -163,7 +173,7 @@
             />
           </JtPortfolioSection>
           <hr
-            class="border-gray-200 md:col-span-2 xl:col-span-1 2xl:col-span-2"
+            class="border-gray-200 md:col-span-2 xl:col-span-1 2xl:col-span-2 dark:border-gray-700"
           />
           <section class="md:col-span-2 xl:col-span-1 2xl:col-span-2">
             <h2 class="text-2xl">{{ t('projects') }}</h2>
