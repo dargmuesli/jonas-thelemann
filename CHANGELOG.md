@@ -1,3 +1,9 @@
+## [6.15.1](https://github.com/dargmuesli/jonas-thelemann/compare/6.15.0...6.15.1) (2026-04-14)
+
+### Bug Fixes
+
+* schedule release ([523bccb](https://github.com/dargmuesli/jonas-thelemann/commit/523bccb2166826add89588d2aa4ced8d0136c4de))
+
 ## [6.15.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.14.2...6.15.0) (2026-04-06)
 
 ### Features
