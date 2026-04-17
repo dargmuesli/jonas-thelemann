@@ -34,10 +34,10 @@ importers:
         version: 9.1.20(magicast@0.5.2)(webpack@5.106.1(esbuild@0.27.7))
       '@dargmuesli/nuxt-vio':
         specifier: 21.0.3
-        version: 21.0.3(9d44a76d3b7c57d42d2a63486c56d2a7)
+        version: 21.0.3(ba94a2745de10fe28ff2efa744b7573b)
       '@nuxt/scripts':
-        specifier: 1.0.0-rc.8
-        version: 1.0.0-rc.8(@unhead/vue@2.1.13(vue@3.5.32(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vite@7.3.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@6.0.2))
+        specifier: 1.0.0-rc.9
+        version: 1.0.0-rc.9(@unhead/vue@2.1.13(vue@3.5.32(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vite@7.3.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@6.0.2))
       '@nuxtjs/partytown':
         specifier: 2.0.0
         version: 2.0.0(magicast@0.5.2)
@@ -110,7 +110,7 @@ importers:
         version: 4.11.1(playwright-core@1.59.1)
       '@dargmuesli/nuxt-vio':
         specifier: 21.0.3
-        version: 21.0.3(5e40d1faad873795f290838e217684c4)
+        version: 21.0.3(1fd00b3da1890ba0d26d981bf64178c6)
       '@dargmuesli/nuxt-vio-testing':
         specifier: 21.0.3
         version: 21.0.3(@axe-core/playwright@4.11.1(playwright-core@1.59.1))(@playwright/test@1.59.1)(lodash-es@4.18.1)(playwright-core@1.59.1)(ufo@1.6.3)
@@ -1401,8 +1401,8 @@ packages:
     resolution: {integrity: sha512-/q6C7Qhiricgi+PKR7ovBnJlKTL0memCbA1CzRT+itCW/oeYzUfeMdQ35mGntlBoyRPNrMXbzuSUhfDbSCU57w==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
-  '@nuxt/scripts@1.0.0-rc.8':
-    resolution: {integrity: sha512-vngPDZ9UooZVZsqa+eMN3WEEh2dQjCKv6I/vNHbJ3XkvqyusSbfJOWBwsic3kQEHmeOiHUx7GgLCeJC2t3ynMA==}
+  '@nuxt/scripts@1.0.0-rc.9':
+    resolution: {integrity: sha512-GSMJD/9WMp9ZGJRIJLt27twIz6DWKVbEIB6jgQVZw4lD0mzPoXXWb1Pg0TaLVtQiYdruGeGwyQKb4ubX3JYO4A==}
     hasBin: true
     peerDependencies:
       '@googlemaps/markerclusterer': ^2.6.2
@@ -8472,7 +8472,7 @@ snapshots:
       playwright-core: 1.59.1
       ufo: 1.6.3
 
-  '@dargmuesli/nuxt-vio@21.0.3(5e40d1faad873795f290838e217684c4)':
+  '@dargmuesli/nuxt-vio@21.0.3(1fd00b3da1890ba0d26d981bf64178c6)':
     dependencies:
       '@dargmuesli/nuxt-cookie-control': 9.1.20(magicast@0.5.2)(webpack@5.106.1(esbuild@0.27.7))
       '@eslint/compat': 2.0.4(eslint@10.2.0(jiti@2.6.1))
@@ -8487,7 +8487,7 @@ snapshots:
       '@nuxtjs/html-validator': 2.1.0(magicast@0.5.2)
       '@nuxtjs/i18n': 10.2.4(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@vue/compiler-dom@3.5.32)(db0@0.3.4)(eslint@10.2.0(jiti@2.6.1))(ioredis@5.10.1)(magicast@0.5.2)(pinia@3.0.4(typescript@6.0.2)(vue@3.5.32(typescript@6.0.2)))(rollup@4.60.1)(typescript@6.0.2)(vue@3.5.32(typescript@6.0.2))
       '@nuxtjs/seo': 5.1.2(da131c6173150361bff08dcb00fb86f1)
-      '@nuxtjs/turnstile': 1.1.2(@nuxt/scripts@1.0.0-rc.8(@unhead/vue@2.1.13(vue@3.5.32(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vite@7.3.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@6.0.2)))(magicast@0.5.2)
+      '@nuxtjs/turnstile': 1.1.2(@nuxt/scripts@1.0.0-rc.9(@unhead/vue@2.1.13(vue@3.5.32(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vite@7.3.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@6.0.2)))(magicast@0.5.2)
       '@pinia/nuxt': 0.11.3(magicast@0.5.2)(pinia@3.0.4(typescript@6.0.2)(vue@3.5.32(typescript@6.0.2)))
       '@tailwindcss/forms': 0.5.11(tailwindcss@4.2.2)
       '@tailwindcss/typography': 0.5.19(tailwindcss@4.2.2)
@@ -8621,7 +8621,7 @@ snapshots:
       - yup
       - zod
 
-  '@dargmuesli/nuxt-vio@21.0.3(9d44a76d3b7c57d42d2a63486c56d2a7)':
+  '@dargmuesli/nuxt-vio@21.0.3(ba94a2745de10fe28ff2efa744b7573b)':
     dependencies:
       '@dargmuesli/nuxt-cookie-control': 9.1.20(magicast@0.5.2)(webpack@5.106.1(esbuild@0.27.7))
       '@eslint/compat': 2.0.4(eslint@10.2.0(jiti@2.6.1))
@@ -8636,7 +8636,7 @@ snapshots:
       '@nuxtjs/html-validator': 2.1.0(magicast@0.5.2)
       '@nuxtjs/i18n': 10.2.4(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@vue/compiler-dom@3.5.32)(db0@0.3.4)(eslint@10.2.0(jiti@2.6.1))(ioredis@5.10.1)(magicast@0.5.2)(pinia@3.0.4(typescript@6.0.2)(vue@3.5.32(typescript@6.0.2)))(rollup@4.60.1)(typescript@6.0.2)(vue@3.5.32(typescript@6.0.2))
       '@nuxtjs/seo': 5.1.2(b72a524367171bcce9d0a23c26c0efe1)
-      '@nuxtjs/turnstile': 1.1.2(@nuxt/scripts@1.0.0-rc.8(@unhead/vue@2.1.13(vue@3.5.32(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vite@7.3.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@6.0.2)))(magicast@0.5.2)
+      '@nuxtjs/turnstile': 1.1.2(@nuxt/scripts@1.0.0-rc.9(@unhead/vue@2.1.13(vue@3.5.32(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vite@7.3.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@6.0.2)))(magicast@0.5.2)
       '@pinia/nuxt': 0.11.3(magicast@0.5.2)(pinia@3.0.4(typescript@6.0.2)(vue@3.5.32(typescript@6.0.2)))
       '@tailwindcss/forms': 0.5.11(tailwindcss@4.2.2)
       '@tailwindcss/typography': 0.5.19(tailwindcss@4.2.2)
@@ -9896,7 +9896,7 @@ snapshots:
       pkg-types: 2.3.0
       std-env: 4.0.0
 
-  '@nuxt/scripts@1.0.0-rc.8(@unhead/vue@2.1.13(vue@3.5.32(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vite@7.3.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@6.0.2))':
+  '@nuxt/scripts@1.0.0-rc.9(@unhead/vue@2.1.13(vue@3.5.32(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vite@7.3.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@6.0.2))':
     dependencies:
       '@nuxt/devtools-kit': 3.2.4(magicast@0.5.2)(vite@7.3.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))
       '@nuxt/kit': 4.4.2(magicast@0.5.2)
@@ -10545,10 +10545,10 @@ snapshots:
       - vite
       - vue
 
-  '@nuxtjs/turnstile@1.1.2(@nuxt/scripts@1.0.0-rc.8(@unhead/vue@2.1.13(vue@3.5.32(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vite@7.3.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@6.0.2)))(magicast@0.5.2)':
+  '@nuxtjs/turnstile@1.1.2(@nuxt/scripts@1.0.0-rc.9(@unhead/vue@2.1.13(vue@3.5.32(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vite@7.3.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@6.0.2)))(magicast@0.5.2)':
     dependencies:
       '@nuxt/kit': 3.21.2(magicast@0.5.2)
-      '@nuxt/scripts': 1.0.0-rc.8(@unhead/vue@2.1.13(vue@3.5.32(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vite@7.3.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@6.0.2))
+      '@nuxt/scripts': 1.0.0-rc.9(@unhead/vue@2.1.13(vue@3.5.32(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vite@7.3.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@6.0.2))
       '@types/cloudflare-turnstile': 0.2.2
       defu: 6.1.7
       pathe: 2.0.3
