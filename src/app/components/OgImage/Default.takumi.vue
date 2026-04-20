@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white">
+  <div class="flex bg-white">
     <img
       alt="Jonas in Wiesbaden."
       class="object-cover"
