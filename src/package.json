@@ -42,7 +42,6 @@
     "lint": "pnpm run lint:js && pnpm run lint:ts && pnpm run lint:style",
     "lint:fix": "pnpm run lint:js --fix && pnpm run lint:ts --fix && pnpm run lint:style --fix",
     "lint:js": "eslint --cache",
-    "lint:staged": "lint-staged",
     "lint:style": "stylelint --cache \"**/*.{vue,css}\" --ignore-path .gitignore",
     "lint:ts": "nuxt typecheck",
     "postinstall": "nuxt prepare",
