@@ -11,8 +11,8 @@ importers:
   src:
     devDependencies:
       '@dargmuesli/nuxt-cookie-control':
-        specifier: 9.1.22
-        version: 9.1.22(magicast@0.5.2)(webpack@5.106.2(esbuild@0.27.7)(lightningcss@1.32.0)(postcss@8.5.14))
+        specifier: 9.1.23
+        version: 9.1.23(magicast@0.5.2)(webpack@5.106.2(esbuild@0.27.7)(lightningcss@1.32.0)(postcss@8.5.14))
       '@dargmuesli/nuxt-vio':
         specifier: 21.0.6
         version: 21.0.6(9397c145874c290fcaf3012097712e02)
@@ -370,6 +370,10 @@ packages:
 
   '@dargmuesli/nuxt-cookie-control@9.1.22':
     resolution: {integrity: sha512-GEer90LScNfBpwBdsc1DmyWJ1FY0UHu/l6vV3FvKZzmJ43FNBywRBu0zbYnQb4eBKZfzjIND9eYc8Jnw1Egcpg==}
+    engines: {node: '>=16'}
+
+  '@dargmuesli/nuxt-cookie-control@9.1.23':
+    resolution: {integrity: sha512-jLpvW3ARwz075MrzPpd11uQ0OhtZaWCnqw2NO+KZd7dGzQ8U12LbNcbp7eM46u8Zx0H4v3AFWZzGBtETgeQXSw==}
     engines: {node: '>=16'}
 
   '@dargmuesli/nuxt-vio-testing@21.0.6':
@@ -8454,7 +8458,7 @@ snapshots:
 
   '@dargmuesli/nuxt-cookie-control@9.1.22(magicast@0.5.2)(webpack@5.106.2(esbuild@0.27.7)(lightningcss@1.32.0)(postcss@8.5.14))':
     dependencies:
-      '@nuxt/kit': 4.4.4(magicast@0.5.2)
+      '@nuxt/kit': 4.4.5(magicast@0.5.2)
       css-vars-ponyfill: 2.4.9
       defu: 6.1.7
       string-replace-loader: 3.3.0(webpack@5.106.2(esbuild@0.27.7)(lightningcss@1.32.0)(postcss@8.5.14))
@@ -8464,10 +8468,20 @@ snapshots:
 
   '@dargmuesli/nuxt-cookie-control@9.1.22(magicast@0.5.2)(webpack@5.106.2(esbuild@0.28.0)(lightningcss@1.32.0))':
     dependencies:
-      '@nuxt/kit': 4.4.4(magicast@0.5.2)
+      '@nuxt/kit': 4.4.5(magicast@0.5.2)
       css-vars-ponyfill: 2.4.9
       defu: 6.1.7
       string-replace-loader: 3.3.0(webpack@5.106.2(esbuild@0.28.0)(lightningcss@1.32.0))
+    transitivePeerDependencies:
+      - magicast
+      - webpack
+
+  '@dargmuesli/nuxt-cookie-control@9.1.23(magicast@0.5.2)(webpack@5.106.2(esbuild@0.27.7)(lightningcss@1.32.0)(postcss@8.5.14))':
+    dependencies:
+      '@nuxt/kit': 4.4.5(magicast@0.5.2)
+      css-vars-ponyfill: 2.4.9
+      defu: 6.1.7
+      string-replace-loader: 3.3.0(webpack@5.106.2(esbuild@0.27.7)(lightningcss@1.32.0)(postcss@8.5.14))
     transitivePeerDependencies:
       - magicast
       - webpack
@@ -8789,7 +8803,7 @@ snapshots:
   '@dxup/nuxt@0.4.1(magicast@0.5.2)(typescript@6.0.3)':
     dependencies:
       '@dxup/unimport': 0.1.2
-      '@nuxt/kit': 4.4.4(magicast@0.5.2)
+      '@nuxt/kit': 4.4.5(magicast@0.5.2)
       chokidar: 5.0.0
       pathe: 2.0.3
       tinyglobby: 0.2.16
