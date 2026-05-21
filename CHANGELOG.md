@@ -1,3 +1,9 @@
+## [6.15.5](https://github.com/dargmuesli/jonas-thelemann/compare/6.15.4...6.15.5) (2026-05-21)
+
+### Bug Fixes
+
+* **docker:** change app directory owner ([add35ee](https://github.com/dargmuesli/jonas-thelemann/commit/add35ee2c86e49ab5e805aa9b36986f9fa63b264))
+
 ## [6.15.4](https://github.com/dargmuesli/jonas-thelemann/compare/6.15.3...6.15.4) (2026-05-19)
 
 ### Bug Fixes
