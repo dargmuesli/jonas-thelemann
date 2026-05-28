@@ -1,3 +1,9 @@
+## [6.15.7](https://github.com/dargmuesli/jonas-thelemann/compare/6.15.6...6.15.7) (2026-05-28)
+
+### Bug Fixes
+
+* **docker:** correct entrypoint inclusion ([1425ff0](https://github.com/dargmuesli/jonas-thelemann/commit/1425ff0d0ea3945a71b4d5a22ced83fef66aceb1))
+
 ## [6.15.6](https://github.com/dargmuesli/jonas-thelemann/compare/6.15.5...6.15.6) (2026-05-28)
 
 ### Bug Fixes
