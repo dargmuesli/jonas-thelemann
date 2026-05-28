@@ -1,3 +1,9 @@
+## [6.15.6](https://github.com/dargmuesli/jonas-thelemann/compare/6.15.5...6.15.6) (2026-05-28)
+
+### Bug Fixes
+
+* **deps:** update dargmuesli/github-actions to v5.4.0 ([7f07062](https://github.com/dargmuesli/jonas-thelemann/commit/7f07062bfba93b6eb9450b40909984642fbb30e8))
+
 ## [6.15.5](https://github.com/dargmuesli/jonas-thelemann/compare/6.15.4...6.15.5) (2026-05-21)
 
 ### Bug Fixes
