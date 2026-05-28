@@ -30,15 +30,13 @@ RUN mkdir \
         /srv/.pnpm-store \
         /srv/app/node_modules
 
-COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-
 VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 VOLUME /srv/app/node_modules
 
 USER node
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/srv/app/docker-entrypoint.sh"]
 CMD ["pnpm", "run", "--dir", "src", "dev", "--host", "0.0.0.0"]
 EXPOSE 3000
 
@@ -153,15 +151,13 @@ RUN groupadd -g $GROUP_ID -o $USER_NAME \
         /srv/.pnpm-store \
         /srv/app/node_modules
 
-COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-
 USER $USER_NAME
 
 VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 VOLUME /srv/app/node_modules
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/srv/app/docker-entrypoint.sh"]
 
 
 ########################
@@ -215,6 +211,7 @@ RUN chown node:node .
 COPY --from=build-node --chown=node /srv/app/src/.output ./src/.output
 COPY --from=build-node --chown=node /srv/app/src/node/server/node.mjs ./src/node/server/node.mjs
 COPY --from=build-node --chown=node /srv/app/src/package.json ./src/package.json
+COPY --from=build-node --chown=node /srv/app/docker-entrypoint.sh ./docker-entrypoint.sh
 COPY --from=build-node --chown=node /srv/app/package.json ./package.json
 # COPY --from=build-cloudflare_pages /srv/app/package.json /dev/null
 # COPY --from=build-static /srv/app/src/.output/public ./.output/public
@@ -261,7 +258,7 @@ USER node
 # Install package manager as `node` user.
 RUN corepack prepare
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/srv/app/docker-entrypoint.sh"]
 CMD ["pnpm", "run", "start:node"]
 HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
 EXPOSE 3000
