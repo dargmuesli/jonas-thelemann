@@ -1,3 +1,9 @@
+## [6.16.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.15.7...6.16.0) (2026-06-04)
+
+### Features
+
+* **portfolio:** add schwarz digits ([b75fad3](https://github.com/dargmuesli/jonas-thelemann/commit/b75fad36e5a9897bf162efb1f159409e44654795))
+
 ## [6.15.7](https://github.com/dargmuesli/jonas-thelemann/compare/6.15.6...6.15.7) (2026-05-28)
 
 ### Bug Fixes
