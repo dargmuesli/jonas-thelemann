@@ -71,7 +71,9 @@ export default defineNuxtConfig(
           firstParty: true,
           partytown: ['cloudflareWebAnalytics'],
           registry: {
-            cloudflareWebAnalytics: true,
+            cloudflareWebAnalytics: {
+              trigger: 'onNuxtReady',
+            },
           },
         },
         security: {
