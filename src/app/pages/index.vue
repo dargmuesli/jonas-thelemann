@@ -265,20 +265,20 @@ const socialLinks = [
 ]
 const experienceItems = [
   {
+    role: t('roleCloudSoftwareEngineer'),
+    organization: t('organizationSchwarzDigits'),
+    organizationUrl: 'https://schwarz-digits.de/',
+    timespan: t('timeSpan', {
+      from: t('time', { month: t('timeMonthJun'), year: 2026 }),
+      to: t('present'),
+    }),
+  },
+  {
     role: t('roleExecutiveDirectorAndHeadOfTechnology'),
     organization: t('organizationMaevsi'),
     organizationUrl: 'https://maev.si/',
     timespan: t('timeSpan', {
       from: t('time', { month: t('timeMonthNov'), year: 2024 }),
-      to: t('present'),
-    }),
-  },
-  {
-    role: t('roleBusinessPartnershipsRepresentative'),
-    organization: t('organizationNinjaneers'),
-    organizationUrl: 'https://www.ninjaneers.de/',
-    timespan: t('timeSpan', {
-      from: t('time', { month: t('timeMonthOct'), year: 2025 }),
       to: t('present'),
     }),
   },
@@ -289,6 +289,15 @@ const experienceItems = [
     timespan: t('timeSpan', {
       from: t('time', { month: t('timeMonthJul'), year: 2022 }),
       to: t('present'),
+    }),
+  },
+  {
+    role: t('roleBusinessPartnershipsRepresentative'),
+    organization: t('organizationNinjaneers'),
+    organizationUrl: 'https://www.ninjaneers.de/',
+    timespan: t('timeSpan', {
+      from: t('time', { month: t('timeMonthOct'), year: 2025 }),
+      to: t('time', { month: t('timeMonthJan'), year: 2026 }),
     }),
   },
   {
@@ -512,6 +521,7 @@ de:
   organizationMaevsi: maevsi
   organizationNinjaneers: Ninjaneers
   organizationNuxt: Nuxt
+  organizationSchwarzDigits: Schwarz Digits
   organizations: Mitgliedschaften
   organizationUnikat: UNIKAT
   organizationUniversityKassel: Universität Kassel
@@ -522,6 +532,7 @@ de:
   projectsMore: und {repoCount} Beiträge…
   roleBoardMember: Vorstandsmitglied
   roleBusinessPartnershipsRepresentative: Repräsentant für Geschäftspartnerschaften
+  roleCloudSoftwareEngineer: Cloud Software-Entwickler
   roleEcosystemTeamMember: Mitglied des Ökosystem-Teams
   roleElectoralAssistant: Beisitzer
   roleElectoralSupervisor: Wahlvorsteher
@@ -586,6 +597,7 @@ en:
   organizationMaevsi: maevsi
   organizationNinjaneers: Ninjaneers
   organizationNuxt: Nuxt
+  organizationSchwarzDigits: Schwarz Digits
   organizations: Memberships
   organizationUnikat: UNIKAT
   organizationUniversityKassel: University of Kassel
@@ -596,6 +608,7 @@ en:
   projectsMore: and {repoCount} contributions…
   roleBoardMember: Board Member
   roleBusinessPartnershipsRepresentative: Business Partnerships Representative
+  roleCloudSoftwareEngineer: Cloud Software Engineer
   roleEcosystemTeamMember: Ecosystem Team Member
   roleElectoralAssistant: Electoral Assistant
   roleElectoralSupervisor: Electoral Supervisor
