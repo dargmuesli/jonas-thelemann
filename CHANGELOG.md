@@ -1,3 +1,5 @@
+## [6.16.2](https://github.com/dargmuesli/jonas-thelemann/compare/6.16.1...6.16.2) (2026-06-30)
+
 ## [6.16.1](https://github.com/dargmuesli/jonas-thelemann/compare/6.16.0...6.16.1) (2026-06-16)
 
 ### Bug Fixes
