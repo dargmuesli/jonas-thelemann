@@ -1,3 +1,5 @@
+## [6.17.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.16.4...6.17.0) (2026-07-23)
+
 ## [6.16.4](https://github.com/dargmuesli/jonas-thelemann/compare/6.16.3...6.16.4) (2026-07-21)
 
 ## [6.16.3](https://github.com/dargmuesli/jonas-thelemann/compare/6.16.2...6.16.3) (2026-07-14)
