@@ -5,6 +5,14 @@ allowBuilds:
   sharp: true
   unrs-resolver: false
   vue-demi: false
+minimumReleaseAgeExclude:
+  - '@dargmuesli/nuxt-vio-testing@21.0.16'
+  - '@dargmuesli/nuxt-vio@21.0.16'
+  - '@nuxt/kit@4.5.1'
+  - '@nuxt/nitro-server@4.5.1'
+  - '@nuxt/schema@4.5.1'
+  - '@nuxt/vite-builder@4.5.1'
+  - nuxt@4.5.1
 packages:
   - src
   - tests
