@@ -1,8 +1,6 @@
 import { getRootHost } from '@dargmuesli/nuxt-vio/shared/utils/networking'
 import { defu } from 'defu'
 
-export const DARGSTACK_SECRET_UNUSED_THIRD_PARTY = 'UNSET THIRD PARTY SECRET'
-
 export const GET_CSP = ({ siteUrl }: { siteUrl: URL }) => {
   const domainTldPort =
     IS_IN_FRONTEND_DEVELOPMENT && !import.meta.prerender

@@ -3,7 +3,7 @@ export const useServiceFetch = ({
   path,
   port,
 }: {
-  name?: string
+  name: string
   path?: string
   port?: number
 }) => {
