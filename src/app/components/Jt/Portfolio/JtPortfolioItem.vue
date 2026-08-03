@@ -1,8 +1,8 @@
 <template>
   <li v-if="isVisible || isExpanded">
     <i18n-t
-      keypath="titleSubtitle"
       class="text-gray-500 dark:text-gray-400"
+      keypath="titleSubtitle"
       tag="span"
     >
       <template #title>

@@ -1,7 +1,7 @@
 <template>
   <VioApp
-    og-image-component="Default"
     :og-image-alt="t('globalSeoOgImageAlt')"
+    og-image-component="Default"
   />
 </template>
 

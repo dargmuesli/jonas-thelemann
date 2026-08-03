@@ -3,9 +3,9 @@
     <img
       alt="Jonas in Wiesbaden."
       class="object-cover"
+      height="630"
       src="/assets/static/images/wiesbaden.jpg"
       width="436"
-      height="630"
     />
     <span class="mx-16 flex flex-col justify-center gap-16">
       <h1 class="text-7xl leading-[1.1875] font-bold" :style="titleLineClamp">
