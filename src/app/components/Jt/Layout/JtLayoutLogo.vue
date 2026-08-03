@@ -1,19 +1,19 @@
 <template>
   <svg
-    version="1.0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="1000.000000pt"
     height="1000.000000pt"
-    viewBox="0 0 1000.000000 1000.000000"
     preserveAspectRatio="xMidYMid meet"
+    version="1.0"
+    viewBox="0 0 1000.000000 1000.000000"
+    width="1000.000000pt"
+    xmlns="http://www.w3.org/2000/svg"
   >
     <title>
       {{ t('logo') }}
     </title>
     <g
-      transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
       fill="#000000"
       stroke="none"
+      transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
     >
       <path
         d="M8784 8059 c-44 -47 -145 -116 -216 -149 -117 -52 -282 -85 -573

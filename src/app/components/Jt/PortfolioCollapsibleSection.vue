@@ -19,8 +19,8 @@
       class="absolute -bottom-3.5 flex w-full justify-center"
     >
       <button
-        :aria-label="`${isExpanded ? t('collapse') : t('expand')} ${title}`"
         :aria-expanded="isExpanded"
+        :aria-label="`${isExpanded ? t('collapse') : t('expand')} ${title}`"
         class="flex items-center gap-1.5 border border-gray-200 px-2.5 py-0.5 text-sm font-medium transition-colors dark:border-gray-700"
         :class="[
           isExpanded
@@ -37,10 +37,10 @@
           viewBox="0 0 24 24"
         >
           <path
+            d="m19 14-7-7m0 0-7 7m7-7v12"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
-            d="m19 14-7-7m0 0-7 7m7-7v12"
           />
         </svg>
         <span>{{ isExpanded ? t('collapse') : t('expand') }}</span>

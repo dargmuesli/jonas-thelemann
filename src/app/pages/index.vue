@@ -91,8 +91,8 @@
         >
           <JtPortfolioCollapsibleSection
             v-slot="{ isExpanded }"
-            :title="t('experience')"
             :items="experienceItems"
+            :title="t('experience')"
           >
             <JtPortfolioItem
               v-for="(item, idx) in experienceItems"
@@ -110,8 +110,8 @@
             <div class="mt-2">
               <p>{{ t('educationGoal') }}</p>
               <i18n-t
-                keypath="titleSubtitle"
                 class="text-gray-500 dark:text-gray-400"
+                keypath="titleSubtitle"
                 tag="span"
               >
                 <template #title>
@@ -130,8 +130,8 @@
           </section>
           <JtPortfolioCollapsibleSection
             v-slot="{ isExpanded }"
-            :title="t('engagement')"
             :items="engagementItems"
+            :title="t('engagement')"
           >
             <JtPortfolioItem
               v-for="(item, idx) in engagementItems"
@@ -148,28 +148,28 @@
             <JtPortfolioItem
               v-for="(item, idx) in languageItems"
               :key="idx"
-              :title="item.title"
               :subtitle-text="item.proficiency"
+              :title="item.title"
             />
           </JtPortfolioSection>
           <JtPortfolioSection :title="t('honorsAwards')">
             <JtPortfolioItem
               v-for="(item, idx) in honorsAwardsItems"
               :key="idx"
-              :title="item.title"
-              :title-url="item.titleUrl"
               :subtitle-place="item.subtitlePlace"
               :subtitle-place-url="item.subtitlePlaceUrl"
               :subtitle-time="item.subtitleTime"
+              :title="item.title"
+              :title-url="item.titleUrl"
             />
           </JtPortfolioSection>
           <JtPortfolioSection :title="t('organizations')">
             <JtPortfolioItem
               v-for="(item, idx) in organizationItems"
               :key="idx"
+              :subtitle-text="item.timespan"
               :title="item.title"
               :title-url="item.url"
-              :subtitle-text="item.timespan"
             />
           </JtPortfolioSection>
           <hr

@@ -27,9 +27,9 @@
     <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
       <input
         v-model="searchQuery"
-        type="text"
-        :placeholder="t('search')"
         class="flex-1 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm transition-colors placeholder:text-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:placeholder:text-gray-500 dark:focus:border-blue-400 dark:focus:ring-blue-400"
+        :placeholder="t('search')"
+        type="text"
       />
       <select
         v-model="sortBy"
@@ -55,9 +55,9 @@
         >
           <img
             v-if="group.length"
-            :src="group[0]?.repository.owner.avatar_url"
             :alt="t('profilePicture')"
             class="h-8 w-8 shrink-0 rounded-full sm:h-10 sm:w-10"
+            :src="group[0]?.repository.owner.avatar_url"
           />
           <h2
             class="truncate text-base font-semibold text-blue-600 hover:underline sm:text-lg dark:text-blue-400"
@@ -169,10 +169,10 @@
             viewBox="0 0 24 24"
           >
             <path
+              d="M19 9l-7 7-7-7"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M19 9l-7 7-7-7"
             />
           </svg>
         </button>
