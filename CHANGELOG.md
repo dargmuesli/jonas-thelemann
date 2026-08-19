@@ -1,3 +1,9 @@
+## [6.17.3](https://github.com/dargmuesli/jonas-thelemann/compare/6.17.2...6.17.3) (2026-08-19)
+
+### Performance Improvements
+
+* **git:** track snapshot images with lfs ([#621](https://github.com/dargmuesli/jonas-thelemann/issues/621)) ([34d5948](https://github.com/dargmuesli/jonas-thelemann/commit/34d594852edf9e06b736e50f6e7db639a03b1faf))
+
 ## [6.17.2](https://github.com/dargmuesli/jonas-thelemann/compare/6.17.1...6.17.2) (2026-08-18)
 
 ## [6.17.1](https://github.com/dargmuesli/jonas-thelemann/compare/6.17.0...6.17.1) (2026-08-04)
