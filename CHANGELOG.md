@@ -1,3 +1,9 @@
+## [6.18.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.17.3...6.18.0) (2026-08-27)
+
+### Features
+
+* **sentry:** use vio's built-in Sentry integration ([d78a03e](https://github.com/dargmuesli/jonas-thelemann/commit/d78a03e189cd2e693f402e79aef914ca8870e04e))
+
 ## [6.17.3](https://github.com/dargmuesli/jonas-thelemann/compare/6.17.2...6.17.3) (2026-08-19)
 
 ### Performance Improvements
