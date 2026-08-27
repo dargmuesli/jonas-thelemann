@@ -1,13 +1,14 @@
 allowBuilds:
   '@dargmuesli/nuxt-vio': false
   '@parcel/watcher': false
+  '@sentry/cli': false
   esbuild: false
   sharp: true
   unrs-resolver: false
   vue-demi: false
 minimumReleaseAgeExclude:
-  - '@dargmuesli/nuxt-vio-testing@21.0.16'
-  - '@dargmuesli/nuxt-vio@21.0.16'
+  - '@dargmuesli/nuxt-vio-testing@21.0.16 || 23.0.0-beta.3 || 23.0.0-beta.4'
+  - '@dargmuesli/nuxt-vio@21.0.16 || 23.0.0-beta.3 || 23.0.0-beta.4'
   - '@nuxt/kit@4.5.1'
   - '@nuxt/nitro-server@4.5.1'
   - '@nuxt/schema@4.5.1'

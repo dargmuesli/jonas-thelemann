@@ -84,6 +84,9 @@ export default defineNuxtConfig(
       },
     },
     VIO_NUXT_BASE_CONFIG({
+      services: {
+        backend: { hasSubdomain: true, port: 3000 },
+      },
       siteName: SITE_NAME,
       stagingHost: PRODUCTION_HOST,
     }),
