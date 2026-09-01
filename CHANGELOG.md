@@ -1,3 +1,9 @@
+## [6.18.1](https://github.com/dargmuesli/jonas-thelemann/compare/6.18.0...6.18.1) (2026-09-01)
+
+### Bug Fixes
+
+* **deps:** bump pnpm to 11.25.0 (GHSA-vx52-2968-3vc6) ([3428b0b](https://github.com/dargmuesli/jonas-thelemann/commit/3428b0b420b465b670296240c26fd6712478e634))
+
 ## [6.18.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.17.3...6.18.0) (2026-08-27)
 
 ### Features
