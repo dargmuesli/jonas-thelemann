@@ -214,7 +214,7 @@ importers:
         version: 9.3.5(magic-string@1.2.3)(magicast@0.5.4)(oxc-parser@0.140.0)(rolldown@1.2.6)(unplugin@3.3.0(esbuild@0.28.2)(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26)))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26))
       '@dargmuesli/nuxt-vio':
         specifier: 23.0.0-beta.5
-        version: 23.0.0-beta.5(4296dd4bc760003c39cc8a0a1af7069e)
+        version: 23.0.0-beta.5(948b752f799eca63577b99e6377144bf)
       '@nuxt/scripts':
         specifier: 1.3.8
         version: 1.3.8(@oxc-project/types@0.147.0)(@unhead/vue@3.4.0(@oxc-project/types@0.147.0)(esbuild@0.28.2)(lightningcss@1.33.0)(oxc-parser@0.140.0)(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26)))(db0@0.3.4)(esbuild@0.28.2)(ioredis@5.11.1(supports-color@10.2.2))(magicast@0.5.4)(rolldown@1.2.6)(rollup@4.63.1)(typescript@6.0.3)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26))
@@ -222,8 +222,8 @@ importers:
         specifier: 2.0.0
         version: 2.0.0(magic-string@1.2.3)(magicast@0.5.4)(oxc-parser@0.140.0)(rolldown@1.2.6)(supports-color@10.2.2)(unplugin@3.3.0(esbuild@0.28.2)(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26)))
       '@takumi-rs/core':
-        specifier: 2.13.4
-        version: 2.13.4(csstype@3.2.3)
+        specifier: 2.13.5
+        version: 2.13.5(csstype@3.2.3)
       '@vuelidate/core':
         specifier: 2.0.3
         version: 2.0.3(vue@3.5.42(typescript@6.0.3))
@@ -285,8 +285,8 @@ importers:
         specifier: 3.5.42
         version: 3.5.42(typescript@6.0.3)
       vue-router:
-        specifier: 5.3.0
-        version: 5.3.0(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(pinia@4.0.3(@vue/devtools-api@8.2.1)(typescript@6.0.3)(vue@3.5.42(typescript@6.0.3)))(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26))
+        specifier: 5.3.1
+        version: 5.3.1(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(pinia@4.0.3(@vue/devtools-api@8.2.1)(typescript@6.0.3)(vue@3.5.42(typescript@6.0.3)))(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26))
       vue-tsc:
         specifier: 3.3.11
         version: 3.3.11(typescript@6.0.3)
@@ -2994,8 +2994,8 @@ packages:
     cpu: [arm64]
     os: [darwin]
 
-  '@takumi-rs/core-darwin-arm64@2.13.4':
-    resolution: {integrity: sha512-znfETB7y3x+nLmbVv7tn4rULaQNpaCQ+Ei69UiR/egNKw/3mAdTcnGKi1ba10/BCnIKKFoYTnD/+c/rX/KOE5g==}
+  '@takumi-rs/core-darwin-arm64@2.13.5':
+    resolution: {integrity: sha512-o4ZGtb8OQH5rODzm6Pa/k2Jzu/CSo/1MvfafvETLTaYlOZUujMTeR9eUS1XWbBF0sKLO97cyARHYnCkgWHVbCw==}
     engines: {node: '>=18'}
     cpu: [arm64]
     os: [darwin]
@@ -3006,8 +3006,8 @@ packages:
     cpu: [x64]
     os: [darwin]
 
-  '@takumi-rs/core-darwin-x64@2.13.4':
-    resolution: {integrity: sha512-YHdOCtyq0fekME3Y76aglwvr1xliDYUkt827cIiNKasVwLyVYp7c2oA2vtOy60AVWSsNaeQZfio/A1+n1yEQvg==}
+  '@takumi-rs/core-darwin-x64@2.13.5':
+    resolution: {integrity: sha512-LkiHNZs0vU7sEouksXJxgS90lZLG7ze4kc4mwIR083ffLUO+xnIJS2KzqTFF9QBcRXq7jVh7Gme3J0COTUs4UQ==}
     engines: {node: '>=18'}
     cpu: [x64]
     os: [darwin]
@@ -3019,8 +3019,8 @@ packages:
     os: [linux]
     libc: [glibc]
 
-  '@takumi-rs/core-linux-arm64-gnu@2.13.4':
-    resolution: {integrity: sha512-enCLLvXIbC/uP84/2MEGnSxtmpiW/WXWxG3EMaGo2Yuukg817N0EOqxR0/pNn5JtSqqYsFjaLSLM7lODyKsz/g==}
+  '@takumi-rs/core-linux-arm64-gnu@2.13.5':
+    resolution: {integrity: sha512-hYhbvMr3aSwZllclTwJ++j/lKpU33T7wcXMxTaboBHj/fmVVLQghWf+ppKE8q1F/Uaw0Y1sn6JY6Iv6CYdjl3w==}
     engines: {node: '>=18'}
     cpu: [arm64]
     os: [linux]
@@ -3033,8 +3033,8 @@ packages:
     os: [linux]
     libc: [musl]
 
-  '@takumi-rs/core-linux-arm64-musl@2.13.4':
-    resolution: {integrity: sha512-PjYuEqZnzOLeltGd33asZyXNFueo/tWhIemuK1EOawMbFIv7ItZ+IPfizEppjiT/9aubbYgAPo7B1RsqJMcjOw==}
+  '@takumi-rs/core-linux-arm64-musl@2.13.5':
+    resolution: {integrity: sha512-pPeI+3Ex9iWQ4OfxGkX1njfdV2OVPgjQKJ19haT4cLizGk/txoj5QGR91XTQjF3y2n09QJJvW/UodeYTMEMBhQ==}
     engines: {node: '>=18'}
     cpu: [arm64]
     os: [linux]
@@ -3047,8 +3047,8 @@ packages:
     os: [linux]
     libc: [glibc]
 
-  '@takumi-rs/core-linux-x64-gnu@2.13.4':
-    resolution: {integrity: sha512-FslEpRoWcLMpNRKLN6lr9o8GZ412h0FgZMa2fuBNXJaXYN0L6W7RctrTZa+mWo2Wt8V4V4DKwCqYEZwPCkyQ3g==}
+  '@takumi-rs/core-linux-x64-gnu@2.13.5':
+    resolution: {integrity: sha512-8/Egq49ieXh/u0cXUgqELIFUPVkrWk6fR2hPX8giD40D61G36ZErQyJR4W9GUlQctP/buwqLwD6FzYT0OsZ0Gw==}
     engines: {node: '>=18'}
     cpu: [x64]
     os: [linux]
@@ -3061,8 +3061,8 @@ packages:
     os: [linux]
     libc: [musl]
 
-  '@takumi-rs/core-linux-x64-musl@2.13.4':
-    resolution: {integrity: sha512-OYCHAE+5kycXvpPVh0xEZbt6A7OSJAKhteJLqStuZUOSp3fkGVTiUIfvcfCgCcLo3vdfE8aOX5SZTqCPkGMQbg==}
+  '@takumi-rs/core-linux-x64-musl@2.13.5':
+    resolution: {integrity: sha512-Fuv6Q52H7OwyESW25ovG6A0ZI4eyvqPjmGaDsAsgOV6MgANwiee74pS6cSR+5cJyxplVWbghiy9ajs9E2SORfg==}
     engines: {node: '>=18'}
     cpu: [x64]
     os: [linux]
@@ -3074,8 +3074,8 @@ packages:
     cpu: [arm64]
     os: [win32]
 
-  '@takumi-rs/core-win32-arm64-msvc@2.13.4':
-    resolution: {integrity: sha512-bAG2fEEmmfqUTaAERLmUYalpwXCiyNIkZXC/pGUZyFK55YDW2usAoaj7zEJY7JDDvmkNC98y57rTvFy6lW6IAQ==}
+  '@takumi-rs/core-win32-arm64-msvc@2.13.5':
+    resolution: {integrity: sha512-nsF5mo6Vgb4dJSOqmTJ/lX6xlwKoJ63X6fEFKh0OfHAZXvvQzUjYsNYc/NRWRbD7gBvxfLKPTtmSTFdaZ0rToQ==}
     engines: {node: '>=18'}
     cpu: [arm64]
     os: [win32]
@@ -3086,8 +3086,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@takumi-rs/core-win32-x64-msvc@2.13.4':
-    resolution: {integrity: sha512-qyj4BPv6d0wuYfm9qL730X6py6v5agXc6M7D5nYQrBFFZ8kYFMyBwrHOjeOgWeqbzDwJ/x8TzBqGrryIm88LQA==}
+  '@takumi-rs/core-win32-x64-msvc@2.13.5':
+    resolution: {integrity: sha512-21LlzKViiUACIiVKd1P/b57HiKw0bkALoBbzG4HJ2fQckv/b0iQaRq0AtRVtbdWuBel/PvDOu5vd2Uwrd5wLSg==}
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
@@ -3101,8 +3101,8 @@ packages:
       csstype:
         optional: true
 
-  '@takumi-rs/core@2.13.4':
-    resolution: {integrity: sha512-YL+2FoGdEZ27jf2SBLvPEdO7/FaALyJv1vEZrN7GVT9RDMgOVZvhpiYIdvWX1BJLDdix9uDgG9M+BCmJWHLIgA==}
+  '@takumi-rs/core@2.13.5':
+    resolution: {integrity: sha512-aQSKB00nvgXP1V10XmFwzuQJ5Cis6U70C4MZ07enxNmg5fqikqOUJShUdHtK8PJX+3zUqpRza3Qnlcw3uaoHdw==}
     engines: {node: '>=18'}
     peerDependencies:
       csstype: '*'
@@ -3122,8 +3122,8 @@ packages:
       react:
         optional: true
 
-  '@takumi-rs/helpers@2.13.4':
-    resolution: {integrity: sha512-5F60HDcr9FelxiUhgSGMt4C1g3Nt8S9LbTlp43YyhmmZeUnsodiaiansnFc2poR/pCDS232S8fLXCsPj7btwxQ==}
+  '@takumi-rs/helpers@2.13.5':
+    resolution: {integrity: sha512-ZuIVNJ258DocE8Wd05gC69vQJoArVpdpYMj+kp9/8pWyci6oyTFtKSrR50zDDTVwpObRHEU3uB9OHeSDHYUVQQ==}
     engines: {node: '>=18'}
     peerDependencies:
       preact: ^10.0.0
@@ -7454,8 +7454,8 @@ packages:
     peerDependencies:
       vue: ^3.0.0
 
-  vue-router@5.3.0:
-    resolution: {integrity: sha512-a2PBXX9yfkS58JzSJALUffgDa09lEzKmCcEnLaepoIr88L+9hEnsgEQkcadJGID+vtHa0gFpVo064zmylA9fcg==}
+  vue-router@5.3.1:
+    resolution: {integrity: sha512-GDBZzgmILxA/kFnkFbJjQZdZ2QQbngnIMMuoUcjhZIfH1RGMaPjPwX5ASnV38qamuA9uhO0RDjSBHTDNG2uXyQ==}
     peerDependencies:
       '@pinia/colada': '>=0.21.2'
       '@vue/compiler-sfc': ^3.5.34 || ^4.0.0
@@ -7976,7 +7976,7 @@ snapshots:
       playwright-core: 1.62.1
       ufo: 1.6.4
 
-  '@dargmuesli/nuxt-vio@23.0.0-beta.5(4296dd4bc760003c39cc8a0a1af7069e)':
+  '@dargmuesli/nuxt-vio@23.0.0-beta.5(948b752f799eca63577b99e6377144bf)':
     dependencies:
       '@dargmuesli/nuxt-cookie-control': 9.3.3(magic-string@1.2.3)(magicast@0.5.4)(oxc-parser@0.140.0)(rolldown@1.2.6)(unplugin@3.3.0(esbuild@0.28.2)(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26)))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26))
       '@eslint/compat': 2.1.0(eslint@10.8.1(jiti@2.7.0)(supports-color@10.2.2))
@@ -8025,7 +8025,7 @@ snapshots:
       tw-animate-css: 1.4.0
       typescript: 6.0.3
       vue: 3.5.42(typescript@6.0.3)
-      vue-router: 5.3.0(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(pinia@4.0.3(@vue/devtools-api@8.2.1)(typescript@6.0.3)(vue@3.5.42(typescript@6.0.3)))(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26))
+      vue-router: 5.3.1(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(pinia@4.0.3(@vue/devtools-api@8.2.1)(typescript@6.0.3)(vue@3.5.42(typescript@6.0.3)))(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26))
       vue-sonner: 2.0.9(@nuxt/kit@4.5.2(magic-string@1.2.3)(magicast@0.5.4)(oxc-parser@0.140.0)(rolldown@1.2.6)(unplugin@3.3.0(esbuild@0.28.2)(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26))))(@nuxt/schema@4.5.2)(nuxt@4.5.2(964585d2a0e2c3faa4c85de688e41af4))
       vue-tsc: 3.3.10(typescript@6.0.3)
     transitivePeerDependencies:
@@ -9588,7 +9588,7 @@ snapshots:
       unrouting: 0.2.3
       unstorage: 1.17.5(db0@0.3.4)(ioredis@5.11.1(supports-color@10.2.2))
       vue-i18n: 11.4.10(vue@3.5.42(typescript@6.0.3))
-      vue-router: 5.3.0(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(pinia@4.0.3(@vue/devtools-api@8.2.1)(typescript@6.0.3)(vue@3.5.42(typescript@6.0.3)))(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26))
+      vue-router: 5.3.1(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(pinia@4.0.3(@vue/devtools-api@8.2.1)(typescript@6.0.3)(vue@3.5.42(typescript@6.0.3)))(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26))
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -10704,49 +10704,49 @@ snapshots:
   '@takumi-rs/core-darwin-arm64@2.10.0':
     optional: true
 
-  '@takumi-rs/core-darwin-arm64@2.13.4':
+  '@takumi-rs/core-darwin-arm64@2.13.5':
     optional: true
 
   '@takumi-rs/core-darwin-x64@2.10.0':
     optional: true
 
-  '@takumi-rs/core-darwin-x64@2.13.4':
+  '@takumi-rs/core-darwin-x64@2.13.5':
     optional: true
 
   '@takumi-rs/core-linux-arm64-gnu@2.10.0':
     optional: true
 
-  '@takumi-rs/core-linux-arm64-gnu@2.13.4':
+  '@takumi-rs/core-linux-arm64-gnu@2.13.5':
     optional: true
 
   '@takumi-rs/core-linux-arm64-musl@2.10.0':
     optional: true
 
-  '@takumi-rs/core-linux-arm64-musl@2.13.4':
+  '@takumi-rs/core-linux-arm64-musl@2.13.5':
     optional: true
 
   '@takumi-rs/core-linux-x64-gnu@2.10.0':
     optional: true
 
-  '@takumi-rs/core-linux-x64-gnu@2.13.4':
+  '@takumi-rs/core-linux-x64-gnu@2.13.5':
     optional: true
 
   '@takumi-rs/core-linux-x64-musl@2.10.0':
     optional: true
 
-  '@takumi-rs/core-linux-x64-musl@2.13.4':
+  '@takumi-rs/core-linux-x64-musl@2.13.5':
     optional: true
 
   '@takumi-rs/core-win32-arm64-msvc@2.10.0':
     optional: true
 
-  '@takumi-rs/core-win32-arm64-msvc@2.13.4':
+  '@takumi-rs/core-win32-arm64-msvc@2.13.5':
     optional: true
 
   '@takumi-rs/core-win32-x64-msvc@2.10.0':
     optional: true
 
-  '@takumi-rs/core-win32-x64-msvc@2.13.4':
+  '@takumi-rs/core-win32-x64-msvc@2.13.5':
     optional: true
 
   '@takumi-rs/core@2.10.0(csstype@3.2.3)':
@@ -10766,18 +10766,18 @@ snapshots:
       - preact
       - react
 
-  '@takumi-rs/core@2.13.4(csstype@3.2.3)':
+  '@takumi-rs/core@2.13.5(csstype@3.2.3)':
     dependencies:
-      '@takumi-rs/helpers': 2.13.4
+      '@takumi-rs/helpers': 2.13.5
     optionalDependencies:
-      '@takumi-rs/core-darwin-arm64': 2.13.4
-      '@takumi-rs/core-darwin-x64': 2.13.4
-      '@takumi-rs/core-linux-arm64-gnu': 2.13.4
-      '@takumi-rs/core-linux-arm64-musl': 2.13.4
-      '@takumi-rs/core-linux-x64-gnu': 2.13.4
-      '@takumi-rs/core-linux-x64-musl': 2.13.4
-      '@takumi-rs/core-win32-arm64-msvc': 2.13.4
-      '@takumi-rs/core-win32-x64-msvc': 2.13.4
+      '@takumi-rs/core-darwin-arm64': 2.13.5
+      '@takumi-rs/core-darwin-x64': 2.13.5
+      '@takumi-rs/core-linux-arm64-gnu': 2.13.5
+      '@takumi-rs/core-linux-arm64-musl': 2.13.5
+      '@takumi-rs/core-linux-x64-gnu': 2.13.5
+      '@takumi-rs/core-linux-x64-musl': 2.13.5
+      '@takumi-rs/core-win32-arm64-msvc': 2.13.5
+      '@takumi-rs/core-win32-x64-msvc': 2.13.5
       csstype: 3.2.3
     transitivePeerDependencies:
       - preact
@@ -10785,7 +10785,7 @@ snapshots:
 
   '@takumi-rs/helpers@2.10.0': {}
 
-  '@takumi-rs/helpers@2.13.4': {}
+  '@takumi-rs/helpers@2.13.5': {}
 
   '@tanstack/virtual-core@3.17.8': {}
 
@@ -13912,7 +13912,7 @@ snapshots:
       verkit: 0.3.2
       vue: 3.5.42(typescript@6.0.3)
       vue-component-type-helpers: 3.3.11
-      vue-router: 5.3.0(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(pinia@4.0.3(@vue/devtools-api@8.2.1)(typescript@6.0.3)(vue@3.5.42(typescript@6.0.3)))(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26))
+      vue-router: 5.3.1(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(pinia@4.0.3(@vue/devtools-api@8.2.1)(typescript@6.0.3)(vue@3.5.42(typescript@6.0.3)))(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26))
     optionalDependencies:
       '@types/node': 24.13.3
     transitivePeerDependencies:
@@ -15697,7 +15697,7 @@ snapshots:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.42(typescript@6.0.3)
 
-  vue-router@5.3.0(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(pinia@4.0.3(@vue/devtools-api@8.2.1)(typescript@6.0.3)(vue@3.5.42(typescript@6.0.3)))(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26)):
+  vue-router@5.3.1(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(pinia@4.0.3(@vue/devtools-api@8.2.1)(typescript@6.0.3)(vue@3.5.42(typescript@6.0.3)))(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26)):
     dependencies:
       '@vue-macros/common': 3.1.4(vue@3.5.42(typescript@6.0.3))
       '@vue/devtools-api': 8.2.1
