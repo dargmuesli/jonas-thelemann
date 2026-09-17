@@ -48,7 +48,7 @@ jobs:
           private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
       - name: Open a pull request
         # A pull request rather than a direct commit.
-        # The data drives the page's ranking and its visual regression snapshots.
+        # The data decides what the page ranks first and how many projects it claims.
         # So it should be looked at before it ships.
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
