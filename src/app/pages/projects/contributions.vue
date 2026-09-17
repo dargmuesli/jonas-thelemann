@@ -100,6 +100,7 @@
           <option value="stars">{{ t('sortByStars') }}</option>
           <option value="recent">{{ t('sortByRecent') }}</option>
           <option value="name">{{ t('sortByName') }}</option>
+          <option value="owner">{{ t('sortByOwner') }}</option>
         </select>
       </div>
 
@@ -267,6 +268,14 @@ const filteredProjects = computed(() => {
         )
       case 'name':
         return a.repository.name.localeCompare(b.repository.name)
+      case 'owner': {
+        const owner = a.repository.owner.name.localeCompare(
+          b.repository.owner.name,
+        )
+        return owner === 0
+          ? a.repository.name.localeCompare(b.repository.name)
+          : owner
+      }
       default:
         return getContributionScore(b) - getContributionScore(a)
     }
@@ -314,7 +323,8 @@ de:
   signatureTitle: Ausgewählte Beiträge
   sortBy: Sortieren nach
   sortByContribution: Nach Beitrag sortieren
-  sortByName: Nach Name sortieren
+  sortByName: Nach Repository-Name sortieren
+  sortByOwner: Nach Besitzer, dann Repository sortieren
   sortByRecent: Nach Aktualität sortieren
   sortByStars: Nach Sternen sortieren
   summary: '{signature} ausgewählte Beiträge, gemergte Arbeit in {major} Projekten mit über 1.000 Sternen.'
@@ -344,7 +354,8 @@ en:
   signatureTitle: Signature contributions
   sortBy: Sort by
   sortByContribution: Sort by contribution
-  sortByName: Sort by name
+  sortByName: Sort by repository name
+  sortByOwner: Sort by owner, then repository
   sortByRecent: Sort by recent activity
   sortByStars: Sort by stars
   summary: '{signature} signature contributions, merged work in {major} projects with over 1,000 stars.'
