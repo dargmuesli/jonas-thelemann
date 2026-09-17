@@ -4,7 +4,9 @@ permissions: {}
 
 on:
   schedule:
-    - cron: "0 3 1 * *" # On the first day of every month at 03:00 AM UTC
+    # The slot was drawn at random to stay off the peaks that delay scheduled runs.
+    # GitHub cannot randomise a schedule itself, so the randomness sits in the choice rather than in each run.
+    - cron: "29 4 12 * *" # On the twelfth day of every month at 04:29 AM UTC
   workflow_dispatch:
 
 jobs:
