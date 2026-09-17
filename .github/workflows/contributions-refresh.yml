@@ -1,0 +1,61 @@
+name: "Contributions: Refresh"
+
+permissions: {}
+
+on:
+  schedule:
+    - cron: "0 3 1 * *" # On the first day of every month at 03:00 AM UTC
+  workflow_dispatch:
+
+jobs:
+  contributions-refresh:
+    name: "Contributions: Refresh"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the website
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Seed the generator with the current data
+        # The contributions API only reaches back so far.
+        # The committed file carries forward everything once imported from the pins export.
+        run: |
+          mkdir -p "$RUNNER_TEMP/contributions/input" "$RUNNER_TEMP/contributions/output"
+          cp src/app/assets/data/contributions.json "$RUNNER_TEMP/contributions/input/seed.json"
+      - name: Generate the contribution data
+        env:
+          # renovate: datasource=docker depName=ghcr.io/dargmuesli/contributed-to
+          CONTRIBUTED_TO_VERSION: "0.1.0"
+          DEFAULT_PREFIX: dargmuesli
+          # A token of the profile owner.
+          # The API reports contribution roles as the permissions of the token's own account.
+          # A GitHub App token cannot stand in for that.
+          GITHUB_TOKEN: ${{ secrets.CONTRIBUTIONS_GITHUB_TOKEN }}
+        # Pinned so a change to the collector cannot alter this data unnoticed.
+        # Renovate cannot see images inside a shell command, so the annotation above tracks it.
+        run: |
+          docker run --rm \
+            --env DEFAULT_PREFIX \
+            --env GITHUB_TOKEN \
+            --volume "$RUNNER_TEMP/contributions/input:/srv/app/input:ro" \
+            --volume "$RUNNER_TEMP/contributions/output:/srv/app/output" \
+            "ghcr.io/dargmuesli/contributed-to:$CONTRIBUTED_TO_VERSION"
+      - name: Copy the result into the website
+        run: cp "$RUNNER_TEMP/contributions/output/repos.json" src/app/assets/data/contributions.json
+      - name: Create an app token
+        id: app-token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          app-id: ${{ vars.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+      - name: Open a pull request
+        # A pull request rather than a direct commit.
+        # The data drives the page's ranking and its visual regression snapshots.
+        # So it should be looked at before it ships.
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        with:
+          add-paths: src/app/assets/data/contributions.json
+          body: Regenerated from the GitHub contributions API.
+          branch: chore/contributions/refresh
+          commit-message: "chore(contributions): update data"
+          delete-branch: true
+          title: "chore(contributions): update data"
+          token: ${{ steps.app-token.outputs.token }}
