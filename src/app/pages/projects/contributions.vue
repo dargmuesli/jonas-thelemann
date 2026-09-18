@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto flex max-w-6xl flex-col gap-6">
+  <div class="mx-auto flex max-w-6xl flex-col gap-10">
     <div class="flex flex-col items-center gap-4">
       <img
         alt="dargmuesli"
@@ -10,11 +10,11 @@
             : 'https://avatars.githubusercontent.com/u/4778485?v=4'
         "
       />
-      <h1 class="flex flex-col">
+      <h1 class="flex flex-col text-center">
         <span
           class="text-lg font-medium text-gray-700 sm:text-xl dark:text-gray-300"
         >
-          {{ t('openSourceContributionsName', { total: repos.length }) }}
+          {{ t('openSourceContributionsName', { total: projects.length }) }}
         </span>
         <span
           class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl dark:text-gray-100"
@@ -22,301 +22,341 @@
           {{ t('openSourceContributions') }}
         </span>
       </h1>
-    </div>
-
-    <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-      <input
-        v-model="searchQuery"
-        class="flex-1 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm transition-colors placeholder:text-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:placeholder:text-gray-500 dark:focus:border-blue-400 dark:focus:ring-blue-400"
-        :placeholder="t('search')"
-        type="text"
-      />
-      <select
-        v-model="sortBy"
-        :aria-label="t('sortBy')"
-        class="rounded-md border border-gray-300 bg-white px-3 py-2 pr-8 text-sm shadow-sm transition-colors focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:focus:border-blue-400 dark:focus:ring-blue-400"
-      >
-        <option value="stars">{{ t('sortByStars') }}</option>
-        <option value="name">{{ t('sortByName') }}</option>
-      </select>
-    </div>
-
-    <div class="flex flex-col gap-6">
-      <div
-        v-for="(group, owner) in groupedRepos"
-        :key="owner"
-        class="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900"
-      >
-        <VioLink
-          :aria-label="t('viewGitHubProfile', { owner })"
-          class="flex items-center gap-3 border-b border-gray-200 bg-gray-50 px-4 py-3 transition-colors hover:bg-gray-100 sm:px-6 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-          is-external-icon-disabled
-          :to="`https://github.com/${owner}`"
-        >
-          <img
-            v-if="group.length"
-            :alt="t('profilePicture')"
-            class="h-8 w-8 shrink-0 rounded-full sm:h-10 sm:w-10"
-            :src="group[0]?.repository.owner.avatar_url"
-          />
-          <h2
-            class="truncate text-base font-semibold text-blue-600 hover:underline sm:text-lg dark:text-blue-400"
-          >
-            {{ owner }}
-          </h2>
-        </VioLink>
-
-        <ul class="divide-y divide-gray-200 dark:divide-gray-700">
-          <li
-            v-for="repo in expandedGroups[owner]
-              ? group
-              : group.slice(0, REPO_PREVIEW_LIMIT)"
-            :key="repo.repository.url"
-            class="transition-colors hover:bg-gray-50 dark:hover:bg-gray-800"
-          >
-            <div
-              class="flex items-start justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4"
-            >
-              <VioLink
-                class="group flex min-w-0 flex-1 flex-col gap-2"
-                is-external-icon-disabled
-                :to="repo.repository.url"
-              >
-                <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5">
-                  <h3
-                    class="truncate text-sm font-semibold text-blue-600 group-hover:underline sm:text-base dark:text-blue-400"
-                  >
-                    {{ repo.repository.name }}
-                  </h3>
-                  <span
-                    v-if="repo.repository.fork"
-                    class="shrink-0 rounded border border-yellow-300 bg-yellow-50 px-1.5 py-0.5 text-xs font-medium text-yellow-700 dark:border-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400"
-                  >
-                    {{ t('fork') }}
-                  </span>
-                </div>
-                <p
-                  v-if="repo.repository.description"
-                  class="line-clamp-2 text-xs text-gray-600 sm:text-sm dark:text-gray-400"
-                >
-                  {{ repo.repository.description }}
-                </p>
-                <p
-                  v-else
-                  class="text-xs text-gray-600 italic sm:text-sm dark:text-gray-400"
-                >
-                  {{ t('noDescription') }}
-                </p>
-              </VioLink>
-              <div class="flex shrink-0 flex-col items-end gap-2">
-                <div
-                  class="flex items-center gap-1 text-xs text-gray-600 sm:text-sm dark:text-gray-400"
-                >
-                  <svg
-                    class="h-3.5 w-3.5 fill-current sm:h-4 sm:w-4"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.147.612a.75.75 0 01.416 1.279l-3.046 2.97.718 4.53a.75.75 0 01-1.088.791L8 12.347l-4.002 2.107a.75.75 0 01-1.088-.79l.718-4.53L1.382 6.374a.75.75 0 01.416-1.28l4.147-.611L7.327.668A.75.75 0 018 .25z"
-                    />
-                  </svg>
-                  <span class="font-medium">{{
-                    repo.repository.stars.toLocaleString()
-                  }}</span>
-                </div>
-                <VioLink
-                  :aria-label="
-                    t('viewMyCommits', { repo: repo.repository.name })
-                  "
-                  class="text-xs underline-offset-2 hover:underline sm:text-sm"
-                  is-external-icon-disabled
-                  :to="`https://github.com/${owner}/${repo.repository.name}/commits?author=dargmuesli`"
-                >
-                  {{ t('myCommits') }}
-                </VioLink>
-                <VioLink
-                  :aria-label="
-                    t('viewMyReviews', { repo: repo.repository.name })
-                  "
-                  class="text-xs underline-offset-2 hover:underline sm:text-sm"
-                  is-external-icon-disabled
-                  :to="`https://github.com/${owner}/${repo.repository.name}/pulls?q=reviewed-by%3Adargmuesli`"
-                >
-                  {{ t('myReviews') }}
-                </VioLink>
-              </div>
-            </div>
-          </li>
-        </ul>
-
-        <button
-          v-if="group.length > REPO_PREVIEW_LIMIT"
-          class="flex w-full items-center justify-center gap-2 border-t border-gray-200 bg-gray-50 px-4 py-3 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 sm:px-6 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300"
-          @click="toggleExpandedGroup(owner)"
-        >
-          <span>{{
-            expandedGroups[owner]
-              ? t('showLess')
-              : t('showMore', { count: group.length - REPO_PREVIEW_LIMIT })
-          }}</span>
-          <svg
-            :class="[
-              'h-4 w-4 shrink-0 transition-transform',
-              expandedGroups[owner] ? 'rotate-180' : '',
-            ]"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19 9l-7 7-7-7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <div
-      v-if="filteredAndSortedRepos.length === 0"
-      class="rounded-lg border border-gray-200 bg-white px-6 py-12 text-center dark:border-gray-700 dark:bg-gray-900"
-    >
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        {{ t('noRepositoriesFound') }}
+      <p class="max-w-2xl text-center text-sm text-gray-600 dark:text-gray-400">
+        {{
+          t('summary', {
+            major: majorProjectCount,
+            signature: signatureContributions.length,
+          })
+        }}
       </p>
     </div>
 
-    <div
-      class="text-center text-xs text-gray-500 sm:text-sm dark:text-gray-400"
-    >
-      {{
-        t('showingRepositories', {
-          count: filteredAndSortedRepos.length,
-          total: repos.length,
-        })
-      }}
-    </div>
+    <section class="flex flex-col gap-4">
+      <div class="flex flex-col gap-1">
+        <h2
+          class="text-xl font-bold text-gray-900 sm:text-2xl dark:text-gray-100"
+        >
+          {{ t('signatureTitle') }}
+        </h2>
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          {{ t('signatureIntro') }}
+        </p>
+      </div>
+      <ul class="grid gap-4 sm:grid-cols-2">
+        <li
+          v-for="item in signatureContributions"
+          :key="item.title"
+          class="flex flex-col gap-2 rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-900"
+        >
+          <h3
+            class="text-sm font-semibold text-gray-900 sm:text-base dark:text-gray-100"
+          >
+            {{ item.title }}
+          </h3>
+          <p class="grow text-xs text-gray-600 sm:text-sm dark:text-gray-400">
+            {{ item.body }}
+          </p>
+          <ul class="flex flex-wrap gap-x-3 gap-y-1 text-xs">
+            <li v-for="link in item.links" :key="link.to">
+              <VioLink
+                class="text-blue-600 underline-offset-2 hover:underline dark:text-blue-400"
+                is-external-icon-disabled
+                :to="link.to"
+              >
+                {{ link.label }}
+              </VioLink>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="flex flex-col gap-4">
+      <div class="flex flex-col gap-1">
+        <h2
+          class="text-xl font-bold text-gray-900 sm:text-2xl dark:text-gray-100"
+        >
+          {{ t('allTitle') }}
+        </h2>
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          {{ t('allIntro') }}
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+        <input
+          v-model="searchQuery"
+          class="min-w-0 flex-1 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm transition-colors placeholder:text-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:placeholder:text-gray-500 dark:focus:border-blue-400 dark:focus:ring-blue-400"
+          :placeholder="t('search')"
+          type="text"
+        />
+        <select
+          v-model="sortBy"
+          :aria-label="t('sortBy')"
+          class="rounded-md border border-gray-300 bg-white px-3 py-2 pr-8 text-sm shadow-sm transition-colors focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:focus:border-blue-400 dark:focus:ring-blue-400"
+        >
+          <option value="contribution">{{ t('sortByContribution') }}</option>
+          <option value="stars">{{ t('sortByStars') }}</option>
+          <option value="recent">{{ t('sortByRecent') }}</option>
+          <option value="name">{{ t('sortByName') }}</option>
+          <option value="owner">{{ t('sortByOwner') }}</option>
+        </select>
+      </div>
+
+      <ul
+        v-if="visibleProjects.length"
+        class="divide-y divide-gray-200 rounded-lg border border-gray-200 bg-white shadow-sm dark:divide-gray-700 dark:border-gray-700 dark:bg-gray-900"
+      >
+        <li
+          v-for="project in visibleProjects"
+          :key="project.repository.url"
+          class="transition-colors hover:bg-gray-50 dark:hover:bg-gray-800"
+        >
+          <JtContributionRow :project />
+        </li>
+      </ul>
+      <p
+        v-else
+        class="rounded-lg border border-gray-200 bg-white px-6 py-12 text-center text-sm text-gray-500 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-400"
+      >
+        {{ t('noRepositoriesFound') }}
+      </p>
+
+      <button
+        v-if="filteredProjects.length > visibleProjects.length"
+        class="flex w-full items-center justify-center gap-2 rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+        @click="isShowingAll = true"
+      >
+        {{
+          t('showAll', {
+            count: filteredProjects.length - visibleProjects.length,
+          })
+        }}
+      </button>
+
+      <p
+        class="text-center text-xs text-gray-500 sm:text-sm dark:text-gray-400"
+      >
+        {{
+          t('showingRepositories', {
+            count: visibleProjects.length,
+            total: projects.length,
+          })
+        }}
+      </p>
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
+import type { ContributedProject } from '~~/shared/utils/contributions'
+
+// Enough rows to show the ranking works without asking the reader to scroll past hundreds.
+const PREVIEW_LIMIT = 20
+// The threshold above which a project counts as one a reader is likely to recognize.
+const MAJOR_PROJECT_STARS = 1000
 const { t } = useI18n()
-const searchQuery = ref('')
-const sortBy = ref('stars')
-const expandedGroups = ref<Record<string, boolean>>({})
-const REPO_PREVIEW_LIMIT = 3
 const isTesting = useIsTesting()
 
-const repos = (
-  await (isTesting
-    ? import('~/assets/data/contributions-test.json')
-    : import('~/assets/data/contributions.json'))
-).default
+// Hand-written because no count knows which work mattered.
+// Every claim here is a merged change, and the links are the evidence.
+const signatureContributions = [
+  {
+    body: t('signatureSpotifyBody'),
+    links: [
+      {
+        label: 'spotify-web-api-java',
+        to: 'https://github.com/spotify-web-api-java/spotify-web-api-java',
+      },
+    ],
+    title: t('signatureSpotifyTitle'),
+  },
+  {
+    body: t('signatureGraphiqlBody'),
+    links: [
+      {
+        label: 'graphiql#4448',
+        to: 'https://github.com/graphql/graphiql/pull/4448',
+      },
+    ],
+    title: t('signatureGraphiqlTitle'),
+  },
+  {
+    body: t('signatureNuxtBody'),
+    links: [
+      {
+        label: 'nuxt/nuxt#31020',
+        to: 'https://github.com/nuxt/nuxt/pull/31020',
+      },
+    ],
+    title: t('signatureNuxtTitle'),
+  },
+  {
+    body: t('signatureCookieControlBody'),
+    links: [
+      {
+        label: 'nuxt-cookie-control',
+        to: 'https://github.com/dargmuesli/nuxt-cookie-control',
+      },
+    ],
+    title: t('signatureCookieControlTitle'),
+  },
+  {
+    body: t('signatureSyncthingBody'),
+    links: [
+      {
+        label: 'syncthing#5446',
+        to: 'https://github.com/syncthing/syncthing/pull/5446',
+      },
+    ],
+    title: t('signatureSyncthingTitle'),
+  },
+  {
+    body: t('signatureCrystalBody'),
+    links: [
+      {
+        label: 'crystal#2954',
+        to: 'https://github.com/graphile/crystal/pull/2954',
+      },
+      {
+        label: 'crystal#2955',
+        to: 'https://github.com/graphile/crystal/pull/2955',
+      },
+    ],
+    title: t('signatureCrystalTitle'),
+  },
+]
+const searchQuery = ref('')
+const sortBy = ref('contribution')
+const isShowingAll = ref(false)
 
-const toggleExpandedGroup = (owner: string) => {
-  expandedGroups.value[owner] = !expandedGroups.value[owner]
-}
+const projects = (
+  (
+    await (isTesting
+      ? import('~/assets/data/contributions-test.json')
+      : import('~/assets/data/contributions.json'))
+  ).default as ContributedProject[]
+).filter(hasContribution)
 
-const filteredAndSortedRepos = computed(() => {
-  const filtered = repos.filter((repo) => {
-    const query = searchQuery.value.toLowerCase()
-    return (
-      repo.repository.name.toLowerCase().includes(query) ||
-      repo.repository.description?.toLowerCase().includes(query) ||
-      false
-    )
-  })
+const majorProjectCount = projects.filter(
+  (project) =>
+    project.repository.stars >= MAJOR_PROJECT_STARS &&
+    (project.contribution.commits > 0 ||
+      project.contribution.pull_requests_merged > 0),
+).length
 
-  return filtered.sort((a, b) => {
-    if (sortBy.value === 'stars') {
-      return b.repository.stars - a.repository.stars
+const filteredProjects = computed(() => {
+  const query = searchQuery.value.trim().toLowerCase()
+  const matches = query
+    ? projects.filter((project) =>
+        [
+          project.repository.name,
+          project.repository.owner.name,
+          project.repository.description,
+        ].some((field) => field?.toLowerCase().includes(query)),
+      )
+    : [...projects]
+
+  return matches.sort((a, b) => {
+    switch (sortBy.value) {
+      case 'stars':
+        return b.repository.stars - a.repository.stars
+      case 'recent':
+        return (b.contribution.last_activity_at ?? '').localeCompare(
+          a.contribution.last_activity_at ?? '',
+        )
+      case 'name':
+        return a.repository.name.localeCompare(b.repository.name)
+      case 'owner': {
+        const owner = a.repository.owner.name.localeCompare(
+          b.repository.owner.name,
+        )
+        return owner === 0
+          ? a.repository.name.localeCompare(b.repository.name)
+          : owner
+      }
+      default:
+        return getContributionScore(b) - getContributionScore(a)
     }
-    return a.repository.name.localeCompare(b.repository.name)
   })
 })
 
-const groupedRepos = computed(() => {
-  const groups: Record<string, typeof repos> = {}
-
-  for (const repo of filteredAndSortedRepos.value) {
-    const owner = repo.repository.owner.name
-    if (!groups[owner]) {
-      groups[owner] = []
-    }
-    groups[owner].push(repo)
-  }
-
-  // Sort groups by total stars or name
-  return Object.fromEntries(
-    Object.entries(groups)
-      .sort((a, b) => {
-        if (sortBy.value === 'stars') {
-          const starsA = a[1].reduce((sum, r) => sum + r.repository.stars, 0)
-          const starsB = b[1].reduce((sum, r) => sum + r.repository.stars, 0)
-          return starsB - starsA
-        }
-        return a[0].localeCompare(b[0])
-      })
-      .map(([owner, repos]) => [
-        owner,
-        repos.sort((a, b) => {
-          if (sortBy.value === 'stars') {
-            return b.repository.stars - a.repository.stars
-          }
-          return a.repository.name.localeCompare(b.repository.name)
-        }),
-      ]),
-  )
-})
+// A search narrows the list on its own, so the preview limit would only hide matches from it.
+const visibleProjects = computed(() =>
+  isShowingAll.value || searchQuery.value.trim()
+    ? filteredProjects.value
+    : filteredProjects.value.slice(0, PREVIEW_LIMIT),
+)
 
 useHeadDefault({
   description: t('description', {
-    total: repos.length,
+    total: projects.length,
   }),
 })
 </script>
 
 <i18n lang="yaml">
 de:
+  allIntro: Nach Gewicht des Beitrags sortiert, nicht nach Bekanntheit des Projekts.
+  allTitle: Alle Beiträge
   description: Beiträge zu {total} öffentlichen Softwareprojekten.
-  fork: Fork
-  myCommits: Commits anzeigen
-  myReviews: Reviews anzeigen
-  noDescription: Keine Beschreibung verfügbar
   noRepositoriesFound: Keine Repositories gefunden.
   openSourceContributions: Öffentlichen Softwareprojekten
   openSourceContributionsName: 'Jonas Thelemann wirkte mit an {total}'
-  profilePicture: Profilbild
   search: Repositories durchsuchen...
+  showAll: 'Alle anzeigen ({count} weitere)'
   showingRepositories: 'Zeige {count} von {total} Repositories'
-  showLess: Weniger anzeigen
-  showMore: '{count} weitere anzeigen'
+  signatureCookieControlBody: Ein umfangreich konfigurierbarer Cookie-Banner für Nuxt. Ich habe die Betreuung übernommen und kümmere mich um Releases, Issues und Reviews.
+  signatureCookieControlTitle: Maintainer von nuxt-cookie-control
+  signatureCrystalBody: Crystal erzeugt GraphQL-APIs aus PostgreSQL-Schemas. Ich habe das tsvector-Plugin beigetragen, das PostgreSQLs Volltextsuche über die generierte API verfügbar macht, sowie einen Fix für die Erkennung fehlender Indizes.
+  signatureCrystalTitle: Volltextsuche für Graphile Crystal
+  signatureGraphiqlBody: GraphiQLs Variablen-Editor hat Werte für eigene Skalare als ungültig markiert, weil er deren Schemas nicht kennen konnte. Meine Änderung stellt sie bereit, sodass Werkzeuge auf Basis von graphiql-react solche Variablen korrekt prüfen.
+  signatureGraphiqlTitle: Eigene Skalare im Variablen-Editor von GraphiQL
+  signatureIntro: Die Beiträge, die ich hervorheben würde, mit dem jeweiligen Nachweis daneben.
+  signatureNuxtBody: Nuxt hat CSS-Layer in der falschen Reihenfolge ausgegeben. Mein Fix dafür steckt im Core, und ich habe Triage-Rechte im Repository, wo ich weiterhin Fehler melde und eingrenze.
+  signatureNuxtTitle: Ein Fix für die CSS-Layer-Reihenfolge in Nuxts Core
+  signatureSpotifyBody: Ich betreue den Java-Wrapper für Spotifys Web-API, eine Bibliothek, die es seit 2014 gibt. Releases, Abhängigkeits-Updates und Pull-Request-Reviews laufen über mich.
+  signatureSpotifyTitle: Maintainer von spotify-web-api-java
+  signatureSyncthingBody: Syncthing hat Docker-Images nur für eine Architektur veröffentlicht. Ich habe den Multi-Architektur-Build in die Release-Skripte eingebracht und die Veröffentlichungs-Pipeline darum herum aufgeräumt.
+  signatureSyncthingTitle: Multi-Architektur-Docker-Images für Syncthing
+  signatureTitle: Ausgewählte Beiträge
   sortBy: Sortieren nach
-  sortByName: Nach Name sortieren
+  sortByContribution: Nach Beitrag sortieren
+  sortByName: Nach Repository-Name sortieren
+  sortByOwner: Nach Besitzer, dann Repository sortieren
+  sortByRecent: Nach Aktualität sortieren
   sortByStars: Nach Sternen sortieren
-  viewGitHubProfile: 'GitHub-Profil von {owner} anzeigen'
-  viewMyCommits: 'Beiträge in {repo} anzeigen'
-  viewMyReviews: 'Reviews in {repo} anzeigen'
+  summary: '{signature} ausgewählte Beiträge, gemergte Arbeit in {major} Projekten mit über 1.000 Sternen.'
 en:
+  allIntro: Ranked by the weight of the contribution, not by how well known the project is.
+  allTitle: All contributions
   description: Contributions to {total} public software projects.
-  fork: Fork
-  myCommits: View commits
-  myReviews: View reviews
-  noDescription: No description available
   noRepositoriesFound: No repositories found.
   openSourceContributions: Public Software Projects
   openSourceContributionsName: Jonas Thelemann contributed to {total}
-  profilePicture: Profile picture
   search: Search repositories...
+  showAll: 'Show all ({count} more)'
   showingRepositories: 'Showing {count} of {total} repositories'
-  showLess: Show less
-  showMore: 'Show {count} more'
+  signatureCookieControlBody: A highly configurable cookie banner for Nuxt. I took over its maintenance and handle its releases, issues and reviews.
+  signatureCookieControlTitle: Maintainer of nuxt-cookie-control
+  signatureCrystalBody: Crystal generates GraphQL APIs from PostgreSQL schemas. I contributed the tsvector plugin that exposes PostgreSQL full-text search through the generated API, plus a fix to its missing index detection.
+  signatureCrystalTitle: Full-text search for Graphile Crystal
+  signatureGraphiqlBody: GraphiQL's variable editor marked values for custom scalars as invalid, because it had no way to learn their schemas. My change exposes them, so tools built on graphiql-react validate those variables properly.
+  signatureGraphiqlTitle: Custom scalars in GraphiQL's variable editor
+  signatureIntro: The contributions I would point to, each with the evidence next to it.
+  signatureNuxtBody: Nuxt emitted CSS layers in the wrong order. My fix for it is in core, and I hold triage rights on the repository, where I keep reporting and narrowing down bugs.
+  signatureNuxtTitle: A CSS layer ordering fix in Nuxt core
+  signatureSpotifyBody: I maintain the Java wrapper for Spotify's Web API, a library that has been around since 2014. Its releases, dependency work and pull request reviews run through me.
+  signatureSpotifyTitle: Maintainer of spotify-web-api-java
+  signatureSyncthingBody: Syncthing published Docker images for a single architecture. I added the multi-architecture build to its release scripts and cleaned up the publishing pipeline around it.
+  signatureSyncthingTitle: Multi-architecture Docker images for Syncthing
+  signatureTitle: Signature contributions
   sortBy: Sort by
-  sortByName: Sort by name
+  sortByContribution: Sort by contribution
+  sortByName: Sort by repository name
+  sortByOwner: Sort by owner, then repository
+  sortByRecent: Sort by recent activity
   sortByStars: Sort by stars
-  viewGitHubProfile: 'View {owner} GitHub profile'
-  viewMyCommits: 'View contributions in {repo}'
-  viewMyReviews: 'View reviews in {repo}'
+  summary: '{signature} signature contributions, merged work in {major} projects with over 1,000 stars.'
 </i18n>

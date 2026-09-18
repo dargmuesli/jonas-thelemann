@@ -216,6 +216,8 @@
 </template>
 
 <script setup lang="ts">
+import type { ContributedProject } from '~~/shared/utils/contributions'
+
 definePageMeta({
   layout: 'root',
 })
@@ -232,10 +234,12 @@ const isTesting = useIsTesting()
 
 // data
 const repos = (
-  await (isTesting
-    ? import('~/assets/data/contributions-test.json')
-    : import('~/assets/data/contributions.json'))
-).default
+  (
+    await (isTesting
+      ? import('~/assets/data/contributions-test.json')
+      : import('~/assets/data/contributions.json'))
+  ).default as ContributedProject[]
+).filter(hasContribution)
 const age = isTesting
   ? 1337
   : Math.abs(
