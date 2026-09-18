@@ -1,3 +1,9 @@
+## [6.19.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.18.2...6.19.0) (2026-09-18)
+
+### Features
+
+* **contributions:** rank contributions and highlight signature work ([#625](https://github.com/dargmuesli/jonas-thelemann/issues/625)) ([2e1a79b](https://github.com/dargmuesli/jonas-thelemann/commit/2e1a79bf1abdb2e003e317d164ccd9d32c82ec02))
+
 ## [6.18.2](https://github.com/dargmuesli/jonas-thelemann/compare/6.18.1...6.18.2) (2026-09-15)
 
 ### Bug Fixes
