@@ -14,8 +14,8 @@ testOgImage({
     en: 'a_A+picture+of+Jonas+Thelemann+and+the+title+of+the+page.,c_Default.takumi,description_Contributions+to+10+public+software+projects.,title_Jonas+Thelemann,p_Ii9wcm9qZWN0cy9jb250cmlidXRpb25zIg.png',
   },
   static: {
-    de: 'o_svpevy.png',
-    en: 'a_A+picture+of+Jonas+Thelemann+and+the+title+of+the+page.,c_Default.takumi,description_Contributions+to+10+public+software+projects.,title_Jonas+Thelemann,p_Ii9wcm9qZWN0cy9jb250cmlidXRpb25zIg.png',
+    de: 'o_d3999ee8a66c2074.png',
+    en: 'o_a584d3e571b7f4e3.png',
   },
 })
 testPageLoad(PAGE_PATH)

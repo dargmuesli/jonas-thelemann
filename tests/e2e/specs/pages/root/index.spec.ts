@@ -17,8 +17,8 @@ testOgImage({
     en: 'a_A+picture+of+Jonas+Thelemann+and+the+title+of+the+page.,c_Default.takumi,description_Director+%40maevsi+%C2%B7+Ecosystem+%40Nuxt+%C2%B7+M.Sc.+Computer+Science,title_Jonas+Thelemann.png',
   },
   static: {
-    de: 'o_d33hz.png',
-    en: 'a_A+picture+of+Jonas+Thelemann+and+the+title+of+the+page.,c_Default.takumi,description_~RGlyZWN0b3IgQG1hZXZzaSDCtyBFY29zeXN0ZW0gQE51eHQgwrcgTS5TYy4gQ29tcHV0ZXIgU2NpZW5jZQ,title_Jonas+Thelemann.png',
+    de: 'o_6781f89ecf4b05d3.png',
+    en: 'o_734c8f126f2b3a9d.png',
   },
 })
 testPageLoad(PAGE_PATH)
