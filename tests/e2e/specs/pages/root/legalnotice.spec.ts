@@ -15,8 +15,8 @@ testOgImage({
     en: `a_A+picture+of+Jonas+Thelemann+and+the+title+of+the+page.,c_Default.takumi,description_Jonas+Thelemann's+portfolio.,title_Legal+notice,p_Ii9sZWdhbC1ub3RpY2Ui.png`,
   },
   static: {
-    de: 'a_Ein+Bild+von+Jonas+Thelemann+und+der+Titel+der+Seite.,c_Default.takumi,description_Portfolio+von+Jonas+Thelemann.,title_Impressum,p_Ii9kZS9sZWdhbC1ub3RpY2Ui.png',
-    en: `a_A+picture+of+Jonas+Thelemann+and+the+title+of+the+page.,c_Default.takumi,description_Jonas+Thelemann's+portfolio.,title_Legal+notice,p_Ii9sZWdhbC1ub3RpY2Ui.png`,
+    de: 'o_973668df6652575b.png',
+    en: 'o_67507d0543ea512c.png',
   },
 })
 testVisualRegression(PAGE_PATH)
