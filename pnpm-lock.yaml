@@ -199,8 +199,8 @@ importers:
         specifier: 10.11.0
         version: 10.11.0(jiti@2.7.0)(supports-color@10.2.2)
       h3:
-        specifier: 1.15.11
-        version: 1.15.11
+        specifier: 2.0.2
+        version: 2.0.2(crossws@0.4.12(srvx@0.11.22))
       nuxt:
         specifier: 4.5.2
         version: 4.5.2(7e488c1c1b14025b86f06d8581470e1a)
@@ -287,8 +287,8 @@ importers:
         specifier: 5.5.6
         version: 5.5.6(eslint-config-prettier@10.1.8(eslint@10.11.0(jiti@2.7.0)(supports-color@10.2.2)))(eslint@10.11.0(jiti@2.7.0)(supports-color@10.2.2))(prettier@3.9.9)
       h3:
-        specifier: 1.15.11
-        version: 1.15.11
+        specifier: 2.0.2
+        version: 2.0.2(crossws@0.4.12(srvx@0.11.22))
       tailwindcss:
         specifier: 4.3.3
         version: 4.3.3
@@ -4841,8 +4841,8 @@ packages:
   h3@1.15.11:
     resolution: {integrity: sha512-L3THSe2MPeBwgIZVSH5zLdBBU90TOxarvhK9d04IDY2AmVS8j2Jz2LIWtwsGOU3lu2I5jCN7FNvVfY2+XyF+mg==}
 
-  h3@2.0.1:
-    resolution: {integrity: sha512-trUtZ82iNkfYi8An9M2kIM/SPlomO59pTRMt4zMBffuVPdwv5v1Bxs7uShxi7bOIAuZne6zq6TsD9hVYdNgo+A==}
+  h3@2.0.2:
+    resolution: {integrity: sha512-+/zvHSNldYpNURuUUG+y1KzdASUhNnSd1VpqxYFVY40ov3YzuBnCETaUQaT+QbKkoxhh9LRa6AEQdB14LALwdA==}
     engines: {node: '>=20.19.0'}
     hasBin: true
     peerDependencies:
@@ -8089,7 +8089,7 @@ snapshots:
       '@modelcontextprotocol/client': 2.3.0
       '@modelcontextprotocol/server': 2.3.0
       devframe: 1.2.0(@devframes/agentic@1.2.0)(cac@7.0.0)(srvx@0.11.22)
-      h3: 2.0.1(crossws@0.4.12(srvx@0.11.22))
+      h3: 2.0.2(crossws@0.4.12(srvx@0.11.22))
       pathe: 2.0.3
     transitivePeerDependencies:
       - crossws
@@ -12039,7 +12039,7 @@ snapshots:
   devframe@1.2.0(@devframes/agentic@1.2.0)(cac@7.0.0)(srvx@0.11.22):
     dependencies:
       crossws: 0.4.12(srvx@0.11.22)
-      h3: 2.0.1(crossws@0.4.12(srvx@0.11.22))
+      h3: 2.0.2(crossws@0.4.12(srvx@0.11.22))
       nostics: 1.3.0
       pathe: 2.0.3
     optionalDependencies:
@@ -12782,7 +12782,7 @@ snapshots:
       ufo: 1.6.4
       uncrypto: 0.1.3
 
-  h3@2.0.1(crossws@0.4.12(srvx@0.11.22)):
+  h3@2.0.2(crossws@0.4.12(srvx@0.11.22)):
     dependencies:
       rou3: 1.0.0
       srvx: 1.0.5
