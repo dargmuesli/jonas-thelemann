@@ -12,10 +12,10 @@
       {{ t('copyright', { year }) }}
     </span>
     <div class="flex gap-4">
-      <VioLink is-colored :to="localePath('/legal-notice')">
+      <VioLink is-colored :to="localePath({ path: '/legal-notice' })">
         {{ t('legalNotice') }}
       </VioLink>
-      <VioLink is-colored :to="localePath('/privacy-policy')">
+      <VioLink is-colored :to="localePath({ path: '/privacy-policy' })">
         {{ t('privacyPolicy') }}
       </VioLink>
     </div>

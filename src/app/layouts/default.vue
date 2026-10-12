@@ -6,7 +6,7 @@
         <VioButtonColored
           :aria-label="t('home')"
           :is-primary="false"
-          :to="localePath('/')"
+          :to="localePath({ path: '/' })"
         >
           <VioIconArrowLeft class="h-6 w-6 xl:h-8 xl:w-8" />
           {{ t('home') }}
