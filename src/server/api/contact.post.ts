@@ -1,16 +1,22 @@
 import { assertTurnstileValid } from '@dargmuesli/nuxt-vio/server/utils/dependencies/turnstile'
-import { defineEventHandler, getRequestHeader, readBody } from 'nuxt/server'
+import {
+  defineEventHandler,
+  getRequestHeader,
+  readValidatedBody,
+} from 'nuxt/server'
+import { z } from 'zod'
 
 const MAIL_FROM = '"jonas-thelemann" <noreply+contact@jonas-thelemann.de>'
 const MAIL_TO = 'e-mail+contact@jonas-thelemann.de'
+const BODY_SCHEMA = z.object({
+  captcha: z.string(),
+  emailAddress: z.email(),
+  message: z.string().min(1),
+  name: z.string().min(1),
+})
 
 export default defineEventHandler(async (event) => {
-  const body = await readBody<{
-    captcha?: string
-    emailAddress: string
-    message: string
-    name: string
-  }>(event)
+  const body = await readValidatedBody(event, BODY_SCHEMA)
   await assertTurnstileValid({ token: body.captcha })
 
   await event.context.$email?.nodemailer.transporter.sendMail({
