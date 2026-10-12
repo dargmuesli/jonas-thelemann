@@ -25,7 +25,7 @@ jobs:
       - name: Generate the contribution data
         env:
           # renovate: datasource=docker depName=ghcr.io/dargmuesli/contributed-to
-          CONTRIBUTED_TO_VERSION: "0.1.0"
+          CONTRIBUTED_TO_VERSION: "0.1.1"
           DEFAULT_PREFIX: dargmuesli
           # A token of the profile owner.
           # The API reports contribution roles as the permissions of the token's own account.
