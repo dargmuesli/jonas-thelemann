@@ -247,7 +247,7 @@ const age = isTesting
     )
 const repoCount = (repos.length - 4).toString() // 4 already displayed project subtracted
 const socialLinks = [
-  { to: localePath('/contact'), label: t('contactForm') },
+  { to: localePath({ path: '/contact' }), label: t('contactForm') },
   { to: 'https://giphy.com/channel/dargmuesli', label: t('brandGiphy') },
   { to: 'https://github.com/dargmuesli', label: t('brandGitHub') },
   { to: 'https://www.instagram.com/dargmuesli/', label: t('brandInstagram') },
