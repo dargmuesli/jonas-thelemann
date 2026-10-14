@@ -11,8 +11,8 @@ testA11y(PAGE_PATH)
 testPageLoad(PAGE_PATH)
 testOgImage({
   dynamic: {
-    de: 'a_Ein+Bild+von+Jonas+Thelemann+und+der+Titel+der+Seite.,c_Default.takumi,description_Portfolio+von+Jonas+Thelemann.,title_Datenschutzerkl%C3%A4rung,p_Ii9kZS9wcml2YWN5LXBvbGljeSI.png',
-    en: `a_A+picture+of+Jonas+Thelemann+and+the+title+of+the+page.,c_Default.takumi,description_Jonas+Thelemann's+portfolio.,title_Privacy+Policy,p_Ii9wcml2YWN5LXBvbGljeSI.png`,
+    de: 'a_Ein+Bild+von+Jonas+Thelemann+und+der+Titel+der+Seite.,c_Default.takumi,description_Portfolio+von+Jonas+Thelemann.,title_~RGF0ZW5zY2h1dHplcmtsw6RydW5n,p_Ii9kZS9wcml2YWN5LXBvbGljeSI,s_WBTCDysrqB9FfrGQ.png',
+    en: `a_A+picture+of+Jonas+Thelemann+and+the+title+of+the+page.,c_Default.takumi,description_Jonas+Thelemann's+portfolio.,title_Privacy+Policy,p_Ii9wcml2YWN5LXBvbGljeSI,s_x-coOJxZPWktDJpa.png`,
   },
   static: {
     de: 'o_c5836f3cef174029.png',
