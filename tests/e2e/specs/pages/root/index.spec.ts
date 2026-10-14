@@ -13,8 +13,8 @@ const PAGE_PATH = '/'
 testA11y(PAGE_PATH)
 testOgImage({
   dynamic: {
-    de: 'a_Ein+Bild+von+Jonas+Thelemann+und+der+Titel+der+Seite.,c_Default.takumi,description_Gesch%C3%A4ftsf%C3%BChrer+%40maevsi+%C2%B7+%C3%96kosystem+%40Nuxt+%C2%B7+M.Sc.+Informatik,title_Jonas+Thelemann,p_Ii9kZSI.png',
-    en: 'a_A+picture+of+Jonas+Thelemann+and+the+title+of+the+page.,c_Default.takumi,description_Director+%40maevsi+%C2%B7+Ecosystem+%40Nuxt+%C2%B7+M.Sc.+Computer+Science,title_Jonas+Thelemann.png',
+    de: 'a_Ein+Bild+von+Jonas+Thelemann+und+der+Titel+der+Seite.,c_Default.takumi,description_~R2VzY2jDpGZ0c2bDvGhyZXIgQG1hZXZzaSDCtyDDlmtvc3lzdGVtIEBOdXh0IMK3IE0uU2MuIEluZm9ybWF0aWs,title_Jonas+Thelemann,p_Ii9kZSI,s_BPaTRn8nz4pTnT9o.png',
+    en: 'a_A+picture+of+Jonas+Thelemann+and+the+title+of+the+page.,c_Default.takumi,description_~RGlyZWN0b3IgQG1hZXZzaSDCtyBFY29zeXN0ZW0gQE51eHQgwrcgTS5TYy4gQ29tcHV0ZXIgU2NpZW5jZQ,title_Jonas+Thelemann,s_S6n9rd3Wee4ODKKd.png',
   },
   static: {
     de: 'o_6781f89ecf4b05d3.png',
