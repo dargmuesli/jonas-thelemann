@@ -1,3 +1,13 @@
+## [7.0.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.19.2...7.0.0) (2026-10-14)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** update vio to 23.0.0-beta.10 (#633)
+
+### Bug Fixes
+
+* **deps:** update vio to 23.0.0-beta.10 ([#633](https://github.com/dargmuesli/jonas-thelemann/issues/633)) ([ed3f53d](https://github.com/dargmuesli/jonas-thelemann/commit/ed3f53da869dc4fb72b4f7d7ca6232a15b83026e))
+
 ## [7.0.0-beta.1](https://github.com/dargmuesli/jonas-thelemann/compare/6.19.2...7.0.0-beta.1) (2026-10-14)
 
 ### ⚠ BREAKING CHANGES
