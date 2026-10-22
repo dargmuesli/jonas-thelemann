@@ -10,13 +10,7 @@ const PAGE_PATH = '/legal-notice'
 testA11y(PAGE_PATH)
 testPageLoad(PAGE_PATH)
 testOgImage({
-  dynamic: {
-    de: 'a_Ein+Bild+von+Jonas+Thelemann+und+der+Titel+der+Seite.,c_Default.takumi,description_Portfolio+von+Jonas+Thelemann.,title_Impressum,p_Ii9kZS9sZWdhbC1ub3RpY2Ui,s_B55KvTBh0hRzayVb.png',
-    en: `a_A+picture+of+Jonas+Thelemann+and+the+title+of+the+page.,c_Default.takumi,description_Jonas+Thelemann's+portfolio.,title_Legal+notice,p_Ii9sZWdhbC1ub3RpY2Ui,s_ZZItilxyhrNWFxiz.png`,
-  },
-  static: {
-    de: 'o_973668df6652575b.png',
-    en: 'o_67507d0543ea512c.png',
-  },
+  de: `/de${PAGE_PATH}`,
+  en: PAGE_PATH,
 })
 testVisualRegression(PAGE_PATH)
