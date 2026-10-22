@@ -15,6 +15,11 @@ minimumReleaseAgeExclude:
   - '@nuxt/vite-builder@4.5.1'
   - nuxt-schema-org@7.0.1
   - nuxt@4.5.1
+overrides:
+  # Keep a single @takumi-rs/core version so the og-image renderer's
+  # core@2.16.3 is not paired with a deduped helpers@2.17.0 (which dropped
+  # the `prepareRenderInput` export and crashes the node server at runtime).
+  '@takumi-rs/core': 2.16.3
 packages:
   - src
   - tests
