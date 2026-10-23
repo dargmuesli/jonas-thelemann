@@ -1,3 +1,9 @@
+## [7.0.1](https://github.com/dargmuesli/jonas-thelemann/compare/7.0.0...7.0.1) (2026-10-23)
+
+### Bug Fixes
+
+* **deps:** update dependency typescript-eslint to v8.72.0 ([ffde065](https://github.com/dargmuesli/jonas-thelemann/commit/ffde0650ec2748812e8efa6553bf4f45187f5b1a))
+
 ## [7.0.0](https://github.com/dargmuesli/jonas-thelemann/compare/6.19.2...7.0.0) (2026-10-14)
 
 ### ⚠ BREAKING CHANGES
