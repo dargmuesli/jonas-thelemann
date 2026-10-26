@@ -2,6 +2,8 @@ allowBuilds:
   '@dargmuesli/nuxt-vio': false
   '@parcel/watcher': false
   '@sentry/cli': false
+  # ships prebuilt binaries per platform/node-abi; the install script is only a check
+  '@sentry/node-cpu-profiler': false
   esbuild: false
   sharp: true
   unrs-resolver: false
