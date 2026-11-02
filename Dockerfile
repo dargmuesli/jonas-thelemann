@@ -129,7 +129,9 @@ ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 
 WORKDIR /srv/app/
 
-RUN corepack enable \
+# The playwright image no longer ships corepack; `--force` overwrites the
+# yarn shims it does still ship, which collide with corepack's own stubs
+RUN npm i -g corepack --force && corepack enable \
   && apt update && apt install mkcert
 
 
