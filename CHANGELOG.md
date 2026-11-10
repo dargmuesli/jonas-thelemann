@@ -1,3 +1,9 @@
+## [7.0.3](https://github.com/dargmuesli/jonas-thelemann/compare/7.0.2...7.0.3) (2026-11-10)
+
+### Bug Fixes
+
+* schedule release ([a128673](https://github.com/dargmuesli/jonas-thelemann/commit/a128673c3e83665dcd750d50390bc516d7501c4f))
+
 ## [7.0.2](https://github.com/dargmuesli/jonas-thelemann/compare/7.0.1...7.0.2) (2026-11-03)
 
 ### Bug Fixes
