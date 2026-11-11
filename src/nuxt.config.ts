@@ -62,6 +62,7 @@ export default defineNuxtConfig(
         },
         twitter: '@dargmuesli',
       },
+      skewProtection: {}, // vio disables it, the dockerfile carries its storage from image to image
 
       $production: {
         scripts: {
