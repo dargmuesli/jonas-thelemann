@@ -1,3 +1,9 @@
+## [7.1.0](https://github.com/dargmuesli/jonas-thelemann/compare/7.0.3...7.1.0) (2026-11-11)
+
+### Features
+
+* **seo:** enable skew protection ([#650](https://github.com/dargmuesli/jonas-thelemann/issues/650)) ([903a8f1](https://github.com/dargmuesli/jonas-thelemann/commit/903a8f11ae125cf18b801a4a514b7a69ee3951a2))
+
 ## [7.0.3](https://github.com/dargmuesli/jonas-thelemann/compare/7.0.2...7.0.3) (2026-11-10)
 
 ### Bug Fixes
