@@ -20,3 +20,6 @@ minimumReleaseAgeExclude:
 packages:
   - src
   - tests
+overrides:
+  # unifies the copy `@dargmuesli/nuxt-vio` ships, whose `Locale` type otherwise mismatches in `VioLayout.vue`; remove once a `nuxt-vio` release depends on v10
+  '@dargmuesli/nuxt-cookie-control': 10.0.0
