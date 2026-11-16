@@ -6,8 +6,9 @@
         is-external-icon-disabled
         :to="project.repository.url"
       >
-        <span class="text-gray-500 dark:text-gray-400">{{ ownerPrefix }}</span
-        ><span
+        <span class="text-gray-500 dark:text-gray-400">{{
+          ownerPrefix
+        }}</span><span
           class="font-semibold text-blue-600 group-hover:underline dark:text-blue-400"
           >{{ project.repository.name }}</span
         >
