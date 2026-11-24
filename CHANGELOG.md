@@ -1,3 +1,9 @@
+## [7.1.1](https://github.com/dargmuesli/jonas-thelemann/compare/7.1.0...7.1.1) (2026-11-24)
+
+### Bug Fixes
+
+* **deps:** [Snyk] Security upgrade node from 26.13.1-alpine to 26.13.1-alpine3.23 ([#656](https://github.com/dargmuesli/jonas-thelemann/issues/656)) ([ef104b2](https://github.com/dargmuesli/jonas-thelemann/commit/ef104b2a366befe60ab956c4f4ffe6859a80c74c))
+
 ## [7.1.0](https://github.com/dargmuesli/jonas-thelemann/compare/7.0.3...7.1.0) (2026-11-11)
 
 ### Features
